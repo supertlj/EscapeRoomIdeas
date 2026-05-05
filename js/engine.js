@@ -11,6 +11,7 @@ const Engine = {
     I18n.init();
     Inventory.init();
     HintSystem.init();
+    AdManager.init();
 
     const canvas = document.getElementById('game-canvas');
     SpriteManager.init(canvas);
@@ -191,6 +192,7 @@ const Engine = {
     }
   },
 
+
   completeRoom() {
     const modal = document.getElementById('room-complete');
     const text = document.getElementById('complete-text');
@@ -200,8 +202,11 @@ const Engine = {
     modal.classList.remove('hidden');
     
     document.getElementById('btn-next-room').onclick = () => {
-      modal.classList.add('hidden');
-      Dialog.showFeedback('Level 2 Coming Soon!', 3000);
+      AdManager.showInterstitialAd(() => {
+        modal.classList.add('hidden');
+        // Logic to load room 2
+        this.loadRoom(2);
+      });
     };
   }
 };

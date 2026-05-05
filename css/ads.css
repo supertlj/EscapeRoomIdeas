@@ -1,0 +1,53 @@
+/* ============================================
+   AD BANNER INTEGRATION
+   ============================================ */
+
+#ad-space {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1525 0%, #0a0a0f 100%);
+  border-top: 2px solid var(--bg-panel-border);
+  box-shadow: inset 0 10px 30px rgba(0,0,0,0.8);
+  overflow: hidden;
+}
+
+.ad-placeholder {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(201, 168, 76, 0.2);
+  border-radius: 12px;
+  position: relative;
+}
+
+.ad-label {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: var(--font-display);
+  font-size: 18px;
+  color: var(--gold-dim);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.ad-content-sim {
+  text-align: center;
+}
+
+.ad-brand {
+  font-family: var(--font-display);
+  font-size: 42px;
+  color: var(--gold);
+  margin-bottom: 5px;
+  letter-spacing: 4px;
+}
+
+.ad-tagline {
+  font-size: 20px;
+  color: var(--text-secondary);
+  font-style: italic;
+}

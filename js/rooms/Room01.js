@@ -12,6 +12,7 @@ class Room01 extends BaseRoom {
       brassKeyFound: false,
       safeOpened: false,
       noteFound: false,
+      elevatorOpen: false,
       escaped: false
     };
 
@@ -64,6 +65,10 @@ class Room01 extends BaseRoom {
     SpriteManager.addSprite('main', {
       id: 'elevator', x: 620, y: 380, w: 220, h: 280,
       onClick: async () => {
+        if (this.state.elevatorOpen) {
+          Engine.completeRoom();
+          return;
+        }
         await Engine.switchScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator.png');
       }
     });
@@ -133,6 +138,8 @@ class Room01 extends BaseRoom {
         }, 'paper_pickup');
         
         await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_open.png');
+        // Update main background to empty safe
+        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_empty.png';
         SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: false });
       }
     });
@@ -148,6 +155,8 @@ class Room01 extends BaseRoom {
           Inventory.removeItem('brass_key');
           Audio.playSFX('door_open');
           await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_with_note.png');
+          // Update main background to open safe (with note)
+          SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_open.png';
           SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: true });
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '保险箱已打开' : 'Safe opened');
         } else {
@@ -169,14 +178,19 @@ class Room01 extends BaseRoom {
 
     this.keypad = new KeypadPuzzle({
       targetCode: '3142',
-      onSuccess: () => {
+      onSuccess: async () => {
+        this.state.elevatorOpen = true;
         Audio.playSFX('door_open');
         this.keypad.hide();
-        Dialog.showStory({
-          en: "The elevator dings and the doors slide open. You've escaped the lobby!",
-          zh: "电梯发出叮的一声，门缓缓打开。你成功离开了大堂！"
-        }, () => {
-          Engine.completeRoom();
+        
+        // Update both backgrounds for consistency
+        await SpriteManager.setScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator_open.png');
+        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_elevator_open.png';
+        
+        // Add click handler to the open elevator in zoom view to exit
+        SpriteManager.addSprite('zoom_elevator', {
+          id: 'elevator_exit_click', x: 200, y: 200, w: 624, h: 624,
+          onClick: () => Engine.completeRoom()
         });
       },
       onFail: () => {

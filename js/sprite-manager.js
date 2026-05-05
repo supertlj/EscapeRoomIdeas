@@ -157,9 +157,7 @@ const SpriteManager = {
     const h = this.canvas.height / dpr;
 
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    ctx.fillStyle = '#0a0a0f'; // Pure dark background for the frame
-    ctx.fillRect(0, 0, w, h);
+    ctx.clearRect(0, 0, w, h);
 
     const scene = this.scenes[this.currentSceneId];
     if (!scene) return;
