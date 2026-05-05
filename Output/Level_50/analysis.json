@@ -1,0 +1,92 @@
+{
+  "level": 50,
+  "room_description": "An ornate Asian-style temple or meditation room. It features wooden furniture, lit candles, large golden bells, and statues.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the temple room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_temple_room_.jpg"
+    },
+    {
+      "description": "Lighting the candles on the table.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Lighting_the_candles_on_the_table_.jpg"
+    },
+    {
+      "description": "Looking at the framed picture of a potted plant with an IP address.",
+      "timestamp_seconds": 5.5,
+      "screenshot_path": "Screenshots/005.5s_Looking_at_the_framed_picture_of_a_potted_plant_with_an_IP_address_.jpg"
+    },
+    {
+      "description": "Examining a lock with four rotating dials.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Examining_a_lock_with_four_rotating_dials_.jpg"
+    },
+    {
+      "description": "Finding a sequence of colored circles on a plate.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Finding_a_sequence_of_colored_circles_on_a_plate_.jpg"
+    },
+    {
+      "description": "Entering a symbol code into a lock.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Entering_a_symbol_code_into_a_lock_.jpg"
+    },
+    {
+      "description": "Striking the large hanging bells in a specific sequence.",
+      "timestamp_seconds": 23.5,
+      "screenshot_path": "Screenshots/023.5s_Bell_Striking_Sequence.jpg"
+    },
+    {
+      "description": "Lighting more candles to reveal a glowing pattern.",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Lighting_more_candles_to_reveal_a_glowing_pattern_.jpg"
+    },
+    {
+      "description": "Observing glowing symbols on the Buddha statue.",
+      "timestamp_seconds": 38.5,
+      "screenshot_path": "Screenshots/038.5s_Buddha_Symbol_Lock.jpg"
+    },
+    {
+      "description": "Completing a wiring puzzle on a wall panel.",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Red_Wiring_Game.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Bell Striking Sequence",
+      "items_used": [],
+      "solution_steps": [
+        "Find the clue that dictates the order in which to hit the bells.",
+        "Strike the bells in the correct order to trigger a mechanism."
+      ],
+      "reward": "Reveals a hidden item or opens a panel",
+      "timestamp_seconds": 23.5,
+      "screenshot_path": "Screenshots/023.5s_Bell_Striking_Sequence.jpg"
+    },
+    {
+      "puzzle_name": "Buddha Symbol Lock",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the sequence of glowing symbols that appear on the chest of the Buddha statue.",
+        "Input those exact symbols into the corresponding combination lock."
+      ],
+      "reward": "Opens a compartment",
+      "timestamp_seconds": 38.5,
+      "screenshot_path": "Screenshots/038.5s_Buddha_Symbol_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Red Wiring Game",
+      "items_used": [],
+      "solution_steps": [
+        "Access the wiring panel.",
+        "Connect the red wires so that all nodes are properly linked across the board."
+      ],
+      "reward": "Unlocks the final door mechanism",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Red_Wiring_Game.jpg"
+    }
+  ],
+  "final_action": "Completing the final puzzle sequence unlocks the ornate double doors, allowing escape from the final level."
+}

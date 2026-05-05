@@ -1,0 +1,342 @@
+{
+  "room_number": 10,
+  "room_name": {
+    "en": "The Piano Lounge",
+    "zh": "钢琴休息室"
+  },
+  "hotel_area": {
+    "en": "Piano Lounge",
+    "zh": "钢琴休息室"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "An intimate lounge with a black baby grand piano as its centerpiece, surrounded by round cocktail tables with tea-light candles (long extinguished). Velvet curtains frame a small performance stage with two spotlights — one red, one blue. A framed portrait of Edmund V. Grandview hangs above the piano, showing a distinguished man with intense eyes. A trapdoor in the stage floor is padlocked shut.",
+    "zh": "一间私密的休息室，黑色小三角钢琴是中心，周围是圆形鸡尾酒桌，上面放着茶灯蜡烛（早已熄灭）。天鹅绒窗帘装饰着一个小型表演舞台，有两盏聚光灯——一盏红色，一盏蓝色。钢琴上方挂着埃德蒙·V·格兰德维尤的肖像画，画中是一位目光锐利的绅士。舞台地板上有一个暗门，用挂锁锁着。"
+  },
+  "story_fragment": {
+    "en": "Inside the piano bench, tucked beneath yellowed sheet music, you find a folded architectural blueprint. It shows a cross-section of the hotel revealing a HIDDEN FLOOR between the basement and sub-basement — labeled 'Level -1.5: The Workshop.' A handwritten note in the margin: 'The way down opens from the clock tower. Listen for the bells.' This is Act 1's major revelation — the hotel has secret floors.",
+    "zh": "在钢琴凳里，夹在泛黄的乐谱下面，你发现了一张折叠的建筑蓝图。它展示了酒店的横截面，揭示了地下室和地下二层之间的一个隐藏楼层——标注为'地下1.5层：工作室。'页边有手写的注释：'通往下方的路从钟楼打开。听钟声。'这是第一幕的重大发现——酒店有秘密楼层。"
+  },
+  "estimated_solve_time_minutes": 3,
+  "items": [
+    {
+      "id": "sheet_music",
+      "name": {
+        "en": "Sheet Music",
+        "zh": "乐谱"
+      }
+    },
+    {
+      "id": "spotlight_gel",
+      "name": {
+        "en": "Color Gel Filter",
+        "zh": "彩色滤光片"
+      }
+    },
+    {
+      "id": "blueprint",
+      "name": {
+        "en": "Hotel Blueprint",
+        "zh": "酒店蓝图"
+      }
+    },
+    {
+      "id": "trapdoor_key",
+      "name": {
+        "en": "Trapdoor Key",
+        "zh": "暗门钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Sheet Music Cipher",
+        "zh": "乐谱密码"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": null,
+      "items_used": [
+        "sheet_music"
+      ],
+      "clue_source": {
+        "en": "The sheet music has musical notes circled in red ink. In standard notation: E=3, A=1, D=4, G=7. A label on the spotlight control panel reads: 'Enter the melody code.'",
+        "zh": "乐谱上用红墨水圈出了几个音符。按照标准记谱法：E=3，A=1，D=4，G=7。聚光灯控制面板上的标签写着：'输入旋律密码。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Take the sheet music from the piano bench.",
+          "zh": "从钢琴凳中取出乐谱。"
+        },
+        {
+          "en": "Notice four notes circled in red: E, A, D, G.",
+          "zh": "注意到四个被红色圈出的音符：E、A、D、G。"
+        },
+        {
+          "en": "A note-to-number chart is printed on the piano's music stand: C=1, D=2, E=3, F=4, G=5, A=6, B=7.",
+          "zh": "钢琴谱架上印着音符转数字表：C=1，D=2，E=3，F=4，G=5，A=6，B=7。"
+        },
+        {
+          "en": "Convert: E=3, A=6, D=2, G=5. Enter '3625' on the spotlight control panel.",
+          "zh": "转换：E=3，A=6，D=2，G=5。在聚光灯控制面板上输入'3625'。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The sheet music has marked notes. There's a chart on the piano that converts notes to numbers.",
+          "zh": "乐谱上有标记的音符。钢琴上有一张将音符转换为数字的图表。"
+        },
+        {
+          "en": "Four circled notes: E, A, D, G. Use the chart to get their number values.",
+          "zh": "四个圈出的音符：E、A、D、G。用图表获取它们的数字值。"
+        },
+        {
+          "en": "E=3, A=6, D=2, G=5. Enter '3625' on the spotlight panel.",
+          "zh": "E=3，A=6，D=2，G=5。在聚光灯面板上输入'3625'。"
+        }
+      ],
+      "reward": {
+        "en": "Activates the spotlights — they illuminate a specific area of the stage",
+        "zh": "激活聚光灯——它们照亮舞台的特定区域"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 20 (robot emotion match)",
+        "Level 40 (bird & bell grid)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Spotlight Reveal",
+        "zh": "聚光灯揭秘"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "twist_applied": "T6_multi_reference",
+      "items_used": [
+        "spotlight_gel"
+      ],
+      "clue_source": {
+        "en": "The two spotlights (red and blue) illuminate different parts of the stage floor. Under red light: the number '4' appears. Under blue light: the number '9' appears. Where both lights overlap (purple): the number '1' appears. A lock on the portrait frame has three digits: Red, Purple, Blue.",
+        "zh": "两盏聚光灯（红色和蓝色）照亮舞台地板的不同部分。红光下：出现数字'4'。蓝光下：出现数字'9'。两种灯光重叠处（紫色）：出现数字'1'。肖像画框上的锁有三位数字：红、紫、蓝。"
+      },
+      "solution_steps": [
+        {
+          "en": "After activating the spotlights, look at the stage floor.",
+          "zh": "激活聚光灯后，看舞台地板。"
+        },
+        {
+          "en": "Red spotlight area shows '4'. Blue spotlight area shows '9'. Overlap (purple) area shows '1'.",
+          "zh": "红色聚光灯区域显示'4'。蓝色聚光灯区域显示'9'。重叠（紫色）区域显示'1'。"
+        },
+        {
+          "en": "The portrait frame lock has colored indicators: Red-Purple-Blue.",
+          "zh": "肖像画框锁有彩色指示：红-紫-蓝。"
+        },
+        {
+          "en": "Enter '4-1-9' on the portrait lock.",
+          "zh": "在肖像画锁上输入'4-1-9'。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The spotlights are revealing something on the stage floor. Look at different colored areas.",
+          "zh": "聚光灯在舞台地板上揭示了什么。看不同颜色的区域。"
+        },
+        {
+          "en": "Three areas: pure red, pure blue, and where they overlap (purple). Each shows a number.",
+          "zh": "三个区域：纯红、纯蓝，以及重叠处（紫色）。每个都显示一个数字。"
+        },
+        {
+          "en": "Red=4, Purple(overlap)=1, Blue=9. Enter '419' on the portrait frame lock.",
+          "zh": "红=4，紫色（重叠）=1，蓝=9。在肖像画框锁上输入'419'。"
+        }
+      ],
+      "reward": {
+        "en": "Portrait swings open revealing a wall niche with the trapdoor key and the hidden blueprint",
+        "zh": "肖像画打开，露出墙壁壁龛中的暗门钥匙和隐藏蓝图"
+      },
+      "depends_on": "Sheet Music Cipher",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 12 (projecting the code)",
+        "Level 47 (clock color code)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Stage Trapdoor",
+        "zh": "舞台暗门"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "key_lock_chain",
+      "twist_applied": null,
+      "items_used": [
+        "trapdoor_key"
+      ],
+      "clue_source": {
+        "en": "The padlocked trapdoor in the stage floor. The key from behind the portrait fits perfectly.",
+        "zh": "舞台地板上用挂锁锁着的暗门。肖像画后面的钥匙完全匹配。"
+      },
+      "solution_steps": [
+        {
+          "en": "Use the trapdoor key on the padlock securing the stage trapdoor.",
+          "zh": "用暗门钥匙打开固定舞台暗门的挂锁。"
+        },
+        {
+          "en": "The trapdoor swings open, revealing a narrow staircase descending into darkness.",
+          "zh": "暗门打开，露出一段狭窄的楼梯通向黑暗。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have a key and there's a padlock on the stage floor.",
+          "zh": "你有一把钥匙，舞台地板上有一个挂锁。"
+        },
+        {
+          "en": "Use the key from behind the portrait on the stage trapdoor padlock.",
+          "zh": "用肖像画后面的钥匙打开舞台暗门的挂锁。"
+        },
+        {
+          "en": "Use the trapdoor key on the padlock. The trapdoor opens to Act 2.",
+          "zh": "用暗门钥匙打开挂锁。暗门通向第二幕。"
+        }
+      ],
+      "reward": {
+        "en": "Opens the trapdoor — passage to Act 2",
+        "zh": "打开暗门——通往第二幕的通道"
+      },
+      "depends_on": "Spotlight Reveal",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 8 (grandfather clock mechanism)",
+        "Level 44 (altar ring puzzle)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "The trapdoor opens with a creak, revealing stone steps spiraling downward. Cold air rises from below. You clutch the blueprint — 'Level -1.5: The Workshop' — and begin your descent. Act 1 Complete. The real investigation begins now.",
+    "zh": "暗门吱嘎一声打开，露出向下旋转的石阶。冷空气从下方升起。你紧握着蓝图——'地下1.5层：工作室'——开始向下走去。第一幕完成。真正的调查现在开始。"
+  },
+  "escape_mechanism": "key",
+  "persistent_items_found": [
+    {
+      "id": "hotel_blueprint",
+      "name": {
+        "en": "Hotel Blueprint (Hidden Floor -1.5)",
+        "zh": "酒店蓝图（隐藏地下1.5层）"
+      },
+      "found_in_room": 10,
+      "used_in_room": 21,
+      "narrative_only": false,
+      "description": {
+        "en": "Architectural cross-section revealing a hidden floor between basement and sub-basement, labeled 'Level -1.5: The Workshop.' Note reads: 'The way down opens from the clock tower.'",
+        "zh": "建筑横截面图，揭示了地下室和地下二层之间的一个隐藏楼层，标注为'地下1.5层：工作室。'注释写道：'通往下方的路从钟楼打开。'"
+      },
+      "acquisition_method": "puzzle_reward",
+      "acquisition_puzzle": "Spotlight Reveal",
+      "critical_path_guaranteed": true,
+      "gate_note": {
+        "en": "Found behind the portrait, revealed by 'Spotlight Reveal' puzzle, which is on the critical path.",
+        "zh": "在肖像画后面找到，由'聚光灯揭秘'谜题揭示，该谜题在关键路径上。"
+      }
+    }
+  ],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "piano",
+      "name": {
+        "en": "Baby Grand Piano",
+        "zh": "小三角钢琴"
+      },
+      "states": [
+        "idle",
+        "bench_open"
+      ],
+      "trigger_puzzle": "Sheet Music Cipher",
+      "z_layer": 2
+    },
+    {
+      "id": "spotlight_panel",
+      "name": {
+        "en": "Spotlight Control Panel",
+        "zh": "聚光灯控制面板"
+      },
+      "states": [
+        "idle",
+        "code_entered",
+        "spotlights_active"
+      ],
+      "trigger_puzzle": "Sheet Music Cipher",
+      "z_layer": 3
+    },
+    {
+      "id": "stage_spotlights",
+      "name": {
+        "en": "Stage Spotlights (Red + Blue)",
+        "zh": "舞台聚光灯（红+蓝）"
+      },
+      "states": [
+        "off",
+        "red_on",
+        "blue_on",
+        "both_on_overlap_visible"
+      ],
+      "trigger_puzzle": "Spotlight Reveal",
+      "z_layer": 1
+    },
+    {
+      "id": "stage_floor_numbers",
+      "name": {
+        "en": "Stage Floor Hidden Numbers",
+        "zh": "舞台地板隐藏数字"
+      },
+      "states": [
+        "hidden",
+        "red_4_visible",
+        "blue_9_visible",
+        "purple_1_visible"
+      ],
+      "trigger_puzzle": "Spotlight Reveal",
+      "z_layer": 2
+    },
+    {
+      "id": "portrait_frame",
+      "name": {
+        "en": "Edmund's Portrait",
+        "zh": "埃德蒙肖像画"
+      },
+      "states": [
+        "closed",
+        "lock_open",
+        "swung_open_niche_visible"
+      ],
+      "trigger_puzzle": "Spotlight Reveal",
+      "z_layer": 2
+    },
+    {
+      "id": "stage_trapdoor",
+      "name": {
+        "en": "Stage Trapdoor",
+        "zh": "舞台暗门"
+      },
+      "states": [
+        "padlocked",
+        "unlocked",
+        "open"
+      ],
+      "trigger_puzzle": "Stage Trapdoor",
+      "z_layer": 1
+    }
+  ]
+}

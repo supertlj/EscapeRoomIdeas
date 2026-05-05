@@ -1,0 +1,87 @@
+{
+  "level": 24,
+  "room_description": "A vibrant green living room with a large white L-shaped sofa, a zebra-print rug, and a modern TV stand.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the green living room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_green_living_room_.jpg"
+    },
+    {
+      "description": "Finding a sharp knife hidden under the coffee table.",
+      "timestamp_seconds": 1.5,
+      "screenshot_path": "Screenshots/001.5s_Finding_a_sharp_knife_hidden_under_the_coffee_table_.jpg"
+    },
+    {
+      "description": "Cutting the sofa cushion with the knife to find a red remote.",
+      "timestamp_seconds": 4.5,
+      "screenshot_path": "Screenshots/004.5s_The_Sofa_Secret.jpg"
+    },
+    {
+      "description": "Finding a crowbar inside the white cabinet.",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Finding_a_crowbar_inside_the_white_cabinet_.jpg"
+    },
+    {
+      "description": "Using the crowbar to pry open the door of the modern fireplace.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Using_the_crowbar_to_pry_open_the_door_of_the_modern_fireplace_.jpg"
+    },
+    {
+      "description": "Tapping the toilet tank (oddly placed in wall) to find a clue.",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Tapping_the_toilet_tank__oddly_placed_in_wall__to_find_a_clue_.jpg"
+    },
+    {
+      "description": "Using the remote to turn on the TV and see the color bars.",
+      "timestamp_seconds": 26.5,
+      "screenshot_path": "Screenshots/026.5s_Using_the_remote_to_turn_on_the_TV_and_see_the_color_bars_.jpg"
+    },
+    {
+      "description": "Counting the colored fish on the wall: 7 Purple, 4 Green, 6 Red.",
+      "timestamp_seconds": 32.5,
+      "screenshot_path": "Screenshots/032.5s_Counting_the_colored_fish_on_the_wall__7_Purple__4_Green__6_Red_.jpg"
+    },
+    {
+      "description": "Entering '746' into the numeric safe drawer.",
+      "timestamp_seconds": 40.0,
+      "screenshot_path": "Screenshots/040.0s_Fish_Wall_Tally.jpg"
+    },
+    {
+      "description": "Retrieving the keycard and exiting.",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Retrieving_the_keycard_and_exiting_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "The Sofa Secret",
+      "items_used": [
+        "Knife"
+      ],
+      "solution_steps": [
+        "Find the knife under the triangular coffee table.",
+        "Use the knife to slice the seat of the white sofa.",
+        "Pick up the red TV remote."
+      ],
+      "reward": "TV Remote",
+      "timestamp_seconds": 4.5,
+      "screenshot_path": "Screenshots/004.5s_The_Sofa_Secret.jpg"
+    },
+    {
+      "puzzle_name": "Fish Wall Tally",
+      "items_used": [
+        "TV Remote"
+      ],
+      "solution_steps": [
+        "Use the remote to turn on the TV, which shows color bars: Purple, Green, Red.",
+        "Count the corresponding colored fish decorations on the green wall.",
+        "Purple (7), Green (4), Red (6)."
+      ],
+      "reward": "Code '746'",
+      "timestamp_seconds": 40.0,
+      "screenshot_path": "Screenshots/040.0s_Fish_Wall_Tally.jpg"
+    }
+  ],
+  "final_action": "The player takes the blue keycard from the drawer and uses it to unlock the exit door at the back of the room."
+}

@@ -1,0 +1,97 @@
+{
+  "level": 33,
+  "room_description": "A dark, green-lit industrial room resembling a control center or bunker, featuring metal panels, electrical boxes, large pipes, and a central metal door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the industrial control room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_industrial_control_room_.jpg"
+    },
+    {
+      "description": "Collecting a blue and yellow keycard from the metal shelf.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Collecting_a_blue_and_yellow_keycard_from_the_metal_shelf_.jpg"
+    },
+    {
+      "description": "Solving the 'Simon Says' style light pattern puzzle on the control panel.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Color_Panel_Memory_Game.jpg"
+    },
+    {
+      "description": "Collecting a heavy metal pipe fitting from the opened panel.",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_Collecting_a_heavy_metal_pipe_fitting_from_the_opened_panel_.jpg"
+    },
+    {
+      "description": "Observing the number sequence on the pipe gauge.",
+      "timestamp_seconds": 38.5,
+      "screenshot_path": "Screenshots/038.5s_Observing_the_number_sequence_on_the_pipe_gauge_.jpg"
+    },
+    {
+      "description": "Entering the color code sequence into the electrical box.",
+      "timestamp_seconds": 49.0,
+      "screenshot_path": "Screenshots/049.0s_Electrical_Box_Code.jpg"
+    },
+    {
+      "description": "Solving the circuit connection puzzle on the large metal door.",
+      "timestamp_seconds": 139.0,
+      "screenshot_path": "Screenshots/139.0s_Circuit_Connection_Door.jpg"
+    },
+    {
+      "description": "Opening the main metal door.",
+      "timestamp_seconds": 141.5,
+      "screenshot_path": "Screenshots/141.5s_Opening_the_main_metal_door_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Color Panel Memory Game",
+      "items_used": [],
+      "solution_steps": [
+        "Interact with the control panel showing a 2x2 grid of colored squares.",
+        "Repeat the sequence of flashing lights exactly as shown."
+      ],
+      "reward": "Heavy Metal Pipe Fitting",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Color_Panel_Memory_Game.jpg"
+    },
+    {
+      "puzzle_name": "Electrical Box Code",
+      "items_used": [
+        "Keycard"
+      ],
+      "solution_steps": [
+        "Find the keycard on the shelf and examine its color quadrants (Red, Blue, Yellow, Green).",
+        "Match the position of the colors to the input panel on the electrical box to unlock it."
+      ],
+      "reward": "Access to the pipe gauge",
+      "timestamp_seconds": 49.0,
+      "screenshot_path": "Screenshots/049.0s_Electrical_Box_Code.jpg"
+    },
+    {
+      "puzzle_name": "Gauge Combination",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the pressure gauge to note the sequence of numbers it points to: 6, 2, 8, 3.",
+        "Enter '6283' into the keypad next to the electrical box."
+      ],
+      "reward": "Activates the door puzzle",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Gauge_Combination.jpg"
+    },
+    {
+      "puzzle_name": "Circuit Connection Door",
+      "items_used": [
+        "Metal Pipe Fitting"
+      ],
+      "solution_steps": [
+        "Place the missing pipe fitting onto the door's circuit panel.",
+        "Rotate the tiles to form a continuous line connecting the two active nodes, creating a closed loop."
+      ],
+      "reward": "Unlocks the main door",
+      "timestamp_seconds": 139.0,
+      "screenshot_path": "Screenshots/139.0s_Circuit_Connection_Door.jpg"
+    }
+  ],
+  "final_action": "Upon completing the circuit puzzle, the heavy metal door slides open, allowing the player to escape."
+}

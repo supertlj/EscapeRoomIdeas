@@ -1,0 +1,349 @@
+﻿Loaded 50 rooms
+
+============================================================
+PUZZLE COUNT DISTRIBUTION
+============================================================
+  2 puzzles: 9 rooms — Levels: 12, 24, 25, 26, 27, 28, 29, 30, 47
+  3 puzzles: 24 rooms — Levels: 4, 5, 6, 7, 8, 9, 10, 13, 15, 16, 17, 18, 19, 20, 21, 36, 37, 38, 39, 40, 46, 48, 49, 50
+  4 puzzles: 16 rooms — Levels: 1, 2, 11, 14, 22, 23, 31, 32, 33, 34, 35, 41, 42, 43, 44, 45
+  5 puzzles: 1 rooms — Levels: 3
+
+============================================================
+KEY MOMENTS COUNT DISTRIBUTION
+============================================================
+  5 moments: 1 rooms
+  8 moments: 1 rooms
+  9 moments: 5 rooms
+  10 moments: 42 rooms
+  12 moments: 1 rooms
+
+============================================================
+ALL PUZZLE NAMES (by level)
+============================================================
+  L01: Gathering Basic Supplies | The '1P' Box | Powering the Monitor Clue | Unlocking the '2P' Door Mechanism
+  L02: Plant Pot Key | Cabinet Paper Clue | Laptop Password | Keypad Safe Box
+  L03: Sofa Key | Desk Drawer CD | Painting Code | Laptop Pattern Game | Metal Pegboard Unlock
+  L04: Gathering Ingredients | Burger Assembly | Burger Machine Reward
+  L05: Powering the TV | Wall Safe Code | Bedside Cabinet Lock
+  L06: Assemble the Hammer | Unseal the Box | Animal Code Box
+  L07: Dusty Compartment | Breaking the Pot | Hieroglyphic Number Lock
+  L08: Jigsaw Puzzle Assembly | Chest Slider Lock | Grandfather Clock Mechanism
+  L09: Fishing for the Clue Mask | Number Grid Code | Animal Color Sequence
+  L10: Mirror Shapes | Color-Coded Safe | Starry Night Slider
+  L11: Assembling the Tool | Red Suitcase Lock | Color Wheel Logic | Alarm Clock Time Code
+  L12: Projecting the Code | Symbol & Color Matching
+  L13: First Half of the Equation | Message in a Bottle | Console Keypad Sum
+  L14: Accessing the Laptop | Dot Grid Overlay | Spot the Difference | Desk Drawer Lock
+  L15: Floor Dot Grid | Symbol Drawer | Math Code (X, Y, Z)
+  L16: Globe Unlock | Dirty Mirror Code | Cabinet Keypad
+  L17: Melted Butter | Steaming the Paper | Fridge Drawer Lock
+  L18: Leaf over Candle | Tablet Jigsaw & Item Count | Birdcage Lock
+  L19: Armor Latch | Colored Numbers Box | Tablet Swipe Pattern
+  L20: Robot Emotion Match | TV Colors Grid | Hidden Numbers Keypad
+  L21: The Notification Code | Wall Grate Secret | Celestial Token Box
+  L22: Glow Fish Code | Fish Silhouette Barrel | Token Geometric Lock | Pipe Connection Grid
+  L23: Basketball Inflation | Magnetic Retrieval | The Coffee Clue | Fruit Plate Elimination
+  L24: The Sofa Secret | Fish Wall Tally
+  L25: Easel Reveal | Demonic Grid
+  L26: Colored Deer Sequence | Color-Coded Keypad
+  L27: Blood Code Briefcase | TV Color Sequence
+  L28: Clock Time Calculation | Pipe Slider Puzzle
+  L29: Toy Chest Code | Arcade Directional Puzzle
+  L30: Animal Tile Wall | Door Hexagon Game
+  L31: Fish Tank Tally | Notebook Clue | Laptop Sum | Console Shape Dials
+  L32: Powering the TV | Magnetic Retrieval | Dresser Code | Symbol Panel Match
+  L33: Color Panel Memory Game | Electrical Box Code | Gauge Combination | Circuit Connection Door
+  L34: Dartboard Key | Card Suit Wall Panels | Billiards Color Match | Billiards Pocket Sequence
+  L35: Assemble the Axe | Statue Color Code | Starry Night Assembly | Breaking the Crate
+  L36: Floor Safe | Laptop Sliding Puzzle | Pressure Valve
+  L37: Console Password | Triangle Grid Game | Arrow Peg Puzzle
+  L38: Butterfly & Flower Lock | Armoire Code | Stuck Door Lock
+  L39: Mirror Chest | Fire Hose Dials | Gear Mechanism & Power
+  L40: Bird & Bell Grid | Buddha Symbols | Altar Node Puzzle
+  L41: Sofa Cushion Flash Drive | Flower Picture Code | Computer Differences | Vent Escape
+  L42: Element Wheel | Mural Sliding Puzzle | Scarab and Sun | Pyramid Assembly
+  L43: Briefcase Code | Lighting the Torch | Hidden Wall Code | Desk Panel & Gears
+  L44: Roman Numeral Math | Water Path Slider | Altar Ring Puzzle | Symbol Floor Lock
+  L45: Magnetic Fishing | Colored Square Alignment | Telescope Planet Code | Table Panel Key
+  L46: Alphabet Block Code | Wall Symbols | Square Tile Game
+  L47: Clock Color Code | Cloth Symbol Box
+  L48: Leaf Pattern Lock | Pipe Connection Game | Sofa Patch
+  L49: Suitcase Date Code | Peg Jumping Game | Colored Slider Puzzle
+  L50: Bell Striking Sequence | Buddha Symbol Lock | Red Wiring Game
+
+============================================================
+ALL ITEMS USED (total unique: 104)
+============================================================
+  Silver Key: used 7x
+  Screwdriver: used 5x
+  Battery: used 3x
+  Magnet: used 3x
+  Knife: used 3x
+  TV Remote: used 2x
+  Scissors: used 2x
+  Color clue scroll: used 2x
+  Monitor Casing: used 1x
+  Remote Control: used 1x
+  Compact Disc (CD): used 1x
+  Bottom Bun: used 1x
+  Meat Patty: used 1x
+  Lettuce: used 1x
+  Sauce: used 1x
+  DVD Disc: used 1x
+  Wooden Handle: used 1x
+  Metal Hammer Head: used 1x
+  Hammer: used 1x
+  Brush: used 1x
+  Mallet: used 1x
+  Chisel: used 1x
+  Scroll: used 1x
+  Puzzle Piece 1: used 1x
+  Puzzle Piece 2: used 1x
+  Puzzle Piece 3: used 1x
+  Two Rings: used 1x
+  Fishing Line Spool: used 1x
+  Grid Mask: used 1x
+  Diamond Ring: used 1x
+  Puzzle Tile: used 1x
+  Pliers handle: used 1x
+  Pliers head: used 1x
+  Pliers: used 1x
+  Numerical clue from poster: used 1x
+  Two combined pieces of paper: used 1x
+  Projector Component: used 1x
+  Red Battery: used 1x
+  Pencil: used 1x
+  Wire Cutters: used 1x
+  Corkscrew: used 1x
+  USB Drive: used 1x
+  Wooden ruler: used 1x
+  Heavy black ball: used 1x
+  Metal pin/handle: used 1x
+  Metal drawer handle: used 1x
+  Spray bottle: used 1x
+  Red towel: used 1x
+  Block of butter: used 1x
+  Electric kettle: used 1x
+  Blank paper: used 1x
+  Green leaf: used 1x
+  Tablet device: used 1x
+  Bread: used 1x
+  Clippers: used 1x
+  Tablet: used 1x
+  Metal crowbar: used 1x
+  Star token: used 1x
+  Half-moon token: used 1x
+  Purple Triangle Token: used 1x
+  Teal Pentagon Token: used 1x
+  Hand Pump: used 1x
+  Wet Cloth: used 1x
+  Blue Blocks: used 1x
+  Metal rod: used 1x
+  Mop: used 1x
+  Silver coin: used 1x
+  Wolf emblem: used 1x
+  Eagle emblem: used 1x
+  Lion emblem: used 1x
+  Purple Pencil: used 1x
+  Paper Clue: used 1x
+  Keycard: used 1x
+  Metal Pipe Fitting: used 1x
+  Dart: used 1x
+  Blue Button: used 1x
+  Axe Handle: used 1x
+  Torch: used 1x
+  Puzzle Piece: used 1x
+  Axe: used 1x
+  CD/DVD: used 1x
+  Paper clue: used 1x
+  Box cutter: used 1x
+  Gold key: used 1x
+  Bottle of oil: used 1x
+  Metal gears: used 1x
+  Two golden dragon emblems: used 1x
+  Blue Rubber Band: used 1x
+  Yellow Tape: used 1x
+  Blue Flash Drive: used 1x
+  Golden Scarab Beetle: used 1x
+  Pyramid Top: used 1x
+  Pyramid Base: used 1x
+  Torch Handle: used 1x
+  Oil Bottle: used 1x
+  Lit Torch: used 1x
+  Silver Coin: used 1x
+  Glowing Orb: used 1x
+  Numbered Sphere '6': used 1x
+  Purple Screwdriver: used 1x
+  Piece of paper with colored lines: used 1x
+  Piece of cloth: used 1x
+  Leaf clue: used 1x
+  Clue card: used 1x
+
+============================================================
+ALL ROOM DESCRIPTIONS
+============================================================
+  L01: A dark, rundown brick room with exposed pipes, an old AC unit on the wall, wooden crates on the left, a piece of old electronic equipment on the ground, and a sealed wooden door.
+  L02: A modern living room with beige walls, a patterned brown and gold rug, a wooden door, a desk with a laptop, a potted plant, a wooden glass-paneled display cabinet, and a white sofa.
+  L03: A brightly lit room featuring blue wallpaper with yellow stars, a teal sofa, an abstract painting, a modern white desk setup with a laptop, and a patterned rug on the floor.
+  L04: A modern kitchen featuring dark brown lower cabinets, white upper cabinets, a black marble countertop island with a fruit bowl, a stove, a microwave, and a strange burger-themed machine built into the tiled right wall.
+  L05: A cozy bedroom with patterned beige wallpaper, a large bed with a brown runner and throw pillows, a wooden wardrobe, a TV stand with a DVD player, and a hidden wall safe located behind a mirror adorned with red rose petals.
+  L06: A rundown, rustic room with boarded-up windows, stone flooring, a simple metal-framed bed, a worn armchair, a wooden door, and a wall poster showing animals made out of numbers.
+  L07: An Egyptian tomb-themed room with walls covered in hieroglyphics, two golden Sphinx statues guarding the exit door, and various stone pedestals and artifacts scattered around.
+  L08: An elegant, luxurious bedroom featuring a large bed, patterned wallpaper, an armoire, a grandfather clock, a wooden chest resting on a bench, and a framed jigsaw puzzle on the wall.
+  L09: A modern living area featuring a beige tufted sofa set, a glass coffee table over a brown rug, a large fish tank against the back wall, a white shelving unit, and a dark wooden exit door.
+  L10: A bright pink bedroom with white wall paneling, a white metal-framed bed, a wall clock, a vanity table with a chest, a large 'Last Supper' painting, and a locked wooden door.
+  L11: A vibrant and colorful child's or teenager's bedroom. It features a bunk bed with blue and yellow bedding, a red suitcase, a desk with a computer and a green swivel chair, and several posters and shelving units with toys. The walls are light blue and the floor is wooden.
+  L12: A bedroom with bold vertical striped wallpaper, a metal bed frame holding a teddy bear, a road bicycle parked on the shiny floor, a wooden cabinet, and a door.
+  L13: A spacious apartment featuring a living room with a white sofa, black coffee table, and TV console, separated by a sliding door from a dining area with a table and wine bucket.
+  L14: A dimly lit home office or study containing a desk with a laptop, a wooden bookshelf, a patterned chaise lounge, an overturned chair, and a wastebasket.
+  L15: A rustic wooden cabin or office room featuring a desk, bookshelf, a vintage globe, a small safe, plants, and puzzle panels integrated into the floor and walls.
+  L16: An elegant, well-lit study room containing a desk, a large vintage globe, a white sofa, decorative wall shelves, picture frames, and an attached bathroom.
+  L17: A storage pantry or break room equipped with wire shelves, a water dispenser, a red microwave over a mini-fridge, a computer desk, and wooden cabinets.
+  L18: A classic dining room featuring a long table set with candles, a sofa, a green potted plant, a large birdcage holding a parrot, and a white sideboard cabinet.
+  L19: A dimly lit room decorated with musical and historical items, including a piano, a suit of knight's armor, a mounted moose head, tribal masks, and a white cabinet.
+  L20: A vibrant, futuristic robot or toy factory room filled with various robotic figures, colorful building blocks, digital monitors, and metal paneling.
+  L21: A modern bedroom with tan wood paneling, a large double bed with a brown and black runner, a desk with a computer on the left, a wall-mounted ship painting, and a vertical heater unit on the right.
+  L22: An underwater-themed fantasy room with blue floors, glowing jellyfish lights, hanging shark and dolphin figures, and a spiral staircase.
+  L23: A classic study with dark wood paneling, a floral sofa, a coffee table with a newspaper and tea set, and a kitchen counter area on the right.
+  L24: A vibrant green living room with a large white L-shaped sofa, a zebra-print rug, and a modern TV stand.
+  L25: A dark, macabre studio featuring gothic armor, a skeleton leaning against the wall, an artist's easel with a sketch, and a large demonic portrait.
+  L26: A luxury master bedroom featuring a large bed, fireplace, mounted deer head, and several pieces of white ornate furniture.
+  L27: A grimy, yellow-tiled basement or locker room with blood stains, a skeleton, and various cleaning equipment.
+  L28: A Japanese-style living room with tatami mats, shoji sliding doors, and traditional wooden furniture.
+  L29: A recreational games room with a pool table, dartboard, arcade machine, and retro gaming decor.
+  L30: An ancient stone temple or tomb with lion statues, pedestals, and glowing blue energy.
+  L31: A well-lit bedroom featuring beige patterned wallpaper, a white tufted bed with matching pillows, an elegant armchair, a flat-screen TV mounted on the wall with a modern console below, and a fish tank built into the wall near the door.
+  L32: A children's room with exposed brick walls, a torn wall mural revealing a hidden figure, two large pumpkin-shaped beanbag chairs, a small TV, a pink dresser, and a bed adorned with plush bunnies.
+  L33: A dark, green-lit industrial room resembling a control center or bunker, featuring metal panels, electrical boxes, large pipes, and a central metal door.
+  L34: An elegant room designed for leisure, featuring dark wood walls, a green billiards table in the center, two suits of armor, an armchair, and playing card suits (Spades, Clubs) displayed on the back wall.
+  L35: A dimly lit, rugged stone cave with uneven terrain. In the background, a bright campfire illuminates the area, and bare tree branches protrude from the ground. A wooden crate sits on the right.
+  L36: A creepy, abandoned underground hospital room or bunker. It features a rusty bed with a body bag, a medical monitor, an ultrasound machine, and blood stains on the floor.
+  L37: The interior of a sunken red car underwater. The player looks out through a cracked windshield into the ocean, with the dashboard, steering wheel, and leather seats visible.
+  L38: A festive, brightly lit room decorated for Christmas. It contains a red sofa, a decorated Christmas tree, a snowman, a nutcracker statue, and a large red and black armoire.
+  L39: An elegant, luxurious hallway with ornate wallpaper, lounge chairs, a large mirror with red writing, a red fire hose box, a treasure chest, and a set of elevator doors.
+  L40: A vibrant Asian temple room decorated with ornate tapestries, hanging bells, a glowing Buddha statue, a wooden chest, and a stone altar.
+  L41: A well-lit, modern living room with beige patterned wallpaper, a white sofa setup, a dark wood coffee table, a TV stand with a decorative ship, a display cabinet, and a study desk with a computer.
+  L42: An Egyptian tomb filled with hieroglyphics. It features a central sarcophagus, statues of Anubis and Horus guarding the sides, sun motifs, and glowing floor panels.
+  L43: A modern, metallic bunker or control room featuring diamond-plate walls, black statues, a hanging fireplace, a computer desk, and a large central metal door.
+  L44: A subterranean stone crypt or dungeon. It features a central illuminated statue of a winged figure, scattered candles, Roman numerals carved into the walls, and a dirt floor.
+  L45: A vibrant, futuristic lounge with a bright blue and green galaxy-patterned wall. It contains modern black and white curved seating, a suspended spherical fireplace, colorful hanging light bulbs, and abstract art pieces.
+  L46: A colorful classroom with a green chalkboard showing a line graph, a teacher's desk, and several student desks arranged in rows.
+  L47: A dark, mysterious underground cave with glowing green moss, a pool of water, and strange carvings on the walls.
+  L48: A sophisticated living room with a grand piano, decorative wall shelving, a large rug, and classical artwork.
+  L49: A modern, luxurious bedroom with a large bed, flat-screen TV, glass coffee table, and an ornate mirror.
+  L50: An ornate Asian-style temple or meditation room. It features wooden furniture, lit candles, large golden bells, and statues.
+
+============================================================
+ALL FINAL ACTIONS (Escape Mechanisms)
+============================================================
+  L01: The player successfully aligns the 4 dials behind the '2P' panel, causing the secret door hidden in the wall behind the wooden crates to swing open, allowing escape.
+  L02: The player inserts the retrieved keycard into the electronic lock on the main wooden door to unlock it and escape.
+  L03: The player takes the key revealed from the hidden compartment behind the metal pegboard and uses it to unlock the main brown door and exit the room.
+  L04: The player uses the key obtained from the burger machine to unlock the main wooden door and escape the kitchen.
+  L05: The player inserts the blue keycard into the slot on the electronic door handle to unlock it and exit.
+  L06: The player uses the key found inside the combination box to unlock the room's central door and escape.
+  L07: The player takes the key from the stone wall compartment and uses it to unlock the large door located in the center of the room.
+  L08: The player takes the key revealed in the bottom compartment of the grandfather clock and uses it to unlock the main door.
+  L09: The player swipes the blue keycard on the electronic door handle to unlock the main door and escape.
+  L10: The player uses the silver key found inside the puzzle box to unlock the main bedroom door and escape.
+  L11: The player uses the silver key obtained from the alarm clock to unlock and open the white door, exiting the room.
+  L12: The player uses the silver key obtained from the symbol panel compartment to unlock the main door.
+  L13: The player takes the blue keycard from the console drawer and inserts it into the electronic lock of the main door to escape.
+  L14: The player uses the silver key from the locked desk drawer to open the main door and escape the room.
+  L15: Uses the acquired key to unlock the main wooden door and escape the room.
+  L16: Retrieves the blue keycard from the opened cabinet and swipes it to unlock the exit door.
+  L17: Takes the key from the fridge compartment and uses it to unlock the main door.
+  L18: Collects the key dropped by the parrot and uses it to unlock the main door.
+  L19: Takes the gold key found inside the knight's armor and uses it to unlock the exit door.
+  L20: Entering the final correct code into the wall keypad automatically unlocks the main door, allowing escape.
+  L21: The player uses the silver key on the main wooden door to unlock it and exit the room.
+  L22: Once the light path is fully connected, the green door automatically opens, allowing the player to swim through and escape.
+  L23: The player takes the silver key from the fruit plate and uses it to unlock the center door and escape.
+  L24: The player takes the blue keycard from the drawer and uses it to unlock the exit door at the back of the room.
+  L25: The player uses the silver key found in the wall compartment to unlock the central wooden door and escape.
+  L26: Using the blue keycard on the electronic lock next to the exit door.
+  L27: Using the duct tape to repair a frayed wire and turning the red valve on the generator to unlock the door.
+  L28: The shoji doors slide open once the slider puzzle is completed, allowing the player to pass through.
+  L29: Using the key found in the wall safe to unlock the wooden exit door.
+  L30: The large stone door slides open after the hexagon puzzle is complete, revealing the way forward.
+  L31: The player uses the silver key found in the console to unlock the bedroom door.
+  L32: The player inputs the code '8659' into the chest to retrieve the exit key and unlock the main door.
+  L33: Upon completing the circuit puzzle, the heavy metal door slides open, allowing the player to escape.
+  L34: The player sinks all four billiard balls in the correct sequence, causing a compartment to open containing the exit key, which is used to unlock the main double doors.
+  L35: The player retrieves the key from the chest and uses it to unlock the metal grate, allowing them to crawl out of the cave.
+  L36: Uses the small key dropped from the pipe to unlock the padlock securing the chains on the main exit doors.
+  L37: Takes the hammer and repeatedly strikes the cracked windshield until it shatters, allowing the player to swim out and escape.
+  L38: Turns the newly lubricated key to unlock the white door hidden behind the armoire and escapes.
+  L39: Restoring power to the electrical fuse box automatically opens the central elevator doors, allowing the player to escape.
+  L40: The player retrieves a hammer from the altar. (Note: The video abruptly cuts to footage from another level at this point, so the final escape interaction is not shown).
+  L41: The player removes the metal vent cover using the screwdriver and crawls into the ventilation shaft to escape the room.
+  L42: The player places the assembled golden pyramid on the pedestal, which reveals a compartment containing a Golden Eye token. This token is inserted into the main door mechanism to unlock it.
+  L43: After completing the gear puzzle, the main heavy metal door in the center of the room opens, allowing the player to escape.
+  L44: The player uses the key found under the symbol plate to unlock the heavy wooden door hidden in the back wall and escape.
+  L45: The player takes the key revealed inside the white table structure and uses it to unlock the modern glass door to escape.
+  L46: Using the acquired key to unlock the main door and escape the classroom.
+  L47: Using the rope combined with another item (likely a hook) to climb up and out of the cave.
+  L48: Using the final key obtained from the puzzles to unlock the main door.
+  L49: Using the key obtained to unlock the exit door.
+  L50: Completing the final puzzle sequence unlocks the ornate double doors, allowing escape from the final level.
+
+============================================================
+PUZZLE REWARD CATEGORIES
+============================================================
+  Key: 39 occurrences
+  Code/Number: 22 occurrences
+  Visual Clue/Reveal: 20 occurrences
+  Unlocks Something: 20 occurrences
+  Token/Emblem: 10 occurrences
+  Tool: 5 occurrences
+
+============================================================
+PUZZLE SOLUTION STEP KEYWORDS (frequency analysis)
+============================================================
+  'use': appears in 42 puzzles
+  'find': appears in 39 puzzles
+  'color': appears in 33 puzzles
+  'enter': appears in 32 puzzles
+  'key': appears in 30 puzzles
+  'code': appears in 30 puzzles
+  'number': appears in 28 puzzles
+  'sequence': appears in 24 puzzles
+  'match': appears in 23 puzzles
+  'observe': appears in 21 puzzles
+  'open': appears in 19 puzzles
+  'place': appears in 14 puzzles
+  'pattern': appears in 13 puzzles
+  'symbol': appears in 13 puzzles
+  'puzzle': appears in 13 puzzles
+  'examine': appears in 12 puzzles
+  'grid': appears in 12 puzzles
+  'insert': appears in 11 puzzles
+  'combine': appears in 10 puzzles
+  'count': appears in 9 puzzles
+  'dial': appears in 8 puzzles
+  'slide': appears in 8 puzzles
+  'tap': appears in 7 puzzles
+  'rotate': appears in 7 puzzles
+  'unlock': appears in 6 puzzles
+  'cut': appears in 6 puzzles
+  'press': appears in 6 puzzles
+  'align': appears in 5 puzzles
+  'peg': appears in 4 puzzles
+  'wire': appears in 4 puzzles
+  'swap': appears in 3 puzzles
+  'connect': appears in 3 puzzles
+  'pipe': appears in 3 puzzles
+  'jump': appears in 3 puzzles
+  'jigsaw': appears in 2 puzzles
+  'circuit': appears in 2 puzzles
+  'arrange': appears in 2 puzzles
+  'memory': appears in 1 puzzles
+
+============================================================
+TOTAL STATS
+============================================================
+  Total Rooms: 50
+  Total Puzzles: 159
+  Total Key Moments: 490
+  Avg Puzzles/Room: 3.2
+  Avg Key Moments/Room: 9.8

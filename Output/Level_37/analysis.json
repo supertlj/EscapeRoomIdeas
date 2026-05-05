@@ -1,0 +1,92 @@
+{
+  "level": 37,
+  "room_description": "The interior of a sunken red car underwater. The player looks out through a cracked windshield into the ocean, with the dashboard, steering wheel, and leather seats visible.",
+  "key_moments": [
+    {
+      "description": "Establishing shot from the driver's seat of the sunken car.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_from_the_driver_s_seat_of_the_sunken_car_.jpg"
+    },
+    {
+      "description": "Looks at the back seat and finds '689241' pressed into the leather.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Looks_at_the_back_seat_and_finds__689241__pressed_into_the_leather_.jpg"
+    },
+    {
+      "description": "Presses a button to pop open the glovebox, finding a grid clue on paper.",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Presses_a_button_to_pop_open_the_glovebox__finding_a_grid_clue_on_paper_.jpg"
+    },
+    {
+      "description": "Enters '689241' into the password prompt on the center console screen.",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Console_Password.jpg"
+    },
+    {
+      "description": "Collects a gold disc from the dashboard near the cracked windshield.",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Collects_a_gold_disc_from_the_dashboard_near_the_cracked_windshield_.jpg"
+    },
+    {
+      "description": "A 3x3 grid puzzle of yellow and blue triangles appears on the screen.",
+      "timestamp_seconds": 42.0,
+      "screenshot_path": "Screenshots/042.0s_A_3x3_grid_puzzle_of_yellow_and_blue_triangles_appears_on_the_screen_.jpg"
+    },
+    {
+      "description": "Successfully matches the grid puzzle pattern to the glovebox clue.",
+      "timestamp_seconds": 72.0,
+      "screenshot_path": "Screenshots/072.0s_Triangle_Grid_Game.jpg"
+    },
+    {
+      "description": "A secret panel slides down, revealing an arrow button puzzle.",
+      "timestamp_seconds": 76.0,
+      "screenshot_path": "Screenshots/076.0s_A_secret_panel_slides_down__revealing_an_arrow_button_puzzle_.jpg"
+    },
+    {
+      "description": "Solves the jumping arrow puzzle and collects a metal hammer.",
+      "timestamp_seconds": 100.0,
+      "screenshot_path": "Screenshots/100.0s_Arrow_Peg_Puzzle.jpg"
+    },
+    {
+      "description": "Uses the hammer to violently smash the cracked windshield.",
+      "timestamp_seconds": 105.0,
+      "screenshot_path": "Screenshots/105.0s_Uses_the_hammer_to_violently_smash_the_cracked_windshield_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Console Password",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the red leather back seat to find the indented numbers '689241'.",
+        "Type this exact sequence into the digital keypad on the center console screen."
+      ],
+      "reward": "Unlocks the screen to reveal a grid puzzle",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Console_Password.jpg"
+    },
+    {
+      "puzzle_name": "Triangle Grid Game",
+      "items_used": [],
+      "solution_steps": [
+        "Look at the paper clue from the glovebox showing a grid with a key icon.",
+        "Tap the squares on the digital 3x3 grid to change their colors (Lights Out style mechanics) until the correct pattern is formed."
+      ],
+      "reward": "Reveals a hidden panel under the steering wheel",
+      "timestamp_seconds": 72.0,
+      "screenshot_path": "Screenshots/072.0s_Triangle_Grid_Game.jpg"
+    },
+    {
+      "puzzle_name": "Arrow Peg Puzzle",
+      "items_used": [],
+      "solution_steps": [
+        "Play the peg solitaire mini-game on the hidden panel.",
+        "Jump the green up-arrows over the blue down-arrows until all green arrows are at the top and blue arrows are at the bottom."
+      ],
+      "reward": "A metal hammer",
+      "timestamp_seconds": 100.0,
+      "screenshot_path": "Screenshots/100.0s_Arrow_Peg_Puzzle.jpg"
+    }
+  ],
+  "final_action": "Takes the hammer and repeatedly strikes the cracked windshield until it shatters, allowing the player to swim out and escape."
+}

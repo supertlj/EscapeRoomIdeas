@@ -1,0 +1,95 @@
+{
+  "level": 20,
+  "room_description": "A vibrant, futuristic robot or toy factory room filled with various robotic figures, colorful building blocks, digital monitors, and metal paneling.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the colorful robot room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_colorful_robot_room_.jpg"
+    },
+    {
+      "description": "Finds a green number '7' printed on the back of a black monitor.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Finds_a_green_number__7__printed_on_the_back_of_a_black_monitor_.jpg"
+    },
+    {
+      "description": "Inspects a 3x3 circular grid on a white wall panel.",
+      "timestamp_seconds": 4.5,
+      "screenshot_path": "Screenshots/004.5s_Inspects_a_3x3_circular_grid_on_a_white_wall_panel_.jpg"
+    },
+    {
+      "description": "Finds a purple number '5' on the chest of a grey plush robot.",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_Finds_a_purple_number__5__on_the_chest_of_a_grey_plush_robot_.jpg"
+    },
+    {
+      "description": "Presses 'play' on the central white monitor to start a sequence.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Presses__play__on_the_central_white_monitor_to_start_a_sequence_.jpg"
+    },
+    {
+      "description": "Watches the three TV-head robots perform a randomized color sequence.",
+      "timestamp_seconds": 45.0,
+      "screenshot_path": "Screenshots/045.0s_Watches_the_three_TV_head_robots_perform_a_randomized_color_sequence_.jpg"
+    },
+    {
+      "description": "Inputs the memorized color sequence into the 3x3 wall grid.",
+      "timestamp_seconds": 103.0,
+      "screenshot_path": "Screenshots/103.0s_TV_Colors_Grid.jpg"
+    },
+    {
+      "description": "Collects a metal crowbar from the opened wall panel.",
+      "timestamp_seconds": 131.0,
+      "screenshot_path": "Screenshots/131.0s_Collects_a_metal_crowbar_from_the_opened_wall_panel_.jpg"
+    },
+    {
+      "description": "Uses the crowbar to pry off a metal plate on the wall, revealing a keypad.",
+      "timestamp_seconds": 134.0,
+      "screenshot_path": "Screenshots/134.0s_Uses_the_crowbar_to_pry_off_a_metal_plate_on_the_wall__revealing_a_keypad_.jpg"
+    },
+    {
+      "description": "Enters the numerical code '953' into the robot keypad.",
+      "timestamp_seconds": 155.0,
+      "screenshot_path": "Screenshots/155.0s_Enters_the_numerical_code__953__into_the_robot_keypad_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Robot Emotion Match",
+      "items_used": [],
+      "solution_steps": [
+        "Press play on the monitor and observe the sequence of face emojis.",
+        "Change the faces on the row of red robots to match the monitor's sequence."
+      ],
+      "reward": "Triggers the TV robots sequence",
+      "timestamp_seconds": 37.0,
+      "screenshot_path": "Screenshots/037.0s_Robot_Emotion_Match.jpg"
+    },
+    {
+      "puzzle_name": "TV Colors Grid",
+      "items_used": [],
+      "solution_steps": [
+        "Watch the three TV-head robots flash different colors.",
+        "Go to the 3x3 wall panel and input the corresponding colors in the correct order."
+      ],
+      "reward": "Metal crowbar",
+      "timestamp_seconds": 103.0,
+      "screenshot_path": "Screenshots/103.0s_TV_Colors_Grid.jpg"
+    },
+    {
+      "puzzle_name": "Hidden Numbers Keypad",
+      "items_used": [
+        "Metal crowbar"
+      ],
+      "solution_steps": [
+        "Pry off the metal plate using the crowbar.",
+        "Find the hidden numbers associated with three specific robots around the room (White/Grey = 9, Blue = 5, Red = 3).",
+        "Enter the code '953' into the keypad."
+      ],
+      "reward": "Unlocks the main door",
+      "timestamp_seconds": 150.0,
+      "screenshot_path": "Screenshots/150.0s_Hidden_Numbers_Keypad.jpg"
+    }
+  ],
+  "final_action": "Entering the final correct code into the wall keypad automatically unlocks the main door, allowing escape."
+}

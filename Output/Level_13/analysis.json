@@ -1,0 +1,100 @@
+{
+  "level": 13,
+  "room_description": "A spacious apartment featuring a living room with a white sofa, black coffee table, and TV console, separated by a sliding door from a dining area with a table and wine bucket.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the living and dining area.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_living_and_dining_area_.jpg"
+    },
+    {
+      "description": "Collecting a pair of wire cutters from under the TV console.",
+      "timestamp_seconds": 5.5,
+      "screenshot_path": "Screenshots/005.5s_Collecting_a_pair_of_wire_cutters_from_under_the_TV_console_.jpg"
+    },
+    {
+      "description": "Collecting a corkscrew from the upper drawer of the dining cabinet.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Collecting_a_corkscrew_from_the_upper_drawer_of_the_dining_cabinet_.jpg"
+    },
+    {
+      "description": "Using the cutters to snip the padlock on the black chest.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Using_the_cutters_to_snip_the_padlock_on_the_black_chest_.jpg"
+    },
+    {
+      "description": "Opening the hidden wall compartment behind the picture frame to get a key.",
+      "timestamp_seconds": 29.5,
+      "screenshot_path": "Screenshots/029.5s_Opening_the_hidden_wall_compartment_behind_the_picture_frame_to_get_a_key_.jpg"
+    },
+    {
+      "description": "Using the key to unlock the sliding door, accessing the dining table.",
+      "timestamp_seconds": 32.0,
+      "screenshot_path": "Screenshots/032.0s_Using_the_key_to_unlock_the_sliding_door__accessing_the_dining_table_.jpg"
+    },
+    {
+      "description": "Using the corkscrew to open the wine bottle and extract a paper clue.",
+      "timestamp_seconds": 40.0,
+      "screenshot_path": "Screenshots/040.0s_Using_the_corkscrew_to_open_the_wine_bottle_and_extract_a_paper_clue_.jpg"
+    },
+    {
+      "description": "Unrolling the wine bottle paper to reveal the number '1462'.",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Message_in_a_Bottle.jpg"
+    },
+    {
+      "description": "Entering the mathematical sum into the TV console keypad.",
+      "timestamp_seconds": 59.5,
+      "screenshot_path": "Screenshots/059.5s_Console_Keypad_Sum.jpg"
+    },
+    {
+      "description": "Using the keycard to unlock the final exit door.",
+      "timestamp_seconds": 103.5,
+      "screenshot_path": "Screenshots/103.5s_Using_the_keycard_to_unlock_the_final_exit_door_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "First Half of the Equation",
+      "items_used": [
+        "Wire Cutters"
+      ],
+      "solution_steps": [
+        "Find the wire cutters under the TV stand.",
+        "Use them to cut the metal lock on the black chest.",
+        "Open the chest and unroll the paper."
+      ],
+      "reward": "Clue '4325 +'",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_First_Half_of_the_Equation.jpg"
+    },
+    {
+      "puzzle_name": "Message in a Bottle",
+      "items_used": [
+        "Corkscrew",
+        "Silver Key"
+      ],
+      "solution_steps": [
+        "Find the silver key behind the wall painting.",
+        "Use the key to open the sliding door to the dining area.",
+        "Use the corkscrew (from the cabinet) to open the wine bottle in the ice bucket."
+      ],
+      "reward": "Clue '1462'",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Message_in_a_Bottle.jpg"
+    },
+    {
+      "puzzle_name": "Console Keypad Sum",
+      "items_used": [],
+      "solution_steps": [
+        "Combine the clues to form an equation: 4325 + 1462.",
+        "Calculate the sum (5787).",
+        "Enter '5787' into the digital keypad on the TV console drawer."
+      ],
+      "reward": "Blue Keycard",
+      "timestamp_seconds": 59.5,
+      "screenshot_path": "Screenshots/059.5s_Console_Keypad_Sum.jpg"
+    }
+  ],
+  "final_action": "The player takes the blue keycard from the console drawer and inserts it into the electronic lock of the main door to escape."
+}

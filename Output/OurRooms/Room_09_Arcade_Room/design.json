@@ -1,0 +1,312 @@
+{
+  "room_number": 9,
+  "room_name": {
+    "en": "The Arcade Room",
+    "zh": "游戏厅"
+  },
+  "hotel_area": {
+    "en": "Arcade",
+    "zh": "游戏厅"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A retro arcade room bathed in neon purple and teal light. Five classic arcade cabinets line the walls, their screens flickering with attract modes. A prize counter sits in the corner with dusty stuffed animals and a token dispenser. The carpet is a wild pattern of stars and lightning bolts. A locked prize cabinet behind the counter contains a gleaming brass key.",
+    "zh": "一间复古游戏厅，沐浴在霓虹紫色和青色灯光中。五台经典街机沿墙排列，屏幕闪烁着演示画面。角落里有一个奖品柜台，上面摆着落满灰尘的毛绒玩具和代币分发器。地毯上有疯狂的星星和闪电图案。柜台后面锁着的奖品柜里有一把闪亮的黄铜钥匙。"
+  },
+  "story_fragment": {
+    "en": "Every arcade machine's high score board shows the same initials at #1: 'E.V.G.' — scores impossibly high, as if someone spent thousands of hours here alone. The token dispenser has a small plaque: 'Compliments of the Management — Play forever.' This was Edmund's private playground.",
+    "zh": "每台街机的最高分排行榜第一名都显示相同的缩写：'E.V.G.'——分数高得不可思议，仿佛有人独自在这里花了几千个小时。代币分发器上有一块小铭牌：'管理层敬赠——尽情畅玩。'这是埃德蒙的私人游乐场。"
+  },
+  "estimated_solve_time_minutes": 3,
+  "items": [
+    {
+      "id": "arcade_tokens",
+      "name": {
+        "en": "Arcade Tokens",
+        "zh": "游戏代币"
+      }
+    },
+    {
+      "id": "prize_cabinet_code",
+      "name": {
+        "en": "Prize Cabinet Code",
+        "zh": "奖品柜密码"
+      }
+    },
+    {
+      "id": "brass_corridor_key",
+      "name": {
+        "en": "Brass Corridor Key",
+        "zh": "黄铜走廊钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Cabinet Light Show",
+        "zh": "街机灯光秀"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "simon_says_memory",
+      "twist_applied": "T11_environmental_simon",
+      "items_used": [],
+      "clue_source": {
+        "en": "A note taped to the token dispenser reads: 'To unlock the tokens — watch the machines. They remember the order.' Every 30 seconds, the five arcade cabinets flash their marquee lights in a specific sequence.",
+        "zh": "代币分发器上贴着一张纸条：'要解锁代币——看机器。它们记住了顺序。'每30秒，五台街机按特定顺序闪烁其顶部灯光。"
+      },
+      "solution_steps": [
+        {
+          "en": "Watch the five arcade cabinets. Their top marquee lights flash in sequence: Machine 3, Machine 1, Machine 5, Machine 2, Machine 4.",
+          "zh": "观察五台街机。它们的顶部灯光按顺序闪烁：3号机、1号机、5号机、2号机、4号机。"
+        },
+        {
+          "en": "Press the START button on each machine in the same order: 3, 1, 5, 2, 4.",
+          "zh": "按相同顺序按下每台机器的START按钮：3、1、5、2、4。"
+        },
+        {
+          "en": "The token dispenser activates and drops a handful of tokens.",
+          "zh": "代币分发器启动，掉落一把代币。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The note says to 'watch the machines.' Stand still and wait — something will happen.",
+          "zh": "纸条说'看机器。'站着不动等待——会有事情发生。"
+        },
+        {
+          "en": "The machines flash in a specific order. Remember the sequence and press their START buttons in the same order.",
+          "zh": "机器按特定顺序闪烁。记住顺序，按相同顺序按下它们的START按钮。"
+        },
+        {
+          "en": "Sequence: Machine 3 → 1 → 5 → 2 → 4. Press START on each in that order.",
+          "zh": "顺序：3号机→1号机→5号机→2号机→4号机。按该顺序按下每台的START按钮。"
+        }
+      ],
+      "reward": {
+        "en": "Arcade Tokens",
+        "zh": "游戏代币"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 33 (color panel memory game)",
+        "Level 50 (bell striking sequence)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "High Score Harvest",
+        "zh": "最高分收集"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": null,
+      "items_used": [
+        "arcade_tokens"
+      ],
+      "clue_source": {
+        "en": "With tokens, you can play each machine once. Each machine's game over screen briefly shows a single large digit before returning to attract mode. A sign above the prize counter says: 'Redeem your score! Enter your 5-digit total to claim your prize.'",
+        "zh": "有了代币，你可以每台机器玩一次。每台机器的游戏结束画面会短暂显示一个大数字，然后回到演示模式。奖品柜台上方的标识写着：'兑换你的分数！输入5位数总分领取奖品。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Insert a token into each of the 5 machines and play briefly.",
+          "zh": "在5台机器中各投入一枚代币并短暂游玩。"
+        },
+        {
+          "en": "Each game over screen flashes a single digit: Machine 1=6, Machine 2=0, Machine 3=3, Machine 4=9, Machine 5=7.",
+          "zh": "每台机器的游戏结束画面闪烁一个数字：1号机=6，2号机=0，3号机=3，4号机=9，5号机=7。"
+        },
+        {
+          "en": "Read the digits in machine order (1-5): 6-0-3-9-7.",
+          "zh": "按机器编号（1-5）读取数字：6-0-3-9-7。"
+        },
+        {
+          "en": "Enter '60397' into the prize counter keypad.",
+          "zh": "在奖品柜台键盘上输入'60397'。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Use a token on each machine. Pay attention to what the screen shows when the game ends.",
+          "zh": "在每台机器上使用一枚代币。注意游戏结束时屏幕显示什么。"
+        },
+        {
+          "en": "Each machine shows a single digit at game over. Read them in order from Machine 1 to 5.",
+          "zh": "每台机器在游戏结束时显示一个数字。按1号到5号机的顺序读取。"
+        },
+        {
+          "en": "Digits: 6, 0, 3, 9, 7. Enter '60397' on the prize counter keypad.",
+          "zh": "数字：6、0、3、9、7。在奖品柜台键盘上输入'60397'。"
+        }
+      ],
+      "reward": {
+        "en": "Opens the prize cabinet, revealing a stuffed bear with a tag reading 'Insert 3 tokens: Star, Moon, Lightning — in carpet order'",
+        "zh": "打开奖品柜，露出一只毛绒熊，标签上写着'投入3枚代币：星星、月亮、闪电——按地毯顺序'"
+      },
+      "depends_on": "Cabinet Light Show",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 21 (notification code)",
+        "Level 31 (laptop sum)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Carpet Code Slots",
+        "zh": "地毯密码投币"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "token_emblem_placement",
+      "twist_applied": null,
+      "items_used": [
+        "arcade_tokens"
+      ],
+      "clue_source": {
+        "en": "The stuffed bear's tag says 'Insert 3 tokens: Star, Moon, Lightning — in carpet order.' The wild carpet pattern has these symbols woven in a specific left-to-right sequence. A brass token slot panel is built into the side of the prize counter with three shaped slots.",
+        "zh": "毛绒熊的标签写着'投入3枚代币：星星、月亮、闪电——按地毯顺序。'疯狂的地毯图案中按特定的从左到右顺序编织着这些符号。奖品柜台侧面内嵌着一个黄铜代币投入面板，有三个不同形状的槽位。"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the stuffed bear's tag: 'Star, Moon, Lightning — in carpet order.'",
+          "zh": "阅读毛绒熊的标签：'星星、月亮、闪电——按地毯顺序。'"
+        },
+        {
+          "en": "Examine the carpet pattern from left to right. The symbols appear in order: Lightning, Star, Moon.",
+          "zh": "从左到右检查地毯图案。符号按顺序出现：闪电、星星、月亮。"
+        },
+        {
+          "en": "Find the three shaped tokens among your arcade tokens (they have different stamp marks).",
+          "zh": "在你的游戏代币中找到三枚不同形状的代币（它们有不同的印记）。"
+        },
+        {
+          "en": "Insert them into the brass panel in carpet order: Lightning slot first, then Star, then Moon.",
+          "zh": "按地毯顺序插入黄铜面板：先闪电槽，再星星槽，最后月亮槽。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The bear's tag mentions a 'carpet order.' Look down — the carpet has symbols in it.",
+          "zh": "熊的标签提到'地毯顺序。'往下看——地毯上有符号。"
+        },
+        {
+          "en": "Read the carpet symbols from left to right. That's the order for the token slots.",
+          "zh": "从左到右读地毯上的符号。那就是代币槽的顺序。"
+        },
+        {
+          "en": "Carpet order is: Lightning, Star, Moon. Insert shaped tokens in that sequence.",
+          "zh": "地毯顺序是：闪电、星星、月亮。按该顺序插入不同形状的代币。"
+        }
+      ],
+      "reward": {
+        "en": "Brass Corridor Key drops from the panel",
+        "zh": "黄铜走廊钥匙从面板中掉出"
+      },
+      "depends_on": "High Score Harvest",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 22 (token geometric lock)",
+        "Level 30 (animal tile wall)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Take the brass key from the prize cabinet. It unlocks the staff door beside the prize counter, opening into a corridor where the faint sound of music drifts from the hotel's piano lounge.",
+    "zh": "从奖品柜中取出黄铜钥匙。它打开了奖品柜台旁边的员工门，通向一条走廊，酒店钢琴休息室隐隐传来音乐声。"
+  },
+  "escape_mechanism": "key",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "arcade_cabinets",
+      "name": {
+        "en": "5 Arcade Cabinets",
+        "zh": "5台街机"
+      },
+      "states": [
+        "attract_mode",
+        "flashing_sequence",
+        "playing",
+        "game_over_digit"
+      ],
+      "trigger_puzzle": "Cabinet Light Show",
+      "z_layer": 2
+    },
+    {
+      "id": "token_dispenser",
+      "name": {
+        "en": "Token Dispenser",
+        "zh": "代币分发器"
+      },
+      "states": [
+        "locked",
+        "dispensing",
+        "empty"
+      ],
+      "trigger_puzzle": "Cabinet Light Show",
+      "z_layer": 3
+    },
+    {
+      "id": "prize_counter_keypad",
+      "name": {
+        "en": "Prize Counter Keypad",
+        "zh": "奖品柜台键盘"
+      },
+      "states": [
+        "idle",
+        "code_entered"
+      ],
+      "trigger_puzzle": "High Score Harvest",
+      "z_layer": 3
+    },
+    {
+      "id": "prize_cabinet",
+      "name": {
+        "en": "Prize Cabinet",
+        "zh": "奖品柜"
+      },
+      "states": [
+        "locked",
+        "open_bear_visible"
+      ],
+      "trigger_puzzle": "High Score Harvest",
+      "z_layer": 2
+    },
+    {
+      "id": "carpet_symbols",
+      "name": {
+        "en": "Carpet Symbols",
+        "zh": "地毯符号"
+      },
+      "states": [
+        "idle",
+        "highlighted"
+      ],
+      "trigger_puzzle": "Carpet Code Slots",
+      "z_layer": 1
+    },
+    {
+      "id": "token_slot_panel",
+      "name": {
+        "en": "Token Slot Panel",
+        "zh": "代币投入面板"
+      },
+      "states": [
+        "empty",
+        "tokens_inserted",
+        "key_dropped"
+      ],
+      "trigger_puzzle": "Carpet Code Slots",
+      "z_layer": 3
+    }
+  ]
+}

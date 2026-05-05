@@ -1,0 +1,110 @@
+{
+  "level": 23,
+  "room_description": "A classic study with dark wood paneling, a floral sofa, a coffee table with a newspaper and tea set, and a kitchen counter area on the right.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the study.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_study_.jpg"
+    },
+    {
+      "description": "Opening the kitchen drawer to find a green hand pump.",
+      "timestamp_seconds": 4.5,
+      "screenshot_path": "Screenshots/004.5s_Opening_the_kitchen_drawer_to_find_a_green_hand_pump_.jpg"
+    },
+    {
+      "description": "Finding an orange combination box on the floor.",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Finding_an_orange_combination_box_on_the_floor_.jpg"
+    },
+    {
+      "description": "Lifting the sofa cushions to find a red/blue magnet.",
+      "timestamp_seconds": 14.5,
+      "screenshot_path": "Screenshots/014.5s_Lifting_the_sofa_cushions_to_find_a_red_blue_magnet_.jpg"
+    },
+    {
+      "description": "Using the hand pump to inflate the deflated basketball.",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Using_the_hand_pump_to_inflate_the_deflated_basketball_.jpg"
+    },
+    {
+      "description": "Observing the color-coded star pattern on the inflated ball.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Basketball_Inflation.jpg"
+    },
+    {
+      "description": "Using the magnet to fish a metal item out of the bean barrel.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Magnetic_Retrieval.jpg"
+    },
+    {
+      "description": "Pouring a cup of coffee to reveal the code '7164'.",
+      "timestamp_seconds": 69.5,
+      "screenshot_path": "Screenshots/069.5s_The_Coffee_Clue.jpg"
+    },
+    {
+      "description": "Entering '7162' (calculated) into the orange box.",
+      "timestamp_seconds": 120.5,
+      "screenshot_path": "Screenshots/120.5s_Entering__7162___calculated__into_the_orange_box_.jpg"
+    },
+    {
+      "description": "Solving the fruit-clicking puzzle to get the final key.",
+      "timestamp_seconds": 149.0,
+      "screenshot_path": "Screenshots/149.0s_Fruit_Plate_Elimination.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Basketball Inflation",
+      "items_used": [
+        "Hand Pump"
+      ],
+      "solution_steps": [
+        "Retrieve the green pump from the kitchen drawer.",
+        "Use the pump on the flat basketball on the rug.",
+        "Identify the color sequence: Red, Yellow, Blue, White."
+      ],
+      "reward": "Color Clue",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Basketball_Inflation.jpg"
+    },
+    {
+      "puzzle_name": "Magnetic Retrieval",
+      "items_used": [
+        "Magnet"
+      ],
+      "solution_steps": [
+        "Find the magnet under the sofa pillow.",
+        "Use the magnet on the large wooden barrel filled with beans.",
+        "Pull out the small metal handle."
+      ],
+      "reward": "Small Handle",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Magnetic_Retrieval.jpg"
+    },
+    {
+      "puzzle_name": "The Coffee Clue",
+      "items_used": [],
+      "solution_steps": [
+        "Interact with the coffee pot on the counter.",
+        "Pour the coffee into the empty white mug.",
+        "The bottom of the mug reveals the code '7164'."
+      ],
+      "reward": "Numeric code '7164'",
+      "timestamp_seconds": 69.5,
+      "screenshot_path": "Screenshots/069.5s_The_Coffee_Clue.jpg"
+    },
+    {
+      "puzzle_name": "Fruit Plate Elimination",
+      "items_used": [],
+      "solution_steps": [
+        "Enter the code '7162' into the orange chest on the floor.",
+        "In the mini-game, click the fruits one by one to make them disappear until only the key remains."
+      ],
+      "reward": "Silver Exit Key",
+      "timestamp_seconds": 149.0,
+      "screenshot_path": "Screenshots/149.0s_Fruit_Plate_Elimination.jpg"
+    }
+  ],
+  "final_action": "The player takes the silver key from the fruit plate and uses it to unlock the center door and escape."
+}

@@ -1,0 +1,86 @@
+{
+  "level": 26,
+  "room_description": "A luxury master bedroom featuring a large bed, fireplace, mounted deer head, and several pieces of white ornate furniture.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the luxury bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_luxury_bedroom_.jpg"
+    },
+    {
+      "description": "Inspecting the pillows on the left side of the bed to find a gold coin.",
+      "timestamp_seconds": 1.5,
+      "screenshot_path": "Screenshots/001.5s_Inspecting_the_pillows_on_the_left_side_of_the_bed_to_find_a_gold_coin_.jpg"
+    },
+    {
+      "description": "Checking under the pillows on the right side of the bed.",
+      "timestamp_seconds": 5.0,
+      "screenshot_path": "Screenshots/005.0s_Checking_under_the_pillows_on_the_right_side_of_the_bed_.jpg"
+    },
+    {
+      "description": "Examining the mounted deer head with colored dots on its neck.",
+      "timestamp_seconds": 10.5,
+      "screenshot_path": "Screenshots/010.5s_Examining_the_mounted_deer_head_with_colored_dots_on_its_neck_.jpg"
+    },
+    {
+      "description": "Opening the bottom drawer of the long white sideboard.",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Opening_the_bottom_drawer_of_the_long_white_sideboard_.jpg"
+    },
+    {
+      "description": "Retrieving a metal rod from the ice bucket containing a wine bottle.",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Retrieving_a_metal_rod_from_the_ice_bucket_containing_a_wine_bottle_.jpg"
+    },
+    {
+      "description": "Unlocking a small ornate chest inside a desk drawer to find a scroll.",
+      "timestamp_seconds": 27.0,
+      "screenshot_path": "Screenshots/027.0s_Unlocking_a_small_ornate_chest_inside_a_desk_drawer_to_find_a_scroll_.jpg"
+    },
+    {
+      "description": "Using a coin to reveal a hidden compartment behind a portrait.",
+      "timestamp_seconds": 44.5,
+      "screenshot_path": "Screenshots/044.5s_Using_a_coin_to_reveal_a_hidden_compartment_behind_a_portrait_.jpg"
+    },
+    {
+      "description": "Viewing a color-coded number clue on a piece of paper: 2694.",
+      "timestamp_seconds": 49.0,
+      "screenshot_path": "Screenshots/049.0s_Viewing_a_color_coded_number_clue_on_a_piece_of_paper__2694_.jpg"
+    },
+    {
+      "description": "Entering a 4-digit code into a wall-mounted keypad.",
+      "timestamp_seconds": 53.5,
+      "screenshot_path": "Screenshots/053.5s_Entering_a_4_digit_code_into_a_wall_mounted_keypad_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Colored Deer Sequence",
+      "items_used": [
+        "Metal rod"
+      ],
+      "solution_steps": [
+        "Observe the color sequence on the deer head's neck (White, White, Yellow, White).",
+        "Use the metal rod to poke the fireplace screen in a specific spot to release a mechanism."
+      ],
+      "reward": "Small key",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Colored_Deer_Sequence.jpg"
+    },
+    {
+      "puzzle_name": "Color-Coded Keypad",
+      "items_used": [
+        "Color clue scroll"
+      ],
+      "solution_steps": [
+        "Find the scroll showing 2 (Blue), 6 (Green), 9 (Red), 4 (Yellow).",
+        "Correlate the numbers with the dot colors on the deer head or portraits.",
+        "Input the resulting sequence 9426 (based on room clues) into the keypad."
+      ],
+      "reward": "A blue keycard",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Color_Coded_Keypad.jpg"
+    }
+  ],
+  "final_action": "Using the blue keycard on the electronic lock next to the exit door."
+}

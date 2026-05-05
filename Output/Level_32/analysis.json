@@ -1,0 +1,105 @@
+{
+  "level": 32,
+  "room_description": "A children's room with exposed brick walls, a torn wall mural revealing a hidden figure, two large pumpkin-shaped beanbag chairs, a small TV, a pink dresser, and a bed adorned with plush bunnies.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the children's room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_children_s_room_.jpg"
+    },
+    {
+      "description": "Moving the green frog plushie to find a battery.",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Moving_the_green_frog_plushie_to_find_a_battery_.jpg"
+    },
+    {
+      "description": "Collecting a magnet piece from the wooden blocks shelf.",
+      "timestamp_seconds": 5.0,
+      "screenshot_path": "Screenshots/005.0s_Collecting_a_magnet_piece_from_the_wooden_blocks_shelf_.jpg"
+    },
+    {
+      "description": "Inserting the battery into the TV remote to turn on the screen.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Powering_the_TV.jpg"
+    },
+    {
+      "description": "Using the magnet on the wall mural to find a key hidden behind the tear.",
+      "timestamp_seconds": 14.5,
+      "screenshot_path": "Screenshots/014.5s_Magnetic_Retrieval.jpg"
+    },
+    {
+      "description": "Observing the numbered bunny plushies on the bed.",
+      "timestamp_seconds": 23.5,
+      "screenshot_path": "Screenshots/023.5s_Observing_the_numbered_bunny_plushies_on_the_bed_.jpg"
+    },
+    {
+      "description": "Opening the pink dresser to find a piece of paper with symbols.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Dresser_Code.jpg"
+    },
+    {
+      "description": "Aligning the symbol pattern on the wall panel.",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Symbol_Panel_Match.jpg"
+    },
+    {
+      "description": "Entering the '8659' code into the final chest.",
+      "timestamp_seconds": 50.0,
+      "screenshot_path": "Screenshots/050.0s_Entering_the__8659__code_into_the_final_chest_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Powering the TV",
+      "items_used": [
+        "Battery"
+      ],
+      "solution_steps": [
+        "Find the battery under the green frog plushie on the beanbag chair.",
+        "Insert it into the TV remote to turn the TV on."
+      ],
+      "reward": "Reveals a visual clue on the TV screen",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Powering_the_TV.jpg"
+    },
+    {
+      "puzzle_name": "Magnetic Retrieval",
+      "items_used": [
+        "Magnet"
+      ],
+      "solution_steps": [
+        "Find the U-shaped magnet on the shelf with the letter blocks.",
+        "Use the magnet near the torn section of the wall mural to pull out a hidden silver key."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 14.5,
+      "screenshot_path": "Screenshots/014.5s_Magnetic_Retrieval.jpg"
+    },
+    {
+      "puzzle_name": "Dresser Code",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the numbers written in red on the four white bunny plushies on the bed: 2, 4, 3, 1.",
+        "Input the sequence '2431' into the digital lock on the pink dresser."
+      ],
+      "reward": "Paper Clue with Symbols",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Dresser_Code.jpg"
+    },
+    {
+      "puzzle_name": "Symbol Panel Match",
+      "items_used": [
+        "Silver Key",
+        "Paper Clue"
+      ],
+      "solution_steps": [
+        "Use the silver key to unlock the wall panel.",
+        "Adjust the slider positions to match the symbol pattern shown on the paper clue found in the dresser."
+      ],
+      "reward": "Code '8659'",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Symbol_Panel_Match.jpg"
+    }
+  ],
+  "final_action": "The player inputs the code '8659' into the chest to retrieve the exit key and unlock the main door."
+}

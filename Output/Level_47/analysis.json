@@ -1,0 +1,86 @@
+{
+  "level": 47,
+  "room_description": "A dark, mysterious underground cave with glowing green moss, a pool of water, and strange carvings on the walls.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the dark cave environment.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_dark_cave_environment_.jpg"
+    },
+    {
+      "description": "Finding a beetle on a mossy rock.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Finding_a_beetle_on_a_mossy_rock_.jpg"
+    },
+    {
+      "description": "Inspecting a small pool of glowing water.",
+      "timestamp_seconds": 5.0,
+      "screenshot_path": "Screenshots/005.0s_Inspecting_a_small_pool_of_glowing_water_.jpg"
+    },
+    {
+      "description": "Using a knife to scrape fungus off a rock.",
+      "timestamp_seconds": 14.0,
+      "screenshot_path": "Screenshots/014.0s_Using_a_knife_to_scrape_fungus_off_a_rock_.jpg"
+    },
+    {
+      "description": "Examining a piece of cloth with red symbols (a pickaxe and numbers).",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Examining_a_piece_of_cloth_with_red_symbols__a_pickaxe_and_numbers__.jpg"
+    },
+    {
+      "description": "Entering symbols into a lock on a wooden box.",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Cloth_Symbol_Box.jpg"
+    },
+    {
+      "description": "Finding a coil of rope inside the opened box.",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Finding_a_coil_of_rope_inside_the_opened_box_.jpg"
+    },
+    {
+      "description": "Looking at an analog clock with colored hands.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Clock_Color_Code.jpg"
+    },
+    {
+      "description": "Combining items in the inventory.",
+      "timestamp_seconds": 56.5,
+      "screenshot_path": "Screenshots/056.5s_Combining_items_in_the_inventory_.jpg"
+    },
+    {
+      "description": "Using the rope to climb out.",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Using_the_rope_to_climb_out_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Clock Color Code",
+      "items_used": [
+        "Piece of paper with colored lines"
+      ],
+      "solution_steps": [
+        "Find the paper showing a yellow, purple, blue, and red line intersecting.",
+        "Look at the clock on the wall and note the numbers each colored hand points to.",
+        "Enter the corresponding code (9246) into the lock."
+      ],
+      "reward": "Unlocks a panel/compartment",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Clock_Color_Code.jpg"
+    },
+    {
+      "puzzle_name": "Cloth Symbol Box",
+      "items_used": [
+        "Piece of cloth"
+      ],
+      "solution_steps": [
+        "Examine the cloth to see the red symbols.",
+        "Enter those exact symbols into the combination lock on the wooden box found in the dark crevice."
+      ],
+      "reward": "A coil of rope",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Cloth_Symbol_Box.jpg"
+    }
+  ],
+  "final_action": "Using the rope combined with another item (likely a hook) to climb up and out of the cave."
+}

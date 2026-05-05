@@ -1,0 +1,87 @@
+{
+  "level": 25,
+  "room_description": "A dark, macabre studio featuring gothic armor, a skeleton leaning against the wall, an artist's easel with a sketch, and a large demonic portrait.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the dark studio.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_dark_studio_.jpg"
+    },
+    {
+      "description": "Finding a blue block inside a barrel.",
+      "timestamp_seconds": 3.5,
+      "screenshot_path": "Screenshots/003.5s_Finding_a_blue_block_inside_a_barrel_.jpg"
+    },
+    {
+      "description": "Collecting a wooden rod from the back of the artist's easel.",
+      "timestamp_seconds": 8.5,
+      "screenshot_path": "Screenshots/008.5s_Collecting_a_wooden_rod_from_the_back_of_the_artist_s_easel_.jpg"
+    },
+    {
+      "description": "Using the rod to knock down a key hidden above the skeleton.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Using_the_rod_to_knock_down_a_key_hidden_above_the_skeleton_.jpg"
+    },
+    {
+      "description": "Opening a drawer to find another blue block.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Opening_a_drawer_to_find_another_blue_block_.jpg"
+    },
+    {
+      "description": "Cleaning the easel sketch with a wet cloth to reveal a code.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Cleaning_the_easel_sketch_with_a_wet_cloth_to_reveal_a_code_.jpg"
+    },
+    {
+      "description": "Entering '5273' into the wall panel.",
+      "timestamp_seconds": 38.5,
+      "screenshot_path": "Screenshots/038.5s_Entering__5273__into_the_wall_panel_.jpg"
+    },
+    {
+      "description": "Placing blue blocks onto the demonic portrait.",
+      "timestamp_seconds": 44.5,
+      "screenshot_path": "Screenshots/044.5s_Placing_blue_blocks_onto_the_demonic_portrait_.jpg"
+    },
+    {
+      "description": "Solving the grid-pattern clicking puzzle on the wall.",
+      "timestamp_seconds": 60.5,
+      "screenshot_path": "Screenshots/060.5s_Solving_the_grid_pattern_clicking_puzzle_on_the_wall_.jpg"
+    },
+    {
+      "description": "Retrieving the final key and escaping.",
+      "timestamp_seconds": 65.5,
+      "screenshot_path": "Screenshots/065.5s_Retrieving_the_final_key_and_escaping_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Easel Reveal",
+      "items_used": [
+        "Wet Cloth"
+      ],
+      "solution_steps": [
+        "Obtain the wet cloth from the side table.",
+        "Use it to wipe the charcoal sketch on the easel.",
+        "A pattern of numbers on blue squares (4, 5, 2, 8) is revealed."
+      ],
+      "reward": "Visual code clue",
+      "timestamp_seconds": 31.5,
+      "screenshot_path": "Screenshots/031.5s_Easel_Reveal.jpg"
+    },
+    {
+      "puzzle_name": "Demonic Grid",
+      "items_used": [
+        "Blue Blocks"
+      ],
+      "solution_steps": [
+        "Look at the demon portrait.",
+        "Interact with the grid on the wall next to it.",
+        "Select the circles to match the pattern from the demon's eyes or the canvas clue (Red dots on the grid)."
+      ],
+      "reward": "Final Silver Key",
+      "timestamp_seconds": 62.0,
+      "screenshot_path": "Screenshots/062.0s_Demonic_Grid.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key found in the wall compartment to unlock the central wooden door and escape."
+}

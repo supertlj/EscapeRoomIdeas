@@ -1,0 +1,94 @@
+{
+  "level": 40,
+  "room_description": "A vibrant Asian temple room decorated with ornate tapestries, hanging bells, a glowing Buddha statue, a wooden chest, and a stone altar.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the colorful temple room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_colorful_temple_room_.jpg"
+    },
+    {
+      "description": "Inspects a painting showing four rows of birds with specific red markings.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Inspects_a_painting_showing_four_rows_of_birds_with_specific_red_markings_.jpg"
+    },
+    {
+      "description": "Solves the 4x4 bell grid puzzle on the wall.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Bird___Bell_Grid.jpg"
+    },
+    {
+      "description": "Collects a golden dragon emblem from the hidden compartment behind the bells.",
+      "timestamp_seconds": 36.0,
+      "screenshot_path": "Screenshots/036.0s_Collects_a_golden_dragon_emblem_from_the_hidden_compartment_behind_the_bells_.jpg"
+    },
+    {
+      "description": "Finds a green metal blade/wedge inside the wooden chest's drawer.",
+      "timestamp_seconds": 45.0,
+      "screenshot_path": "Screenshots/045.0s_Finds_a_green_metal_blade_wedge_inside_the_wooden_chest_s_drawer_.jpg"
+    },
+    {
+      "description": "Looks up at the ceiling mandala and discovers a hidden gold chain.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Looks_up_at_the_ceiling_mandala_and_discovers_a_hidden_gold_chain_.jpg"
+    },
+    {
+      "description": "Notes the four glowing orange symbols appearing on the Buddha statue's chest.",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Notes_the_four_glowing_orange_symbols_appearing_on_the_Buddha_statue_s_chest_.jpg"
+    },
+    {
+      "description": "Adjusts the symbol dials on a hidden panel to match the Buddha.",
+      "timestamp_seconds": 66.0,
+      "screenshot_path": "Screenshots/066.0s_Adjusts_the_symbol_dials_on_a_hidden_panel_to_match_the_Buddha_.jpg"
+    },
+    {
+      "description": "Collects a second golden dragon emblem from the symbol panel.",
+      "timestamp_seconds": 70.0,
+      "screenshot_path": "Screenshots/070.0s_Collects_a_second_golden_dragon_emblem_from_the_symbol_panel_.jpg"
+    },
+    {
+      "description": "Solves the node jumping mini-game on the stone altar to reveal a hammer.",
+      "timestamp_seconds": 100.0,
+      "screenshot_path": "Screenshots/100.0s_Solves_the_node_jumping_mini_game_on_the_stone_altar_to_reveal_a_hammer_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Bird & Bell Grid",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the red birds on the wire painting to get a sequence (Row 1: 2nd, Row 2: 4th, Row 3: 1st, Row 4: 3rd).",
+        "Tap the corresponding bells on the 4x4 wall grid to light them up in this exact pattern."
+      ],
+      "reward": "Golden dragon emblem",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Bird___Bell_Grid.jpg"
+    },
+    {
+      "puzzle_name": "Buddha Symbols",
+      "items_used": [],
+      "solution_steps": [
+        "Look closely at the glowing symbols cycling or appearing on the chest of the Buddha statue.",
+        "Input this exact sequence of four characters into the dial lock."
+      ],
+      "reward": "Second golden dragon emblem",
+      "timestamp_seconds": 106.0,
+      "screenshot_path": "Screenshots/106.0s_Buddha_Symbols.jpg"
+    },
+    {
+      "puzzle_name": "Altar Node Puzzle",
+      "items_used": [
+        "Two golden dragon emblems"
+      ],
+      "solution_steps": [
+        "Insert both dragon emblems into the stone altar to activate a puzzle.",
+        "Play the peg-jumping mini-game, moving the blue and red helmet nodes across the board until they have completely swapped sides."
+      ],
+      "reward": "A metal hammer",
+      "timestamp_seconds": 140.0,
+      "screenshot_path": "Screenshots/140.0s_Altar_Node_Puzzle.jpg"
+    }
+  ],
+  "final_action": "The player retrieves a hammer from the altar. (Note: The video abruptly cuts to footage from another level at this point, so the final escape interaction is not shown)."
+}

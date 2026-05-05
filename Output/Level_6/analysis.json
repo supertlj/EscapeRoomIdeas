@@ -1,0 +1,92 @@
+{
+  "level": 6,
+  "room_description": "A rundown, rustic room with boarded-up windows, stone flooring, a simple metal-framed bed, a worn armchair, a wooden door, and a wall poster showing animals made out of numbers.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the rundown room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_rundown_room_.jpg"
+    },
+    {
+      "description": "Lifting the bed pillow to collect a wooden hammer handle.",
+      "timestamp_seconds": 1.5,
+      "screenshot_path": "Screenshots/001.5s_Lifting_the_bed_pillow_to_collect_a_wooden_hammer_handle_.jpg"
+    },
+    {
+      "description": "Retrieving a metal hammer head from the floor beneath the bed.",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Assemble_the_Hammer.jpg"
+    },
+    {
+      "description": "Examining the wall poster displaying animals integrated with numbers.",
+      "timestamp_seconds": 14.0,
+      "screenshot_path": "Screenshots/014.0s_Examining_the_wall_poster_displaying_animals_integrated_with_numbers_.jpg"
+    },
+    {
+      "description": "Approaching a wooden box that is nailed shut with wooden planks.",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Approaching_a_wooden_box_that_is_nailed_shut_with_wooden_planks_.jpg"
+    },
+    {
+      "description": "Using the assembled hammer to pry the nailed planks off the box.",
+      "timestamp_seconds": 37.5,
+      "screenshot_path": "Screenshots/037.5s_Unseal_the_Box.jpg"
+    },
+    {
+      "description": "Entering the 3-digit combination '532' into the wooden box dials.",
+      "timestamp_seconds": 43.0,
+      "screenshot_path": "Screenshots/043.0s_Animal_Code_Box.jpg"
+    },
+    {
+      "description": "Retrieving the silver key from the opened box.",
+      "timestamp_seconds": 44.5,
+      "screenshot_path": "Screenshots/044.5s_Retrieving_the_silver_key_from_the_opened_box_.jpg"
+    },
+    {
+      "description": "Unlocking the wooden exit door with the key.",
+      "timestamp_seconds": 48.0,
+      "screenshot_path": "Screenshots/048.0s_Unlocking_the_wooden_exit_door_with_the_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Assemble the Hammer",
+      "items_used": [
+        "Wooden Handle",
+        "Metal Hammer Head"
+      ],
+      "solution_steps": [
+        "Find the handle under the pillow.",
+        "Find the head under the bed.",
+        "Combine them in the inventory to create a usable hammer."
+      ],
+      "reward": "Hammer",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Assemble_the_Hammer.jpg"
+    },
+    {
+      "puzzle_name": "Unseal the Box",
+      "items_used": [
+        "Hammer"
+      ],
+      "solution_steps": [
+        "Use the hammer on the wooden planks crossing the front of the box to pry out the nails."
+      ],
+      "reward": "Access to combination dials",
+      "timestamp_seconds": 37.5,
+      "screenshot_path": "Screenshots/037.5s_Unseal_the_Box.jpg"
+    },
+    {
+      "puzzle_name": "Animal Code Box",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the animal poster to correlate animals to numbers: Elephant=5, Cat=3, Zebra=2.",
+        "Enter the code '532' into the dials on the front of the box."
+      ],
+      "reward": "Door Key",
+      "timestamp_seconds": 43.0,
+      "screenshot_path": "Screenshots/043.0s_Animal_Code_Box.jpg"
+    }
+  ],
+  "final_action": "The player uses the key found inside the combination box to unlock the room's central door and escape."
+}

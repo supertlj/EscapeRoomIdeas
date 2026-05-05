@@ -1,0 +1,97 @@
+{
+  "level": 15,
+  "room_description": "A rustic wooden cabin or office room featuring a desk, bookshelf, a vintage globe, a small safe, plants, and puzzle panels integrated into the floor and walls.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the wooden office room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_wooden_office_room_.jpg"
+    },
+    {
+      "description": "Inspects the metal dot puzzle integrated into the wooden floor.",
+      "timestamp_seconds": 1.0,
+      "screenshot_path": "Screenshots/001.0s_Inspects_the_metal_dot_puzzle_integrated_into_the_wooden_floor_.jpg"
+    },
+    {
+      "description": "Checks the desk and moves magazines to reveal the equation 'Z=Y-X'.",
+      "timestamp_seconds": 5.5,
+      "screenshot_path": "Screenshots/005.5s_Checks_the_desk_and_moves_magazines_to_reveal_the_equation__Z_Y_X__.jpg"
+    },
+    {
+      "description": "Examines a glowing sun puzzle panel mounted on the wall.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Examines_a_glowing_sun_puzzle_panel_mounted_on_the_wall_.jpg"
+    },
+    {
+      "description": "Solves the floor dot puzzle by recreating a specific pattern, turning dots gold.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Floor_Dot_Grid.jpg"
+    },
+    {
+      "description": "Collects a wooden ruler from the newly opened floor compartment.",
+      "timestamp_seconds": 25.0,
+      "screenshot_path": "Screenshots/025.0s_Collects_a_wooden_ruler_from_the_newly_opened_floor_compartment_.jpg"
+    },
+    {
+      "description": "Uses the ruler on the chalkboard to measure the sides of a drawn triangle.",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Uses_the_ruler_on_the_chalkboard_to_measure_the_sides_of_a_drawn_triangle_.jpg"
+    },
+    {
+      "description": "Weighs a black ball on the red scale to determine its numerical value.",
+      "timestamp_seconds": 59.0,
+      "screenshot_path": "Screenshots/059.0s_Weighs_a_black_ball_on_the_red_scale_to_determine_its_numerical_value_.jpg"
+    },
+    {
+      "description": "Enters the calculated 3-digit code into the desk drawer lock.",
+      "timestamp_seconds": 104.5,
+      "screenshot_path": "Screenshots/104.5s_Math_Code__X__Y__Z_.jpg"
+    },
+    {
+      "description": "Retrieves the door key from the unlocked drawer.",
+      "timestamp_seconds": 108.0,
+      "screenshot_path": "Screenshots/108.0s_Retrieves_the_door_key_from_the_unlocked_drawer_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Floor Dot Grid",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the pattern from the other wall grids.",
+        "Press the corresponding metal dots on the floor panel until they turn gold to match the pattern."
+      ],
+      "reward": "Wooden ruler",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Floor_Dot_Grid.jpg"
+    },
+    {
+      "puzzle_name": "Symbol Drawer",
+      "items_used": [],
+      "solution_steps": [
+        "Find the correct sequence of four symbols (Magnet, Telescope, Lightbulb, Magnifying Glass).",
+        "Input the symbols into the four square panels on the cabinet."
+      ],
+      "reward": "Heavy black ball",
+      "timestamp_seconds": 56.0,
+      "screenshot_path": "Screenshots/056.0s_Symbol_Drawer.jpg"
+    },
+    {
+      "puzzle_name": "Math Code (X, Y, Z)",
+      "items_used": [
+        "Wooden ruler",
+        "Heavy black ball"
+      ],
+      "solution_steps": [
+        "Use the ruler on the chalkboard to find the value of Y.",
+        "Weigh the black ball on the scale to find the value of X.",
+        "Calculate Z using the desk formula 'Z=Y-X'.",
+        "Enter the resulting 3-digit combination into the drawer."
+      ],
+      "reward": "Door key",
+      "timestamp_seconds": 104.5,
+      "screenshot_path": "Screenshots/104.5s_Math_Code__X__Y__Z_.jpg"
+    }
+  ],
+  "final_action": "Uses the acquired key to unlock the main wooden door and escape the room."
+}

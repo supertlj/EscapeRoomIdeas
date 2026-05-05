@@ -1,0 +1,96 @@
+{
+  "level": 48,
+  "room_description": "A sophisticated living room with a grand piano, decorative wall shelving, a large rug, and classical artwork.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the living room with the piano.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_living_room_with_the_piano_.jpg"
+    },
+    {
+      "description": "Inspecting a toy car on a book on the coffee table.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Inspecting_a_toy_car_on_a_book_on_the_coffee_table_.jpg"
+    },
+    {
+      "description": "Taking a matchbox from the wall shelf.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Taking_a_matchbox_from_the_wall_shelf_.jpg"
+    },
+    {
+      "description": "Looking closely at the grandfather clock.",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Looking_closely_at_the_grandfather_clock_.jpg"
+    },
+    {
+      "description": "Finding a key hidden in the clock mechanism.",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Finding_a_key_hidden_in_the_clock_mechanism_.jpg"
+    },
+    {
+      "description": "Examining a clue on a leaf showing white worm-like shapes.",
+      "timestamp_seconds": 28.5,
+      "screenshot_path": "Screenshots/028.5s_Examining_a_clue_on_a_leaf_showing_white_worm_like_shapes_.jpg"
+    },
+    {
+      "description": "Entering a pattern of dashes on a lock panel.",
+      "timestamp_seconds": 39.0,
+      "screenshot_path": "Screenshots/039.0s_Leaf_Pattern_Lock.jpg"
+    },
+    {
+      "description": "Solving a pipe/wire connection mini-game.",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Pipe_Connection_Game.jpg"
+    },
+    {
+      "description": "Unlocking a cabinet door with a silver key.",
+      "timestamp_seconds": 78.5,
+      "screenshot_path": "Screenshots/078.5s_Unlocking_a_cabinet_door_with_a_silver_key_.jpg"
+    },
+    {
+      "description": "Using a knife to cut open a sofa cushion.",
+      "timestamp_seconds": 88.0,
+      "screenshot_path": "Screenshots/088.0s_Sofa_Patch.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Leaf Pattern Lock",
+      "items_used": [
+        "Leaf clue"
+      ],
+      "solution_steps": [
+        "Examine the leaf to see the pattern of the white shapes.",
+        "Input that pattern of dashes into the lock panel."
+      ],
+      "reward": "Opens a compartment",
+      "timestamp_seconds": 39.0,
+      "screenshot_path": "Screenshots/039.0s_Leaf_Pattern_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Pipe Connection Game",
+      "items_used": [],
+      "solution_steps": [
+        "Play the mini-game on the panel.",
+        "Rotate the pipe pieces so that all the red connections are linked properly across the board."
+      ],
+      "reward": "Unlocks a mechanism",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Pipe_Connection_Game.jpg"
+    },
+    {
+      "puzzle_name": "Sofa Patch",
+      "items_used": [
+        "Knife"
+      ],
+      "solution_steps": [
+        "Find the knife.",
+        "Use the knife to cut the stitched patch on the sofa cushion."
+      ],
+      "reward": "A hidden item (likely a key or token)",
+      "timestamp_seconds": 88.0,
+      "screenshot_path": "Screenshots/088.0s_Sofa_Patch.jpg"
+    }
+  ],
+  "final_action": "Using the final key obtained from the puzzles to unlock the main door."
+}

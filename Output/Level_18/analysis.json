@@ -1,0 +1,99 @@
+{
+  "level": 18,
+  "room_description": "A classic dining room featuring a long table set with candles, a sofa, a green potted plant, a large birdcage holding a parrot, and a white sideboard cabinet.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the classic dining room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_classic_dining_room_.jpg"
+    },
+    {
+      "description": "Inspects the decorative brown cushions on the sofa.",
+      "timestamp_seconds": 1.5,
+      "screenshot_path": "Screenshots/001.5s_Inspects_the_decorative_brown_cushions_on_the_sofa_.jpg"
+    },
+    {
+      "description": "Finds a small key sitting inside a bowl on the white cabinet.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Finds_a_small_key_sitting_inside_a_bowl_on_the_white_cabinet_.jpg"
+    },
+    {
+      "description": "Uses the key to unlock the top drawer of the white cabinet.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Uses_the_key_to_unlock_the_top_drawer_of_the_white_cabinet_.jpg"
+    },
+    {
+      "description": "Collects a loaf of bread resting on a plate on the dining table.",
+      "timestamp_seconds": 19.5,
+      "screenshot_path": "Screenshots/019.5s_Collects_a_loaf_of_bread_resting_on_a_plate_on_the_dining_table_.jpg"
+    },
+    {
+      "description": "Holds a large green leaf over a lit candle on the dining table.",
+      "timestamp_seconds": 30.0,
+      "screenshot_path": "Screenshots/030.0s_Leaf_over_Candle.jpg"
+    },
+    {
+      "description": "Reveals a hidden pattern of glowing green dashes on the leaf.",
+      "timestamp_seconds": 35.0,
+      "screenshot_path": "Screenshots/035.0s_Reveals_a_hidden_pattern_of_glowing_green_dashes_on_the_leaf_.jpg"
+    },
+    {
+      "description": "Enters the dash pattern into the lock at the bottom of the cabinet.",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Enters_the_dash_pattern_into_the_lock_at_the_bottom_of_the_cabinet_.jpg"
+    },
+    {
+      "description": "Completes a sliding jigsaw puzzle on a tablet found inside the drawer.",
+      "timestamp_seconds": 41.0,
+      "screenshot_path": "Screenshots/041.0s_Tablet_Jigsaw___Item_Count.jpg"
+    },
+    {
+      "description": "Enters the calculated code '835' into the padlock on the birdcage.",
+      "timestamp_seconds": 118.0,
+      "screenshot_path": "Screenshots/118.0s_Birdcage_Lock.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Leaf over Candle",
+      "items_used": [
+        "Green leaf"
+      ],
+      "solution_steps": [
+        "Collect the large green leaf from the potted plant.",
+        "Hold the leaf over the heat of the lit candle on the dining table to reveal a dash pattern."
+      ],
+      "reward": "Dash code for the cabinet lock",
+      "timestamp_seconds": 30.0,
+      "screenshot_path": "Screenshots/030.0s_Leaf_over_Candle.jpg"
+    },
+    {
+      "puzzle_name": "Tablet Jigsaw & Item Count",
+      "items_used": [
+        "Tablet device"
+      ],
+      "solution_steps": [
+        "Solve the Roman ruins jigsaw puzzle on the tablet.",
+        "The tablet then displays three items: a chair, a cushion, and a candle.",
+        "Count these specific items in the room (8 chairs, 3 cushions, 5 candles) to form the code."
+      ],
+      "reward": "Code '835'",
+      "timestamp_seconds": 41.0,
+      "screenshot_path": "Screenshots/041.0s_Tablet_Jigsaw___Item_Count.jpg"
+    },
+    {
+      "puzzle_name": "Birdcage Lock",
+      "items_used": [
+        "Bread"
+      ],
+      "solution_steps": [
+        "Enter the code '835' into the padlock to open the birdcage.",
+        "Feed the bread to the parrot inside so it drops the key from its beak."
+      ],
+      "reward": "Door key",
+      "timestamp_seconds": 118.0,
+      "screenshot_path": "Screenshots/118.0s_Birdcage_Lock.jpg"
+    }
+  ],
+  "final_action": "Collects the key dropped by the parrot and uses it to unlock the main door."
+}

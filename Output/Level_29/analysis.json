@@ -1,0 +1,84 @@
+{
+  "level": 29,
+  "room_description": "A recreational games room with a pool table, dartboard, arcade machine, and retro gaming decor.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the games room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_games_room_.jpg"
+    },
+    {
+      "description": "Finding a metal slider piece under the billiard balls on the pool table.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Finding_a_metal_slider_piece_under_the_billiard_balls_on_the_pool_table_.jpg"
+    },
+    {
+      "description": "Examining a row of cues and colored billiard balls on the wall rack.",
+      "timestamp_seconds": 10.5,
+      "screenshot_path": "Screenshots/010.5s_Examining_a_row_of_cues_and_colored_billiard_balls_on_the_wall_rack_.jpg"
+    },
+    {
+      "description": "Opening a toy chest using a 4-digit code (2571) to find a box cutter.",
+      "timestamp_seconds": 45.5,
+      "screenshot_path": "Screenshots/045.5s_Opening_a_toy_chest_using_a_4_digit_code__2571__to_find_a_box_cutter_.jpg"
+    },
+    {
+      "description": "Using the box cutter to open a stuffed cow toy to find a silver coin.",
+      "timestamp_seconds": 54.5,
+      "screenshot_path": "Screenshots/054.5s_Using_the_box_cutter_to_open_a_stuffed_cow_toy_to_find_a_silver_coin_.jpg"
+    },
+    {
+      "description": "Inserting the coin into the arcade machine to play a mini-game.",
+      "timestamp_seconds": 100.5,
+      "screenshot_path": "Screenshots/100.5s_Inserting_the_coin_into_the_arcade_machine_to_play_a_mini_game_.jpg"
+    },
+    {
+      "description": "Playing a directional arrow game on the arcade screen.",
+      "timestamp_seconds": 110.0,
+      "screenshot_path": "Screenshots/110.0s_Playing_a_directional_arrow_game_on_the_arcade_screen_.jpg"
+    },
+    {
+      "description": "Revealing the code '495' in Red, Green, and Blue ink on the arcade screen.",
+      "timestamp_seconds": 126.5,
+      "screenshot_path": "Screenshots/126.5s_Revealing_the_code__495__in_Red__Green__and_Blue_ink_on_the_arcade_screen_.jpg"
+    },
+    {
+      "description": "Entering '950' (based on color logic) into a wall safe hidden behind the dartboard.",
+      "timestamp_seconds": 150.0,
+      "screenshot_path": "Screenshots/150.0s_Entering__950___based_on_color_logic__into_a_wall_safe_hidden_behind_the_dartboard_.jpg"
+    },
+    {
+      "description": "Retrieving the exit key from the wall safe.",
+      "timestamp_seconds": 154.0,
+      "screenshot_path": "Screenshots/154.0s_Retrieving_the_exit_key_from_the_wall_safe_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Toy Chest Code",
+      "items_used": [],
+      "solution_steps": [
+        "Count the billiard balls of different colors on the rack.",
+        "Check the dartboard for specific numbers hit by darts.",
+        "Combine these counts to derive the code 2571 for the chest."
+      ],
+      "reward": "Box cutter",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Toy_Chest_Code.jpg"
+    },
+    {
+      "puzzle_name": "Arcade Directional Puzzle",
+      "items_used": [
+        "Silver coin"
+      ],
+      "solution_steps": [
+        "Insert the coin to start the game.",
+        "Press the arrows (Left, Up, Right, Down) in the sequence indicated by the flashing characters on screen."
+      ],
+      "reward": "Number code 495",
+      "timestamp_seconds": 125.0,
+      "screenshot_path": "Screenshots/125.0s_Arcade_Directional_Puzzle.jpg"
+    }
+  ],
+  "final_action": "Using the key found in the wall safe to unlock the wooden exit door."
+}

@@ -1,0 +1,105 @@
+{
+  "level": 2,
+  "room_description": "A modern living room with beige walls, a patterned brown and gold rug, a wooden door, a desk with a laptop, a potted plant, a wooden glass-paneled display cabinet, and a white sofa.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the living room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_living_room_.jpg"
+    },
+    {
+      "description": "Checking the laptop on the desk, which requires a text password.",
+      "timestamp_seconds": 4.0,
+      "screenshot_path": "Screenshots/004.0s_Checking_the_laptop_on_the_desk__which_requires_a_text_password_.jpg"
+    },
+    {
+      "description": "Zooming into the potted plant to find a hidden key.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Plant_Pot_Key.jpg"
+    },
+    {
+      "description": "Approaching the lower wooden cabinet doors.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Approaching_the_lower_wooden_cabinet_doors_.jpg"
+    },
+    {
+      "description": "Unlocking the cabinet and finding a piece of paper.",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Unlocking_the_cabinet_and_finding_a_piece_of_paper_.jpg"
+    },
+    {
+      "description": "Examining the paper to read the word 'TAKI'.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Cabinet_Paper_Clue.jpg"
+    },
+    {
+      "description": "Entering 'TAKI' into the laptop's password prompt.",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_Entering__TAKI__into_the_laptop_s_password_prompt_.jpg"
+    },
+    {
+      "description": "Laptop screen displaying the numeric code '1886'.",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Laptop_Password.jpg"
+    },
+    {
+      "description": "Finding a wooden box with a digital keypad inside the upper cabinet.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Finding_a_wooden_box_with_a_digital_keypad_inside_the_upper_cabinet_.jpg"
+    },
+    {
+      "description": "Using the keycard on the electronic door lock.",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Using_the_keycard_on_the_electronic_door_lock_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Plant Pot Key",
+      "items_used": [],
+      "solution_steps": [
+        "Investigate the soil base of the potted plant near the desk."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Plant_Pot_Key.jpg"
+    },
+    {
+      "puzzle_name": "Cabinet Paper Clue",
+      "items_used": [
+        "Silver Key"
+      ],
+      "solution_steps": [
+        "Use the silver key to unlock the bottom doors of the wooden display cabinet.",
+        "Retrieve and examine the paper inside."
+      ],
+      "reward": "Password clue 'TAKI'",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Cabinet_Paper_Clue.jpg"
+    },
+    {
+      "puzzle_name": "Laptop Password",
+      "items_used": [],
+      "solution_steps": [
+        "Go to the laptop on the desk.",
+        "Type the password 'TAKI' using the keyboard."
+      ],
+      "reward": "Numeric code '1886'",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Laptop_Password.jpg"
+    },
+    {
+      "puzzle_name": "Keypad Safe Box",
+      "items_used": [],
+      "solution_steps": [
+        "Open the upper section of the wooden cabinet.",
+        "Interact with the digital keypad on the wooden box.",
+        "Enter the code '1886'."
+      ],
+      "reward": "Keycard",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Keypad_Safe_Box.jpg"
+    }
+  ],
+  "final_action": "The player inserts the retrieved keycard into the electronic lock on the main wooden door to unlock it and escape."
+}

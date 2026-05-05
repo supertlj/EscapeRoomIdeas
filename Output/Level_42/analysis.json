@@ -1,0 +1,111 @@
+{
+  "level": 42,
+  "room_description": "An Egyptian tomb filled with hieroglyphics. It features a central sarcophagus, statues of Anubis and Horus guarding the sides, sun motifs, and glowing floor panels.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the Egyptian tomb.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_Egyptian_tomb_.jpg"
+    },
+    {
+      "description": "Collecting the top piece of a golden pyramid from the floor.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Collecting_the_top_piece_of_a_golden_pyramid_from_the_floor_.jpg"
+    },
+    {
+      "description": "Entering a hidden chamber behind the Sphinx statue.",
+      "timestamp_seconds": 10.0,
+      "screenshot_path": "Screenshots/010.0s_Entering_a_hidden_chamber_behind_the_Sphinx_statue_.jpg"
+    },
+    {
+      "description": "Solving the element wheel puzzle to open the wall compartment.",
+      "timestamp_seconds": 17.5,
+      "screenshot_path": "Screenshots/017.5s_Element_Wheel.jpg"
+    },
+    {
+      "description": "Retrieving a golden scarab beetle from the compartment.",
+      "timestamp_seconds": 19.0,
+      "screenshot_path": "Screenshots/019.0s_Retrieving_a_golden_scarab_beetle_from_the_compartment_.jpg"
+    },
+    {
+      "description": "Solving the large sliding tile mural puzzle.",
+      "timestamp_seconds": 104.0,
+      "screenshot_path": "Screenshots/104.0s_Mural_Sliding_Puzzle.jpg"
+    },
+    {
+      "description": "Using the scarab beetle to unlock the glowing sun emblem.",
+      "timestamp_seconds": 107.0,
+      "screenshot_path": "Screenshots/107.0s_Scarab_and_Sun.jpg"
+    },
+    {
+      "description": "Collecting the bottom half of the golden pyramid.",
+      "timestamp_seconds": 127.0,
+      "screenshot_path": "Screenshots/127.0s_Collecting_the_bottom_half_of_the_golden_pyramid_.jpg"
+    },
+    {
+      "description": "Placing the assembled pyramid onto the altar.",
+      "timestamp_seconds": 131.0,
+      "screenshot_path": "Screenshots/131.0s_Pyramid_Assembly.jpg"
+    },
+    {
+      "description": "Taking the golden eye token and unlocking the exit.",
+      "timestamp_seconds": 140.0,
+      "screenshot_path": "Screenshots/140.0s_Taking_the_golden_eye_token_and_unlocking_the_exit_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Element Wheel",
+      "items_used": [],
+      "solution_steps": [
+        "Enter the side chamber.",
+        "Interact with the circular panel on the wall showing elemental symbols.",
+        "Rotate the rings to align the symbols according to the environmental clues (Fire on bottom, Water on right, Sun on left, Moon on top)."
+      ],
+      "reward": "Golden Scarab Beetle",
+      "timestamp_seconds": 17.5,
+      "screenshot_path": "Screenshots/017.5s_Element_Wheel.jpg"
+    },
+    {
+      "puzzle_name": "Mural Sliding Puzzle",
+      "items_used": [],
+      "solution_steps": [
+        "Interact with the large chaotic mural on the wall.",
+        "Slide the rectangular segments horizontally and vertically to form a coherent picture of Egyptian figures and deities."
+      ],
+      "reward": "Access to the sun emblem lock",
+      "timestamp_seconds": 104.0,
+      "screenshot_path": "Screenshots/104.0s_Mural_Sliding_Puzzle.jpg"
+    },
+    {
+      "puzzle_name": "Scarab and Sun",
+      "items_used": [
+        "Golden Scarab Beetle"
+      ],
+      "solution_steps": [
+        "After finishing the mural, a sun emblem is revealed.",
+        "Place the golden scarab beetle into the center indentation of the sun emblem.",
+        "The wall slides open."
+      ],
+      "reward": "Access to the inner sanctum / Pyramid base",
+      "timestamp_seconds": 107.0,
+      "screenshot_path": "Screenshots/107.0s_Scarab_and_Sun.jpg"
+    },
+    {
+      "puzzle_name": "Pyramid Assembly",
+      "items_used": [
+        "Pyramid Top",
+        "Pyramid Base"
+      ],
+      "solution_steps": [
+        "Retrieve the base of the pyramid from the inner sanctum.",
+        "Combine the top (found on the floor earlier) with the base.",
+        "Place the completed pyramid onto the square pedestal in the main room."
+      ],
+      "reward": "Golden Eye Token",
+      "timestamp_seconds": 131.0,
+      "screenshot_path": "Screenshots/131.0s_Pyramid_Assembly.jpg"
+    }
+  ],
+  "final_action": "The player places the assembled golden pyramid on the pedestal, which reveals a compartment containing a Golden Eye token. This token is inserted into the main door mechanism to unlock it."
+}

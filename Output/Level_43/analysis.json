@@ -1,0 +1,115 @@
+{
+  "level": 43,
+  "room_description": "A modern, metallic bunker or control room featuring diamond-plate walls, black statues, a hanging fireplace, a computer desk, and a large central metal door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the metallic bunker.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_metallic_bunker_.jpg"
+    },
+    {
+      "description": "Finding a silver coin near the base of a statue.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Finding_a_silver_coin_near_the_base_of_a_statue_.jpg"
+    },
+    {
+      "description": "Collecting an unlit torch handle from the fireplace grate.",
+      "timestamp_seconds": 14.0,
+      "screenshot_path": "Screenshots/014.0s_Collecting_an_unlit_torch_handle_from_the_fireplace_grate_.jpg"
+    },
+    {
+      "description": "Looking at the wall clock to see the time '4:15'.",
+      "timestamp_seconds": 19.5,
+      "screenshot_path": "Screenshots/019.5s_Looking_at_the_wall_clock_to_see_the_time__4_15__.jpg"
+    },
+    {
+      "description": "Entering '4195' into the briefcase lock.",
+      "timestamp_seconds": 32.0,
+      "screenshot_path": "Screenshots/032.0s_Briefcase_Code.jpg"
+    },
+    {
+      "description": "Retrieving a bottle of oil from the briefcase.",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Retrieving_a_bottle_of_oil_from_the_briefcase_.jpg"
+    },
+    {
+      "description": "Using the coin to unscrew the panel on the desk.",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Using_the_coin_to_unscrew_the_panel_on_the_desk_.jpg"
+    },
+    {
+      "description": "Lighting the torch in the fireplace.",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Lighting_the_Torch.jpg"
+    },
+    {
+      "description": "Using the lit torch to reveal a code hidden in a dark wall compartment.",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Hidden_Wall_Code.jpg"
+    },
+    {
+      "description": "Solving the gear rotation puzzle on the wall.",
+      "timestamp_seconds": 81.0,
+      "screenshot_path": "Screenshots/081.0s_Desk_Panel___Gears.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Briefcase Code",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the wall clock. The hands indicate the time 4:15.",
+        "Examine the desk calendar. The date circled is the 9th.",
+        "Combine the numbers: 4, 1, 9, 5.",
+        "Use the code '4195' to unlock the briefcase on the floor."
+      ],
+      "reward": "Bottle of Oil",
+      "timestamp_seconds": 32.0,
+      "screenshot_path": "Screenshots/032.0s_Briefcase_Code.jpg"
+    },
+    {
+      "puzzle_name": "Lighting the Torch",
+      "items_used": [
+        "Torch Handle",
+        "Oil Bottle"
+      ],
+      "solution_steps": [
+        "Collect the torch handle from the floor.",
+        "Apply the oil from the briefcase to the torch.",
+        "Hold the oiled torch to the flames in the hanging fireplace to light it."
+      ],
+      "reward": "Lit Torch",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Lighting_the_Torch.jpg"
+    },
+    {
+      "puzzle_name": "Hidden Wall Code",
+      "items_used": [
+        "Lit Torch"
+      ],
+      "solution_steps": [
+        "Find the dark, recessed compartment in the wall.",
+        "Use the lit torch to illuminate the interior.",
+        "Read the numbers revealed in the light: '2468'."
+      ],
+      "reward": "Code '2468'",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Hidden_Wall_Code.jpg"
+    },
+    {
+      "puzzle_name": "Desk Panel & Gears",
+      "items_used": [
+        "Silver Coin"
+      ],
+      "solution_steps": [
+        "Use the coin to unscrew the flat panel on the desk.",
+        "Enter the code '2468' into the revealed keypad.",
+        "A wall panel opens showing gears. Rotate the rings to align the gaps, allowing the central mechanism to turn."
+      ],
+      "reward": "Unlocks the main door",
+      "timestamp_seconds": 81.0,
+      "screenshot_path": "Screenshots/081.0s_Desk_Panel___Gears.jpg"
+    }
+  ],
+  "final_action": "After completing the gear puzzle, the main heavy metal door in the center of the room opens, allowing the player to escape."
+}

@@ -1,0 +1,89 @@
+{
+  "level": 11,
+  "room_description": "A vibrant and colorful child's or teenager's bedroom. It features a bunk bed with blue and yellow bedding, a red suitcase, a desk with a computer and a green swivel chair, and several posters and shelving units with toys. The walls are light blue and the floor is wooden.",
+  "key_moments": [
+    {
+      "description": "Establishing shot showing the overall view of the bedroom",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_showing_the_overall_view_of_the_bedroom.jpg"
+    },
+    {
+      "description": "Zooming in on the blue wall poster with glowing symbols",
+      "timestamp_seconds": 9.5,
+      "screenshot_path": "Screenshots/009.5s_Zooming_in_on_the_blue_wall_poster_with_glowing_symbols.jpg"
+    },
+    {
+      "description": "Assembling the pliers from two separate parts",
+      "timestamp_seconds": 33.5,
+      "screenshot_path": "Screenshots/033.5s_Assembling_the_Tool.jpg"
+    },
+    {
+      "description": "Solving the color wheel puzzle on the bunk bed shelf",
+      "timestamp_seconds": 45.8,
+      "screenshot_path": "Screenshots/045.8s_Solving_the_color_wheel_puzzle_on_the_bunk_bed_shelf.jpg"
+    },
+    {
+      "description": "Combining two halves of a torn paper to reveal a code",
+      "timestamp_seconds": 50.5,
+      "screenshot_path": "Screenshots/050.5s_Combining_two_halves_of_a_torn_paper_to_reveal_a_code.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Assembling the Tool",
+      "items_used": [
+        "Pliers handle",
+        "Pliers head"
+      ],
+      "solution_steps": [
+        "Find the pliers handle in the lower bunk bed area",
+        "Find the pliers head inside the wall shelving",
+        "Combine the handle and the head in the inventory"
+      ],
+      "reward": "Pliers",
+      "timestamp_seconds": 33.5,
+      "screenshot_path": "Screenshots/033.5s_Assembling_the_Tool.jpg"
+    },
+    {
+      "puzzle_name": "Red Suitcase Lock",
+      "items_used": [
+        "Pliers"
+      ],
+      "solution_steps": [
+        "Use the pliers to cut the metal wire lock on the red suitcase lying on the floor"
+      ],
+      "reward": "A blue triangle block",
+      "timestamp_seconds": 38.2,
+      "screenshot_path": "Screenshots/038.2s_Red_Suitcase_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Color Wheel Logic",
+      "items_used": [
+        "Numerical clue from poster"
+      ],
+      "solution_steps": [
+        "Examine the poster on the wall to see the number sequence '3917'",
+        "Adjust the four colored dials on the shelf box to match the sequence: Red (3), Blue (9), Yellow (1), Green (7)"
+      ],
+      "reward": "A torn half piece of paper",
+      "timestamp_seconds": 48.3,
+      "screenshot_path": "Screenshots/048.3s_Color_Wheel_Logic.jpg"
+    },
+    {
+      "puzzle_name": "Alarm Clock Time Code",
+      "items_used": [
+        "Two combined pieces of paper"
+      ],
+      "solution_steps": [
+        "Collect the first piece of paper from the wall lamp on the left",
+        "Collect the second piece of paper from the color wheel drawer",
+        "Combine both pieces to see the numbers 0, 7, 4, 5 highlighted",
+        "Set the green alarm clock's time to 07:45"
+      ],
+      "reward": "Door Key",
+      "timestamp_seconds": 58.5,
+      "screenshot_path": "Screenshots/058.5s_Alarm_Clock_Time_Code.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key obtained from the alarm clock to unlock and open the white door, exiting the room."
+}

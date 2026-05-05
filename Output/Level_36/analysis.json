@@ -1,0 +1,96 @@
+{
+  "level": 36,
+  "room_description": "A creepy, abandoned underground hospital room or bunker. It features a rusty bed with a body bag, a medical monitor, an ultrasound machine, and blood stains on the floor.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the dark medical room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_dark_medical_room_.jpg"
+    },
+    {
+      "description": "Inspects a combination safe hidden in a floor panel.",
+      "timestamp_seconds": 4.0,
+      "screenshot_path": "Screenshots/004.0s_Inspects_a_combination_safe_hidden_in_a_floor_panel_.jpg"
+    },
+    {
+      "description": "Enters the code '5985' to unlock the floor safe.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Enters_the_code__5985__to_unlock_the_floor_safe_.jpg"
+    },
+    {
+      "description": "Retrieves a CD/DVD from the opened floor safe.",
+      "timestamp_seconds": 28.0,
+      "screenshot_path": "Screenshots/028.0s_Retrieves_a_CD_DVD_from_the_opened_floor_safe_.jpg"
+    },
+    {
+      "description": "Inserts the CD into the laptop resting on the bed.",
+      "timestamp_seconds": 30.0,
+      "screenshot_path": "Screenshots/030.0s_Inserts_the_CD_into_the_laptop_resting_on_the_bed_.jpg"
+    },
+    {
+      "description": "Completes a sliding photo puzzle on the laptop screen.",
+      "timestamp_seconds": 46.0,
+      "screenshot_path": "Screenshots/046.0s_Laptop_Sliding_Puzzle.jpg"
+    },
+    {
+      "description": "Checks the newly activated medical monitor on the wall.",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Checks_the_newly_activated_medical_monitor_on_the_wall_.jpg"
+    },
+    {
+      "description": "Checks the toe tag on the body bag, reading the number '240'.",
+      "timestamp_seconds": 61.0,
+      "screenshot_path": "Screenshots/061.0s_Checks_the_toe_tag_on_the_body_bag__reading_the_number__240__.jpg"
+    },
+    {
+      "description": "Turns a red valve on a wall pipe until the pressure gauge hits 240.",
+      "timestamp_seconds": 68.0,
+      "screenshot_path": "Screenshots/068.0s_Pressure_Valve.jpg"
+    },
+    {
+      "description": "Collects a small key that drops from the pressurized pipe.",
+      "timestamp_seconds": 72.0,
+      "screenshot_path": "Screenshots/072.0s_Collects_a_small_key_that_drops_from_the_pressurized_pipe_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Floor Safe",
+      "items_used": [],
+      "solution_steps": [
+        "Determine the 4-digit code (likely deciphered from the ultrasound machine imagery).",
+        "Enter '5985' into the combination lock on the floor."
+      ],
+      "reward": "CD/DVD",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Floor_Safe.jpg"
+    },
+    {
+      "puzzle_name": "Laptop Sliding Puzzle",
+      "items_used": [
+        "CD/DVD"
+      ],
+      "solution_steps": [
+        "Insert the CD into the laptop to trigger the puzzle.",
+        "Slide the scrambled tiles to form a complete vintage photograph of a group of people.",
+        "Completing the photo powers on the wall-mounted medical monitor."
+      ],
+      "reward": "Activates the medical monitor",
+      "timestamp_seconds": 46.0,
+      "screenshot_path": "Screenshots/046.0s_Laptop_Sliding_Puzzle.jpg"
+    },
+    {
+      "puzzle_name": "Pressure Valve",
+      "items_used": [],
+      "solution_steps": [
+        "Find the toe tag on the body bag to get the target number '240'.",
+        "Locate the pipe and turn the red valve to increase the pressure.",
+        "Stop exactly when the gauge needle hits 240."
+      ],
+      "reward": "A small key drops from the pipe",
+      "timestamp_seconds": 68.0,
+      "screenshot_path": "Screenshots/068.0s_Pressure_Valve.jpg"
+    }
+  ],
+  "final_action": "Uses the small key dropped from the pipe to unlock the padlock securing the chains on the main exit doors."
+}

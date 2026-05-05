@@ -1,0 +1,109 @@
+{
+  "level": 31,
+  "room_description": "A well-lit bedroom featuring beige patterned wallpaper, a white tufted bed with matching pillows, an elegant armchair, a flat-screen TV mounted on the wall with a modern console below, and a fish tank built into the wall near the door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the modern bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_modern_bedroom_.jpg"
+    },
+    {
+      "description": "Collecting a purple pencil from under the armchair.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Collecting_a_purple_pencil_from_under_the_armchair_.jpg"
+    },
+    {
+      "description": "Counting the colored fish in the fish tank to get a 4-digit code.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Counting_the_colored_fish_in_the_fish_tank_to_get_a_4_digit_code_.jpg"
+    },
+    {
+      "description": "Entering the code '2133' to open the TV console drawer.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Fish_Tank_Tally.jpg"
+    },
+    {
+      "description": "Scribbling on the blank notebook page with the pencil to reveal a hidden code.",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Notebook_Clue.jpg"
+    },
+    {
+      "description": "Entering the code '4325 + 1462' into the laptop.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Laptop_Sum.jpg"
+    },
+    {
+      "description": "Matching the colored shapes from the laptop clue onto the TV console dials.",
+      "timestamp_seconds": 121.0,
+      "screenshot_path": "Screenshots/121.0s_Console_Shape_Dials.jpg"
+    },
+    {
+      "description": "Opening the small wooden box inside the console drawer with the silver key.",
+      "timestamp_seconds": 142.5,
+      "screenshot_path": "Screenshots/142.5s_Opening_the_small_wooden_box_inside_the_console_drawer_with_the_silver_key_.jpg"
+    },
+    {
+      "description": "Solving the flower puzzle using the battery.",
+      "timestamp_seconds": 146.5,
+      "screenshot_path": "Screenshots/146.5s_Solving_the_flower_puzzle_using_the_battery_.jpg"
+    },
+    {
+      "description": "Unlocking the main door using the silver key.",
+      "timestamp_seconds": 154.5,
+      "screenshot_path": "Screenshots/154.5s_Unlocking_the_main_door_using_the_silver_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Fish Tank Tally",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the fish tank.",
+        "Count the fish by color to find the code: 2 red, 1 yellow, 3 blue, 3 green.",
+        "Enter '2133' into the colored digital lock on the white TV console drawer."
+      ],
+      "reward": "Access to the console drawer",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Fish_Tank_Tally.jpg"
+    },
+    {
+      "puzzle_name": "Notebook Clue",
+      "items_used": [
+        "Purple Pencil"
+      ],
+      "solution_steps": [
+        "Find the pencil under the armchair.",
+        "Open the notebook found in the console drawer.",
+        "Use the pencil on the blank page to reveal the text '4325 + 1462'."
+      ],
+      "reward": "Code '4325 + 1462'",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Notebook_Clue.jpg"
+    },
+    {
+      "puzzle_name": "Laptop Sum",
+      "items_used": [
+        "Battery"
+      ],
+      "solution_steps": [
+        "Calculate the sum of the equation found in the notebook: 4325 + 1462 = 5787.",
+        "Enter '5787' into the laptop on the bed."
+      ],
+      "reward": "Visual clue (colored shapes)",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Laptop_Sum.jpg"
+    },
+    {
+      "puzzle_name": "Console Shape Dials",
+      "items_used": [],
+      "solution_steps": [
+        "Note the shapes and colors displayed on the laptop: Red Hexagon, Blue Circle, Green Square, Yellow Triangle.",
+        "Adjust the dials on the left console drawer to match this sequence."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 121.0,
+      "screenshot_path": "Screenshots/121.0s_Console_Shape_Dials.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key found in the console to unlock the bedroom door."
+}

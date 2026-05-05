@@ -1,0 +1,84 @@
+{
+  "level": 28,
+  "room_description": "A Japanese-style living room with tatami mats, shoji sliding doors, and traditional wooden furniture.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the Japanese living room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_Japanese_living_room_.jpg"
+    },
+    {
+      "description": "Opening a drawer in the side table to find a set of bowls and chopsticks.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Opening_a_drawer_in_the_side_table_to_find_a_set_of_bowls_and_chopsticks_.jpg"
+    },
+    {
+      "description": "Finding a mahjong tile hidden in a potted plant.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Finding_a_mahjong_tile_hidden_in_a_potted_plant_.jpg"
+    },
+    {
+      "description": "Retrieving a pair of scissors from a low cabinet drawer.",
+      "timestamp_seconds": 19.5,
+      "screenshot_path": "Screenshots/019.5s_Retrieving_a_pair_of_scissors_from_a_low_cabinet_drawer_.jpg"
+    },
+    {
+      "description": "Using the scissors to cut a patch on the sofa to reveal a hidden compartment.",
+      "timestamp_seconds": 24.5,
+      "screenshot_path": "Screenshots/024.5s_Using_the_scissors_to_cut_a_patch_on_the_sofa_to_reveal_a_hidden_compartment_.jpg"
+    },
+    {
+      "description": "Looking at a wall clock with colored hands and markers.",
+      "timestamp_seconds": 31.5,
+      "screenshot_path": "Screenshots/031.5s_Looking_at_a_wall_clock_with_colored_hands_and_markers_.jpg"
+    },
+    {
+      "description": "Setting the clock hands to specific times based on a color clue scroll.",
+      "timestamp_seconds": 35.5,
+      "screenshot_path": "Screenshots/035.5s_Setting_the_clock_hands_to_specific_times_based_on_a_color_clue_scroll_.jpg"
+    },
+    {
+      "description": "Entering '9246' into the digital keypad on the shoji door.",
+      "timestamp_seconds": 43.5,
+      "screenshot_path": "Screenshots/043.5s_Entering__9246__into_the_digital_keypad_on_the_shoji_door_.jpg"
+    },
+    {
+      "description": "Solving a slider puzzle involving multi-colored vertical pipes.",
+      "timestamp_seconds": 55.0,
+      "screenshot_path": "Screenshots/055.0s_Solving_a_slider_puzzle_involving_multi_colored_vertical_pipes_.jpg"
+    },
+    {
+      "description": "The shoji doors slide open to reveal the exit.",
+      "timestamp_seconds": 110.5,
+      "screenshot_path": "Screenshots/110.5s_The_shoji_doors_slide_open_to_reveal_the_exit_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Clock Time Calculation",
+      "items_used": [
+        "Color clue scroll"
+      ],
+      "solution_steps": [
+        "Find the scroll showing a sequence of colored hands/marks.",
+        "Manipulate the clock hands to align with these colors.",
+        "Read the numbers revealed by the clock hands (9, 2, 4, 6)."
+      ],
+      "reward": "Keypad code 9246",
+      "timestamp_seconds": 39.5,
+      "screenshot_path": "Screenshots/039.5s_Clock_Time_Calculation.jpg"
+    },
+    {
+      "puzzle_name": "Pipe Slider Puzzle",
+      "items_used": [],
+      "solution_steps": [
+        "Access the sliding puzzle behind the keypad panel.",
+        "Move the colored segments up and down to align them with the corresponding colored sockets at the top."
+      ],
+      "reward": "Unlocks the main exit doors",
+      "timestamp_seconds": 108.0,
+      "screenshot_path": "Screenshots/108.0s_Pipe_Slider_Puzzle.jpg"
+    }
+  ],
+  "final_action": "The shoji doors slide open once the slider puzzle is completed, allowing the player to pass through."
+}

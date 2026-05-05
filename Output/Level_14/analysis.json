@@ -1,0 +1,106 @@
+{
+  "level": 14,
+  "room_description": "A dimly lit home office or study containing a desk with a laptop, a wooden bookshelf, a patterned chaise lounge, an overturned chair, and a wastebasket.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the office room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_office_room_.jpg"
+    },
+    {
+      "description": "Moving the sofa cushion to find a silver key.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Moving_the_sofa_cushion_to_find_a_silver_key_.jpg"
+    },
+    {
+      "description": "Using the key to unlock the bookshelf drawer, revealing a green box cutter.",
+      "timestamp_seconds": 15.5,
+      "screenshot_path": "Screenshots/015.5s_Using_the_key_to_unlock_the_bookshelf_drawer__revealing_a_green_box_cutter_.jpg"
+    },
+    {
+      "description": "Opening the desk drawer to collect a USB flash drive.",
+      "timestamp_seconds": 19.5,
+      "screenshot_path": "Screenshots/019.5s_Opening_the_desk_drawer_to_collect_a_USB_flash_drive_.jpg"
+    },
+    {
+      "description": "Plugging the USB drive into the laptop to activate the screen.",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Accessing_the_Laptop.jpg"
+    },
+    {
+      "description": "Examining the black notebook to see a grid of red numbers.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Examining_the_black_notebook_to_see_a_grid_of_red_numbers_.jpg"
+    },
+    {
+      "description": "Unfolding the crumpled paper on the desk to reveal a grid with red dots.",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Unfolding_the_crumpled_paper_on_the_desk_to_reveal_a_grid_with_red_dots_.jpg"
+    },
+    {
+      "description": "Entering the derived PIN code into the laptop.",
+      "timestamp_seconds": 104.0,
+      "screenshot_path": "Screenshots/104.0s_Dot_Grid_Overlay.jpg"
+    },
+    {
+      "description": "Completing the 'Quickspot' minigame on the laptop.",
+      "timestamp_seconds": 115.5,
+      "screenshot_path": "Screenshots/115.5s_Completing_the__Quickspot__minigame_on_the_laptop_.jpg"
+    },
+    {
+      "description": "Entering '311' into the desk drawer lock and escaping with the key.",
+      "timestamp_seconds": 126.5,
+      "screenshot_path": "Screenshots/126.5s_Entering__311__into_the_desk_drawer_lock_and_escaping_with_the_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Accessing the Laptop",
+      "items_used": [
+        "USB Drive"
+      ],
+      "solution_steps": [
+        "Open the unlocked desk drawer to get the USB drive.",
+        "Insert it into the laptop to bring up the keypad screen."
+      ],
+      "reward": "Activates Laptop Password Prompt",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Accessing_the_Laptop.jpg"
+    },
+    {
+      "puzzle_name": "Dot Grid Overlay",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the crumpled paper to see the positions of 5 red dots.",
+        "Cross-reference these positions with the grid of numbers in the black notebook.",
+        "Extract the corresponding numbers to form the code."
+      ],
+      "reward": "Code to unlock laptop",
+      "timestamp_seconds": 104.0,
+      "screenshot_path": "Screenshots/104.0s_Dot_Grid_Overlay.jpg"
+    },
+    {
+      "puzzle_name": "Spot the Difference",
+      "items_used": [],
+      "solution_steps": [
+        "Play the 'Quickspot' game on the laptop.",
+        "Find and click all 5 differences between the two classic portraits."
+      ],
+      "reward": "Code '311'",
+      "timestamp_seconds": 116.0,
+      "screenshot_path": "Screenshots/116.0s_Spot_the_Difference.jpg"
+    },
+    {
+      "puzzle_name": "Desk Drawer Lock",
+      "items_used": [],
+      "solution_steps": [
+        "Look at the combination lock on the lower desk drawer.",
+        "Enter the code '311' provided by the laptop."
+      ],
+      "reward": "Final Silver Key",
+      "timestamp_seconds": 123.5,
+      "screenshot_path": "Screenshots/123.5s_Desk_Drawer_Lock.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key from the locked desk drawer to open the main door and escape the room."
+}

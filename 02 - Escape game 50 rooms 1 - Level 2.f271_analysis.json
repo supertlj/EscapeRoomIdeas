@@ -1,0 +1,70 @@
+{
+  "level": 10,
+  "room_description": "A modern, minimalist living room or office featuring a central wooden door, a desk with a laptop to the left, a large potted plant, and a large wooden cabinet to the right. The walls are decorated with simple tree-themed artwork.",
+  "key_moments": [
+    {
+      "description": "Establishing shot showing the entire room including the sofa, desk, and cabinet.",
+      "timestamp_seconds": 0.1
+    },
+    {
+      "description": "Zooming in on the potted plant to find a hidden item in the soil.",
+      "timestamp_seconds": 8.2
+    },
+    {
+      "description": "Revealing the numerical code 1886 on the laptop screen after entering the password.",
+      "timestamp_seconds": 26.5
+    },
+    {
+      "description": "Opening the wooden box inside the cabinet using a four-digit code.",
+      "timestamp_seconds": 34.2
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Potted Plant Search",
+      "items_used": [],
+      "solution_steps": [
+        "Zoom into the potted plant to the left of the door",
+        "Search the soil at the base of the plant"
+      ],
+      "reward": "Silver key",
+      "timestamp_seconds": 8.2
+    },
+    {
+      "puzzle_name": "Unlock Cabinet Clue",
+      "items_used": [
+        "Silver key"
+      ],
+      "solution_steps": [
+        "Use the silver key on the bottom-left door of the wooden cabinet"
+      ],
+      "reward": "Paper clue with the word 'TAKI'",
+      "timestamp_seconds": 15.5
+    },
+    {
+      "puzzle_name": "Laptop Password",
+      "items_used": [
+        "Paper clue 'TAKI'"
+      ],
+      "solution_steps": [
+        "Interact with the laptop on the desk",
+        "Enter the password 'TAKI' as suggested by the paper clue"
+      ],
+      "reward": "Numeric code '1886'",
+      "timestamp_seconds": 26.5
+    },
+    {
+      "puzzle_name": "Wooden Box Keypad",
+      "items_used": [
+        "Numeric code '1886'"
+      ],
+      "solution_steps": [
+        "Locate the wooden box on the shelf inside the opened cabinet",
+        "Enter the code 1886 on the keypad"
+      ],
+      "reward": "Key card",
+      "timestamp_seconds": 34.2
+    }
+  ],
+  "final_action": "The player uses the key card on the electronic door handle of the center door to unlock it and exit the room."
+}

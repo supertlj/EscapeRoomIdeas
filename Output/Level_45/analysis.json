@@ -1,0 +1,113 @@
+{
+  "level": 45,
+  "room_description": "A vibrant, futuristic lounge with a bright blue and green galaxy-patterned wall. It contains modern black and white curved seating, a suspended spherical fireplace, colorful hanging light bulbs, and abstract art pieces.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the futuristic lounge.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_futuristic_lounge_.jpg"
+    },
+    {
+      "description": "Finding a red utility knife hidden under a sofa pillow.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Finding_a_red_utility_knife_hidden_under_a_sofa_pillow_.jpg"
+    },
+    {
+      "description": "Collecting a U-shaped magnet from the white futuristic chair.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Collecting_a_U_shaped_magnet_from_the_white_futuristic_chair_.jpg"
+    },
+    {
+      "description": "Using the magnet on a string to fish a white sphere out of a tall vase.",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Magnetic_Fishing.jpg"
+    },
+    {
+      "description": "Opening the white cabinet to find an empty glass.",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Opening_the_white_cabinet_to_find_an_empty_glass_.jpg"
+    },
+    {
+      "description": "Arranging the four colored square blocks on the wall panel.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Colored_Square_Alignment.jpg"
+    },
+    {
+      "description": "Viewing the planets/spheres through the telescope.",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Telescope_Planet_Code.jpg"
+    },
+    {
+      "description": "Entering '4681' into the colored button panel.",
+      "timestamp_seconds": 51.0,
+      "screenshot_path": "Screenshots/051.0s_Entering__4681__into_the_colored_button_panel_.jpg"
+    },
+    {
+      "description": "Collecting a purple screwdriver from the opened compartment.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Collecting_a_purple_screwdriver_from_the_opened_compartment_.jpg"
+    },
+    {
+      "description": "Removing the panel on the white table using the screwdriver to get the final key.",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Table_Panel_Key.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Magnetic Fishing",
+      "items_used": [
+        "Magnet"
+      ],
+      "solution_steps": [
+        "Find the magnet on the white chair.",
+        "Attach the magnet to the string hanging over the tall white vase.",
+        "Lower it to pull out the white sphere with the number '6' on it."
+      ],
+      "reward": "Numbered Sphere '6'",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Magnetic_Fishing.jpg"
+    },
+    {
+      "puzzle_name": "Colored Square Alignment",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the colored squares hidden around the room (e.g., behind pillows, on walls).",
+        "Interact with the wall panel.",
+        "Rearrange the sliders so the colors match the sequence: Grey, Red, Grey, Green."
+      ],
+      "reward": "Access to the Telescope",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Colored_Square_Alignment.jpg"
+    },
+    {
+      "puzzle_name": "Telescope Planet Code",
+      "items_used": [
+        "Numbered Sphere '6'"
+      ],
+      "solution_steps": [
+        "Look through the telescope at the starry background.",
+        "Identify the numbers written on the floating colored planets: Pink(4), Yellow(6), Green(8), Yellow-Green(1).",
+        "Note the sequence based on the colored bulbs hanging in the room."
+      ],
+      "reward": "Numeric code '4681'",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Telescope_Planet_Code.jpg"
+    },
+    {
+      "puzzle_name": "Table Panel Key",
+      "items_used": [
+        "Purple Screwdriver"
+      ],
+      "solution_steps": [
+        "Input the code '4681' into the lock matching the planet colors.",
+        "Take the purple screwdriver from the compartment.",
+        "Use the screwdriver to remove the side panel from the futuristic white table."
+      ],
+      "reward": "Final Exit Key",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Table_Panel_Key.jpg"
+    }
+  ],
+  "final_action": "The player takes the key revealed inside the white table structure and uses it to unlock the modern glass door to escape."
+}

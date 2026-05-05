@@ -1,0 +1,11 @@
+# Temporary scripts
+create_safe_sprite.py
+crop_elevator.py
+crop_keypad.py
+analyze_video.py
+
+# System
+.DS_Store
+Thumbs.db
+node_modules/
+.gemini/

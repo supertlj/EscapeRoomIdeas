@@ -1,0 +1,103 @@
+{
+  "level": 22,
+  "room_description": "An underwater-themed fantasy room with blue floors, glowing jellyfish lights, hanging shark and dolphin figures, and a spiral staircase.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the bioluminescent underwater room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_bioluminescent_underwater_room_.jpg"
+    },
+    {
+      "description": "Checking the numeric safe box on the left rock formation.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Checking_the_numeric_safe_box_on_the_left_rock_formation_.jpg"
+    },
+    {
+      "description": "Counting the colored glowing lights on the hanging fish models.",
+      "timestamp_seconds": 6.0,
+      "screenshot_path": "Screenshots/006.0s_Counting_the_colored_glowing_lights_on_the_hanging_fish_models_.jpg"
+    },
+    {
+      "description": "Entering '424' into the rock-mounted safe.",
+      "timestamp_seconds": 15.5,
+      "screenshot_path": "Screenshots/015.5s_Glow_Fish_Code.jpg"
+    },
+    {
+      "description": "Collecting a purple triangle token from the safe.",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Collecting_a_purple_triangle_token_from_the_safe_.jpg"
+    },
+    {
+      "description": "Observing the numbered fish silhouettes on the background wall.",
+      "timestamp_seconds": 28.5,
+      "screenshot_path": "Screenshots/028.5s_Observing_the_numbered_fish_silhouettes_on_the_background_wall_.jpg"
+    },
+    {
+      "description": "Setting the color sequence on the barrel-shaped pillar.",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Setting_the_color_sequence_on_the_barrel_shaped_pillar_.jpg"
+    },
+    {
+      "description": "Solving the numeric path puzzle on the exit door console.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Solving_the_numeric_path_puzzle_on_the_exit_door_console_.jpg"
+    },
+    {
+      "description": "Solving the circuit-style tile rotation puzzle.",
+      "timestamp_seconds": 123.0,
+      "screenshot_path": "Screenshots/123.0s_Pipe_Connection_Grid.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Glow Fish Code",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the hanging fish models: Pink has 4 lights, Yellow has 2, Blue has 4.",
+        "Input '424' into the colored numeric boxes on the left rock."
+      ],
+      "reward": "Purple Triangle Token",
+      "timestamp_seconds": 15.5,
+      "screenshot_path": "Screenshots/015.5s_Glow_Fish_Code.jpg"
+    },
+    {
+      "puzzle_name": "Fish Silhouette Barrel",
+      "items_used": [],
+      "solution_steps": [
+        "Look at the numbered fish silhouettes on the back wall.",
+        "Match the numbers (1-6) to the colors of the jellyfish near them.",
+        "Adjust the circular buttons on the twin-barrel unit to match the sequence."
+      ],
+      "reward": "Teal Pentagon Token",
+      "timestamp_seconds": 38.5,
+      "screenshot_path": "Screenshots/038.5s_Fish_Silhouette_Barrel.jpg"
+    },
+    {
+      "puzzle_name": "Token Geometric Lock",
+      "items_used": [
+        "Purple Triangle Token",
+        "Teal Pentagon Token"
+      ],
+      "solution_steps": [
+        "Go to the golden pentagonal pedestal.",
+        "Place the triangle and pentagon tokens into their matching slots.",
+        "Observe the number code '474' that appears."
+      ],
+      "reward": "Code '474'",
+      "timestamp_seconds": 45.5,
+      "screenshot_path": "Screenshots/045.5s_Token_Geometric_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Pipe Connection Grid",
+      "items_used": [],
+      "solution_steps": [
+        "Enter '474' into the keypad on the green door.",
+        "Solve the puzzle by rotating the square tiles to create a continuous path of light from the power sources."
+      ],
+      "reward": "Unlocks the exit door",
+      "timestamp_seconds": 123.0,
+      "screenshot_path": "Screenshots/123.0s_Pipe_Connection_Grid.jpg"
+    }
+  ],
+  "final_action": "Once the light path is fully connected, the green door automatically opens, allowing the player to swim through and escape."
+}

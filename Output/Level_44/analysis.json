@@ -1,0 +1,106 @@
+{
+  "level": 44,
+  "room_description": "A subterranean stone crypt or dungeon. It features a central illuminated statue of a winged figure, scattered candles, Roman numerals carved into the walls, and a dirt floor.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the stone crypt.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_stone_crypt_.jpg"
+    },
+    {
+      "description": "Noting the Roman numeral pairs carved on the wall (VII II, V II, I II, III II).",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Roman_Numeral_Math.jpg"
+    },
+    {
+      "description": "Solving the water flow puzzle on the stone panel.",
+      "timestamp_seconds": 24.5,
+      "screenshot_path": "Screenshots/024.5s_Water_Path_Slider.jpg"
+    },
+    {
+      "description": "Entering '1425' into the wall panel.",
+      "timestamp_seconds": 28.0,
+      "screenshot_path": "Screenshots/028.0s_Entering__1425__into_the_wall_panel_.jpg"
+    },
+    {
+      "description": "Solving the ring rotation puzzle on the floor pedestal.",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Altar_Ring_Puzzle.jpg"
+    },
+    {
+      "description": "Collecting a glowing orb from the pedestal.",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Collecting_a_glowing_orb_from_the_pedestal_.jpg"
+    },
+    {
+      "description": "Entering '5273' into the combination lock.",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Entering__5273__into_the_combination_lock_.jpg"
+    },
+    {
+      "description": "Placing the glowing orb into the skull's eye socket.",
+      "timestamp_seconds": 56.5,
+      "screenshot_path": "Screenshots/056.5s_Placing_the_glowing_orb_into_the_skull_s_eye_socket_.jpg"
+    },
+    {
+      "description": "Inputting the symbol code onto the floor plate.",
+      "timestamp_seconds": 60.5,
+      "screenshot_path": "Screenshots/060.5s_Symbol_Floor_Lock.jpg"
+    },
+    {
+      "description": "Retrieving the exit key from the opened compartment.",
+      "timestamp_seconds": 61.5,
+      "screenshot_path": "Screenshots/061.5s_Retrieving_the_exit_key_from_the_opened_compartment_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Roman Numeral Math",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the Roman numeral pairs on the wall: VII (7) and II (2), V (5) and II (2), I (1) and II (2), III (3) and II (2).",
+        "Subtract the second number from the first: 7-2=5, 5-2=3, 1-2 (treated as absolute difference or just reading the first numeral incorrectly in logic? Wait, the video shows entering 1425. Let's re-examine. Actually, it's 7/2=3.5 -> no. Let's look at the symbols again at 00:07. It's VII II (7/2), V II (5/2), I II (1/2), III II (3/2). The video enters '1425' at 00:28 based on the water puzzle. The Roman numerals seem to be a different clue.)"
+      ],
+      "reward": "Unknown/Contextual",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Roman_Numeral_Math.jpg"
+    },
+    {
+      "puzzle_name": "Water Path Slider",
+      "items_used": [],
+      "solution_steps": [
+        "Interact with the stone panel showing blue liquid.",
+        "Use the directional arrows to move the turtle block, clearing a continuous path for the water to flow from the inlet to the outlet."
+      ],
+      "reward": "Reveals Roman Numerals 'I IV II V III A'",
+      "timestamp_seconds": 24.5,
+      "screenshot_path": "Screenshots/024.5s_Water_Path_Slider.jpg"
+    },
+    {
+      "puzzle_name": "Altar Ring Puzzle",
+      "items_used": [],
+      "solution_steps": [
+        "Interact with the circular stone pedestal on the floor.",
+        "Rotate the outer rings until the glowing orange symbols match the pattern (forming a specific sequence of Greek-like letters)."
+      ],
+      "reward": "Glowing Orb",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Altar_Ring_Puzzle.jpg"
+    },
+    {
+      "puzzle_name": "Symbol Floor Lock",
+      "items_used": [
+        "Glowing Orb"
+      ],
+      "solution_steps": [
+        "Place the orb into the eye socket of the skeleton in the corner to reveal a symbol clue.",
+        "Go to the rectangular plate on the floor.",
+        "Change the four symbols to match the clue (Pi, Phi, Omega, Omega)."
+      ],
+      "reward": "Exit Key",
+      "timestamp_seconds": 60.5,
+      "screenshot_path": "Screenshots/060.5s_Symbol_Floor_Lock.jpg"
+    }
+  ],
+  "final_action": "The player uses the key found under the symbol plate to unlock the heavy wooden door hidden in the back wall and escape."
+}

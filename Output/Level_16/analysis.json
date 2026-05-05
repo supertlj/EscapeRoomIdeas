@@ -1,0 +1,99 @@
+{
+  "level": 16,
+  "room_description": "An elegant, well-lit study room containing a desk, a large vintage globe, a white sofa, decorative wall shelves, picture frames, and an attached bathroom.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the elegant study room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_elegant_study_room_.jpg"
+    },
+    {
+      "description": "Inspects the cushions on the white sofa.",
+      "timestamp_seconds": 1.0,
+      "screenshot_path": "Screenshots/001.0s_Inspects_the_cushions_on_the_white_sofa_.jpg"
+    },
+    {
+      "description": "Finds and collects a metal pin/handle resting on a book on the desk.",
+      "timestamp_seconds": 3.5,
+      "screenshot_path": "Screenshots/003.5s_Finds_and_collects_a_metal_pin_handle_resting_on_a_book_on_the_desk_.jpg"
+    },
+    {
+      "description": "Examines the decorative shelving unit on the wall.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Examines_the_decorative_shelving_unit_on_the_wall_.jpg"
+    },
+    {
+      "description": "Uses the metal pin to unlock the vintage globe.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Globe_Unlock.jpg"
+    },
+    {
+      "description": "Enters the attached bathroom and attaches the handle to a blank drawer.",
+      "timestamp_seconds": 20.5,
+      "screenshot_path": "Screenshots/020.5s_Enters_the_attached_bathroom_and_attaches_the_handle_to_a_blank_drawer_.jpg"
+    },
+    {
+      "description": "Opens the bathroom drawer and collects a red towel and a spray bottle.",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Opens_the_bathroom_drawer_and_collects_a_red_towel_and_a_spray_bottle_.jpg"
+    },
+    {
+      "description": "Sprays cleaning fluid on the dirty bathroom mirror and wipes it with the towel.",
+      "timestamp_seconds": 28.5,
+      "screenshot_path": "Screenshots/028.5s_Dirty_Mirror_Code.jpg"
+    },
+    {
+      "description": "Reveals the hidden code '7649' written in red on the mirror.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Reveals_the_hidden_code__7649__written_in_red_on_the_mirror_.jpg"
+    },
+    {
+      "description": "Enters the mirrored code into the keypad on the dark wooden cabinet.",
+      "timestamp_seconds": 35.0,
+      "screenshot_path": "Screenshots/035.0s_Cabinet_Keypad.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Globe Unlock",
+      "items_used": [
+        "Metal pin/handle"
+      ],
+      "solution_steps": [
+        "Locate the metal pin on the desk.",
+        "Insert it into the slot on the vintage globe to pop it open."
+      ],
+      "reward": "Glass lens/coin",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Globe_Unlock.jpg"
+    },
+    {
+      "puzzle_name": "Dirty Mirror Code",
+      "items_used": [
+        "Metal drawer handle",
+        "Spray bottle",
+        "Red towel"
+      ],
+      "solution_steps": [
+        "Attach the handle to the bathroom drawer to access the cleaning supplies.",
+        "Spray the clouded mirror with the bottle.",
+        "Wipe the mirror clean with the red towel to reveal the hidden 4-digit code."
+      ],
+      "reward": "Code '7649'",
+      "timestamp_seconds": 28.5,
+      "screenshot_path": "Screenshots/028.5s_Dirty_Mirror_Code.jpg"
+    },
+    {
+      "puzzle_name": "Cabinet Keypad",
+      "items_used": [],
+      "solution_steps": [
+        "Take the code '7649' found on the bathroom mirror.",
+        "Type it into the electronic keypad on the main room's dark cabinet."
+      ],
+      "reward": "Blue keycard",
+      "timestamp_seconds": 35.0,
+      "screenshot_path": "Screenshots/035.0s_Cabinet_Keypad.jpg"
+    }
+  ],
+  "final_action": "Retrieves the blue keycard from the opened cabinet and swipes it to unlock the exit door."
+}

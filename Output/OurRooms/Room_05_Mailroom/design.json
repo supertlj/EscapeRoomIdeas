@@ -1,0 +1,315 @@
+{
+  "room_number": 5,
+  "room_name": {
+    "en": "The Mailroom",
+    "zh": "收发室"
+  },
+  "hotel_area": {
+    "en": "Mailroom",
+    "zh": "收发室"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A narrow backroom lined with wooden mail cubbies numbered 101-350, one for each hotel room. A pneumatic tube system runs along the ceiling with brass sending stations. Stacks of undelivered letters and packages sit on a sorting table. A heavy iron door with a combination wheel leads out, and a single desk lamp illuminates the cramped space.",
+    "zh": "一间狭窄的后勤室，木质信件格子排列在墙上，编号从101到350，每个酒店房间一个。气动传输管系统沿天花板延伸，配有黄铜发送站。分拣桌上堆满了未投递的信件和包裹。一扇带有密码转盘的厚重铁门通向外面，一盏台灯照亮了这个狭小的空间。"
+  },
+  "story_fragment": {
+    "en": "Among the undelivered mail is a sealed envelope stamped 'DO NOT DELIVER — BY ORDER OF MANAGEMENT.' Inside is a hand-drawn map fragment showing a section of the hotel basement with an X marking a specific location. A note attached reads: 'If you're reading this, keep going down. The truth is below. — E.V.G.'",
+    "zh": "未投递的邮件中有一个密封信封，盖着'管理层命令——请勿投递'的印章。里面是一张手绘地图碎片，显示酒店地下室的一部分，X标记了一个特定位置。附带的纸条写着：'如果你正在读这个，继续往下走。真相在下面。——E.V.G.'"
+  },
+  "estimated_solve_time_minutes": 2.5,
+  "items": [
+    {
+      "id": "map_fragment",
+      "name": {
+        "en": "Basement Map Fragment",
+        "zh": "地下室地图碎片"
+      }
+    },
+    {
+      "id": "brass_tube_capsule",
+      "name": {
+        "en": "Pneumatic Tube Capsule",
+        "zh": "气动管传输胶囊"
+      }
+    },
+    {
+      "id": "mailroom_exit_code",
+      "name": {
+        "en": "Exit Combination",
+        "zh": "出口密码"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Room Number Sort",
+        "zh": "房间号分拣"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "Four letters on the table are marked 'URGENT — RETURN TO SENDER.' Each is addressed to a different room: 215, 307, 118, 242. The sorting table has a label: 'File urgent returns by floor, lowest room first.'",
+        "zh": "桌上有四封标记'紧急——退回寄件人'的信件。每封寄往不同房间：215、307、118、242。分拣桌上有标签：'按楼层归档紧急退件，房间号从小到大。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Find the four 'URGENT' letters addressed to rooms 215, 307, 118, 242.",
+          "zh": "找到四封'紧急'信件，分别寄往215、307、118、242号房间。"
+        },
+        {
+          "en": "Sort them by floor (1st digit), then room number within each floor: 118, 215, 242, 307.",
+          "zh": "按楼层（第一位数）排序，然后按每层内的房间号排序：118、215、242、307。"
+        },
+        {
+          "en": "Place each letter in its correct cubby. When all four are filed correctly, a hidden drawer opens in the sorting table.",
+          "zh": "将每封信放入正确的格子。当四封信都正确归档后，分拣桌上的一个隐藏抽屉打开了。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Four urgent letters need filing. Read the instruction label on the sorting table.",
+          "zh": "四封紧急信件需要归档。阅读分拣桌上的指示标签。"
+        },
+        {
+          "en": "Sort by floor number first, then by room number within each floor.",
+          "zh": "先按楼层号排序，然后按每层内的房间号排序。"
+        },
+        {
+          "en": "Order: 118, 215, 242, 307. Place each in its numbered cubby.",
+          "zh": "顺序：118、215、242、307。将每封信放入对应编号的格子。"
+        }
+      ],
+      "reward": {
+        "en": "Hidden drawer reveals the sealed 'DO NOT DELIVER' envelope with the map fragment",
+        "zh": "隐藏抽屉露出密封的'请勿投递'信封和地图碎片"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 31 (fish tank tally)",
+        "Level 34 (card suit wall panels)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Package Weight Cipher",
+        "zh": "包裹重量密码"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "Three packages on the scale each have a weight tag and a colored sticker (Red, Blue, Green). A poster on the wall shows: 'Shipping rates: Red = heavy, Blue = medium, Green = light. Report weight in R-B-G order.'",
+        "zh": "秤上的三个包裹各有一个重量标签和一个彩色贴纸（红、蓝、绿）。墙上的海报显示：'运费标准：红=重，蓝=中，绿=轻。按红-蓝-绿顺序报告重量。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Find the three packages on the scale: Red sticker = 8kg, Blue sticker = 3kg, Green sticker = 5kg.",
+          "zh": "找到秤上的三个包裹：红色贴纸=8公斤，蓝色贴纸=3公斤，绿色贴纸=5公斤。"
+        },
+        {
+          "en": "Follow the poster's R-B-G order: 8-3-5.",
+          "zh": "按海报的红-蓝-绿顺序：8-3-5。"
+        },
+        {
+          "en": "Enter '835' into the pneumatic tube station keypad to send a capsule.",
+          "zh": "在气动管站键盘上输入'835'发送一个胶囊。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Three packages have colored stickers and weight tags. There's a poster about the order.",
+          "zh": "三个包裹有彩色贴纸和重量标签。有一张关于顺序的海报。"
+        },
+        {
+          "en": "Read the weights in the color order shown on the poster: Red, Blue, Green.",
+          "zh": "按海报显示的颜色顺序读取重量：红、蓝、绿。"
+        },
+        {
+          "en": "Red=8, Blue=3, Green=5. Enter '835' on the pneumatic tube keypad.",
+          "zh": "红=8，蓝=3，绿=5。在气动管键盘上输入'835'。"
+        }
+      ],
+      "reward": {
+        "en": "A capsule arrives via pneumatic tube containing a paper strip with the exit code",
+        "zh": "一个胶囊通过气动管到达，里面有一张写有出口密码的纸条"
+      },
+      "depends_on": "Room Number Sort",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 22 (glow fish code)",
+        "Level 26 (colored deer sequence)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Iron Door Dial",
+        "zh": "铁门转盘"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "dial_alignment",
+      "twist_applied": null,
+      "items_used": [
+        "brass_tube_capsule"
+      ],
+      "clue_source": {
+        "en": "The paper strip from the capsule shows three arrow symbols pointing to clock positions: ↑ (12), → (3), ↓ (6). The iron exit door has a combination wheel with these same positions.",
+        "zh": "胶囊中的纸条显示三个箭头符号指向时钟位置：↑（12点）、→（3点）、↓（6点）。铁门出口有一个带有相同位置的密码转盘。"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the paper strip from the pneumatic capsule: three arrows pointing Up, Right, Down.",
+          "zh": "阅读气动胶囊中的纸条：三个箭头指向上、右、下。"
+        },
+        {
+          "en": "Go to the iron exit door's combination wheel.",
+          "zh": "走到铁门出口的密码转盘前。"
+        },
+        {
+          "en": "Turn the dial to 12 o'clock (up), then 3 o'clock (right), then 6 o'clock (down).",
+          "zh": "将转盘转到12点（上），然后3点（右），然后6点（下）。"
+        },
+        {
+          "en": "The heavy iron door clicks and swings open.",
+          "zh": "厚重的铁门咔哒一声打开了。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The paper from the tube has arrows. What do they represent on a dial?",
+          "zh": "管子里的纸条有箭头。它们在转盘上代表什么？"
+        },
+        {
+          "en": "Think of the arrows as clock positions. Up = 12, Right = 3, Down = 6.",
+          "zh": "把箭头想象成时钟位置。上=12点，右=3点，下=6点。"
+        },
+        {
+          "en": "Turn the door dial to 12, then 3, then 6 o'clock positions.",
+          "zh": "将门转盘转到12点、3点、6点位置。"
+        }
+      ],
+      "reward": {
+        "en": "Opens the iron exit door",
+        "zh": "打开铁门出口"
+      },
+      "depends_on": "Package Weight Cipher",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 1 (dial mechanism)",
+        "Level 28 (clock time calculation)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "The iron door swings open with a groan, revealing a dim service stairwell. You pocket the basement map fragment — you'll need it later. The stairs lead both up and down.",
+    "zh": "铁门吱嘎一声打开，露出一个昏暗的服务楼梯间。你把地下室地图碎片收入口袋——以后会用到。楼梯通向上方和下方。"
+  },
+  "escape_mechanism": "dial_combination",
+  "persistent_items_found": [
+    {
+      "id": "basement_map_fragment",
+      "name": {
+        "en": "Basement Map Fragment",
+        "zh": "地下室地图碎片"
+      },
+      "found_in_room": 5,
+      "used_in_room": 29,
+      "narrative_only": false,
+      "description": {
+        "en": "A hand-drawn map of the hotel basement with an X marking a specific location. Required to navigate the Underground Spring in Room 29.",
+        "zh": "一张手绘的酒店地下室地图，X标记了一个特定位置。在第29间房间的地下泉水中需要用来导航。"
+      },
+      "acquisition_method": "puzzle_reward",
+      "acquisition_puzzle": "Room Number Sort",
+      "critical_path_guaranteed": true,
+      "gate_note": {
+        "en": "Rewarded by 'Room Number Sort' puzzle, which is now on the critical escape path.",
+        "zh": "由'房间号分拣'谜题奖励，该谜题现在在关键逃脱路径上。"
+      }
+    }
+  ],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "mail_cubbies",
+      "name": {
+        "en": "Mail Cubbies",
+        "zh": "信件格子"
+      },
+      "states": [
+        "empty",
+        "letters_placed_correctly"
+      ],
+      "trigger_puzzle": "Room Number Sort",
+      "z_layer": 2
+    },
+    {
+      "id": "sorting_table_drawer",
+      "name": {
+        "en": "Sorting Table Hidden Drawer",
+        "zh": "分拣桌隐藏抽屉"
+      },
+      "states": [
+        "closed",
+        "open"
+      ],
+      "trigger_puzzle": "Room Number Sort",
+      "z_layer": 3
+    },
+    {
+      "id": "pneumatic_tube",
+      "name": {
+        "en": "Pneumatic Tube Station",
+        "zh": "气动管站"
+      },
+      "states": [
+        "idle",
+        "code_entered",
+        "capsule_arriving"
+      ],
+      "trigger_puzzle": "Package Weight Cipher",
+      "z_layer": 2
+    },
+    {
+      "id": "iron_door",
+      "name": {
+        "en": "Iron Exit Door",
+        "zh": "铁门出口"
+      },
+      "states": [
+        "locked",
+        "dial_turning",
+        "open"
+      ],
+      "trigger_puzzle": "Iron Door Dial",
+      "z_layer": 1
+    },
+    {
+      "id": "sealed_envelope",
+      "name": {
+        "en": "DO NOT DELIVER Envelope",
+        "zh": "请勿投递信封"
+      },
+      "states": [
+        "hidden",
+        "revealed",
+        "opened",
+        "collected"
+      ],
+      "trigger_puzzle": "Room Number Sort",
+      "z_layer": 4
+    }
+  ]
+}

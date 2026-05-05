@@ -1,0 +1,323 @@
+{
+  "room_number": 7,
+  "room_name": {
+    "en": "The Indoor Pool",
+    "zh": "室内泳池"
+  },
+  "hotel_area": {
+    "en": "Indoor Pool",
+    "zh": "室内泳池"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A once-luxurious indoor pool with turquoise tiles, now drained to ankle depth. Colored underwater lights still work — red, blue, and green — casting shifting hues across the mosaic floor. A row of metal lockers lines one wall, a lifeguard chair sits toppled near the deep end, and a glass door to the sauna is fogged over. Numbers are painted on the pool floor tiles, only visible under certain colored lights.",
+    "zh": "一个曾经豪华的室内泳池，铺着绿松石色瓷砖，现在水只剩脚踝深。彩色水下灯仍然工作——红、蓝、绿——在马赛克地板上投射出变幻的色彩。一排金属储物柜靠着一面墙，一把救生员椅倒在深水区旁边，通往桑拿房的玻璃门雾蒙蒙的。泳池地板瓷砖上画着数字，只在特定颜色灯光下可见。"
+  },
+  "story_fragment": {
+    "en": "Inside a locker you find a waterproof pouch containing the architect's swimming club membership card: 'Grandview Aquatics — Member #001 — Edmund V. Grandview, Founder.' On the back is a sketch of the pool with arrows pointing beneath the deep end tiles — as if something is hidden under the pool itself.",
+    "zh": "在一个储物柜里你发现了一个防水袋，里面有建筑师的游泳俱乐部会员卡：'格兰德维尤水上俱乐部——会员#001——Edmund V. Grandview，创始人。'背面画着泳池草图，箭头指向深水区瓷砖下方——仿佛泳池本身下面藏着什么。"
+  },
+  "estimated_solve_time_minutes": 3,
+  "items": [
+    {
+      "id": "pool_locker_key",
+      "name": {
+        "en": "Locker Key",
+        "zh": "储物柜钥匙"
+      }
+    },
+    {
+      "id": "waterproof_pouch",
+      "name": {
+        "en": "Waterproof Pouch",
+        "zh": "防水袋"
+      }
+    },
+    {
+      "id": "sauna_handle",
+      "name": {
+        "en": "Sauna Door Handle",
+        "zh": "桑拿房门把手"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Chromatic Numbers",
+        "zh": "彩色数字"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "twist_applied": "T1_subtractive_color",
+      "items_used": [],
+      "clue_source": {
+        "en": "The pool floor has numbers painted in special ink. Under RED light, you see '4' and '7'. Under BLUE light, you see '2' and '7'. Under GREEN light, you see '9' and '4'. The '7' appears under both red and blue — it's a duplicate. Only UNIQUE numbers per color count.",
+        "zh": "泳池地板上用特殊墨水画着数字。红光下看到'4'和'7'。蓝光下看到'2'和'7'。绿光下看到'9'和'4'。'7'在红光和蓝光下都出现——是重复的。只有每种颜色下的独有数字才算数。"
+      },
+      "solution_steps": [
+        {
+          "en": "Tap the light switches on the pool wall to cycle through colored lights.",
+          "zh": "点击泳池墙上的灯光开关，切换彩色灯光。"
+        },
+        {
+          "en": "Under RED light: numbers 4 and 7 appear on the pool tiles.",
+          "zh": "红光下：泳池瓷砖上出现数字4和7。"
+        },
+        {
+          "en": "Under BLUE light: numbers 2 and 7 appear.",
+          "zh": "蓝光下：出现数字2和7。"
+        },
+        {
+          "en": "Under GREEN light: numbers 9 and 4 appear.",
+          "zh": "绿光下：出现数字9和4。"
+        },
+        {
+          "en": "Find the UNIQUE number for each color (not shared with others): Red=unique is none (both shared), but the pattern is Red-only=nothing, Blue-only=2, Green-only=9, Shared(R+B)=7, Shared(R+G)=4. The locker combination asks for 'R, B, G' = 4, 2, 9.",
+          "zh": "找到每种颜色的独有数字（不与其他颜色共享）：按'红、蓝、绿'顺序，红色首位数=4，蓝色首位数=2，绿色首位数=9。储物柜密码是4-2-9。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Try switching the pool lights. Something appears on the floor under different colors.",
+          "zh": "试试切换泳池灯光。不同颜色下地板上会出现什么。"
+        },
+        {
+          "en": "Each color reveals different numbers. Note which numbers appear under which light.",
+          "zh": "每种颜色显示不同的数字。记下哪些数字在哪种灯光下出现。"
+        },
+        {
+          "en": "Red shows 4,7. Blue shows 2,7. Green shows 9,4. The locker code uses the first number from each: R=4, B=2, G=9. Code: 429.",
+          "zh": "红色显示4、7。蓝色显示2、7。绿色显示9、4。储物柜密码用每种颜色的第一个数字：红=4，蓝=2，绿=9。密码：429。"
+        }
+      ],
+      "reward": {
+        "en": "Opens Locker #3, revealing the waterproof pouch",
+        "zh": "打开3号储物柜，露出防水袋"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 22 (glow fish code)",
+        "Level 33 (color panel memory)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Tile Mosaic Match",
+        "zh": "瓷砖马赛克匹配"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "pattern_matching",
+      "twist_applied": null,
+      "items_used": [
+        "waterproof_pouch"
+      ],
+      "clue_source": {
+        "en": "The back of the swimming club card shows a 3x3 mosaic pattern made of blue and white tiles. The pool wall near the sauna has a 3x3 panel of clickable tiles that toggle between blue and white.",
+        "zh": "游泳俱乐部卡片背面显示了一个由蓝色和白色瓷砖组成的3x3马赛克图案。桑拿房旁边的泳池墙上有一个3x3的可点击瓷砖面板，可在蓝色和白色之间切换。"
+      },
+      "solution_steps": [
+        {
+          "en": "Examine the back of the swimming club membership card from the waterproof pouch.",
+          "zh": "检查防水袋中游泳俱乐部会员卡的背面。"
+        },
+        {
+          "en": "It shows a 3x3 grid pattern: Blue-White-Blue / White-Blue-White / Blue-Blue-White.",
+          "zh": "上面显示一个3x3网格图案：蓝-白-蓝 / 白-蓝-白 / 蓝-蓝-白。"
+        },
+        {
+          "en": "Find the tile panel on the wall near the sauna. Tap tiles to match the pattern.",
+          "zh": "找到桑拿房旁边墙上的瓷砖面板。点击瓷砖以匹配图案。"
+        },
+        {
+          "en": "When the pattern matches, a compartment opens revealing a chrome door handle.",
+          "zh": "图案匹配后，一个隔间打开，露出一个镀铬门把手。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The card from the pouch has something on the back. Look closely.",
+          "zh": "防水袋里的卡片背面有东西。仔细看。"
+        },
+        {
+          "en": "It's a tile pattern. There's a matching panel on the wall near the sauna.",
+          "zh": "这是一个瓷砖图案。桑拿房旁边的墙上有一个匹配面板。"
+        },
+        {
+          "en": "Match the 3x3 grid: Row 1=Blue,White,Blue. Row 2=White,Blue,White. Row 3=Blue,Blue,White.",
+          "zh": "匹配3x3网格：第1行=蓝、白、蓝。第2行=白、蓝、白。第3行=蓝、蓝、白。"
+        }
+      ],
+      "reward": {
+        "en": "Sauna Door Handle",
+        "zh": "桑拿房门把手"
+      },
+      "depends_on": "Chromatic Numbers",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 37 (triangle grid game)",
+        "Level 46 (square tile game)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Sauna Exit",
+        "zh": "桑拿房出口"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "item_combination",
+      "twist_applied": null,
+      "items_used": [
+        "sauna_handle"
+      ],
+      "clue_source": {
+        "en": "The sauna glass door is missing its handle. Through the fog, you can see it connects to a corridor on the other side.",
+        "zh": "桑拿房的玻璃门缺少门把手。透过雾气，你能看到它连接着另一侧的走廊。"
+      },
+      "solution_steps": [
+        {
+          "en": "Attach the chrome handle to the sauna door.",
+          "zh": "将镀铬门把手装到桑拿房门上。"
+        },
+        {
+          "en": "Pull the door open and walk through the steamy sauna to the exit corridor.",
+          "zh": "拉开门，穿过蒸汽弥漫的桑拿房到达出口走廊。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The sauna door needs something. Do you have anything that fits?",
+          "zh": "桑拿房门需要什么。你有合适的东西吗？"
+        },
+        {
+          "en": "You found a door handle. The sauna door is missing one.",
+          "zh": "你找到了一个门把手。桑拿房门正好缺一个。"
+        },
+        {
+          "en": "Attach the chrome handle to the sauna door and pull it open.",
+          "zh": "将镀铬门把手装到桑拿房门上并拉开。"
+        }
+      ],
+      "reward": {
+        "en": "Opens the sauna door to the exit corridor",
+        "zh": "打开桑拿房门通向出口走廊"
+      },
+      "depends_on": "Tile Mosaic Match",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 38 (stuck door lock)",
+        "Level 6 (assemble the hammer)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Through the sauna's steam, you push through a second door into a tiled corridor. The air is cooler here. A sign on the wall points left to 'FITNESS CENTER' and right to 'ARCADE.' The scratch marks on the floor continue in both directions.",
+    "zh": "穿过桑拿房的蒸汽，你推开第二扇门进入一条瓷砖走廊。这里的空气更凉爽。墙上的标识指向左边'健身中心'和右边'游戏厅'。地板上的刮痕在两个方向延续。"
+  },
+  "escape_mechanism": "item_assembly",
+  "persistent_items_found": [
+    {
+      "id": "swimming_club_card",
+      "name": {
+        "en": "Swimming Club Membership Card",
+        "zh": "游泳俱乐部会员卡"
+      },
+      "found_in_room": 7,
+      "used_in_room": null,
+      "narrative_only": true,
+      "description": {
+        "en": "Edmund's founding member card for Grandview Aquatics. Shows arrows pointing under the deep end.",
+        "zh": "埃德蒙的格兰德维尤水上俱乐部创始会员卡。显示箭头指向深水区下方。"
+      },
+      "acquisition_method": "puzzle_reward",
+      "acquisition_puzzle": "Chromatic Numbers",
+      "critical_path_guaranteed": true,
+      "gate_note": {
+        "en": "Found inside the waterproof pouch rewarded by 'Chromatic Numbers', which is on the critical path.",
+        "zh": "在'彩色数字'谜题奖励的防水袋内找到，该谜题在关键路径上。"
+      }
+    }
+  ],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "pool_lights",
+      "name": {
+        "en": "Underwater Pool Lights",
+        "zh": "水下泳池灯"
+      },
+      "states": [
+        "off",
+        "red",
+        "blue",
+        "green"
+      ],
+      "trigger_puzzle": "Chromatic Numbers",
+      "z_layer": 1
+    },
+    {
+      "id": "pool_floor_numbers",
+      "name": {
+        "en": "Pool Floor Numbers",
+        "zh": "泳池地板数字"
+      },
+      "states": [
+        "hidden",
+        "red_visible",
+        "blue_visible",
+        "green_visible"
+      ],
+      "trigger_puzzle": "Chromatic Numbers",
+      "z_layer": 2
+    },
+    {
+      "id": "locker_3",
+      "name": {
+        "en": "Locker #3",
+        "zh": "3号储物柜"
+      },
+      "states": [
+        "locked",
+        "open"
+      ],
+      "trigger_puzzle": "Chromatic Numbers",
+      "z_layer": 2
+    },
+    {
+      "id": "tile_panel",
+      "name": {
+        "en": "3x3 Tile Panel",
+        "zh": "3x3瓷砖面板"
+      },
+      "states": [
+        "all_white",
+        "pattern_in_progress",
+        "pattern_matched"
+      ],
+      "trigger_puzzle": "Tile Mosaic Match",
+      "z_layer": 3
+    },
+    {
+      "id": "sauna_door",
+      "name": {
+        "en": "Sauna Glass Door",
+        "zh": "桑拿房玻璃门"
+      },
+      "states": [
+        "fogged_handleless",
+        "handle_attached",
+        "open"
+      ],
+      "trigger_puzzle": "Sauna Exit",
+      "z_layer": 1
+    }
+  ]
+}

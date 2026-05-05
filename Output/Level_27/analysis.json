@@ -1,0 +1,83 @@
+{
+  "level": 27,
+  "room_description": "A grimy, yellow-tiled basement or locker room with blood stains, a skeleton, and various cleaning equipment.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the grimy room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_grimy_room_.jpg"
+    },
+    {
+      "description": "Finding a mop and a bucket on the blood-stained checkered floor.",
+      "timestamp_seconds": 1.5,
+      "screenshot_path": "Screenshots/001.5s_Finding_a_mop_and_a_bucket_on_the_blood_stained_checkered_floor_.jpg"
+    },
+    {
+      "description": "Inspecting a skeleton holding a leather briefcase.",
+      "timestamp_seconds": 5.0,
+      "screenshot_path": "Screenshots/005.0s_Inspecting_a_skeleton_holding_a_leather_briefcase_.jpg"
+    },
+    {
+      "description": "Finding a hidden number '1354' written in blood on the wall tile.",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Finding_a_hidden_number__1354__written_in_blood_on_the_wall_tile_.jpg"
+    },
+    {
+      "description": "Entering '1354' into the briefcase combination lock.",
+      "timestamp_seconds": 17.5,
+      "screenshot_path": "Screenshots/017.5s_Entering__1354__into_the_briefcase_combination_lock_.jpg"
+    },
+    {
+      "description": "A small monitor on the wall flashes a sequence of Red, White, Yellow, Green.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_A_small_monitor_on_the_wall_flashes_a_sequence_of_Red__White__Yellow__Green_.jpg"
+    },
+    {
+      "description": "Pressing the buttons on the trash bins in the order shown by the monitor.",
+      "timestamp_seconds": 30.5,
+      "screenshot_path": "Screenshots/030.5s_Pressing_the_buttons_on_the_trash_bins_in_the_order_shown_by_the_monitor_.jpg"
+    },
+    {
+      "description": "Using a hooked pole to retrieve an object from the ceiling rafters.",
+      "timestamp_seconds": 37.5,
+      "screenshot_path": "Screenshots/037.5s_Using_a_hooked_pole_to_retrieve_an_object_from_the_ceiling_rafters_.jpg"
+    },
+    {
+      "description": "Checking the generator/pump in the corner of the room.",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Checking_the_generator_pump_in_the_corner_of_the_room_.jpg"
+    },
+    {
+      "description": "Activating the generator to open the exit door.",
+      "timestamp_seconds": 49.5,
+      "screenshot_path": "Screenshots/049.5s_Activating_the_generator_to_open_the_exit_door_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Blood Code Briefcase",
+      "items_used": [
+        "Mop"
+      ],
+      "solution_steps": [
+        "Use the mop to clear away grime or blood to reveal the code 1354 on the wall.",
+        "Enter 1354 into the briefcase lock next to the skeleton."
+      ],
+      "reward": "Roll of duct tape",
+      "timestamp_seconds": 18.5,
+      "screenshot_path": "Screenshots/018.5s_Blood_Code_Briefcase.jpg"
+    },
+    {
+      "puzzle_name": "TV Color Sequence",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the color sequence on the wall monitor (Red, White, Yellow, Green).",
+        "Press the corresponding color-coded lids of the four trash bins in the same order."
+      ],
+      "reward": "Hooked metal pole",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_TV_Color_Sequence.jpg"
+    }
+  ],
+  "final_action": "Using the duct tape to repair a frayed wire and turning the red valve on the generator to unlock the door."
+}

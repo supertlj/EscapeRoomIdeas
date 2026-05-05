@@ -1,0 +1,94 @@
+{
+  "level": 46,
+  "room_description": "A colorful classroom with a green chalkboard showing a line graph, a teacher's desk, and several student desks arranged in rows.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the classroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_classroom_.jpg"
+    },
+    {
+      "description": "Inspecting a cloth doll lying on the floor between the student desks.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Inspecting_a_cloth_doll_lying_on_the_floor_between_the_student_desks_.jpg"
+    },
+    {
+      "description": "Looking at musical notes painted on the right wall.",
+      "timestamp_seconds": 5.5,
+      "screenshot_path": "Screenshots/005.5s_Looking_at_musical_notes_painted_on_the_right_wall_.jpg"
+    },
+    {
+      "description": "Zooming in on the colorful ball pit seen through the classroom door.",
+      "timestamp_seconds": 9.5,
+      "screenshot_path": "Screenshots/009.5s_Zooming_in_on_the_colorful_ball_pit_seen_through_the_classroom_door_.jpg"
+    },
+    {
+      "description": "Examining a toy crib and shelves in the adjacent playroom.",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Examining_a_toy_crib_and_shelves_in_the_adjacent_playroom_.jpg"
+    },
+    {
+      "description": "Finding a 3x3 grid lock panel hidden behind a poster.",
+      "timestamp_seconds": 43.5,
+      "screenshot_path": "Screenshots/043.5s_Finding_a_3x3_grid_lock_panel_hidden_behind_a_poster_.jpg"
+    },
+    {
+      "description": "Entering a combination sequence of shapes on the grid panel.",
+      "timestamp_seconds": 46.5,
+      "screenshot_path": "Screenshots/046.5s_Wall_Symbols.jpg"
+    },
+    {
+      "description": "Retrieving a key half from the unlocked panel.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Retrieving_a_key_half_from_the_unlocked_panel_.jpg"
+    },
+    {
+      "description": "Completing the Lights Out style puzzle game on a tablet.",
+      "timestamp_seconds": 64.0,
+      "screenshot_path": "Screenshots/064.0s_Square_Tile_Game.jpg"
+    },
+    {
+      "description": "Picking up the full key to escape.",
+      "timestamp_seconds": 67.5,
+      "screenshot_path": "Screenshots/067.5s_Picking_up_the_full_key_to_escape_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Alphabet Block Code",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the abacus/block toy in the playroom.",
+        "Note the position of the blank spots to figure out the missing letters.",
+        "Input the letters 'G', 'I', 'R', 'L' onto the four interactive blocks on the abacus."
+      ],
+      "reward": "A key half",
+      "timestamp_seconds": 15.5,
+      "screenshot_path": "Screenshots/015.5s_Alphabet_Block_Code.jpg"
+    },
+    {
+      "puzzle_name": "Wall Symbols",
+      "items_used": [],
+      "solution_steps": [
+        "Look at the symbols painted on the wall.",
+        "Go to the three-panel combination lock behind the poster.",
+        "Match the symbols found on the wall on the lock."
+      ],
+      "reward": "The second key half",
+      "timestamp_seconds": 46.5,
+      "screenshot_path": "Screenshots/046.5s_Wall_Symbols.jpg"
+    },
+    {
+      "puzzle_name": "Square Tile Game",
+      "items_used": [],
+      "solution_steps": [
+        "Access the tablet device.",
+        "Tap the tiles to turn them all blue. Tapping a tile changes its color and the color of adjacent tiles."
+      ],
+      "reward": "A key",
+      "timestamp_seconds": 64.0,
+      "screenshot_path": "Screenshots/064.0s_Square_Tile_Game.jpg"
+    }
+  ],
+  "final_action": "Using the acquired key to unlock the main door and escape the classroom."
+}

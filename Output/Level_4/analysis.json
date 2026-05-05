@@ -1,0 +1,98 @@
+{
+  "level": 4,
+  "room_description": "A modern kitchen featuring dark brown lower cabinets, white upper cabinets, a black marble countertop island with a fruit bowl, a stove, a microwave, and a strange burger-themed machine built into the tiled right wall.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the kitchen.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_kitchen_.jpg"
+    },
+    {
+      "description": "Retrieving the bottom half of a burger bun from inside the microwave.",
+      "timestamp_seconds": 5.0,
+      "screenshot_path": "Screenshots/005.0s_Retrieving_the_bottom_half_of_a_burger_bun_from_inside_the_microwave_.jpg"
+    },
+    {
+      "description": "Taking a cooked meat patty from the frying pan on the stove.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Taking_a_cooked_meat_patty_from_the_frying_pan_on_the_stove_.jpg"
+    },
+    {
+      "description": "Collecting a plate of shredded lettuce from the counter next to the sink.",
+      "timestamp_seconds": 12.0,
+      "screenshot_path": "Screenshots/012.0s_Collecting_a_plate_of_shredded_lettuce_from_the_counter_next_to_the_sink_.jpg"
+    },
+    {
+      "description": "Placing the bottom bun onto the red tray on the kitchen island.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Placing_the_bottom_bun_onto_the_red_tray_on_the_kitchen_island_.jpg"
+    },
+    {
+      "description": "Finding a bottle of mustard/sauce inside the upper kitchen cabinet.",
+      "timestamp_seconds": 42.0,
+      "screenshot_path": "Screenshots/042.0s_Gathering_Ingredients.jpg"
+    },
+    {
+      "description": "Completing the burger assembly by adding the top bun.",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Burger_Assembly.jpg"
+    },
+    {
+      "description": "The burger-themed machine on the wall automatically opens its compartment.",
+      "timestamp_seconds": 49.0,
+      "screenshot_path": "Screenshots/049.0s_The_burger_themed_machine_on_the_wall_automatically_opens_its_compartment_.jpg"
+    },
+    {
+      "description": "Retrieving the door key from the opened wall machine.",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Burger_Machine_Reward.jpg"
+    },
+    {
+      "description": "Unlocking the main kitchen door with the key.",
+      "timestamp_seconds": 56.0,
+      "screenshot_path": "Screenshots/056.0s_Unlocking_the_main_kitchen_door_with_the_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Gathering Ingredients",
+      "items_used": [],
+      "solution_steps": [
+        "Check the microwave for the bottom bun.",
+        "Check the stove pan for the meat patty.",
+        "Check the sink area for the lettuce.",
+        "Open the upper cabinet to find the sauce bottle."
+      ],
+      "reward": "Burger Ingredients (Bun, Patty, Lettuce, Sauce)",
+      "timestamp_seconds": 42.0,
+      "screenshot_path": "Screenshots/042.0s_Gathering_Ingredients.jpg"
+    },
+    {
+      "puzzle_name": "Burger Assembly",
+      "items_used": [
+        "Bottom Bun",
+        "Meat Patty",
+        "Lettuce",
+        "Sauce"
+      ],
+      "solution_steps": [
+        "Go to the red tray on the kitchen island.",
+        "Stack the ingredients in the correct order: Bottom Bun, Patty, Lettuce, Sauce, Top Bun (already on tray area)."
+      ],
+      "reward": "Triggers the wall machine to open",
+      "timestamp_seconds": 47.0,
+      "screenshot_path": "Screenshots/047.0s_Burger_Assembly.jpg"
+    },
+    {
+      "puzzle_name": "Burger Machine Reward",
+      "items_used": [],
+      "solution_steps": [
+        "Walk over to the newly opened compartment in the burger-themed wall machine."
+      ],
+      "reward": "Door Key",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Burger_Machine_Reward.jpg"
+    }
+  ],
+  "final_action": "The player uses the key obtained from the burger machine to unlock the main wooden door and escape the kitchen."
+}

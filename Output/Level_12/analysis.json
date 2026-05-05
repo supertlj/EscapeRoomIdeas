@@ -1,0 +1,89 @@
+{
+  "level": 12,
+  "room_description": "A bedroom with bold vertical striped wallpaper, a metal bed frame holding a teddy bear, a road bicycle parked on the shiny floor, a wooden cabinet, and a door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the striped bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_striped_bedroom_.jpg"
+    },
+    {
+      "description": "Picking up a yellow pencil from near the bicycle's pedals.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Picking_up_a_yellow_pencil_from_near_the_bicycle_s_pedals_.jpg"
+    },
+    {
+      "description": "Lifting the bed pillow to collect a red battery.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Lifting_the_bed_pillow_to_collect_a_red_battery_.jpg"
+    },
+    {
+      "description": "Opening the bottom drawer of the black nightstand to collect a projector component.",
+      "timestamp_seconds": 12.5,
+      "screenshot_path": "Screenshots/012.5s_Opening_the_bottom_drawer_of_the_black_nightstand_to_collect_a_projector_component_.jpg"
+    },
+    {
+      "description": "Scribbling on the blank notebook with the pencil to reveal a flower drawing.",
+      "timestamp_seconds": 18.5,
+      "screenshot_path": "Screenshots/018.5s_Scribbling_on_the_blank_notebook_with_the_pencil_to_reveal_a_flower_drawing_.jpg"
+    },
+    {
+      "description": "Assembling the projector inside the wooden cabinet to reveal a projection code.",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Projecting_the_Code.jpg"
+    },
+    {
+      "description": "Entering the projected code '8659' to open the cabinet drawer.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Entering_the_projected_code__8659__to_open_the_cabinet_drawer_.jpg"
+    },
+    {
+      "description": "Retrieving a screwdriver from the opened drawer.",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Retrieving_a_screwdriver_from_the_opened_drawer_.jpg"
+    },
+    {
+      "description": "Entering the color-symbol code on the left cabinet panel.",
+      "timestamp_seconds": 105.0,
+      "screenshot_path": "Screenshots/105.0s_Entering_the_color_symbol_code_on_the_left_cabinet_panel_.jpg"
+    },
+    {
+      "description": "Using the retrieved key to unlock the exit door.",
+      "timestamp_seconds": 116.5,
+      "screenshot_path": "Screenshots/116.5s_Using_the_retrieved_key_to_unlock_the_exit_door_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Projecting the Code",
+      "items_used": [
+        "Projector Component",
+        "Red Battery"
+      ],
+      "solution_steps": [
+        "Find the projector component in the nightstand.",
+        "Find the battery under the bed pillow.",
+        "Place both items into the slot in the center of the wooden cabinet to project the numbers '8659'."
+      ],
+      "reward": "Code '8659'",
+      "timestamp_seconds": 27.5,
+      "screenshot_path": "Screenshots/027.5s_Projecting_the_Code.jpg"
+    },
+    {
+      "puzzle_name": "Symbol & Color Matching",
+      "items_used": [
+        "Pencil",
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Use the pencil on the notebook to reveal a yellow flower.",
+        "Use the screwdriver to open the locked left panel of the cabinet.",
+        "Match the objects in the room to their colors on the panel dials: White Teddy Bear (bed), Green Trash Can (floor), Red Flower (vase), Yellow Flower (notebook)."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 113.0,
+      "screenshot_path": "Screenshots/113.0s_Symbol___Color_Matching.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key obtained from the symbol panel compartment to unlock the main door."
+}

@@ -1,0 +1,119 @@
+{
+  "level": 3,
+  "room_description": "A brightly lit room featuring blue wallpaper with yellow stars, a teal sofa, an abstract painting, a modern white desk setup with a laptop, and a patterned rug on the floor.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the star-wallpapered room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_star_wallpapered_room_.jpg"
+    },
+    {
+      "description": "Lifting the pillow on the teal sofa.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Lifting_the_pillow_on_the_teal_sofa_.jpg"
+    },
+    {
+      "description": "Finding a silver key hidden behind the sofa pillow.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Sofa_Key.jpg"
+    },
+    {
+      "description": "Approaching the white desk drawer.",
+      "timestamp_seconds": 7.0,
+      "screenshot_path": "Screenshots/007.0s_Approaching_the_white_desk_drawer_.jpg"
+    },
+    {
+      "description": "Unlocking the drawer to find a compact disc (CD).",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Desk_Drawer_CD.jpg"
+    },
+    {
+      "description": "Inspecting the laptop which asks for a numeric password.",
+      "timestamp_seconds": 12.0,
+      "screenshot_path": "Screenshots/012.0s_Inspecting_the_laptop_which_asks_for_a_numeric_password_.jpg"
+    },
+    {
+      "description": "Examining the abstract wall art to find hidden numbers.",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Painting_Code.jpg"
+    },
+    {
+      "description": "Entering the code '739' into the laptop.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Entering_the_code__739__into_the_laptop_.jpg"
+    },
+    {
+      "description": "Viewing the red dot pattern on the laptop screen.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Laptop_Pattern_Game.jpg"
+    },
+    {
+      "description": "Inputting the pattern into the metal pegboard on the wall to reveal the final key.",
+      "timestamp_seconds": 29.0,
+      "screenshot_path": "Screenshots/029.0s_Metal_Pegboard_Unlock.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Sofa Key",
+      "items_used": [],
+      "solution_steps": [
+        "Tap on the teal sofa to zoom in.",
+        "Lift the left decorative pillow to reveal the item."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Sofa_Key.jpg"
+    },
+    {
+      "puzzle_name": "Desk Drawer CD",
+      "items_used": [
+        "Silver Key"
+      ],
+      "solution_steps": [
+        "Navigate to the white desk.",
+        "Use the silver key on the lock of the top drawer to open it."
+      ],
+      "reward": "Compact Disc (CD)",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Desk_Drawer_CD.jpg"
+    },
+    {
+      "puzzle_name": "Painting Code",
+      "items_used": [],
+      "solution_steps": [
+        "Look closely at the abstract painting hanging on the wall.",
+        "Identify the faint numbers embedded in the corners and design."
+      ],
+      "reward": "Numeric code '739'",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Painting_Code.jpg"
+    },
+    {
+      "puzzle_name": "Laptop Pattern Game",
+      "items_used": [
+        "Compact Disc (CD)"
+      ],
+      "solution_steps": [
+        "Access the laptop.",
+        "Use the on-screen keypad to enter the code '739'.",
+        "Observe the 5x4 grid pattern with specific red dots."
+      ],
+      "reward": "Grid pattern visual clue",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Laptop_Pattern_Game.jpg"
+    },
+    {
+      "puzzle_name": "Metal Pegboard Unlock",
+      "items_used": [],
+      "solution_steps": [
+        "Locate the metal panel with circular holes.",
+        "Tap the corresponding holes to turn them red, matching the pattern exactly as seen on the laptop screen."
+      ],
+      "reward": "Final Door Key",
+      "timestamp_seconds": 29.0,
+      "screenshot_path": "Screenshots/029.0s_Metal_Pegboard_Unlock.jpg"
+    }
+  ],
+  "final_action": "The player takes the key revealed from the hidden compartment behind the metal pegboard and uses it to unlock the main brown door and exit the room."
+}

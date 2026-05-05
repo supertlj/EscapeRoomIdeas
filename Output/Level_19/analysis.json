@@ -1,0 +1,97 @@
+{
+  "level": 19,
+  "room_description": "A dimly lit room decorated with musical and historical items, including a piano, a suit of knight's armor, a mounted moose head, tribal masks, and a white cabinet.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the music and armor room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_music_and_armor_room_.jpg"
+    },
+    {
+      "description": "Inspects the piano, noting the red roses scattered on the keys.",
+      "timestamp_seconds": 1.0,
+      "screenshot_path": "Screenshots/001.0s_Inspects_the_piano__noting_the_red_roses_scattered_on_the_keys_.jpg"
+    },
+    {
+      "description": "Opens the white cabinet drawer and collects a pair of clippers.",
+      "timestamp_seconds": 13.5,
+      "screenshot_path": "Screenshots/013.5s_Opens_the_white_cabinet_drawer_and_collects_a_pair_of_clippers_.jpg"
+    },
+    {
+      "description": "Uses the clippers to cut the metal latch securing the knight's armor.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Armor_Latch.jpg"
+    },
+    {
+      "description": "Discovers a crumpled piece of paper showing colored, overlapping numbers '2508'.",
+      "timestamp_seconds": 36.0,
+      "screenshot_path": "Screenshots/036.0s_Discovers_a_crumpled_piece_of_paper_showing_colored__overlapping_numbers__2508__.jpg"
+    },
+    {
+      "description": "Enters the code '2508' into the 4-digit lock on the wooden box.",
+      "timestamp_seconds": 40.0,
+      "screenshot_path": "Screenshots/040.0s_Colored_Numbers_Box.jpg"
+    },
+    {
+      "description": "Opens the box to reveal a tablet requiring a swipe pattern.",
+      "timestamp_seconds": 45.0,
+      "screenshot_path": "Screenshots/045.0s_Opens_the_box_to_reveal_a_tablet_requiring_a_swipe_pattern_.jpg"
+    },
+    {
+      "description": "Solves the colored floor pad puzzle, which likely reveals the swipe pattern.",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Solves_the_colored_floor_pad_puzzle__which_likely_reveals_the_swipe_pattern_.jpg"
+    },
+    {
+      "description": "Draws an hourglass/X swipe pattern on the tablet screen.",
+      "timestamp_seconds": 108.0,
+      "screenshot_path": "Screenshots/108.0s_Tablet_Swipe_Pattern.jpg"
+    },
+    {
+      "description": "Retrieves the gold key from the opened chest plate of the knight armor.",
+      "timestamp_seconds": 114.5,
+      "screenshot_path": "Screenshots/114.5s_Retrieves_the_gold_key_from_the_opened_chest_plate_of_the_knight_armor_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Armor Latch",
+      "items_used": [
+        "Clippers"
+      ],
+      "solution_steps": [
+        "Find the clippers in the cabinet drawer.",
+        "Use them to cut the metal lock keeping the knight's chest plate shut."
+      ],
+      "reward": "Access to the inside of the armor",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Armor_Latch.jpg"
+    },
+    {
+      "puzzle_name": "Colored Numbers Box",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the crumpled paper clue to read the overlapping colored numbers (2508).",
+        "Input the digits into the wooden box."
+      ],
+      "reward": "Access to the tablet",
+      "timestamp_seconds": 40.0,
+      "screenshot_path": "Screenshots/040.0s_Colored_Numbers_Box.jpg"
+    },
+    {
+      "puzzle_name": "Tablet Swipe Pattern",
+      "items_used": [
+        "Tablet"
+      ],
+      "solution_steps": [
+        "Solve the colored circles on the floor to deduce the lock pattern.",
+        "Swipe the corresponding hourglass/X shape on the tablet's 9-dot grid.",
+        "View the X-ray on the tablet to confirm the key is inside the armor."
+      ],
+      "reward": "Unlocks the armor compartment",
+      "timestamp_seconds": 108.0,
+      "screenshot_path": "Screenshots/108.0s_Tablet_Swipe_Pattern.jpg"
+    }
+  ],
+  "final_action": "Takes the gold key found inside the knight's armor and uses it to unlock the exit door."
+}

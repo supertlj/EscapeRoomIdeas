@@ -1,0 +1,117 @@
+{
+  "level": 41,
+  "room_description": "A well-lit, modern living room with beige patterned wallpaper, a white sofa setup, a dark wood coffee table, a TV stand with a decorative ship, a display cabinet, and a study desk with a computer.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the living room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_living_room_.jpg"
+    },
+    {
+      "description": "Finding a blue rubber band hidden between the sofa cushions.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Finding_a_blue_rubber_band_hidden_between_the_sofa_cushions_.jpg"
+    },
+    {
+      "description": "Collecting a pair of scissors from the top drawer of the display cabinet.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Collecting_a_pair_of_scissors_from_the_top_drawer_of_the_display_cabinet_.jpg"
+    },
+    {
+      "description": "Opening the middle cabinet drawer to get a roll of yellow tape.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Opening_the_middle_cabinet_drawer_to_get_a_roll_of_yellow_tape_.jpg"
+    },
+    {
+      "description": "Using scissors to cut open the sofa cushion, retrieving a blue flash drive.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Sofa_Cushion_Flash_Drive.jpg"
+    },
+    {
+      "description": "Solving the flower picture puzzle to reveal the hidden code '6540'.",
+      "timestamp_seconds": 65.0,
+      "screenshot_path": "Screenshots/065.0s_Flower_Picture_Code.jpg"
+    },
+    {
+      "description": "Opening the safe behind the picture frame to get the red keycard.",
+      "timestamp_seconds": 72.0,
+      "screenshot_path": "Screenshots/072.0s_Opening_the_safe_behind_the_picture_frame_to_get_the_red_keycard_.jpg"
+    },
+    {
+      "description": "Solving the 'Quickspot' puzzle on the computer.",
+      "timestamp_seconds": 121.0,
+      "screenshot_path": "Screenshots/121.0s_Computer_Differences.jpg"
+    },
+    {
+      "description": "Entering '4681' into the wooden box lock.",
+      "timestamp_seconds": 125.0,
+      "screenshot_path": "Screenshots/125.0s_Entering__4681__into_the_wooden_box_lock_.jpg"
+    },
+    {
+      "description": "Retrieving the screwdriver from the wooden box and using it to unscrew the wall vent.",
+      "timestamp_seconds": 127.0,
+      "screenshot_path": "Screenshots/127.0s_Retrieving_the_screwdriver_from_the_wooden_box_and_using_it_to_unscrew_the_wall_vent_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Sofa Cushion Flash Drive",
+      "items_used": [
+        "Scissors"
+      ],
+      "solution_steps": [
+        "Get the scissors from the display cabinet.",
+        "Use the scissors on the patched-up tear on the white sofa cushion.",
+        "Collect the blue USB flash drive hidden inside."
+      ],
+      "reward": "Blue Flash Drive",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Sofa_Cushion_Flash_Drive.jpg"
+    },
+    {
+      "puzzle_name": "Flower Picture Code",
+      "items_used": [
+        "Blue Rubber Band",
+        "Yellow Tape"
+      ],
+      "solution_steps": [
+        "Find the rubber band (sofa) and tape (cabinet).",
+        "Go to the framed picture of flowers on the left wall.",
+        "The picture morphs into a grid. Apply the colored tape/bands to the grid lines based on the visual clue on the wall (Red, Yellow, Green, Blue borders).",
+        "The grid reveals the numbers '6540'."
+      ],
+      "reward": "Numeric code '6540'",
+      "timestamp_seconds": 65.0,
+      "screenshot_path": "Screenshots/065.0s_Flower_Picture_Code.jpg"
+    },
+    {
+      "puzzle_name": "Computer Differences",
+      "items_used": [
+        "Blue Flash Drive"
+      ],
+      "solution_steps": [
+        "Plug the flash drive into the computer on the desk.",
+        "Play the 'spot the difference' minigame on the screen.",
+        "Click the 5 differences between the two images to reveal the code '4681'."
+      ],
+      "reward": "Code '4681'",
+      "timestamp_seconds": 121.0,
+      "screenshot_path": "Screenshots/121.0s_Computer_Differences.jpg"
+    },
+    {
+      "puzzle_name": "Vent Escape",
+      "items_used": [
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Enter '4681' into the wooden box in the desk area.",
+        "Retrieve the screwdriver.",
+        "Use the screwdriver on the metal vent cover located near the floor."
+      ],
+      "reward": "Access to the escape vent",
+      "timestamp_seconds": 128.0,
+      "screenshot_path": "Screenshots/128.0s_Vent_Escape.jpg"
+    }
+  ],
+  "final_action": "The player removes the metal vent cover using the screwdriver and crawls into the ventilation shaft to escape the room."
+}

@@ -1,0 +1,64 @@
+{
+  "level": 1,
+  "room_description": "A dingy industrial basement or storage room with exposed red brick walls partially covered in climbing vines. The room features wooden crates, an old air conditioning unit mounted on the wall, various metal pipes in the corner, and a dirt floor scattered with debris including an old monitor frame.",
+  "puzzles": [
+    {
+      "puzzle_name": "Assembling the Screwdriver",
+      "items_used": [
+        "Screwdriver handle",
+        "Screwdriver tip"
+      ],
+      "solution_steps": [
+        "Collect the screwdriver handle from the air conditioning unit on the wall",
+        "Collect the screwdriver tip from the monitor frame on the floor",
+        "Combine the handle and tip in the inventory"
+      ],
+      "reward": "Screwdriver",
+      "timestamp_seconds": 13.0
+    },
+    {
+      "puzzle_name": "Opening the Floor Hatch",
+      "items_used": [
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Use the screwdriver to open the floor hatch labeled '1P'"
+      ],
+      "reward": "Remote control",
+      "timestamp_seconds": 21.0
+    },
+    {
+      "puzzle_name": "Obtaining the Power Cable",
+      "items_used": [],
+      "solution_steps": [
+        "Locate and pick up the black power cable lying on the floor near the pipes"
+      ],
+      "reward": "Power cable",
+      "timestamp_seconds": 24.5
+    },
+    {
+      "puzzle_name": "Powering the Monitor",
+      "items_used": [
+        "Power cable"
+      ],
+      "solution_steps": [
+        "Plug the power cable into the wall outlet next to the monitor"
+      ],
+      "reward": "Visual clue showing four dial positions (North-West, South-West, North-East, South-East)",
+      "timestamp_seconds": 36.5
+    },
+    {
+      "puzzle_name": "The Dial Code Panel",
+      "items_used": [
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Use the screwdriver to remove the wall panel labeled '2P'",
+        "Adjust the four dials to match the positions seen on the monitor: Dial 1 (top left) to NW, Dial 2 (bottom left) to SW, Dial 3 (top right) to NE, and Dial 4 (bottom right) to SE"
+      ],
+      "reward": "The exit door unlocks and opens",
+      "timestamp_seconds": 55.0
+    }
+  ],
+  "final_action": "The player exits the room through the now-open wooden door at the back."
+}

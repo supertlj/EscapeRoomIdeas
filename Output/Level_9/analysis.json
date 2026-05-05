@@ -1,0 +1,102 @@
+{
+  "level": 9,
+  "room_description": "A modern living area featuring a beige tufted sofa set, a glass coffee table over a brown rug, a large fish tank against the back wall, a white shelving unit, and a dark wooden exit door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the modern living room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_modern_living_room_.jpg"
+    },
+    {
+      "description": "Lifting the beige sofa pillow to find a pair of red scissors.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Lifting_the_beige_sofa_pillow_to_find_a_pair_of_red_scissors_.jpg"
+    },
+    {
+      "description": "Using the scissors to cut the string on the rolled paper on the coffee table, revealing a number grid.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Using_the_scissors_to_cut_the_string_on_the_rolled_paper_on_the_coffee_table__revealing_a_number_grid_.jpg"
+    },
+    {
+      "description": "Discovering a small silver key hidden in the soil of the potted plant.",
+      "timestamp_seconds": 16.0,
+      "screenshot_path": "Screenshots/016.0s_Discovering_a_small_silver_key_hidden_in_the_soil_of_the_potted_plant_.jpg"
+    },
+    {
+      "description": "Unlocking the white drawer to retrieve a yellow fishing line spool.",
+      "timestamp_seconds": 19.5,
+      "screenshot_path": "Screenshots/019.5s_Unlocking_the_white_drawer_to_retrieve_a_yellow_fishing_line_spool_.jpg"
+    },
+    {
+      "description": "Attaching the spool to the fishing rod and using it to fish out a grid mask from the fish tank.",
+      "timestamp_seconds": 25.5,
+      "screenshot_path": "Screenshots/025.5s_Attaching_the_spool_to_the_fishing_rod_and_using_it_to_fish_out_a_grid_mask_from_the_fish_tank_.jpg"
+    },
+    {
+      "description": "Overlaying the grid mask onto the number grid to reveal a 4-digit code.",
+      "timestamp_seconds": 28.5,
+      "screenshot_path": "Screenshots/028.5s_Overlaying_the_grid_mask_onto_the_number_grid_to_reveal_a_4_digit_code_.jpg"
+    },
+    {
+      "description": "Entering the code into the digital lock inside the cabinet.",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Number_Grid_Code.jpg"
+    },
+    {
+      "description": "Solving the sliding puzzle on the laptop to reveal a sequence of colors.",
+      "timestamp_seconds": 100.0,
+      "screenshot_path": "Screenshots/100.0s_Solving_the_sliding_puzzle_on_the_laptop_to_reveal_a_sequence_of_colors_.jpg"
+    },
+    {
+      "description": "Inputting the color sequence into the safe to get the keycard and escaping.",
+      "timestamp_seconds": 112.0,
+      "screenshot_path": "Screenshots/112.0s_Animal_Color_Sequence.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Fishing for the Clue Mask",
+      "items_used": [
+        "Silver Key",
+        "Fishing Line Spool"
+      ],
+      "solution_steps": [
+        "Find the key in the plant pot and use it to open the cabinet drawer to get the yellow spool.",
+        "Attach the spool to the fishing rod near the tank.",
+        "Use the rod to extract the black grid mask from the water."
+      ],
+      "reward": "Grid Mask",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Fishing_for_the_Clue_Mask.jpg"
+    },
+    {
+      "puzzle_name": "Number Grid Code",
+      "items_used": [
+        "Scissors",
+        "Grid Mask"
+      ],
+      "solution_steps": [
+        "Use the scissors to unroll the paper on the table.",
+        "Overlay the grid mask onto the paper's number grid.",
+        "Read the numbers visible through the holes.",
+        "Enter the code into the red digital safe."
+      ],
+      "reward": "Access to the laptop",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Number_Grid_Code.jpg"
+    },
+    {
+      "puzzle_name": "Animal Color Sequence",
+      "items_used": [],
+      "solution_steps": [
+        "Solve the sliding tile puzzle on the laptop.",
+        "Note the background colors of the four animals displayed (Yellow, Purple, Green, White).",
+        "Input this exact color sequence into the 4-panel safe in the cabinet."
+      ],
+      "reward": "Blue Keycard",
+      "timestamp_seconds": 112.0,
+      "screenshot_path": "Screenshots/112.0s_Animal_Color_Sequence.jpg"
+    }
+  ],
+  "final_action": "The player swipes the blue keycard on the electronic door handle to unlock the main door and escape."
+}

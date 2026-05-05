@@ -1,0 +1,111 @@
+{
+  "level": 34,
+  "room_description": "An elegant room designed for leisure, featuring dark wood walls, a green billiards table in the center, two suits of armor, an armchair, and playing card suits (Spades, Clubs) displayed on the back wall.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the billiards room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_billiards_room_.jpg"
+    },
+    {
+      "description": "Collecting a dart from the small round table next to the armchair.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Collecting_a_dart_from_the_small_round_table_next_to_the_armchair_.jpg"
+    },
+    {
+      "description": "Finding a blue button hidden in the wooden box.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Finding_a_blue_button_hidden_in_the_wooden_box_.jpg"
+    },
+    {
+      "description": "Using the dart to pop a balloon on the dartboard, revealing a key.",
+      "timestamp_seconds": 13.5,
+      "screenshot_path": "Screenshots/013.5s_Dartboard_Key.jpg"
+    },
+    {
+      "description": "Unlocking the lower cabinet to find a rolled piece of paper.",
+      "timestamp_seconds": 17.0,
+      "screenshot_path": "Screenshots/017.0s_Unlocking_the_lower_cabinet_to_find_a_rolled_piece_of_paper_.jpg"
+    },
+    {
+      "description": "Arranging the card suit panels on the wall according to the clue.",
+      "timestamp_seconds": 26.5,
+      "screenshot_path": "Screenshots/026.5s_Card_Suit_Wall_Panels.jpg"
+    },
+    {
+      "description": "Solving the colored ball placement puzzle using the cue ball positions.",
+      "timestamp_seconds": 32.5,
+      "screenshot_path": "Screenshots/032.5s_Billiards_Color_Match.jpg"
+    },
+    {
+      "description": "Completing the playing card memory match game.",
+      "timestamp_seconds": 46.5,
+      "screenshot_path": "Screenshots/046.5s_Completing_the_playing_card_memory_match_game_.jpg"
+    },
+    {
+      "description": "Inputting the sequence 'Spade, Heart, Club, Diamond' to open the final drawer.",
+      "timestamp_seconds": 53.0,
+      "screenshot_path": "Screenshots/053.0s_Inputting_the_sequence__Spade__Heart__Club__Diamond__to_open_the_final_drawer_.jpg"
+    },
+    {
+      "description": "Sinking the billiard balls into the pockets in the correct order.",
+      "timestamp_seconds": 111.0,
+      "screenshot_path": "Screenshots/111.0s_Billiards_Pocket_Sequence.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Dartboard Key",
+      "items_used": [
+        "Dart"
+      ],
+      "solution_steps": [
+        "Collect the dart from the side table.",
+        "Use the dart on the dartboard to pop the balloon and retrieve the silver key."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 13.5,
+      "screenshot_path": "Screenshots/013.5s_Dartboard_Key.jpg"
+    },
+    {
+      "puzzle_name": "Card Suit Wall Panels",
+      "items_used": [
+        "Silver Key"
+      ],
+      "solution_steps": [
+        "Use the key to open the cabinet and get the paper clue.",
+        "The paper shows the card suits: Spade, Heart, Club, Diamond.",
+        "Adjust the four wall panels to display these suits in the correct order."
+      ],
+      "reward": "Reveals the colored ball puzzle",
+      "timestamp_seconds": 26.5,
+      "screenshot_path": "Screenshots/026.5s_Card_Suit_Wall_Panels.jpg"
+    },
+    {
+      "puzzle_name": "Billiards Color Match",
+      "items_used": [
+        "Blue Button"
+      ],
+      "solution_steps": [
+        "Place the blue button onto the puzzle board.",
+        "Observe the colored billiard balls on the table.",
+        "Arrange the colored buttons on the board to match the positions of the corresponding balls on the pool table."
+      ],
+      "reward": "Access to the card matching game",
+      "timestamp_seconds": 32.5,
+      "screenshot_path": "Screenshots/032.5s_Billiards_Color_Match.jpg"
+    },
+    {
+      "puzzle_name": "Billiards Pocket Sequence",
+      "items_used": [],
+      "solution_steps": [
+        "After completing the card memory game, observe the numbers associated with the colored balls: Red=4, Yellow=2, Green=1, Blue=3.",
+        "Using the cue stick, hit the balls into the pockets in numerical order (Green, Yellow, Blue, Red)."
+      ],
+      "reward": "Exit Key",
+      "timestamp_seconds": 111.0,
+      "screenshot_path": "Screenshots/111.0s_Billiards_Pocket_Sequence.jpg"
+    }
+  ],
+  "final_action": "The player sinks all four billiard balls in the correct sequence, causing a compartment to open containing the exit key, which is used to unlock the main double doors."
+}

@@ -1,0 +1,99 @@
+{
+  "level": 38,
+  "room_description": "A festive, brightly lit room decorated for Christmas. It contains a red sofa, a decorated Christmas tree, a snowman, a nutcracker statue, and a large red and black armoire.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the colorful Christmas room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_colorful_Christmas_room_.jpg"
+    },
+    {
+      "description": "Opens the nutcracker's mouth to find hidden items.",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Opens_the_nutcracker_s_mouth_to_find_hidden_items_.jpg"
+    },
+    {
+      "description": "Collects a small bottle of lubricating oil from the nutcracker.",
+      "timestamp_seconds": 17.0,
+      "screenshot_path": "Screenshots/017.0s_Collects_a_small_bottle_of_lubricating_oil_from_the_nutcracker_.jpg"
+    },
+    {
+      "description": "Collects a paper clue from the nutcracker showing the code '5674'.",
+      "timestamp_seconds": 20.0,
+      "screenshot_path": "Screenshots/020.0s_Collects_a_paper_clue_from_the_nutcracker_showing_the_code__5674__.jpg"
+    },
+    {
+      "description": "Inspects the picture combination lock on the wall.",
+      "timestamp_seconds": 30.0,
+      "screenshot_path": "Screenshots/030.0s_Inspects_the_picture_combination_lock_on_the_wall_.jpg"
+    },
+    {
+      "description": "Enters '2571' into the lock and retrieves a red box cutter.",
+      "timestamp_seconds": 48.0,
+      "screenshot_path": "Screenshots/048.0s_Butterfly___Flower_Lock.jpg"
+    },
+    {
+      "description": "Enters '5674' into the digital lock on the large armoire.",
+      "timestamp_seconds": 66.0,
+      "screenshot_path": "Screenshots/066.0s_Armoire_Code.jpg"
+    },
+    {
+      "description": "Uses the box cutter to slice open a wrapped gift box on the floor.",
+      "timestamp_seconds": 74.0,
+      "screenshot_path": "Screenshots/074.0s_Uses_the_box_cutter_to_slice_open_a_wrapped_gift_box_on_the_floor_.jpg"
+    },
+    {
+      "description": "Retrieves a gold key from inside the sliced gift box.",
+      "timestamp_seconds": 76.0,
+      "screenshot_path": "Screenshots/076.0s_Retrieves_a_gold_key_from_inside_the_sliced_gift_box_.jpg"
+    },
+    {
+      "description": "Applies the oil to the stuck key inside the exit door lock.",
+      "timestamp_seconds": 82.0,
+      "screenshot_path": "Screenshots/082.0s_Applies_the_oil_to_the_stuck_key_inside_the_exit_door_lock_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Butterfly & Flower Lock",
+      "items_used": [],
+      "solution_steps": [
+        "Count the red butterflies, pink flowers, yellow butterflies, and white flowers depicted on the room's wall panels.",
+        "Input the resulting sequence (2571) into the picture combination lock."
+      ],
+      "reward": "Red box cutter",
+      "timestamp_seconds": 48.0,
+      "screenshot_path": "Screenshots/048.0s_Butterfly___Flower_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Armoire Code",
+      "items_used": [
+        "Paper clue"
+      ],
+      "solution_steps": [
+        "Read the code '5674' from the paper found inside the nutcracker's mouth.",
+        "Enter this code into the digital keypad on the large armoire."
+      ],
+      "reward": "The armoire slides open, revealing the room's true exit door hidden behind it",
+      "timestamp_seconds": 66.0,
+      "screenshot_path": "Screenshots/066.0s_Armoire_Code.jpg"
+    },
+    {
+      "puzzle_name": "Stuck Door Lock",
+      "items_used": [
+        "Box cutter",
+        "Gold key",
+        "Bottle of oil"
+      ],
+      "solution_steps": [
+        "Cut open the gift box with the box cutter to find the gold key.",
+        "Insert the key into the exit door, realizing the mechanism is stuck.",
+        "Use the bottle of oil from the nutcracker to lubricate the keyhole."
+      ],
+      "reward": "Unlocks the main door",
+      "timestamp_seconds": 84.0,
+      "screenshot_path": "Screenshots/084.0s_Stuck_Door_Lock.jpg"
+    }
+  ],
+  "final_action": "Turns the newly lubricated key to unlock the white door hidden behind the armoire and escapes."
+}

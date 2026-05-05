@@ -1,0 +1,109 @@
+{
+  "level": 1,
+  "room_description": "A dark, rundown brick room with exposed pipes, an old AC unit on the wall, wooden crates on the left, a piece of old electronic equipment on the ground, and a sealed wooden door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the room and introduction.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_room_and_introduction_.jpg"
+    },
+    {
+      "description": "Zooming in on the AC unit to collect a screwdriver.",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Gathering_Basic_Supplies.jpg"
+    },
+    {
+      "description": "Picking up the empty monitor casing from the debris.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Picking_up_the_empty_monitor_casing_from_the_debris_.jpg"
+    },
+    {
+      "description": "Inspecting the '1P' block on the ground.",
+      "timestamp_seconds": 19.0,
+      "screenshot_path": "Screenshots/019.0s_Inspecting_the__1P__block_on_the_ground_.jpg"
+    },
+    {
+      "description": "Removing the '1P' cover to reveal a remote control.",
+      "timestamp_seconds": 22.0,
+      "screenshot_path": "Screenshots/022.0s_The__1P__Box.jpg"
+    },
+    {
+      "description": "Inspecting the rusty '2P' panel on the brick wall.",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Inspecting_the_rusty__2P__panel_on_the_brick_wall_.jpg"
+    },
+    {
+      "description": "Connecting the power cord to the monitor casing.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Connecting_the_power_cord_to_the_monitor_casing_.jpg"
+    },
+    {
+      "description": "Using the remote to turn on the monitor, revealing a clue with four dials.",
+      "timestamp_seconds": 36.0,
+      "screenshot_path": "Screenshots/036.0s_Powering_the_Monitor_Clue.jpg"
+    },
+    {
+      "description": "Opening the '2P' panel to reveal four physical dials.",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Opening_the__2P__panel_to_reveal_four_physical_dials_.jpg"
+    },
+    {
+      "description": "Adjusting the dials to match the pattern shown on the monitor.",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Unlocking_the__2P__Door_Mechanism.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Gathering Basic Supplies",
+      "items_used": [],
+      "solution_steps": [
+        "Find the screwdriver stuck in the AC unit.",
+        "Pick up the empty monitor casing from the pile of wood on the ground."
+      ],
+      "reward": "Screwdriver, Monitor Casing",
+      "timestamp_seconds": 9.0,
+      "screenshot_path": "Screenshots/009.0s_Gathering_Basic_Supplies.jpg"
+    },
+    {
+      "puzzle_name": "The '1P' Box",
+      "items_used": [],
+      "solution_steps": [
+        "Locate the dark grey block marked '1P' on the ground.",
+        "Remove its lid."
+      ],
+      "reward": "Remote Control",
+      "timestamp_seconds": 22.0,
+      "screenshot_path": "Screenshots/022.0s_The__1P__Box.jpg"
+    },
+    {
+      "puzzle_name": "Powering the Monitor Clue",
+      "items_used": [
+        "Monitor Casing",
+        "Remote Control"
+      ],
+      "solution_steps": [
+        "Place the monitor casing back down.",
+        "Plug the loose power cord into the monitor.",
+        "Use the remote control to turn it on and observe the dial orientation clue."
+      ],
+      "reward": "Visual clue (Dial orientations: top-left, bottom-left, top-right, bottom-right)",
+      "timestamp_seconds": 36.0,
+      "screenshot_path": "Screenshots/036.0s_Powering_the_Monitor_Clue.jpg"
+    },
+    {
+      "puzzle_name": "Unlocking the '2P' Door Mechanism",
+      "items_used": [
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Use the screwdriver to remove the screws on the rusty '2P' panel.",
+        "Adjust the four dials to match the visual clue from the monitor."
+      ],
+      "reward": "Opens the exit door",
+      "timestamp_seconds": 54.0,
+      "screenshot_path": "Screenshots/054.0s_Unlocking_the__2P__Door_Mechanism.jpg"
+    }
+  ],
+  "final_action": "The player successfully aligns the 4 dials behind the '2P' panel, causing the secret door hidden in the wall behind the wooden crates to swing open, allowing escape."
+}

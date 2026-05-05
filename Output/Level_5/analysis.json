@@ -1,0 +1,94 @@
+{
+  "level": 5,
+  "room_description": "A cozy bedroom with patterned beige wallpaper, a large bed with a brown runner and throw pillows, a wooden wardrobe, a TV stand with a DVD player, and a hidden wall safe located behind a mirror adorned with red rose petals.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_bedroom_.jpg"
+    },
+    {
+      "description": "Lifting the cylindrical bolster pillow on the bed to collect a TV remote.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Lifting_the_cylindrical_bolster_pillow_on_the_bed_to_collect_a_TV_remote_.jpg"
+    },
+    {
+      "description": "Opening the white drawer under the TV to collect a DVD disc.",
+      "timestamp_seconds": 14.0,
+      "screenshot_path": "Screenshots/014.0s_Opening_the_white_drawer_under_the_TV_to_collect_a_DVD_disc_.jpg"
+    },
+    {
+      "description": "Collecting a battery from the shelves inside the wooden wardrobe.",
+      "timestamp_seconds": 24.0,
+      "screenshot_path": "Screenshots/024.0s_Collecting_a_battery_from_the_shelves_inside_the_wooden_wardrobe_.jpg"
+    },
+    {
+      "description": "The TV screen turns on, displaying a color test pattern and the red numbers '1096'.",
+      "timestamp_seconds": 29.0,
+      "screenshot_path": "Screenshots/029.0s_Powering_the_TV.jpg"
+    },
+    {
+      "description": "Entering the code '1096' into the digital keypad of the hidden wall safe.",
+      "timestamp_seconds": 35.0,
+      "screenshot_path": "Screenshots/035.0s_Wall_Safe_Code.jpg"
+    },
+    {
+      "description": "Retrieving a small silver key from inside the safe.",
+      "timestamp_seconds": 36.0,
+      "screenshot_path": "Screenshots/036.0s_Retrieving_a_small_silver_key_from_inside_the_safe_.jpg"
+    },
+    {
+      "description": "Using the silver key to unlock the glass-front bedside cabinet to find a blue keycard.",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Bedside_Cabinet_Lock.jpg"
+    },
+    {
+      "description": "Swiping the blue keycard on the electronic door handle.",
+      "timestamp_seconds": 48.0,
+      "screenshot_path": "Screenshots/048.0s_Swiping_the_blue_keycard_on_the_electronic_door_handle_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Powering the TV",
+      "items_used": [
+        "TV Remote",
+        "DVD Disc",
+        "Battery"
+      ],
+      "solution_steps": [
+        "Find the remote under the bed pillow.",
+        "Find the DVD in the TV stand drawer.",
+        "Find the battery in the wardrobe.",
+        "Combine items to turn on the TV and reveal the code."
+      ],
+      "reward": "Code '1096'",
+      "timestamp_seconds": 29.0,
+      "screenshot_path": "Screenshots/029.0s_Powering_the_TV.jpg"
+    },
+    {
+      "puzzle_name": "Wall Safe Code",
+      "items_used": [],
+      "solution_steps": [
+        "Locate the safe hidden in the wall cubby next to the mirror.",
+        "Input the code '1096' seen on the TV screen."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 35.0,
+      "screenshot_path": "Screenshots/035.0s_Wall_Safe_Code.jpg"
+    },
+    {
+      "puzzle_name": "Bedside Cabinet Lock",
+      "items_used": [
+        "Silver Key"
+      ],
+      "solution_steps": [
+        "Use the silver key from the safe to unlock the small nightstand/cabinet next to the bed."
+      ],
+      "reward": "Blue Keycard",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Bedside_Cabinet_Lock.jpg"
+    }
+  ],
+  "final_action": "The player inserts the blue keycard into the slot on the electronic door handle to unlock it and exit."
+}

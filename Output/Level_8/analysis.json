@@ -1,0 +1,111 @@
+{
+  "level": 8,
+  "room_description": "An elegant, luxurious bedroom featuring a large bed, patterned wallpaper, an armoire, a grandfather clock, a wooden chest resting on a bench, and a framed jigsaw puzzle on the wall.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_bedroom_.jpg"
+    },
+    {
+      "description": "Collecting a puzzle piece from inside the ice bucket on the bed tray.",
+      "timestamp_seconds": 3.5,
+      "screenshot_path": "Screenshots/003.5s_Collecting_a_puzzle_piece_from_inside_the_ice_bucket_on_the_bed_tray_.jpg"
+    },
+    {
+      "description": "Collecting a second puzzle piece pinned to the black coat hanging on the mannequin.",
+      "timestamp_seconds": 5.5,
+      "screenshot_path": "Screenshots/005.5s_Collecting_a_second_puzzle_piece_pinned_to_the_black_coat_hanging_on_the_mannequin_.jpg"
+    },
+    {
+      "description": "Collecting a third puzzle piece from the top of the chest, revealing the red text '6:15'.",
+      "timestamp_seconds": 7.5,
+      "screenshot_path": "Screenshots/007.5s_Collecting_a_third_puzzle_piece_from_the_top_of_the_chest__revealing_the_red_text__6_15__.jpg"
+    },
+    {
+      "description": "Completing the framed jigsaw puzzle on the wall.",
+      "timestamp_seconds": 176.0,
+      "screenshot_path": "Screenshots/176.0s_Jigsaw_Puzzle_Assembly.jpg"
+    },
+    {
+      "description": "The completed jigsaw puzzle morphs into a clue showing an arrangement of dots and lines.",
+      "timestamp_seconds": 177.0,
+      "screenshot_path": "Screenshots/177.0s_The_completed_jigsaw_puzzle_morphs_into_a_clue_showing_an_arrangement_of_dots_and_lines_.jpg"
+    },
+    {
+      "description": "Arranging the wooden sliders on the chest to match the dot pattern from the puzzle clue.",
+      "timestamp_seconds": 208.0,
+      "screenshot_path": "Screenshots/208.0s_Chest_Slider_Lock.jpg"
+    },
+    {
+      "description": "Retrieving two metal rings from inside the opened chest.",
+      "timestamp_seconds": 209.0,
+      "screenshot_path": "Screenshots/209.0s_Retrieving_two_metal_rings_from_inside_the_opened_chest_.jpg"
+    },
+    {
+      "description": "Placing the rings onto the two pegs of the grandfather clock face to open the glass cover.",
+      "timestamp_seconds": 214.0,
+      "screenshot_path": "Screenshots/214.0s_Placing_the_rings_onto_the_two_pegs_of_the_grandfather_clock_face_to_open_the_glass_cover_.jpg"
+    },
+    {
+      "description": "Setting the hands on the clock face to '6:15', causing the bottom cabinet door to swing open.",
+      "timestamp_seconds": 222.0,
+      "screenshot_path": "Screenshots/222.0s_Grandfather_Clock_Mechanism.jpg"
+    },
+    {
+      "description": "Retrieving the main door key from the bottom of the grandfather clock.",
+      "timestamp_seconds": 239.0,
+      "screenshot_path": "Screenshots/239.0s_Retrieving_the_main_door_key_from_the_bottom_of_the_grandfather_clock_.jpg"
+    },
+    {
+      "description": "Unlocking the exit door with the key.",
+      "timestamp_seconds": 243.0,
+      "screenshot_path": "Screenshots/243.0s_Unlocking_the_exit_door_with_the_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Jigsaw Puzzle Assembly",
+      "items_used": [
+        "Puzzle Piece 1",
+        "Puzzle Piece 2",
+        "Puzzle Piece 3"
+      ],
+      "solution_steps": [
+        "Find the 3 missing puzzle pieces around the room (ice bucket, coat, chest).",
+        "Interact with the painting frame.",
+        "Assemble the pieces to form a complete picture of a Venetian canal."
+      ],
+      "reward": "Slider pattern visual clue",
+      "timestamp_seconds": 176.0,
+      "screenshot_path": "Screenshots/176.0s_Jigsaw_Puzzle_Assembly.jpg"
+    },
+    {
+      "puzzle_name": "Chest Slider Lock",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the line and dot pattern revealed after finishing the jigsaw puzzle.",
+        "Interact with the front of the wooden chest.",
+        "Move the three wooden sliders so they align perfectly with the dot positions shown on the clue."
+      ],
+      "reward": "Two Rings",
+      "timestamp_seconds": 208.0,
+      "screenshot_path": "Screenshots/208.0s_Chest_Slider_Lock.jpg"
+    },
+    {
+      "puzzle_name": "Grandfather Clock Mechanism",
+      "items_used": [
+        "Two Rings"
+      ],
+      "solution_steps": [
+        "Attach the two rings to the small pegs on the grandfather clock face to act as handles.",
+        "Open the glass cover.",
+        "Set the clock hands to read '6:15', using the clue written in red on top of the chest."
+      ],
+      "reward": "Door Key",
+      "timestamp_seconds": 222.0,
+      "screenshot_path": "Screenshots/222.0s_Grandfather_Clock_Mechanism.jpg"
+    }
+  ],
+  "final_action": "The player takes the key revealed in the bottom compartment of the grandfather clock and uses it to unlock the main door."
+}

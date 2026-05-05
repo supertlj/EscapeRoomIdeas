@@ -1,0 +1,94 @@
+{
+  "level": 49,
+  "room_description": "A modern, luxurious bedroom with a large bed, flat-screen TV, glass coffee table, and an ornate mirror.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the luxury bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_luxury_bedroom_.jpg"
+    },
+    {
+      "description": "Finding a clue card on a sofa pillow.",
+      "timestamp_seconds": 4.5,
+      "screenshot_path": "Screenshots/004.5s_Finding_a_clue_card_on_a_sofa_pillow_.jpg"
+    },
+    {
+      "description": "Inspecting the ornate mirror and an image inside it.",
+      "timestamp_seconds": 10.0,
+      "screenshot_path": "Screenshots/010.0s_Inspecting_the_ornate_mirror_and_an_image_inside_it_.jpg"
+    },
+    {
+      "description": "Playing a sliding tile puzzle on a wall panel.",
+      "timestamp_seconds": 17.5,
+      "screenshot_path": "Screenshots/017.5s_Playing_a_sliding_tile_puzzle_on_a_wall_panel_.jpg"
+    },
+    {
+      "description": "Examining a clue showing colored numbers '2694'.",
+      "timestamp_seconds": 23.5,
+      "screenshot_path": "Screenshots/023.5s_Examining_a_clue_showing_colored_numbers__2694__.jpg"
+    },
+    {
+      "description": "Entering a date '1991.12.07' into a lock on a suitcase on the bed.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Suitcase_Date_Code.jpg"
+    },
+    {
+      "description": "Opening the suitcase to reveal a tablet.",
+      "timestamp_seconds": 41.5,
+      "screenshot_path": "Screenshots/041.5s_Opening_the_suitcase_to_reveal_a_tablet_.jpg"
+    },
+    {
+      "description": "Entering a 5-digit code into a wall safe.",
+      "timestamp_seconds": 45.0,
+      "screenshot_path": "Screenshots/045.0s_Entering_a_5_digit_code_into_a_wall_safe_.jpg"
+    },
+    {
+      "description": "Playing a peg-jumping game on a red panel.",
+      "timestamp_seconds": 47.5,
+      "screenshot_path": "Screenshots/047.5s_Peg_Jumping_Game.jpg"
+    },
+    {
+      "description": "Solving a slider puzzle with colored tiles.",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Colored_Slider_Puzzle.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Suitcase Date Code",
+      "items_used": [
+        "Clue card"
+      ],
+      "solution_steps": [
+        "Find the clue card (possibly near the Russian nesting dolls) that shows a date.",
+        "Enter '1991.12.07' into the combination lock on the suitcase on the bed."
+      ],
+      "reward": "Access to the tablet inside",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Suitcase_Date_Code.jpg"
+    },
+    {
+      "puzzle_name": "Peg Jumping Game",
+      "items_used": [],
+      "solution_steps": [
+        "Access the mini-game on the red panel.",
+        "Jump the pegs to clear the board or reach a specific configuration."
+      ],
+      "reward": "Unlocks a compartment",
+      "timestamp_seconds": 47.5,
+      "screenshot_path": "Screenshots/047.5s_Peg_Jumping_Game.jpg"
+    },
+    {
+      "puzzle_name": "Colored Slider Puzzle",
+      "items_used": [],
+      "solution_steps": [
+        "Access the slider puzzle.",
+        "Move the colored squares into the correct positions based on a color clue found elsewhere in the room."
+      ],
+      "reward": "The exit key",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Colored_Slider_Puzzle.jpg"
+    }
+  ],
+  "final_action": "Using the key obtained to unlock the exit door."
+}

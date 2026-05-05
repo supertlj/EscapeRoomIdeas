@@ -1,0 +1,328 @@
+{
+  "room_number": 4,
+  "room_name": {
+    "en": "The Gift Shop",
+    "zh": "礼品店"
+  },
+  "hotel_area": {
+    "en": "Gift Shop",
+    "zh": "礼品店"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A small hotel gift shop with glass display cases, shelves of dusty souvenirs, postcard racks, and a vintage cash register. A framed black-and-white photograph of the hotel in its glory days hangs behind the counter. Snow globes, keychains, and faded Grandview-branded merchandise fill the shelves. A locked glass cabinet near the exit contains something glinting in the low light.",
+    "zh": "一间小型酒店礼品店，有玻璃展柜、落满灰尘的纪念品货架、明信片架和一台复古收银机。柜台后面挂着一张酒店辉煌时期的黑白照片。雪花球、钥匙链和褪色的格兰德维尤品牌商品摆满了货架。出口旁有一个锁着的玻璃柜，在昏暗的灯光下有东西闪闪发光。"
+  },
+  "story_fragment": {
+    "en": "A postcard in the rack is addressed but never mailed: 'Dear Margaret — I've done it. The final room is complete. After 22 years of building in secret, the Grandview holds my life's work. I only wish you could see it. You would understand why I had to disappear. — Your brother, Edmund.' The stamp is from 1994.",
+    "zh": "明信片架上有一张写好地址但从未寄出的明信片：'亲爱的玛格丽特——我做到了。最后一间密室完成了。经过22年的秘密建造，格兰德维尤承载了我毕生的心血。我只希望你能看到。你会理解我为什么不得不消失。——你的兄弟，埃德蒙。'邮票是1994年的。"
+  },
+  "estimated_solve_time_minutes": 2,
+  "items": [
+    {
+      "id": "magnifying_glass",
+      "name": {
+        "en": "Magnifying Glass",
+        "zh": "放大镜"
+      }
+    },
+    {
+      "id": "postcard_clue",
+      "name": {
+        "en": "Numbered Postcard",
+        "zh": "编号明信片"
+      }
+    },
+    {
+      "id": "cabinet_key",
+      "name": {
+        "en": "Display Cabinet Key",
+        "zh": "展柜钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Then and Now",
+        "zh": "今昔对比"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": "T9_before_after",
+      "items_used": [
+        "magnifying_glass"
+      ],
+      "clue_source": {
+        "en": "The framed photograph shows the gift shop as it looked in 1972. Four items on the shelves in the photo have been moved to different positions in the current room. Their new shelf positions encode a 4-digit number.",
+        "zh": "框架照片展示了1972年礼品店的样子。照片中货架上的四件物品在当前房间中被移到了不同位置。它们的新货架位置编码了一个4位数字。"
+      },
+      "solution_steps": [
+        {
+          "en": "Pick up the magnifying glass from the counter display.",
+          "zh": "从柜台展示中拿起放大镜。"
+        },
+        {
+          "en": "Use the magnifying glass on the old photograph to see details clearly.",
+          "zh": "用放大镜查看旧照片以看清细节。"
+        },
+        {
+          "en": "Compare the photo to the current room: a globe moved from shelf 6 to shelf 3, a teddy bear from shelf 2 to shelf 8, a clock from shelf 9 to shelf 1, a vase from shelf 4 to shelf 5.",
+          "zh": "将照片与当前房间对比：地球仪从6号架移到3号架，泰迪熊从2号架移到8号架，时钟从9号架移到1号架，花瓶从4号架移到5号架。"
+        },
+        {
+          "en": "The new positions give the code: 3-8-1-5.",
+          "zh": "新位置给出密码：3-8-1-5。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The old photo and the current room aren't identical. Something has been moved.",
+          "zh": "旧照片和当前房间不完全一样。有东西被移动了。"
+        },
+        {
+          "en": "Four items from the photo are now on different shelves. Note their NEW shelf numbers.",
+          "zh": "照片中的四件物品现在在不同的架子上。记下它们的新架子编号。"
+        },
+        {
+          "en": "Globe→3, Bear→8, Clock→1, Vase→5. Code is 3815.",
+          "zh": "地球仪→3，泰迪熊→8，时钟→1，花瓶→5。密码是3815。"
+        }
+      ],
+      "reward": {
+        "en": "Code '3815'",
+        "zh": "密码'3815'"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 14 (spot the difference)",
+        "Level 41 (computer differences)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Postcard Sequence",
+        "zh": "明信片序列"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "Five postcards in the rack each have a small number printed in the corner and a landmark on the front. A sign says 'Arrange our landmarks from East to West for a surprise!'",
+        "zh": "明信片架上的五张明信片每张角落都印有一个小数字，正面有一个地标。标识写着'从东到西排列我们的地标，会有惊喜！'"
+      },
+      "solution_steps": [
+        {
+          "en": "Find five postcards in the rack showing landmarks: Statue of Liberty (East), Grand Canyon, Golden Gate Bridge, Mount Rushmore, Space Needle (West).",
+          "zh": "在明信片架上找到五张地标明信片：自由女神像（东）、大峡谷、金门大桥、拉什莫尔山、太空针塔（西）。"
+        },
+        {
+          "en": "Each postcard has a small number: Liberty=7, Canyon=2, Bridge=9, Rushmore=4, Needle=6.",
+          "zh": "每张明信片有一个小数字：自由女神=7，大峡谷=2，金门大桥=9，拉什莫尔山=4，太空针塔=6。"
+        },
+        {
+          "en": "Arrange East to West: 7-4-2-9-6.",
+          "zh": "从东到西排列：7-4-2-9-6。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The postcards show famous landmarks. Think about their geography.",
+          "zh": "明信片展示了著名地标。想想它们的地理位置。"
+        },
+        {
+          "en": "Order the landmarks from East Coast to West Coast. Each card has a small number.",
+          "zh": "从东海岸到西海岸排列地标。每张卡片有一个小数字。"
+        },
+        {
+          "en": "East to West: Liberty(7), Rushmore(4), Canyon(2), Bridge(9), Needle(6). Code: 74296.",
+          "zh": "从东到西：自由女神(7)、拉什莫尔(4)、大峡谷(2)、金门大桥(9)、太空针塔(6)。密码：74296。"
+        }
+      ],
+      "reward": {
+        "en": "Code '74296' — unlocks the register drawer, which holds the display cabinet key",
+        "zh": "密码'74296'——打开收银机抽屉，里面有展柜钥匙"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 9 (number grid code)",
+        "Level 31 (notebook clue)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "The Glass Cabinet",
+        "zh": "玻璃展柜"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "key_lock_chain",
+      "twist_applied": null,
+      "items_used": [
+        "cabinet_key"
+      ],
+      "clue_source": {
+        "en": "The locked glass cabinet near the exit has a traditional keyhole. Inside, a brass door handle gleams — clearly the exit mechanism.",
+        "zh": "出口旁锁着的玻璃柜有一个传统钥匙孔。里面有一个闪亮的黄铜门把手——显然是出口机关。"
+      },
+      "solution_steps": [
+        {
+          "en": "Use the display cabinet key from the register on the glass cabinet near the exit.",
+          "zh": "用收银机里的展柜钥匙打开出口旁的玻璃柜。"
+        },
+        {
+          "en": "Take the brass door handle from inside.",
+          "zh": "取出里面的黄铜门把手。"
+        },
+        {
+          "en": "Attach the handle to the exit door (which is missing its handle) and turn it to open.",
+          "zh": "将门把手装到出口门上（门把手缺失的那扇门），转动打开。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have a key. There's a locked cabinet near the exit.",
+          "zh": "你有一把钥匙。出口旁有一个锁着的柜子。"
+        },
+        {
+          "en": "The exit door is missing something. Check what's inside the cabinet.",
+          "zh": "出口门缺少了什么。看看柜子里有什么。"
+        },
+        {
+          "en": "Use the key on the glass cabinet, take the handle, attach it to the exit door.",
+          "zh": "用钥匙打开玻璃柜，拿出门把手，装到出口门上。"
+        }
+      ],
+      "reward": {
+        "en": "Brass Door Handle — opens the exit",
+        "zh": "黄铜门把手——打开出口"
+      },
+      "depends_on": "Postcard Sequence",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 6 (assemble the hammer)",
+        "Level 38 (stuck door lock)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Attach the brass handle to the handleless exit door and turn it. The door swings open, revealing a dusty corridor with arrows painted on the floor pointing deeper into the hotel.",
+    "zh": "将黄铜门把手装到没有把手的出口门上并转动。门打开了，露出一条尘封的走廊，地板上画着指向酒店深处的箭头。"
+  },
+  "escape_mechanism": "item_assembly",
+  "persistent_items_found": [
+    {
+      "id": "postcard_to_margaret",
+      "name": {
+        "en": "Unsent Postcard to Margaret",
+        "zh": "未寄出的给玛格丽特的明信片"
+      },
+      "found_in_room": 4,
+      "used_in_room": 27,
+      "narrative_only": true,
+      "description": {
+        "en": "A postcard revealing Edmund's sister Margaret and his reason for disappearing.",
+        "zh": "一张明信片，揭示了埃德蒙的姐姐玛格丽特以及他消失的原因。"
+      },
+      "acquisition_method": "auto_collect_with_story",
+      "acquisition_puzzle": null,
+      "critical_path_guaranteed": true,
+      "gate_note": {
+        "en": "Auto-collected when the player reads the story fragment. Cannot leave without viewing.",
+        "zh": "当玩家阅读故事碎片时自动收集。不查看无法离开。"
+      }
+    }
+  ],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "old_photograph",
+      "name": {
+        "en": "Framed Photograph",
+        "zh": "框架照片"
+      },
+      "states": [
+        "idle",
+        "zoomed"
+      ],
+      "trigger_puzzle": "Then and Now",
+      "z_layer": 2
+    },
+    {
+      "id": "magnifying_glass",
+      "name": {
+        "en": "Magnifying Glass",
+        "zh": "放大镜"
+      },
+      "states": [
+        "on_counter",
+        "in_use",
+        "collected"
+      ],
+      "trigger_puzzle": "Then and Now",
+      "z_layer": 4
+    },
+    {
+      "id": "postcard_rack",
+      "name": {
+        "en": "Postcard Rack",
+        "zh": "明信片架"
+      },
+      "states": [
+        "idle",
+        "zoomed"
+      ],
+      "trigger_puzzle": "Postcard Sequence",
+      "z_layer": 3
+    },
+    {
+      "id": "vintage_register",
+      "name": {
+        "en": "Vintage Cash Register",
+        "zh": "复古收银机"
+      },
+      "states": [
+        "locked",
+        "drawer_open"
+      ],
+      "trigger_puzzle": "Postcard Sequence",
+      "z_layer": 3
+    },
+    {
+      "id": "glass_cabinet",
+      "name": {
+        "en": "Glass Display Cabinet",
+        "zh": "玻璃展柜"
+      },
+      "states": [
+        "locked",
+        "unlocked_open"
+      ],
+      "trigger_puzzle": "The Glass Cabinet",
+      "z_layer": 2
+    },
+    {
+      "id": "exit_door",
+      "name": {
+        "en": "Exit Door (missing handle)",
+        "zh": "出口门（缺少把手）"
+      },
+      "states": [
+        "handleless",
+        "handle_attached",
+        "open"
+      ],
+      "trigger_puzzle": "final_action",
+      "z_layer": 1
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "level": 17,
+  "room_description": "A storage pantry or break room equipped with wire shelves, a water dispenser, a red microwave over a mini-fridge, a computer desk, and wooden cabinets.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the storage pantry room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_storage_pantry_room_.jpg"
+    },
+    {
+      "description": "Inspects the computer desk, monitors, and mouse.",
+      "timestamp_seconds": 2.0,
+      "screenshot_path": "Screenshots/002.0s_Inspects_the_computer_desk__monitors__and_mouse_.jpg"
+    },
+    {
+      "description": "Opens the red microwave to check inside.",
+      "timestamp_seconds": 7.0,
+      "screenshot_path": "Screenshots/007.0s_Opens_the_red_microwave_to_check_inside_.jpg"
+    },
+    {
+      "description": "Finds a token resting on top of the wooden cabinet.",
+      "timestamp_seconds": 13.0,
+      "screenshot_path": "Screenshots/013.0s_Finds_a_token_resting_on_top_of_the_wooden_cabinet_.jpg"
+    },
+    {
+      "description": "Opens the mini-fridge to find a row of red apples inside.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Opens_the_mini_fridge_to_find_a_row_of_red_apples_inside_.jpg"
+    },
+    {
+      "description": "Places a block of butter into the microwave and melts it.",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_Melted_Butter.jpg"
+    },
+    {
+      "description": "Collects a hidden token/coin from the melted butter.",
+      "timestamp_seconds": 26.0,
+      "screenshot_path": "Screenshots/026.0s_Collects_a_hidden_token_coin_from_the_melted_butter_.jpg"
+    },
+    {
+      "description": "Retrieves an electric kettle from the opened cabinet drawer.",
+      "timestamp_seconds": 32.5,
+      "screenshot_path": "Screenshots/032.5s_Retrieves_an_electric_kettle_from_the_opened_cabinet_drawer_.jpg"
+    },
+    {
+      "description": "Turns on the kettle to steam a blank piece of crumpled paper.",
+      "timestamp_seconds": 46.0,
+      "screenshot_path": "Screenshots/046.0s_Steaming_the_Paper.jpg"
+    },
+    {
+      "description": "Enters the code '572' into the combination lock inside the mini-fridge.",
+      "timestamp_seconds": 109.0,
+      "screenshot_path": "Screenshots/109.0s_Fridge_Drawer_Lock.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Melted Butter",
+      "items_used": [
+        "Block of butter"
+      ],
+      "solution_steps": [
+        "Take the frozen block of butter.",
+        "Place it inside the red microwave and turn it on to melt it away."
+      ],
+      "reward": "Hidden token/coin",
+      "timestamp_seconds": 21.0,
+      "screenshot_path": "Screenshots/021.0s_Melted_Butter.jpg"
+    },
+    {
+      "puzzle_name": "Steaming the Paper",
+      "items_used": [
+        "Electric kettle",
+        "Blank paper"
+      ],
+      "solution_steps": [
+        "Place the electric kettle on the counter and turn it on.",
+        "Hold the blank piece of paper over the steam to reveal hidden ink symbols."
+      ],
+      "reward": "Clue revealing a Mask, Apple, and Rose",
+      "timestamp_seconds": 46.0,
+      "screenshot_path": "Screenshots/046.0s_Steaming_the_Paper.jpg"
+    },
+    {
+      "puzzle_name": "Fridge Drawer Lock",
+      "items_used": [],
+      "solution_steps": [
+        "Count the corresponding items hidden around the room (Masks, Apples, Roses).",
+        "Enter the final tallied combination (572) into the 3-digit lock on the fridge drawer."
+      ],
+      "reward": "Door key",
+      "timestamp_seconds": 109.0,
+      "screenshot_path": "Screenshots/109.0s_Fridge_Drawer_Lock.jpg"
+    }
+  ],
+  "final_action": "Takes the key from the fridge compartment and uses it to unlock the main door."
+}

@@ -1,0 +1,100 @@
+{
+  "level": 21,
+  "room_description": "A modern bedroom with tan wood paneling, a large double bed with a brown and black runner, a desk with a computer on the left, a wall-mounted ship painting, and a vertical heater unit on the right.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the bedroom interior.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_bedroom_interior_.jpg"
+    },
+    {
+      "description": "Removing the heater grate to find a hidden compartment.",
+      "timestamp_seconds": 1.4,
+      "screenshot_path": "Screenshots/001.4s_Removing_the_heater_grate_to_find_a_hidden_compartment_.jpg"
+    },
+    {
+      "description": "Lifting the bed runner to find a golden star-shaped token.",
+      "timestamp_seconds": 10.0,
+      "screenshot_path": "Screenshots/010.0s_Lifting_the_bed_runner_to_find_a_golden_star_shaped_token_.jpg"
+    },
+    {
+      "description": "Tapping the wall shelves to collect a small white model bicycle.",
+      "timestamp_seconds": 11.5,
+      "screenshot_path": "Screenshots/011.5s_Tapping_the_wall_shelves_to_collect_a_small_white_model_bicycle_.jpg"
+    },
+    {
+      "description": "Inspecting the smartphone on the desk to see notification numbers.",
+      "timestamp_seconds": 18.5,
+      "screenshot_path": "Screenshots/018.5s_Inspecting_the_smartphone_on_the_desk_to_see_notification_numbers_.jpg"
+    },
+    {
+      "description": "Finding a numeric lock box inside the desk drawer.",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Finding_a_numeric_lock_box_inside_the_desk_drawer_.jpg"
+    },
+    {
+      "description": "Retreiving a yellow pencil and a screwdriver from a different cabinet section.",
+      "timestamp_seconds": 36.5,
+      "screenshot_path": "Screenshots/036.5s_Retreiving_a_yellow_pencil_and_a_screwdriver_from_a_different_cabinet_section_.jpg"
+    },
+    {
+      "description": "Opening a hidden wall safe behind the heater area using the screwdriver.",
+      "timestamp_seconds": 50.5,
+      "screenshot_path": "Screenshots/050.5s_Wall_Grate_Secret.jpg"
+    },
+    {
+      "description": "Using tokens to unlock a specialized box hidden in a wall niche.",
+      "timestamp_seconds": 57.0,
+      "screenshot_path": "Screenshots/057.0s_Using_tokens_to_unlock_a_specialized_box_hidden_in_a_wall_niche_.jpg"
+    },
+    {
+      "description": "Retrieving the exit key and opening the door.",
+      "timestamp_seconds": 63.5,
+      "screenshot_path": "Screenshots/063.5s_Retrieving_the_exit_key_and_opening_the_door_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "The Notification Code",
+      "items_used": [],
+      "solution_steps": [
+        "Check the smartphone on the left desk.",
+        "Note the counts: Calls (2), Messages (5), Updates (8).",
+        "Enter '258' into the numeric box inside the desk drawer."
+      ],
+      "reward": "Blue token",
+      "timestamp_seconds": 26.5,
+      "screenshot_path": "Screenshots/026.5s_The_Notification_Code.jpg"
+    },
+    {
+      "puzzle_name": "Wall Grate Secret",
+      "items_used": [
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Locate the vertical heater/grate on the right wall.",
+        "Use the screwdriver to remove the screws and the grate.",
+        "Collect the half-moon token from inside."
+      ],
+      "reward": "Half-moon token",
+      "timestamp_seconds": 50.5,
+      "screenshot_path": "Screenshots/050.5s_Wall_Grate_Secret.jpg"
+    },
+    {
+      "puzzle_name": "Celestial Token Box",
+      "items_used": [
+        "Star token",
+        "Half-moon token"
+      ],
+      "solution_steps": [
+        "Navigate to the hidden wall niche (behind the ship painting).",
+        "Insert the star token and the moon token into the wooden box.",
+        "The box opens to reveal the key."
+      ],
+      "reward": "Silver Exit Key",
+      "timestamp_seconds": 59.5,
+      "screenshot_path": "Screenshots/059.5s_Celestial_Token_Box.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key on the main wooden door to unlock it and exit the room."
+}

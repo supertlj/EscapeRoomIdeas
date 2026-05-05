@@ -1,0 +1,291 @@
+{
+  "room_number": 8,
+  "room_name": {
+    "en": "The Fitness Room",
+    "zh": "健身房"
+  },
+  "hotel_area": {
+    "en": "Fitness Room",
+    "zh": "健身房"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A dated fitness room with mirrored walls, a rowing machine, a weight bench with cast-iron plates, and a wall-mounted analog timer. Rubber floor mats are peeling at the corners. A row of small lockers sits below the mirror, and a workout log clipboard hangs on the wall. The exit is a heavy fire door with a magnetic lock display.",
+    "zh": "一间过时的健身房，镜面墙壁、划船机、带铸铁杠铃片的卧推凳，以及墙上安装的模拟计时器。橡胶地垫边角翘起。镜子下方有一排小储物柜，墙上挂着一个健身记录夹板。出口是一扇带磁力锁显示屏的厚重防火门。"
+  },
+  "story_fragment": {
+    "en": "The workout log has an oddly detailed entry: 'Oct 12 — Chest day. 3 sets of 12. 4 sets of 8. 2 sets of 15. Mr. G doesn't lift weights — he uses the machines at 2 AM when he thinks no one is watching. But I see him. He goes to the back mirror and it... opens? Staying late tomorrow to find out.'",
+    "zh": "健身记录本有一条异常详细的记录：'10月12日——胸部训练日。3组12次。4组8次。2组15次。G先生不举重——他凌晨2点在没人的时候用器械。但我看到了他。他走到后面的镜子前，镜子竟然...打开了？明天晚上留下来一探究竟。'"
+  },
+  "estimated_solve_time_minutes": 2,
+  "items": [
+    {
+      "id": "small_magnet",
+      "name": {
+        "en": "Horseshoe Magnet",
+        "zh": "马蹄形磁铁"
+      }
+    },
+    {
+      "id": "timer_knob",
+      "name": {
+        "en": "Timer Dial Knob",
+        "zh": "计时器旋钮"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Weight Plate Tally",
+        "zh": "杠铃片计数"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "The weight plates on the rack are color-coded by weight. A chart on the wall shows: Red=25kg, Blue=20kg, Yellow=15kg, Green=10kg. The magnetic lock display asks: 'Total weight on the bench (kg)?'",
+        "zh": "架子上的杠铃片按重量用颜色编码。墙上的图表显示：红=25公斤，蓝=20公斤，黄=15公斤，绿=10公斤。磁力锁显示屏提示：'卧推凳上的总重量（公斤）？'"
+      },
+      "solution_steps": [
+        {
+          "en": "Look at the weight bench. It has plates loaded: 2 Red (25 each = 50), 1 Blue (20), 1 Green (10).",
+          "zh": "查看卧推凳。上面放着杠铃片：2个红色（每个25=50），1个蓝色（20），1个绿色（10）。"
+        },
+        {
+          "en": "Add the weights: 50 + 20 + 10 = 80 kg.",
+          "zh": "加起来：50 + 20 + 10 = 80公斤。"
+        },
+        {
+          "en": "Enter '80' on the magnetic lock display.",
+          "zh": "在磁力锁显示屏上输入'80'。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The door lock wants a weight. Count what's on the bench using the color chart.",
+          "zh": "门锁要一个重量数值。用颜色图表数卧推凳上的重量。"
+        },
+        {
+          "en": "Count the colored plates: 2 Red, 1 Blue, 1 Green. Use the chart to convert to kg.",
+          "zh": "数彩色杠铃片：2个红、1个蓝、1个绿。用图表换算成公斤。"
+        },
+        {
+          "en": "2×25 + 20 + 10 = 80. Enter '80'.",
+          "zh": "2×25 + 20 + 10 = 80。输入'80'。"
+        }
+      ],
+      "reward": {
+        "en": "Partially unlocks the door — display now shows 'Step 2: Set the timer'",
+        "zh": "部分解锁门——显示屏现在显示'第2步：设置计时器'"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 22 (glow fish code)",
+        "Level 15 (math code)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Locker Magnet Retrieval",
+        "zh": "储物柜磁铁取物"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "physical_tool_use",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "One locker is jammed — the latch is stuck. Through the vent slits you can see a horseshoe magnet and a timer knob inside. A magnetic sign on the wall gives you an idea...",
+        "zh": "一个储物柜卡住了——门闩坏了。透过通风口缝隙你能看到里面有一个马蹄形磁铁和一个计时器旋钮。墙上的磁性标识给了你一个想法……"
+      },
+      "solution_steps": [
+        {
+          "en": "Try to open the jammed locker — it won't budge.",
+          "zh": "试着打开卡住的储物柜——打不开。"
+        },
+        {
+          "en": "Take the magnetic sign from the wall.",
+          "zh": "从墙上取下磁性标识。"
+        },
+        {
+          "en": "Use the magnetic sign on the locker vent slits to drag the horseshoe magnet toward the opening, then pull it out.",
+          "zh": "用磁性标识在储物柜通风口缝隙处吸引马蹄形磁铁向开口滑动，然后拉出来。"
+        },
+        {
+          "en": "Use the horseshoe magnet to then retrieve the timer knob the same way.",
+          "zh": "用马蹄形磁铁以同样方式取出计时器旋钮。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The locker is jammed. Can you see what's inside through the slits?",
+          "zh": "储物柜卡住了。你能透过缝隙看到里面有什么吗？"
+        },
+        {
+          "en": "Something magnetic might help pull items through the vent. Look around for a magnet.",
+          "zh": "磁性的东西可能帮助通过通风口拉出物品。找找有没有磁铁。"
+        },
+        {
+          "en": "Take the magnetic sign from the wall. Use it on the locker vents to pull out the magnet, then use that to get the knob.",
+          "zh": "从墙上取下磁性标识。在储物柜通风口使用它拉出磁铁，再用磁铁取出旋钮。"
+        }
+      ],
+      "reward": {
+        "en": "Horseshoe Magnet and Timer Dial Knob",
+        "zh": "马蹄形磁铁和计时器旋钮"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 23 (magnetic retrieval)",
+        "Level 32 (magnetic retrieval)",
+        "Level 45 (magnetic fishing)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Timer Dial Set",
+        "zh": "计时器设置"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "dial_alignment",
+      "twist_applied": null,
+      "items_used": [
+        "timer_knob"
+      ],
+      "clue_source": {
+        "en": "The wall timer is missing its knob. The workout log has a circled entry: '3 sets of 12, 4 sets of 8, 2 sets of 15.' Below it, someone scrawled: 'Total reps = timer setting.'",
+        "zh": "墙上的计时器缺少旋钮。健身记录上有一个圈出的条目：'3组12次，4组8次，2组15次。'下面有人潦草地写着：'总次数=计时器设置。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Attach the timer knob to the wall timer.",
+          "zh": "将计时器旋钮装到墙上的计时器上。"
+        },
+        {
+          "en": "Calculate total reps from the circled log entry: (3×12) + (4×8) + (2×15) = 36 + 32 + 30 = 98.",
+          "zh": "根据圈出的记录条目计算总次数：(3×12) + (4×8) + (2×15) = 36 + 32 + 30 = 98。"
+        },
+        {
+          "en": "Set the timer dial to 98.",
+          "zh": "将计时器设置到98。"
+        },
+        {
+          "en": "The fire door's magnetic lock fully disengages with a loud buzz.",
+          "zh": "防火门的磁力锁完全解除，发出响亮的蜂鸣声。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have a knob and a timer missing one. The workout log has a hint about the setting.",
+          "zh": "你有一个旋钮，计时器正好缺一个。健身记录里有关于设置的提示。"
+        },
+        {
+          "en": "Calculate the total reps: multiply sets × reps for each exercise, then add them all.",
+          "zh": "计算总次数：每个练习的组数×次数，然后全部加起来。"
+        },
+        {
+          "en": "(3×12)+(4×8)+(2×15) = 36+32+30 = 98. Set timer to 98.",
+          "zh": "(3×12)+(4×8)+(2×15) = 36+32+30 = 98。计时器设置到98。"
+        }
+      ],
+      "reward": {
+        "en": "Fully unlocks the fire door",
+        "zh": "完全解锁防火门"
+      },
+      "depends_on": "Weight Plate Tally",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 15 (math code X Y Z)",
+        "Level 13 (console keypad sum)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "The fire door swings open to reveal a neon-lit hallway. To the left, flashing lights and vintage sounds emanate from what can only be the hotel arcade. You notice the back mirror the workout log mentioned — but that's a mystery for another time.",
+    "zh": "防火门打开，露出一条霓虹灯照亮的走廊。左边传来闪烁的灯光和复古的声音——那只能是酒店游戏厅。你注意到健身记录中提到的后面那面镜子——但那是以后的事了。"
+  },
+  "escape_mechanism": "electronic_lock",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "weight_bench",
+      "name": {
+        "en": "Weight Bench with Plates",
+        "zh": "带杠铃片的卧推凳"
+      },
+      "states": [
+        "idle",
+        "zoomed"
+      ],
+      "trigger_puzzle": "Weight Plate Tally",
+      "z_layer": 2
+    },
+    {
+      "id": "fire_door_display",
+      "name": {
+        "en": "Fire Door Magnetic Lock",
+        "zh": "防火门磁力锁"
+      },
+      "states": [
+        "locked_step1",
+        "step1_done",
+        "fully_unlocked"
+      ],
+      "trigger_puzzle": "Weight Plate Tally",
+      "z_layer": 2
+    },
+    {
+      "id": "jammed_locker",
+      "name": {
+        "en": "Jammed Locker",
+        "zh": "卡住的储物柜"
+      },
+      "states": [
+        "jammed",
+        "magnet_retrieving",
+        "items_removed"
+      ],
+      "trigger_puzzle": "Locker Magnet Retrieval",
+      "z_layer": 2
+    },
+    {
+      "id": "wall_timer",
+      "name": {
+        "en": "Wall Timer",
+        "zh": "墙上计时器"
+      },
+      "states": [
+        "missing_knob",
+        "knob_attached",
+        "set_to_98"
+      ],
+      "trigger_puzzle": "Timer Dial Set",
+      "z_layer": 3
+    },
+    {
+      "id": "magnetic_sign",
+      "name": {
+        "en": "Magnetic Wall Sign",
+        "zh": "磁性墙标识"
+      },
+      "states": [
+        "on_wall",
+        "removed",
+        "in_use"
+      ],
+      "trigger_puzzle": "Locker Magnet Retrieval",
+      "z_layer": 4
+    }
+  ]
+}

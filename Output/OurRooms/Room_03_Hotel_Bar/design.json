@@ -1,0 +1,324 @@
+{
+  "room_number": 3,
+  "room_name": {
+    "en": "The Hotel Bar",
+    "zh": "酒店酒吧"
+  },
+  "hotel_area": {
+    "en": "Bar",
+    "zh": "酒吧"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A moody, wood-paneled cocktail bar with a long mahogany counter, leather bar stools, and a large mirror behind rows of dusty bottles. A broken jukebox sits in the corner, its neon flickering weakly. Cocktail shakers and glasses still line the counter, and a bartender's cloth drapes over the brass beer taps. A locked cash register sits at the end of the bar.",
+    "zh": "一间氛围感十足的木质鸡尾酒吧，长长的红木吧台、皮革吧凳，以及一面大镜子后面排列着落满灰尘的酒瓶。角落里有一台坏掉的点唱机，霓虹灯微弱地闪烁。调酒器和酒杯仍然排列在吧台上，调酒师的布巾搭在黄铜啤酒龙头上。吧台尽头有一台锁着的收银机。"
+  },
+  "story_fragment": {
+    "en": "A leather-bound bartender's diary lies open behind the counter. The last entry reads: 'Oct 14 — Mr. G came in at 9 PM, alone. Said his dinner guest never showed. Ordered three whiskeys. Asked me if I'd ever kept a secret so big it could swallow you whole. Tipped $100. Never saw him again.'",
+    "zh": "吧台后面放着一本皮面装订的调酒师日记，翻开着。最后一条记录写道：'10月14日——G先生晚上9点独自来了。说他的晚餐客人没来。点了三杯威士忌。问我是否曾经守过一个大到能把你吞噬的秘密。给了$100小费。再也没见过他。'"
+  },
+  "estimated_solve_time_minutes": 2.5,
+  "items": [
+    {
+      "id": "cocktail_recipe",
+      "name": {
+        "en": "Cocktail Recipe Card",
+        "zh": "鸡尾酒配方卡"
+      }
+    },
+    {
+      "id": "jukebox_coin",
+      "name": {
+        "en": "Jukebox Coin",
+        "zh": "点唱机硬币"
+      }
+    },
+    {
+      "id": "bar_exit_key",
+      "name": {
+        "en": "Bar Storage Key",
+        "zh": "酒吧储物间钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Mirror Writing",
+        "zh": "镜像文字"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": "T2_mirror_code",
+      "items_used": [],
+      "clue_source": {
+        "en": "A napkin with numbers is pinned to the wall behind a bottle. It's only readable through the mirror behind the bar — but the numbers appear reversed.",
+        "zh": "一张写有数字的餐巾纸被钉在一个酒瓶后面的墙上。只能通过吧台后面的镜子才能看到——但数字是反转的。"
+      },
+      "solution_steps": [
+        {
+          "en": "Notice a napkin pinned to the wall behind the top shelf bottles. You can't read it directly.",
+          "zh": "注意到顶层酒瓶后面的墙上钉着一张餐巾纸。你无法直接阅读。"
+        },
+        {
+          "en": "Look at the mirror behind the bar — the napkin is reflected clearly, showing '5831'. But remember: it's mirrored.",
+          "zh": "看吧台后面的镜子——餐巾纸清晰地反射出来，显示'5831'。但记住：这是镜像的。"
+        },
+        {
+          "en": "Reverse the number: the actual code is '1385'.",
+          "zh": "反转数字：实际密码是'1385'。"
+        },
+        {
+          "en": "Enter '1385' on the cash register keypad to pop open the drawer.",
+          "zh": "在收银机键盘上输入'1385'打开抽屉。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "There's something written behind the bottles, but you can't see it from here. Is there another way to read it?",
+          "zh": "酒瓶后面写了东西，但你从这里看不到。有没有其他方式可以读到？"
+        },
+        {
+          "en": "The mirror shows numbers, but mirrors reverse things. What's the real code?",
+          "zh": "镜子显示了数字，但镜子会反转。真正的密码是什么？"
+        },
+        {
+          "en": "The mirror shows '5831' — reverse it to get '1385'. Enter it on the cash register.",
+          "zh": "镜子显示'5831'——反转得到'1385'。在收银机上输入。"
+        }
+      ],
+      "reward": {
+        "en": "Cocktail Recipe Card and a Jukebox Coin from the cash drawer",
+        "zh": "收银机抽屉里的鸡尾酒配方卡和点唱机硬币"
+      },
+      "depends_on": null,
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 16 (dirty mirror code)",
+        "Level 27 (blood code)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Cocktail Mixing",
+        "zh": "调制鸡尾酒"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "item_combination",
+      "twist_applied": null,
+      "items_used": [
+        "cocktail_recipe"
+      ],
+      "clue_source": {
+        "en": "The recipe card shows 'The Grandview Special: 2 parts Blue, 1 part Red, 3 parts Gold. Serve in the crystal glass on tap 4.'",
+        "zh": "配方卡上写着'格兰德维尤特调：2份蓝色，1份红色，3份金色。用4号龙头的水晶杯盛放。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the cocktail recipe card for the 'Grandview Special.'",
+          "zh": "阅读'格兰德维尤特调'的鸡尾酒配方卡。"
+        },
+        {
+          "en": "Find the three colored bottles on the shelf: Blue, Red, and Gold.",
+          "zh": "在架子上找到三瓶彩色酒：蓝色、红色和金色。"
+        },
+        {
+          "en": "Pour them into the crystal glass in order: Blue (tap twice), Red (tap once), Gold (tap three times).",
+          "zh": "按顺序倒入水晶杯：蓝色（点两次），红色（点一次），金色（点三次）。"
+        },
+        {
+          "en": "Place the glass on the brass coaster marked '4'. A hidden panel pops open under the bar.",
+          "zh": "将酒杯放在标有'4'的黄铜杯垫上。吧台下面弹出一个隐藏面板。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have a recipe. The ingredients are on the shelf — try mixing them.",
+          "zh": "你有配方。原料在架子上——试试调配。"
+        },
+        {
+          "en": "Follow the recipe exactly: 2 Blue, 1 Red, 3 Gold. Then look for where to place the glass.",
+          "zh": "严格按配方操作：2份蓝色、1份红色、3份金色。然后找放酒杯的地方。"
+        },
+        {
+          "en": "Tap Blue twice, Red once, Gold three times. Place the glass on the coaster marked '4'.",
+          "zh": "点蓝色两次、红色一次、金色三次。把酒杯放在标记'4'的杯垫上。"
+        }
+      ],
+      "reward": {
+        "en": "Hidden panel reveals a small brass key",
+        "zh": "隐藏面板露出一把小黄铜钥匙"
+      },
+      "depends_on": "Mirror Writing",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 4 (burger assembly)",
+        "Level 43 (torch + oil combination)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Jukebox Serenade",
+        "zh": "点唱机小夜曲"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": null,
+      "items_used": [
+        "jukebox_coin"
+      ],
+      "clue_source": {
+        "en": "The jukebox has a coin slot and a song list. One song is circled in red: 'Track B7 — Farewell to the Grandview.' The back of the jukebox has a loose panel.",
+        "zh": "点唱机有投币口和歌单。一首歌被红笔圈出：'B7曲目——告别格兰德维尤。'点唱机背面有一块松动的面板。"
+      },
+      "solution_steps": [
+        {
+          "en": "Insert the jukebox coin into the slot.",
+          "zh": "将点唱机硬币投入投币口。"
+        },
+        {
+          "en": "Select Track B7, the one circled in red on the song list.",
+          "zh": "选择B7曲目——歌单上被红笔圈出的那首。"
+        },
+        {
+          "en": "The jukebox plays a melancholy tune. As it finishes, the loose back panel clicks open, revealing the bar storage key.",
+          "zh": "点唱机播放了一首忧伤的曲子。曲子结束时，背面松动的面板咔哒一声打开，露出酒吧储物间钥匙。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The jukebox needs a coin. Do you have one?",
+          "zh": "点唱机需要投币。你有硬币吗？"
+        },
+        {
+          "en": "Check the song list — one track is specially marked. Play that one.",
+          "zh": "看看歌单——有一首歌被特别标记了。播放那首。"
+        },
+        {
+          "en": "Insert the coin and select Track B7 (circled in red). Check the back of the jukebox after the song plays.",
+          "zh": "投入硬币并选择B7曲目（红圈标记）。歌曲播放后检查点唱机背面。"
+        }
+      ],
+      "reward": {
+        "en": "Bar Storage Key",
+        "zh": "酒吧储物间钥匙"
+      },
+      "depends_on": "Mirror Writing",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 5 (DVD + remote combination)",
+        "Level 1 (monitor + remote)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Use the bar storage key on the heavy door behind the jukebox. It opens into a narrow service corridor, the wallpaper torn and water-stained, leading further into the hotel's interior.",
+    "zh": "用酒吧储物间钥匙打开点唱机后面的重门。它通向一条狭窄的服务走廊，墙纸破损且有水渍，通往酒店更深处。"
+  },
+  "escape_mechanism": "key",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "bar_mirror",
+      "name": {
+        "en": "Bar Mirror",
+        "zh": "吧台镜子"
+      },
+      "states": [
+        "idle",
+        "zoomed_reflection"
+      ],
+      "trigger_puzzle": "Mirror Writing",
+      "z_layer": 1
+    },
+    {
+      "id": "napkin_code",
+      "name": {
+        "en": "Napkin with Code",
+        "zh": "写有密码的餐巾纸"
+      },
+      "states": [
+        "hidden_behind_bottles",
+        "reflected_in_mirror"
+      ],
+      "trigger_puzzle": "Mirror Writing",
+      "z_layer": 3
+    },
+    {
+      "id": "cash_register",
+      "name": {
+        "en": "Cash Register",
+        "zh": "收银机"
+      },
+      "states": [
+        "locked",
+        "drawer_open"
+      ],
+      "trigger_puzzle": "Mirror Writing",
+      "z_layer": 3
+    },
+    {
+      "id": "colored_bottles",
+      "name": {
+        "en": "Cocktail Bottles (Blue/Red/Gold)",
+        "zh": "鸡尾酒瓶（蓝/红/金）"
+      },
+      "states": [
+        "on_shelf",
+        "pouring"
+      ],
+      "trigger_puzzle": "Cocktail Mixing",
+      "z_layer": 3
+    },
+    {
+      "id": "crystal_glass",
+      "name": {
+        "en": "Crystal Glass",
+        "zh": "水晶杯"
+      },
+      "states": [
+        "empty",
+        "mixed",
+        "placed_on_coaster"
+      ],
+      "trigger_puzzle": "Cocktail Mixing",
+      "z_layer": 4
+    },
+    {
+      "id": "bar_hidden_panel",
+      "name": {
+        "en": "Hidden Panel",
+        "zh": "隐藏面板"
+      },
+      "states": [
+        "closed",
+        "open"
+      ],
+      "trigger_puzzle": "Cocktail Mixing",
+      "z_layer": 3
+    },
+    {
+      "id": "jukebox",
+      "name": {
+        "en": "Jukebox",
+        "zh": "点唱机"
+      },
+      "states": [
+        "off",
+        "coin_inserted",
+        "playing",
+        "back_panel_open"
+      ],
+      "trigger_puzzle": "Jukebox Serenade",
+      "z_layer": 2
+    }
+  ]
+}

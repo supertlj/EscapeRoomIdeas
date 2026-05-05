@@ -1,0 +1,99 @@
+{
+  "level": 10,
+  "room_description": "A bright pink bedroom with white wall paneling, a white metal-framed bed, a wall clock, a vanity table with a chest, a large 'Last Supper' painting, and a locked wooden door.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the pink bedroom.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_pink_bedroom_.jpg"
+    },
+    {
+      "description": "Lifting the cloth on the table shelf to find a green number '5'.",
+      "timestamp_seconds": 3.5,
+      "screenshot_path": "Screenshots/003.5s_Lifting_the_cloth_on_the_table_shelf_to_find_a_green_number__5__.jpg"
+    },
+    {
+      "description": "Moving the bed pillow to find a red number '2' and a diamond ring.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Moving_the_bed_pillow_to_find_a_red_number__2__and_a_diamond_ring_.jpg"
+    },
+    {
+      "description": "Using the diamond ring to cut the glass of the ornate wall mirror.",
+      "timestamp_seconds": 12.0,
+      "screenshot_path": "Screenshots/012.0s_Using_the_diamond_ring_to_cut_the_glass_of_the_ornate_wall_mirror_.jpg"
+    },
+    {
+      "description": "Entering the shape sequence from the mirror onto the large wall painting.",
+      "timestamp_seconds": 18.0,
+      "screenshot_path": "Screenshots/018.0s_Entering_the_shape_sequence_from_the_mirror_onto_the_large_wall_painting_.jpg"
+    },
+    {
+      "description": "Opening the small chest on the table to find a yellow number '3'.",
+      "timestamp_seconds": 37.5,
+      "screenshot_path": "Screenshots/037.5s_Opening_the_small_chest_on_the_table_to_find_a_yellow_number__3__.jpg"
+    },
+    {
+      "description": "Checking the wall clock to see the blue hand pointing to '8'.",
+      "timestamp_seconds": 40.5,
+      "screenshot_path": "Screenshots/040.5s_Checking_the_wall_clock_to_see_the_blue_hand_pointing_to__8__.jpg"
+    },
+    {
+      "description": "Entering the color-coded number combination into the wall safe.",
+      "timestamp_seconds": 51.0,
+      "screenshot_path": "Screenshots/051.0s_Color_Coded_Safe.jpg"
+    },
+    {
+      "description": "Placing the missing puzzle piece into the wooden box under the bed.",
+      "timestamp_seconds": 55.5,
+      "screenshot_path": "Screenshots/055.5s_Placing_the_missing_puzzle_piece_into_the_wooden_box_under_the_bed_.jpg"
+    },
+    {
+      "description": "Unlocking the main door after completing the sliding puzzle.",
+      "timestamp_seconds": 331.0,
+      "screenshot_path": "Screenshots/331.0s_Unlocking_the_main_door_after_completing_the_sliding_puzzle_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Mirror Shapes",
+      "items_used": [
+        "Diamond Ring"
+      ],
+      "solution_steps": [
+        "Find the ring under the pillow.",
+        "Use the ring to cut the mirror glass, revealing four red symbols.",
+        "Tap the medallions on the 'Last Supper' painting to match the symbols (Circle, Star of David, Eye of Providence, Cross)."
+      ],
+      "reward": "Reveals the hidden wall safe",
+      "timestamp_seconds": 23.0,
+      "screenshot_path": "Screenshots/023.0s_Mirror_Shapes.jpg"
+    },
+    {
+      "puzzle_name": "Color-Coded Safe",
+      "items_used": [],
+      "solution_steps": [
+        "Locate the four colored numbers hidden around the room: Red 2 (bed), Yellow 3 (chest), Blue 8 (clock), Green 5 (table).",
+        "Match the numbers to the colored arrows on the wall safe (Red, Yellow, Blue, Green).",
+        "Enter the code '2385'."
+      ],
+      "reward": "Puzzle Tile",
+      "timestamp_seconds": 51.0,
+      "screenshot_path": "Screenshots/051.0s_Color_Coded_Safe.jpg"
+    },
+    {
+      "puzzle_name": "Starry Night Slider",
+      "items_used": [
+        "Puzzle Tile"
+      ],
+      "solution_steps": [
+        "Find the wooden box under the bed.",
+        "Insert the missing tile retrieved from the safe.",
+        "Solve the sliding tile puzzle to form Van Gogh's 'Starry Night'."
+      ],
+      "reward": "Silver Key",
+      "timestamp_seconds": 328.0,
+      "screenshot_path": "Screenshots/328.0s_Starry_Night_Slider.jpg"
+    }
+  ],
+  "final_action": "The player uses the silver key found inside the puzzle box to unlock the main bedroom door and escape."
+}

@@ -1,0 +1,85 @@
+{
+  "level": 30,
+  "room_description": "An ancient stone temple or tomb with lion statues, pedestals, and glowing blue energy.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the stone temple.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_stone_temple_.jpg"
+    },
+    {
+      "description": "Finding a stone artifact on a pedestal with an eagle carving.",
+      "timestamp_seconds": 2.5,
+      "screenshot_path": "Screenshots/002.5s_Finding_a_stone_artifact_on_a_pedestal_with_an_eagle_carving_.jpg"
+    },
+    {
+      "description": "Inspecting the left lion statue with glowing green eyes.",
+      "timestamp_seconds": 11.0,
+      "screenshot_path": "Screenshots/011.0s_Inspecting_the_left_lion_statue_with_glowing_green_eyes_.jpg"
+    },
+    {
+      "description": "Finding a hammer on the floor near a pillar.",
+      "timestamp_seconds": 14.5,
+      "screenshot_path": "Screenshots/014.5s_Finding_a_hammer_on_the_floor_near_a_pillar_.jpg"
+    },
+    {
+      "description": "Using the hammer to break a clay pot to find a golden dragon head.",
+      "timestamp_seconds": 31.0,
+      "screenshot_path": "Screenshots/031.0s_Using_the_hammer_to_break_a_clay_pot_to_find_a_golden_dragon_head_.jpg"
+    },
+    {
+      "description": "Matching stone tiles with eagle, dolphin, and wolf carvings on a wall panel.",
+      "timestamp_seconds": 51.5,
+      "screenshot_path": "Screenshots/051.5s_Matching_stone_tiles_with_eagle__dolphin__and_wolf_carvings_on_a_wall_panel_.jpg"
+    },
+    {
+      "description": "Placing two golden dragon heads into a central stone box.",
+      "timestamp_seconds": 112.5,
+      "screenshot_path": "Screenshots/112.5s_Placing_two_golden_dragon_heads_into_a_central_stone_box_.jpg"
+    },
+    {
+      "description": "Retrieving a wolf emblem from the stone box.",
+      "timestamp_seconds": 114.5,
+      "screenshot_path": "Screenshots/114.5s_Retrieving_a_wolf_emblem_from_the_stone_box_.jpg"
+    },
+    {
+      "description": "Inserting various emblems into the main circular door lock.",
+      "timestamp_seconds": 118.0,
+      "screenshot_path": "Screenshots/118.0s_Inserting_various_emblems_into_the_main_circular_door_lock_.jpg"
+    },
+    {
+      "description": "Solving a pathfinding mini-game on the door to align helmet and beast icons.",
+      "timestamp_seconds": 122.5,
+      "screenshot_path": "Screenshots/122.5s_Solving_a_pathfinding_mini_game_on_the_door_to_align_helmet_and_beast_icons_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Animal Tile Wall",
+      "items_used": [],
+      "solution_steps": [
+        "Examine the carvings around the room (Dolphin 4, Eagle 2, etc.).",
+        "Rotate or swap the tiles on the wall panel to match the icons found on the pedestals."
+      ],
+      "reward": "Second golden dragon head",
+      "timestamp_seconds": 101.5,
+      "screenshot_path": "Screenshots/101.5s_Animal_Tile_Wall.jpg"
+    },
+    {
+      "puzzle_name": "Door Hexagon Game",
+      "items_used": [
+        "Wolf emblem",
+        "Eagle emblem",
+        "Lion emblem"
+      ],
+      "solution_steps": [
+        "Insert the three gathered emblems into the door slots.",
+        "Slide the beast heads (Left) and the knight helmets (Right) across the hexagonal grid to swap their positions."
+      ],
+      "reward": "Unlocks the stone temple door",
+      "timestamp_seconds": 210.0,
+      "screenshot_path": "Screenshots/210.0s_Door_Hexagon_Game.jpg"
+    }
+  ],
+  "final_action": "The large stone door slides open after the hexagon puzzle is complete, revealing the way forward."
+}

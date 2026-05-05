@@ -1,0 +1,108 @@
+{
+  "level": 35,
+  "room_description": "A dimly lit, rugged stone cave with uneven terrain. In the background, a bright campfire illuminates the area, and bare tree branches protrude from the ground. A wooden crate sits on the right.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the cave interior.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_cave_interior_.jpg"
+    },
+    {
+      "description": "Collecting a wooden axe handle from the ground.",
+      "timestamp_seconds": 3.0,
+      "screenshot_path": "Screenshots/003.0s_Collecting_a_wooden_axe_handle_from_the_ground_.jpg"
+    },
+    {
+      "description": "Using a knife to cut away the dry branches, revealing a stone code.",
+      "timestamp_seconds": 6.5,
+      "screenshot_path": "Screenshots/006.5s_Using_a_knife_to_cut_away_the_dry_branches__revealing_a_stone_code_.jpg"
+    },
+    {
+      "description": "Collecting a torch from near the campfire.",
+      "timestamp_seconds": 10.0,
+      "screenshot_path": "Screenshots/010.0s_Collecting_a_torch_from_near_the_campfire_.jpg"
+    },
+    {
+      "description": "Using the torch to illuminate a dark alcove, finding a metal axe head.",
+      "timestamp_seconds": 15.0,
+      "screenshot_path": "Screenshots/015.0s_Using_the_torch_to_illuminate_a_dark_alcove__finding_a_metal_axe_head_.jpg"
+    },
+    {
+      "description": "Assembling the axe.",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Assemble_the_Axe.jpg"
+    },
+    {
+      "description": "Inputting the colored block sequence from the statue puzzle.",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Statue_Color_Code.jpg"
+    },
+    {
+      "description": "Completing the Van Gogh 'Starry Night' jigsaw puzzle.",
+      "timestamp_seconds": 64.0,
+      "screenshot_path": "Screenshots/064.0s_Starry_Night_Assembly.jpg"
+    },
+    {
+      "description": "Entering the final numeric code '7164' to open the chest.",
+      "timestamp_seconds": 118.0,
+      "screenshot_path": "Screenshots/118.0s_Breaking_the_Crate.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Assemble the Axe",
+      "items_used": [
+        "Axe Handle",
+        "Torch",
+        "Knife"
+      ],
+      "solution_steps": [
+        "Pick up the handle from the ground.",
+        "Use the knife to clear the branches to get the torch.",
+        "Use the torch to light the dark area and find the axe head.",
+        "Combine the handle and head."
+      ],
+      "reward": "Axe",
+      "timestamp_seconds": 16.5,
+      "screenshot_path": "Screenshots/016.5s_Assemble_the_Axe.jpg"
+    },
+    {
+      "puzzle_name": "Statue Color Code",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the colored gems on the small stone statues: Red, Blue, Yellow, Green.",
+        "Enter this sequence into the colored blocks on the puzzle box."
+      ],
+      "reward": "Puzzle Piece",
+      "timestamp_seconds": 34.0,
+      "screenshot_path": "Screenshots/034.0s_Statue_Color_Code.jpg"
+    },
+    {
+      "puzzle_name": "Starry Night Assembly",
+      "items_used": [
+        "Puzzle Piece"
+      ],
+      "solution_steps": [
+        "Place the missing piece into the frame.",
+        "Assemble the tiles to form the classic Van Gogh painting 'The Starry Night'."
+      ],
+      "reward": "Numeric Code '7164'",
+      "timestamp_seconds": 64.0,
+      "screenshot_path": "Screenshots/064.0s_Starry_Night_Assembly.jpg"
+    },
+    {
+      "puzzle_name": "Breaking the Crate",
+      "items_used": [
+        "Axe"
+      ],
+      "solution_steps": [
+        "Use the assembled axe to smash the wooden crate on the right side of the cave.",
+        "Input the code '7164' into the chest hidden inside."
+      ],
+      "reward": "Exit Key",
+      "timestamp_seconds": 118.0,
+      "screenshot_path": "Screenshots/118.0s_Breaking_the_Crate.jpg"
+    }
+  ],
+  "final_action": "The player retrieves the key from the chest and uses it to unlock the metal grate, allowing them to crawl out of the cave."
+}

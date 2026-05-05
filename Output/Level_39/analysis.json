@@ -1,0 +1,96 @@
+{
+  "level": 39,
+  "room_description": "An elegant, luxurious hallway with ornate wallpaper, lounge chairs, a large mirror with red writing, a red fire hose box, a treasure chest, and a set of elevator doors.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the elegant elevator lobby.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_elegant_elevator_lobby_.jpg"
+    },
+    {
+      "description": "Finds a silver key buried in the dirt of a potted plant.",
+      "timestamp_seconds": 8.0,
+      "screenshot_path": "Screenshots/008.0s_Finds_a_silver_key_buried_in_the_dirt_of_a_potted_plant_.jpg"
+    },
+    {
+      "description": "Reads the code '27583' written in red across the large mirror.",
+      "timestamp_seconds": 32.0,
+      "screenshot_path": "Screenshots/032.0s_Reads_the_code__27583__written_in_red_across_the_large_mirror_.jpg"
+    },
+    {
+      "description": "Enters '27583' into the combination lock on the treasure chest.",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Mirror_Chest.jpg"
+    },
+    {
+      "description": "Retrieves a set of metal gears from the unlocked chest.",
+      "timestamp_seconds": 46.0,
+      "screenshot_path": "Screenshots/046.0s_Retrieves_a_set_of_metal_gears_from_the_unlocked_chest_.jpg"
+    },
+    {
+      "description": "Studies a painting depicting colored Greek letters at different angles.",
+      "timestamp_seconds": 52.0,
+      "screenshot_path": "Screenshots/052.0s_Studies_a_painting_depicting_colored_Greek_letters_at_different_angles_.jpg"
+    },
+    {
+      "description": "Adjusts the colored dials on the fire hose box to match the painting.",
+      "timestamp_seconds": 66.0,
+      "screenshot_path": "Screenshots/066.0s_Fire_Hose_Dials.jpg"
+    },
+    {
+      "description": "Uses the retrieved screwdriver to open the wall's electrical fuse box.",
+      "timestamp_seconds": 74.0,
+      "screenshot_path": "Screenshots/074.0s_Uses_the_retrieved_screwdriver_to_open_the_wall_s_electrical_fuse_box_.jpg"
+    },
+    {
+      "description": "Places the gears onto a wall puzzle, opening a hidden compartment for fuses.",
+      "timestamp_seconds": 82.0,
+      "screenshot_path": "Screenshots/082.0s_Places_the_gears_onto_a_wall_puzzle__opening_a_hidden_compartment_for_fuses_.jpg"
+    },
+    {
+      "description": "Inserts the newly found fuses into the electrical box to restore power.",
+      "timestamp_seconds": 112.0,
+      "screenshot_path": "Screenshots/112.0s_Gear_Mechanism___Power.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Mirror Chest",
+      "items_used": [],
+      "solution_steps": [
+        "Read the 5-digit code '27583' written prominently in red on the large mirror.",
+        "Enter this code into the digital lock on the wooden treasure chest."
+      ],
+      "reward": "Metal gears",
+      "timestamp_seconds": 44.0,
+      "screenshot_path": "Screenshots/044.0s_Mirror_Chest.jpg"
+    },
+    {
+      "puzzle_name": "Fire Hose Dials",
+      "items_used": [],
+      "solution_steps": [
+        "Observe the painting showing Alpha (Red) at 10 o'clock, Beta (Yellow) at 2 o'clock, and Omega (Blue) at 4 o'clock.",
+        "Rotate the three corresponding dials on the fire hose box to match these orientations."
+      ],
+      "reward": "Screwdriver",
+      "timestamp_seconds": 66.0,
+      "screenshot_path": "Screenshots/066.0s_Fire_Hose_Dials.jpg"
+    },
+    {
+      "puzzle_name": "Gear Mechanism & Power",
+      "items_used": [
+        "Metal gears",
+        "Screwdriver"
+      ],
+      "solution_steps": [
+        "Place the gears onto the wall mechanism to complete the turning circuit, which opens a compartment containing two fuses.",
+        "Use the screwdriver to unscrew the cover of the electrical box.",
+        "Insert the two fuses to restore power to the room."
+      ],
+      "reward": "Restores power to the elevator",
+      "timestamp_seconds": 112.0,
+      "screenshot_path": "Screenshots/112.0s_Gear_Mechanism___Power.jpg"
+    }
+  ],
+  "final_action": "Restoring power to the electrical fuse box automatically opens the central elevator doors, allowing the player to escape."
+}

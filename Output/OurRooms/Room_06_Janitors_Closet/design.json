@@ -1,0 +1,304 @@
+{
+  "room_number": 6,
+  "room_name": {
+    "en": "Janitor's Closet",
+    "zh": "清洁工储藏室"
+  },
+  "hotel_area": {
+    "en": "Janitor's Closet",
+    "zh": "清洁工储藏室"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A cramped utility closet smelling of old bleach. Metal shelving holds cleaning supplies — bottles of various colors, mops, and rags. An electrical fuse box is mounted on the back wall, its door hanging open to reveal a tangle of wires. A key ring with numbered tags hangs from a hook, and a janitor's logbook sits on a small folding chair. A heavy steel utility door leads out.",
+    "zh": "一间狭小的清洁工储藏室，弥漫着旧漂白剂的气味。金属架子上放着各种颜色的清洁用品瓶、拖把和抹布。后墙上安装着一个电气保险丝盒，门半开着，露出一团缠绕的电线。一串带编号标签的钥匙挂在挂钩上，一本清洁工日志本放在折叠椅上。一扇厚重的钢制公用门通向外面。"
+  },
+  "story_fragment": {
+    "en": "The janitor's logbook has entries spanning years, all mundane — until the last page: 'Oct 13, 1994 — Heard hammering from below the boiler room again. 2 AM. Been hearing it every Tuesday for months. Told Mr. G but he just smiled and said some things are better left unheard. Giving my two weeks tomorrow. This place gives me the creeps.'",
+    "zh": "清洁工日志本的记录跨越数年，都很平常——直到最后一页：'1994年10月13日——又听到锅炉房下面的锤击声了。凌晨2点。几个月来每周二都能听到。告诉了G先生，但他只是笑笑说，有些事情还是不听为好。明天递辞呈。这个地方让我毛骨悚然。'"
+  },
+  "estimated_solve_time_minutes": 2.5,
+  "items": [
+    {
+      "id": "fuse_red",
+      "name": {
+        "en": "Red Fuse",
+        "zh": "红色保险丝"
+      }
+    },
+    {
+      "id": "fuse_blue",
+      "name": {
+        "en": "Blue Fuse",
+        "zh": "蓝色保险丝"
+      }
+    },
+    {
+      "id": "utility_key",
+      "name": {
+        "en": "Utility Door Key",
+        "zh": "公用门钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Supply Shelf Count",
+        "zh": "清洁用品计数"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "A laminated card taped to the shelf reads: 'Weekly inventory check — report count of: Yellow bottles, Blue bottles, Green bottles, Red bottles.'",
+        "zh": "架子上贴着一张塑封卡片：'每周库存检查——报告以下数量：黄瓶、蓝瓶、绿瓶、红瓶。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Count the cleaning supply bottles by color: Yellow = 3, Blue = 6, Green = 1, Red = 4.",
+          "zh": "按颜色数清洁用品瓶：黄=3，蓝=6，绿=1，红=4。"
+        },
+        {
+          "en": "The inventory code is 3-6-1-4.",
+          "zh": "库存代码是3-6-1-4。"
+        },
+        {
+          "en": "Enter '3614' into the padlock on the supply cabinet to find the two fuses inside.",
+          "zh": "在清洁柜的挂锁上输入'3614'，找到里面的两个保险丝。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "There's an inventory card asking you to count bottles. Look at the shelves.",
+          "zh": "有一张库存卡要求你数瓶子。看看架子。"
+        },
+        {
+          "en": "Count bottles by color in the order on the card: Yellow, Blue, Green, Red.",
+          "zh": "按卡片上的顺序按颜色数瓶子：黄、蓝、绿、红。"
+        },
+        {
+          "en": "Yellow=3, Blue=6, Green=1, Red=4. Code is 3614.",
+          "zh": "黄=3，蓝=6，绿=1，红=4。密码是3614。"
+        }
+      ],
+      "reward": {
+        "en": "Red Fuse and Blue Fuse",
+        "zh": "红色保险丝和蓝色保险丝"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 22 (glow fish code)",
+        "Level 24 (fish wall tally)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Fuse Box Circuit",
+        "zh": "保险丝盒电路"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "pipe_circuit_connection",
+      "twist_applied": "T7_bidirectional",
+      "items_used": [
+        "fuse_red",
+        "fuse_blue"
+      ],
+      "clue_source": {
+        "en": "The fuse box has two empty slots (red-labeled and blue-labeled) and a circuit diagram showing two paths that must BOTH be completed simultaneously — one for lights, one for the door lock.",
+        "zh": "保险丝盒有两个空槽（红色标签和蓝色标签）和一个电路图，显示两条路径必须同时完成——一条用于照明，一条用于门锁。"
+      },
+      "solution_steps": [
+        {
+          "en": "Insert the Red Fuse into the red-labeled slot and the Blue Fuse into the blue-labeled slot.",
+          "zh": "将红色保险丝插入红色标签槽位，蓝色保险丝插入蓝色标签槽位。"
+        },
+        {
+          "en": "The circuit diagram shows two wire paths. Tap the toggle switches to route power through BOTH paths simultaneously.",
+          "zh": "电路图显示两条电线路径。点击拨动开关，同时将电力通过两条路径。"
+        },
+        {
+          "en": "When both circuits are complete, the overhead light turns on AND the door lock buzzes.",
+          "zh": "当两条电路都完成时，头顶灯亮起，同时门锁发出嗡嗡声。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have two fuses. The box has two empty slots with color labels.",
+          "zh": "你有两个保险丝。盒子有两个带颜色标签的空槽。"
+        },
+        {
+          "en": "Both circuits need to be completed at the same time. Flip the switches to route power through both paths.",
+          "zh": "两条电路需要同时完成。拨动开关，将电力同时通过两条路径。"
+        },
+        {
+          "en": "Insert Red fuse in red slot, Blue in blue slot. Toggle switches until both light AND lock indicators show green.",
+          "zh": "红色保险丝插入红色槽，蓝色插入蓝色槽。拨动开关直到灯光和门锁指示灯都显示绿色。"
+        }
+      ],
+      "reward": {
+        "en": "Powers the overhead light and unlocks the electronic door mechanism",
+        "zh": "接通头顶灯光并解锁电子门机关"
+      },
+      "depends_on": "Supply Shelf Count",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 33 (circuit connection door)",
+        "Level 22 (pipe connection grid)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Key Ring Match",
+        "zh": "钥匙环匹配"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "With the light now on, you can see a notice board that was in darkness. It shows: 'Utility exits: Use key tagged with the SAME number as the room you're in.' The closet door has a small plaque reading 'UTIL-07.'",
+        "zh": "灯亮后，你能看到之前在黑暗中的公告板。上面显示：'公用出口：使用与你所在房间相同编号的钥匙。'储藏室门上有一个小铭牌写着'UTIL-07'。"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the notice board (now visible with the light on): 'Use key tagged with the same number as the room.'",
+          "zh": "阅读公告板（灯亮后现在可以看到）：'使用与房间相同编号的钥匙。'"
+        },
+        {
+          "en": "Check the door plaque: 'UTIL-07.'",
+          "zh": "检查门上的铭牌：'UTIL-07'。"
+        },
+        {
+          "en": "Find key #7 on the key ring hanging from the hook.",
+          "zh": "在挂钩上的钥匙环中找到7号钥匙。"
+        },
+        {
+          "en": "Use key #7 on the utility door.",
+          "zh": "用7号钥匙打开公用门。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The light revealed something on the wall. What does the notice board say?",
+          "zh": "灯光照亮了墙上的什么东西。公告板上写了什么？"
+        },
+        {
+          "en": "You need a specific key from the ring. What number is this room?",
+          "zh": "你需要钥匙环上的一把特定钥匙。这个房间的编号是什么？"
+        },
+        {
+          "en": "The room is UTIL-07. Take key #7 from the key ring and use it on the door.",
+          "zh": "房间是UTIL-07。从钥匙环上拿7号钥匙，用它打开门。"
+        }
+      ],
+      "reward": {
+        "en": "Utility Door Key #7 — opens the exit",
+        "zh": "7号公用门钥匙——打开出口"
+      },
+      "depends_on": "Fuse Box Circuit",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 6 (animal code box)",
+        "Level 12 (symbol & color matching)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Key #7 turns smoothly in the utility door lock. Behind it, a musty corridor branches left toward the pool area and right toward the fitness room. You notice scratch marks on the floor — something heavy was dragged through here.",
+    "zh": "7号钥匙在公用门锁中顺利转动。门后，一条潮湿的走廊向左通往泳池区域，向右通往健身房。你注意到地板上有刮痕——有重物被拖过这里。"
+  },
+  "escape_mechanism": "key",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "cleaning_bottles",
+      "name": {
+        "en": "Cleaning Supply Bottles",
+        "zh": "清洁用品瓶"
+      },
+      "states": [
+        "on_shelves",
+        "highlighted_by_color"
+      ],
+      "trigger_puzzle": "Supply Shelf Count",
+      "z_layer": 3
+    },
+    {
+      "id": "supply_cabinet",
+      "name": {
+        "en": "Supply Cabinet",
+        "zh": "清洁柜"
+      },
+      "states": [
+        "padlocked",
+        "open"
+      ],
+      "trigger_puzzle": "Supply Shelf Count",
+      "z_layer": 2
+    },
+    {
+      "id": "fuse_box",
+      "name": {
+        "en": "Fuse Box",
+        "zh": "保险丝盒"
+      },
+      "states": [
+        "open_empty",
+        "fuses_inserted",
+        "circuits_active"
+      ],
+      "trigger_puzzle": "Fuse Box Circuit",
+      "z_layer": 2
+    },
+    {
+      "id": "overhead_light",
+      "name": {
+        "en": "Overhead Light",
+        "zh": "头顶灯"
+      },
+      "states": [
+        "off",
+        "on"
+      ],
+      "trigger_puzzle": "Fuse Box Circuit",
+      "z_layer": 1
+    },
+    {
+      "id": "notice_board",
+      "name": {
+        "en": "Notice Board",
+        "zh": "公告板"
+      },
+      "states": [
+        "in_darkness",
+        "illuminated"
+      ],
+      "trigger_puzzle": "Fuse Box Circuit",
+      "z_layer": 2
+    },
+    {
+      "id": "key_ring",
+      "name": {
+        "en": "Key Ring on Hook",
+        "zh": "挂钩上的钥匙环"
+      },
+      "states": [
+        "hanging",
+        "key_7_removed"
+      ],
+      "trigger_puzzle": "Key Ring Match",
+      "z_layer": 3
+    }
+  ]
+}

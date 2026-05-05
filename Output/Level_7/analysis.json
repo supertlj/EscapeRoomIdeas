@@ -1,0 +1,100 @@
+{
+  "level": 7,
+  "room_description": "An Egyptian tomb-themed room with walls covered in hieroglyphics, two golden Sphinx statues guarding the exit door, and various stone pedestals and artifacts scattered around.",
+  "key_moments": [
+    {
+      "description": "Establishing shot of the Egyptian tomb room.",
+      "timestamp_seconds": 0.0,
+      "screenshot_path": "Screenshots/000.0s_Establishing_shot_of_the_Egyptian_tomb_room_.jpg"
+    },
+    {
+      "description": "Finding a feather duster/brush behind a tilted stone block.",
+      "timestamp_seconds": 8.5,
+      "screenshot_path": "Screenshots/008.5s_Finding_a_feather_duster_brush_behind_a_tilted_stone_block_.jpg"
+    },
+    {
+      "description": "Collecting a chisel from the shelf beneath a small wooden chest.",
+      "timestamp_seconds": 17.0,
+      "screenshot_path": "Screenshots/017.0s_Collecting_a_chisel_from_the_shelf_beneath_a_small_wooden_chest_.jpg"
+    },
+    {
+      "description": "Using the brush to clean off a dusty, blank stone panel on a pedestal.",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Dusty_Compartment.jpg"
+    },
+    {
+      "description": "Retrieving a wooden mallet from the newly revealed compartment.",
+      "timestamp_seconds": 39.5,
+      "screenshot_path": "Screenshots/039.5s_Retrieving_a_wooden_mallet_from_the_newly_revealed_compartment_.jpg"
+    },
+    {
+      "description": "Using the mallet and chisel to break open the clay pot on the floor.",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Breaking_the_Pot.jpg"
+    },
+    {
+      "description": "Unrolling the scroll found in the pot to reveal Arabic numerals (\u0661\u0665\u0662\u0662).",
+      "timestamp_seconds": 61.5,
+      "screenshot_path": "Screenshots/061.5s_Unrolling_the_scroll_found_in_the_pot_to_reveal_Arabic_numerals________.jpg"
+    },
+    {
+      "description": "Entering the corresponding symbols (1-5-2-2) into the slots on the wall panel.",
+      "timestamp_seconds": 75.0,
+      "screenshot_path": "Screenshots/075.0s_Hieroglyphic_Number_Lock.jpg"
+    },
+    {
+      "description": "Retrieving the key from the compartment that opens below the wall panel.",
+      "timestamp_seconds": 76.5,
+      "screenshot_path": "Screenshots/076.5s_Retrieving_the_key_from_the_compartment_that_opens_below_the_wall_panel_.jpg"
+    },
+    {
+      "description": "Unlocking the main door between the Sphinxes using the key.",
+      "timestamp_seconds": 81.0,
+      "screenshot_path": "Screenshots/081.0s_Unlocking_the_main_door_between_the_Sphinxes_using_the_key_.jpg"
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": "Dusty Compartment",
+      "items_used": [
+        "Brush"
+      ],
+      "solution_steps": [
+        "Find the brush hidden behind a stone.",
+        "Use the brush on the blank, dusty square panel on the left pedestal."
+      ],
+      "reward": "Wooden Mallet",
+      "timestamp_seconds": 38.0,
+      "screenshot_path": "Screenshots/038.0s_Dusty_Compartment.jpg"
+    },
+    {
+      "puzzle_name": "Breaking the Pot",
+      "items_used": [
+        "Mallet",
+        "Chisel"
+      ],
+      "solution_steps": [
+        "Find the chisel on the shelf.",
+        "Combine the mallet and chisel to break the round clay pot on the floor."
+      ],
+      "reward": "Scroll with a clue",
+      "timestamp_seconds": 58.0,
+      "screenshot_path": "Screenshots/058.0s_Breaking_the_Pot.jpg"
+    },
+    {
+      "puzzle_name": "Hieroglyphic Number Lock",
+      "items_used": [
+        "Scroll"
+      ],
+      "solution_steps": [
+        "Read the scroll to see the Arabic numerals '\u0661\u0665\u0662\u0662' (1522).",
+        "Locate the wall panel with 4 vertical slots.",
+        "Change the slots to match the symbols for 1, 5, 2, and 2."
+      ],
+      "reward": "Door Key",
+      "timestamp_seconds": 75.0,
+      "screenshot_path": "Screenshots/075.0s_Hieroglyphic_Number_Lock.jpg"
+    }
+  ],
+  "final_action": "The player takes the key from the stone wall compartment and uses it to unlock the large door located in the center of the room."
+}

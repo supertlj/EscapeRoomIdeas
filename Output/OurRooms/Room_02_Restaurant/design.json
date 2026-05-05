@@ -1,0 +1,305 @@
+{
+  "room_number": 2,
+  "room_name": {
+    "en": "The Restaurant",
+    "zh": "酒店餐厅"
+  },
+  "hotel_area": {
+    "en": "Restaurant",
+    "zh": "餐厅"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "An elegant hotel dining room frozen in time. White tablecloths have yellowed with age, silverware sits tarnished at each place setting, and a grand stone fireplace dominates the far wall. A large chalkboard menu still displays the specials from 1994. Dried flower arrangements sit in crystal vases, and a wine rack lines the entire left wall. Table 7, near the window, still has a half-eaten meal and an overturned wine glass.",
+    "zh": "一间被时间凝固的优雅酒店餐厅。白色桌布已经泛黄，每套餐具旁的银器已经失去光泽，远处墙壁上有一座宏大的石头壁炉。一块大黑板菜单上仍然显示着1994年的特色菜品。干花插在水晶花瓶中，整面左墙排满了酒架。靠窗的7号桌上还有一顿未吃完的饭菜和一只翻倒的酒杯。"
+  },
+  "story_fragment": {
+    "en": "Table 7 has a reservation card: 'Mr. E.V. Grandview — Dinner for Two — Oct 14, 8:00 PM.' But the second chair is pulled back, napkin untouched. Whoever was supposed to join him never arrived — or left in a hurry.",
+    "zh": "7号桌上有一张预订卡：'E.V. Grandview先生——双人晚餐——10月14日晚8:00。'但第二把椅子被推开，餐巾纸没有动过。原本要来赴约的人从未到达——或者匆忙离开了。"
+  },
+  "estimated_solve_time_minutes": 2,
+  "items": [
+    {
+      "id": "wine_cork",
+      "name": {
+        "en": "Wine Cork",
+        "zh": "酒瓶软木塞"
+      }
+    },
+    {
+      "id": "menu_note",
+      "name": {
+        "en": "Scribbled Menu Note",
+        "zh": "菜单上的涂写便条"
+      }
+    },
+    {
+      "id": "dining_key",
+      "name": {
+        "en": "Dining Room Key",
+        "zh": "餐厅钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Table Number Tally",
+        "zh": "餐桌编号统计"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "Each table has a small brass number plate and a different colored napkin. A sign on the wall reads: 'Tonight's seating: Red tables first, then Blue, then Gold.'",
+        "zh": "每张桌子都有一个小铜牌号码和不同颜色的餐巾。墙上的标识写着：'今晚的座位安排：红色桌先，然后蓝色，再金色。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Note the wall sign about seating order by napkin color: Red, Blue, Gold.",
+          "zh": "注意墙上关于按餐巾颜色安排座位的标识：红色、蓝色、金色。"
+        },
+        {
+          "en": "Find the three tables with colored napkins: Red napkin is Table 4, Blue is Table 7, Gold is Table 2.",
+          "zh": "找到三张有彩色餐巾的桌子：红色餐巾是4号桌，蓝色是7号桌，金色是2号桌。"
+        },
+        {
+          "en": "The sequence is 4-7-2.",
+          "zh": "序列是4-7-2。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Look at the napkin colors on the tables. There's a sign about their order.",
+          "zh": "看看桌子上餐巾的颜色。有一个关于它们顺序的标识。"
+        },
+        {
+          "en": "Red, Blue, Gold — match these colors to the table numbers.",
+          "zh": "红色、蓝色、金色——将这些颜色与桌号对应。"
+        },
+        {
+          "en": "Red = Table 4, Blue = Table 7, Gold = Table 2. Code is 4-7-2.",
+          "zh": "红色=4号桌，蓝色=7号桌，金色=2号桌。密码是4-7-2。"
+        }
+      ],
+      "reward": {
+        "en": "Code '472'",
+        "zh": "密码'472'"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 22 (glow fish counting)",
+        "Level 38 (butterfly & flower counting)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "The Chef's Secret Menu",
+        "zh": "厨师的秘密菜单"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": null,
+      "items_used": [],
+      "clue_source": {
+        "en": "The chalkboard menu lists three items with prices. A note scrawled in the margin says: 'Add the specials. That's my locker number. — Chef R.'",
+        "zh": "黑板菜单列出了三道菜和价格。边上潦草地写着：'把特价菜加起来。那是我的储物柜号码。——R厨师'"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the chalkboard menu. Three specials are listed: Lobster Bisque ($14), Filet Mignon ($28), Crème Brûlée ($9).",
+          "zh": "阅读黑板菜单。列出了三道特色菜：龙虾浓汤（$14）、菲力牛排（$28）、焦糖布丁（$9）。"
+        },
+        {
+          "en": "Add the prices: 14 + 28 + 9 = 51.",
+          "zh": "把价格加起来：14 + 28 + 9 = 51。"
+        },
+        {
+          "en": "Enter '51' into the number lock on the kitchen pass-through window.",
+          "zh": "在厨房传菜窗口的数字锁上输入'51'。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The chef left a note about adding something up. Check the chalkboard.",
+          "zh": "厨师留了一张关于加法的便条。看看黑板。"
+        },
+        {
+          "en": "Add the prices of all three specials on the chalkboard menu.",
+          "zh": "把黑板菜单上三道特色菜的价格加起来。"
+        },
+        {
+          "en": "$14 + $28 + $9 = 51. Enter '51' into the lock on the kitchen window.",
+          "zh": "$14 + $28 + $9 = 51。在厨房窗口的锁上输入'51'。"
+        }
+      ],
+      "reward": {
+        "en": "Opens the kitchen pass-through, revealing a wine cork with a number scratched on it",
+        "zh": "打开厨房传菜窗口，露出一个刻有数字的酒瓶软木塞"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 15 (math code X Y Z)",
+        "Level 13 (console keypad sum)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "The Wine Rack Code",
+        "zh": "酒架密码"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "environmental_clue_reading",
+      "twist_applied": null,
+      "items_used": [
+        "wine_cork"
+      ],
+      "clue_source": {
+        "en": "The wine cork has '3rd row, 5th bottle' scratched into it. That wine bottle in the rack has a tag with the code '472' verification and a small keyhole.",
+        "zh": "软木塞上刻着'第3排，第5瓶'。酒架上那瓶酒的标签上有密码'472'验证和一个小钥匙孔。"
+      },
+      "solution_steps": [
+        {
+          "en": "Examine the wine cork — it reads '3rd row, 5th bottle.'",
+          "zh": "检查酒瓶软木塞——上面写着'第3排，第5瓶'。"
+        },
+        {
+          "en": "Go to the wine rack and find the 3rd row, 5th bottle. It has a small keypad on its label.",
+          "zh": "走到酒架前，找到第3排第5瓶。它的标签上有一个小键盘。"
+        },
+        {
+          "en": "Enter the table number code '472' into the wine bottle keypad.",
+          "zh": "在酒瓶键盘上输入桌号密码'472'。"
+        },
+        {
+          "en": "The bottle slides out, revealing a hidden compartment with a brass dining room key.",
+          "zh": "酒瓶滑出，露出一个隐藏的隔间，里面有一把黄铜餐厅钥匙。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The cork has something written on it. What does it point you to?",
+          "zh": "软木塞上写了东西。它指向什么？"
+        },
+        {
+          "en": "Find the specific wine bottle the cork mentions. You'll need a code you already found.",
+          "zh": "找到软木塞提到的那瓶特定的酒。你需要一个你已经找到的密码。"
+        },
+        {
+          "en": "Go to the wine rack, 3rd row, 5th bottle. Enter code '472' on the bottle label keypad.",
+          "zh": "走到酒架，第3排第5瓶。在酒瓶标签键盘上输入密码'472'。"
+        }
+      ],
+      "reward": {
+        "en": "Dining Room Key",
+        "zh": "餐厅钥匙"
+      },
+      "depends_on": "Table Number Tally",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 5 (wall safe code)",
+        "Level 32 (dresser code)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Use the dining room key on the service door behind the fireplace. It opens into a dimly lit corridor leading deeper into the hotel.",
+    "zh": "用餐厅钥匙打开壁炉后面的服务门。它通向一条昏暗的走廊，深入酒店内部。"
+  },
+  "escape_mechanism": "key",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "table_napkins",
+      "name": {
+        "en": "Colored Napkins",
+        "zh": "彩色餐巾"
+      },
+      "states": [
+        "idle",
+        "highlighted"
+      ],
+      "trigger_puzzle": "Table Number Tally",
+      "z_layer": 3
+    },
+    {
+      "id": "chalkboard_menu",
+      "name": {
+        "en": "Chalkboard Menu",
+        "zh": "黑板菜单"
+      },
+      "states": [
+        "idle",
+        "zoomed"
+      ],
+      "trigger_puzzle": "The Chef's Secret Menu",
+      "z_layer": 2
+    },
+    {
+      "id": "kitchen_window",
+      "name": {
+        "en": "Kitchen Pass-Through",
+        "zh": "厨房传菜窗"
+      },
+      "states": [
+        "locked",
+        "open"
+      ],
+      "trigger_puzzle": "The Chef's Secret Menu",
+      "z_layer": 2
+    },
+    {
+      "id": "wine_bottle",
+      "name": {
+        "en": "Wine Bottle (3rd row, 5th)",
+        "zh": "酒瓶（第3排第5瓶）"
+      },
+      "states": [
+        "in_rack",
+        "sliding_out",
+        "compartment_open"
+      ],
+      "trigger_puzzle": "The Wine Rack Code",
+      "z_layer": 3
+    },
+    {
+      "id": "wine_cork",
+      "name": {
+        "en": "Wine Cork",
+        "zh": "酒瓶软木塞"
+      },
+      "states": [
+        "hidden",
+        "visible",
+        "collected"
+      ],
+      "trigger_puzzle": "The Chef's Secret Menu",
+      "z_layer": 4
+    },
+    {
+      "id": "dining_key",
+      "name": {
+        "en": "Dining Room Key",
+        "zh": "餐厅钥匙"
+      },
+      "states": [
+        "hidden",
+        "revealed",
+        "collected"
+      ],
+      "trigger_puzzle": "The Wine Rack Code",
+      "z_layer": 4
+    }
+  ]
+}
