@@ -1,0 +1,259 @@
+/* ============================================
+   PUZZLES & MINI-GAMES CSS
+   ============================================ */
+
+/* === Item Inspect Modal === */
+#item-inspect-modal {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 0;
+}
+
+#item-inspect-container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#item-inspect-image {
+  max-width: 100%;
+  max-height: 1200px;
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 100px rgba(0,0,0,1);
+  animation: inspectPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#item-inspect-hint {
+  margin-top: 40px;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.6;
+}
+
+@keyframes inspectPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* === Keypad Display === */
+/* === Keypad Overlay Modal === */
+.keypad-content {
+  background: transparent;
+  padding: 0;
+  width: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+#keypad-overlay-inner {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad-bg-image {
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 80px rgba(0,0,0,1), 0 0 20px rgba(201, 168, 76, 0.3);
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#keypad-bg-image, #item-inspect-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoom-hint {
+  margin-top: 50px;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  animation: softPulse 2s infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* === Keypad Components (Overlays) === */
+#keypad-display-overlay {
+  position: absolute;
+  /* top, left, width, height must be set by room-specific CSS */
+  background: rgba(0, 0, 0, 0.98);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: inset 0 0 40px rgba(0,0,0,1);
+}
+
+#keypad-display-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+  background-size: 100% 4px;
+  opacity: 0.3;
+}
+
+#keypad-digits {
+  color: #ff8c00;
+  font-family: 'Seven Segment', sans-serif;
+  font-size: 65px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 240px;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+  filter: none;
+  animation: amberFlicker 4s infinite;
+}
+
+.digit-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.digit-slot::before {
+  content: "8";
+  position: absolute;
+  color: rgba(255, 140, 0, 0.08);
+  pointer-events: none;
+  font-family: 'Seven Segment', sans-serif;
+  filter: none;
+  text-shadow: none;
+}
+
+.digit-slot.has-value::before {
+  opacity: 0.15;
+}
+
+#keypad-button-grid {
+  position: absolute;
+  /* top, left, width, height must be set by room-specific CSS */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.key-row {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+}
+
+.key-btn {
+  width: 30%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: none;
+}
+
+.key-btn:hover {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.key-btn:active {
+  background: rgba(255, 140, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+#keypad-close {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---- Code Entry Modal (Legacy generic one) ---- */
+
+#code-display {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--bg-panel-border);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#code-digits {
+  font-family: 'Courier New', monospace;
+  font-size: 64px;
+  letter-spacing: 20px;
+  color: var(--gold-bright);
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.5);
+}
+
+#code-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+#code-keypad .key-btn {
+  padding: 28px;
+  font-size: 40px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  background: rgba(30, 25, 40, 0.8);
+  border: 2px solid var(--bg-panel-border);
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+#code-keypad .key-btn:hover {
+  background: rgba(50, 40, 70, 0.8);
+  border-color: var(--gold);
+}
+
+#code-keypad .key-btn:active {
+  transform: scale(0.93);
+  background: rgba(201, 168, 76, 0.2);
+}
+
+.key-clear {
+  color: var(--danger);
+}
+
+.key-enter {
+  background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 100%);
+  color: #1a1520;
+  border: none;
+}

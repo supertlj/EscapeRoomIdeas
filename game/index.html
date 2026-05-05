@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="The Grandview Hotel - An immersive escape room puzzle game">
   <title>The Grandview Hotel</title>
-  <link rel="stylesheet" href="css/game.css">
+  <link rel="stylesheet" href="css/core.css">
+  <link rel="stylesheet" href="css/ui.css">
+  <link rel="stylesheet" href="css/puzzles.css">
+  <link rel="stylesheet" href="css/rooms/room_01.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
 </head>
@@ -76,28 +79,6 @@
           </div>
         </div>
 
-        <!-- Code entry modal -->
-        <div id="code-modal" class="modal hidden">
-          <div class="modal-content code-content">
-            <div id="code-display">
-              <span id="code-digits"></span>
-            </div>
-            <div id="code-keypad">
-              <button class="key-btn" data-key="1">1</button>
-              <button class="key-btn" data-key="2">2</button>
-              <button class="key-btn" data-key="3">3</button>
-              <button class="key-btn" data-key="4">4</button>
-              <button class="key-btn" data-key="5">5</button>
-              <button class="key-btn" data-key="6">6</button>
-              <button class="key-btn" data-key="7">7</button>
-              <button class="key-btn" data-key="8">8</button>
-              <button class="key-btn" data-key="9">9</button>
-              <button class="key-btn key-clear" data-key="clear">C</button>
-              <button class="key-btn" data-key="0">0</button>
-              <button class="key-btn key-enter" data-key="enter">✓</button>
-            </div>
-          </div>
-        </div>
 
         <!-- Menu panel -->
         <div id="menu-panel" class="modal hidden">
@@ -129,49 +110,6 @@
           </div>
         </div>
 
-        <!-- Keypad Modal (Interactive Overlay) -->
-        <div id="keypad-modal" class="modal hidden">
-          <div class="zoom-overlay-container">
-            <div id="keypad-overlay-inner">
-              <!-- Background image of the keypad hardware -->
-              <img src="assets/rooms/room_01/zoom_keypad.png" id="keypad-bg-image" alt="Keypad">
-              
-              <div id="keypad-display-overlay">
-                <div id="keypad-digits">
-                  <span class="digit-slot"></span>
-                  <span class="digit-slot"></span>
-                  <span class="digit-slot"></span>
-                  <span class="digit-slot"></span>
-                </div>
-              </div>
-
-              <div id="keypad-button-grid">
-                <div class="key-row">
-                  <button class="key-btn" data-val="1"></button>
-                  <button class="key-btn" data-val="2"></button>
-                  <button class="key-btn" data-val="3"></button>
-                </div>
-                <div class="key-row">
-                  <button class="key-btn" data-val="4"></button>
-                  <button class="key-btn" data-val="5"></button>
-                  <button class="key-btn" data-val="6"></button>
-                </div>
-                <div class="key-row">
-                  <button class="key-btn" data-val="7"></button>
-                  <button class="key-btn" data-val="8"></button>
-                  <button class="key-btn" data-val="9"></button>
-                </div>
-                <div class="key-row">
-                  <button class="key-btn util" data-val="CLEAR"></button>
-                  <button class="key-btn" data-val="0"></button>
-                  <button class="key-btn util" data-val="ENTER"></button>
-                </div>
-              </div>
-            </div>
-            <div class="zoom-hint">TAP ANYWHERE TO CLOSE</div>
-          </div>
-        </div>
-
       </div><!-- end #ui-design-container -->
     </div><!-- end #ui-overlay -->
   </div><!-- end #game-container -->
@@ -183,6 +121,10 @@
   <script src="js/hint-system.js"></script>
   <script src="js/puzzle-engine.js"></script>
   <script src="js/sprite-manager.js"></script>
+  <script src="js/puzzles/KeypadPuzzle.js"></script>
+  <script src="js/rooms/BaseRoom.js"></script>
+  <script src="js/rooms/Room01.js"></script>
+  <script src="js/rooms/Room02.js"></script>
   <script src="js/room-loader.js"></script>
   <script src="js/engine.js"></script>
 </body>
