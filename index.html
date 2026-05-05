@@ -119,21 +119,56 @@
           </div>
         </div>
 
-        <!-- Item Inspect Modal (Dims background, centered image) -->
+        <!-- Item Inspect Modal -->
         <div id="item-inspect-modal" class="modal hidden">
-          <div id="item-inspect-container">
-            <img id="item-inspect-image" src="" alt="Item Zoom">
-            <div id="item-inspect-hint">Tap anywhere to close</div>
+          <div class="zoom-overlay-container">
+            <div class="zoom-overlay-inner">
+              <img id="item-inspect-image" src="" alt="Item Zoom">
+            </div>
+            <div class="zoom-hint">TAP ANYWHERE TO CLOSE</div>
           </div>
         </div>
 
-        <!-- Keypad Display (Overlays the zoom_keypad scene) -->
-        <div id="keypad-display" class="hidden">
-          <div id="keypad-digits">
-            <span class="digit-slot"></span>
-            <span class="digit-slot"></span>
-            <span class="digit-slot"></span>
-            <span class="digit-slot"></span>
+        <!-- Keypad Modal (Interactive Overlay) -->
+        <div id="keypad-modal" class="modal hidden">
+          <div class="zoom-overlay-container">
+            <div id="keypad-overlay-inner">
+              <!-- Background image of the keypad hardware -->
+              <img src="assets/rooms/room_01/zoom_keypad.png" id="keypad-bg-image" alt="Keypad">
+              
+              <div id="keypad-display-overlay">
+                <div id="keypad-digits">
+                  <span class="digit-slot"></span>
+                  <span class="digit-slot"></span>
+                  <span class="digit-slot"></span>
+                  <span class="digit-slot"></span>
+                </div>
+              </div>
+
+              <div id="keypad-button-grid">
+                <div class="key-row">
+                  <button class="key-btn" data-val="1"></button>
+                  <button class="key-btn" data-val="2"></button>
+                  <button class="key-btn" data-val="3"></button>
+                </div>
+                <div class="key-row">
+                  <button class="key-btn" data-val="4"></button>
+                  <button class="key-btn" data-val="5"></button>
+                  <button class="key-btn" data-val="6"></button>
+                </div>
+                <div class="key-row">
+                  <button class="key-btn" data-val="7"></button>
+                  <button class="key-btn" data-val="8"></button>
+                  <button class="key-btn" data-val="9"></button>
+                </div>
+                <div class="key-row">
+                  <button class="key-btn util" data-val="CLEAR"></button>
+                  <button class="key-btn" data-val="0"></button>
+                  <button class="key-btn util" data-val="ENTER"></button>
+                </div>
+              </div>
+            </div>
+            <div class="zoom-hint">TAP ANYWHERE TO CLOSE</div>
           </div>
         </div>
 

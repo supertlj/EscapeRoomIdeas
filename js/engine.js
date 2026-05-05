@@ -27,6 +27,14 @@ const Engine = {
     document.getElementById('btn-language').addEventListener('click', () => this.toggleLanguage());
     document.getElementById('btn-restart-room').addEventListener('click', () => this.restartRoom());
     document.getElementById('btn-back').addEventListener('click', () => this.goBack());
+    
+    // Debug Mode Toggle (Hotspot Outlines)
+    window.addEventListener('keydown', (e) => {
+      if (e.key.toLowerCase() === 'd') {
+        SpriteManager.debugMode = !SpriteManager.debugMode;
+        console.log('Debug Mode:', SpriteManager.debugMode ? 'ON' : 'OFF');
+      }
+    });
 
     await this.loadRoom(1);
   },
@@ -117,7 +125,7 @@ const Engine = {
     Dialog.showFeedback(newLang === 'zh' ? '语言已切换为中文' : 'Language switched to English', 1500);
   },
 
-  animateItemPickup(startX, startY, imgSrc) {
+  animateItemPickup(startX, startY, imgSrc, targetSlotIndex = -1, itemId = null) {
     const fly = document.createElement('img');
     fly.src = imgSrc;
     fly.className = 'fly-item';
@@ -130,9 +138,18 @@ const Engine = {
     fly.style.top = `${sy - 50}px`;
     document.body.appendChild(fly);
 
-    const inv = document.getElementById('inventory-bar').getBoundingClientRect();
-    const tx = inv.left + inv.width / 2 - 50;
-    const ty = inv.top + inv.height / 2 - 50;
+    let tx, ty;
+    const slots = document.querySelectorAll('.inv-slot');
+    
+    if (targetSlotIndex >= 0 && slots[targetSlotIndex]) {
+      const rect = slots[targetSlotIndex].getBoundingClientRect();
+      tx = rect.left + rect.width / 2 - 50;
+      ty = rect.top + rect.height / 2 - 50;
+    } else {
+      const inv = document.getElementById('inventory-bar').getBoundingClientRect();
+      tx = inv.left + inv.width / 2 - 50;
+      ty = inv.top + inv.height / 2 - 50;
+    }
 
     requestAnimationFrame(() => {
       fly.style.left = `${tx}px`;
@@ -140,7 +157,12 @@ const Engine = {
       fly.classList.add('animating');
     });
 
-    setTimeout(() => fly.remove(), 850);
+    setTimeout(() => {
+      fly.remove();
+      if (itemId) {
+        Inventory.revealItem(itemId);
+      }
+    }, 850);
   },
 
   async restartRoom() {
