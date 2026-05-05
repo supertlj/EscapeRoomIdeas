@@ -326,14 +326,14 @@ html, body {
 
 #feedback-overlay {
   position: absolute;
-  top: 400px; /* Aligned with the start of the room art (ART_Y) */
+  top: 400px;
   left: 0;
   width: 1080px;
-  height: 1024px; /* Matches the ART_SIZE */
+  height: 1024px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 200;
+  z-index: 2000; /* Boosted above modals */
   pointer-events: none;
 }
 
@@ -397,53 +397,94 @@ html, body {
 }
 
 /* === Keypad Display === */
-#keypad-display {
+/* === Keypad Overlay Modal === */
+.keypad-content {
+  background: transparent;
+  padding: 0;
+  width: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  border: none;
+  box-shadow: none;
+  overflow: visible;
+}
+
+#keypad-overlay-inner {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#keypad-bg-image {
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 80px rgba(0,0,0,1), 0 0 20px rgba(201, 168, 76, 0.3);
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+#keypad-bg-image, #item-inspect-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoom-hint {
+  margin-top: 50px;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  animation: softPulse 2s infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* === Keypad Components (Overlays) === */
+#keypad-display-overlay {
   position: absolute;
-  top: 485px; /* Perfectly aligned with the new functional hardware window */
-  left: 342px; /* Shifted right to fit perfectly inside the brass bezel */
-  width: 395px;
-  height: 170px;
+  top: 85px;
+  left: 265px;
+  width: 285px;
+  height: 115px;
+  background: rgba(0, 0, 0, 0.98);
+  border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 100;
   pointer-events: none;
-  
-  /* Smoked Glass / Blackout Layer to hide baked-in numbers */
-  background: rgba(0, 0, 0, 0.98); 
-  border-radius: 4px;
   box-shadow: inset 0 0 40px rgba(0,0,0,1);
 }
 
-/* Subtle scanline effect for digital realism */
-#keypad-display::after {
+#keypad-display-overlay::after {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: linear-gradient(
-    rgba(18, 16, 16, 0) 50%, 
-    rgba(0, 0, 0, 0.2) 50%
-  );
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
   background-size: 100% 4px;
-  pointer-events: none;
-  opacity: 0.5;
-  border-radius: 4px;
+  opacity: 0.3;
 }
 
 #keypad-digits {
-  color: #e67e00; /* More 'burnt' amber color */
+  color: #ff8c00;
   font-family: 'Seven Segment', sans-serif;
-  font-size: 85px;
-  font-weight: 400;
-  width: 320px; /* Constrained width for tighter spacing */
-  height: 100%;
+  font-size: 65px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 fixed slots */
-  margin: 0 auto; /* Center the grid within the display area */
-  text-shadow: 
-    0 0 10px rgba(230, 126, 0, 0.9),
-    0 0 30px rgba(230, 126, 0, 0.4);
-  filter: blur(0.5px); /* Simulates old optics/behind thick glass */
+  grid-template-columns: repeat(4, 1fr);
+  width: 240px;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.6); /* Reduced glow for sharpness */
+  filter: none; /* Removed blur */
   animation: amberFlicker 4s infinite;
 }
 
@@ -454,27 +495,62 @@ html, body {
   position: relative;
 }
 
-/* The 'Ghost' LED segments */
 .digit-slot::before {
-  content: "8"; /* Dim '8' to simulate unlit segments */
+  content: "8";
   position: absolute;
-  color: rgba(230, 126, 0, 0.05);
+  color: rgba(255, 140, 0, 0.08); /* Sharp but very faint unlit segment */
   pointer-events: none;
   font-family: 'Seven Segment', sans-serif;
-  transition: opacity 0.2s;
+  filter: none;
+  text-shadow: none;
 }
 
-/* Hide ghost segments when a number is typed */
 .digit-slot.has-value::before {
-  opacity: 0;
+  opacity: 0.15; /* Keep a hint of the segment even when lit */
 }
 
-@keyframes amberFlicker {
-  0%, 100% { opacity: 1; }
-  45% { opacity: 0.98; }
-  50% { opacity: 0.95; }
-  55% { opacity: 0.99; }
-  90% { opacity: 1; }
+#keypad-button-grid {
+  position: absolute;
+  top: 260px; /* Nudged DOWN */
+  left: 275px;
+  width: 260px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.key-row {
+  display: flex;
+  justify-content: space-between;
+  height: 20%; /* Increased for larger buttons */
+}
+
+.key-btn {
+  width: 30%;
+  height: 100%;
+  background: transparent; /* Invisible */
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: none;
+}
+
+.key-btn:hover {
+  background: transparent !important; /* No hover effect */
+  box-shadow: none !important;
+}
+
+.key-btn:active {
+  background: rgba(255, 140, 0, 0.2); /* Tactile feedback glow on click */
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+#keypad-close {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
@@ -515,8 +591,8 @@ html, body {
 /* ---- Story Modal ---- */
 
 #story-text {
-  font-size: 36px; /* Reduced from 42px */
-  line-height: 1.6;
+  font-size: 24px; /* Refined for better aesthetics */
+  line-height: 1.7;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-weight: 300;
@@ -530,13 +606,13 @@ html, body {
 
 .modal-btn {
   display: inline-block;
-  padding: 18px 60px; /* Slimmer button */
+  padding: 16px 50px; /* Slimmer button */
   border: 3px solid var(--gold);
   border-radius: 16px;
   background: rgba(40, 35, 60, 0.95);
   color: var(--gold);
   font-family: var(--font-display);
-  font-size: 26px; /* Reduced from 32px */
+  font-size: 22px; /* Refined for better aesthetics */
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
@@ -577,8 +653,8 @@ html, body {
 }
 
 #hint-text {
-  font-size: 38px;
-  line-height: 1.6;
+  font-size: 24px; /* Refined for better aesthetics */
+  line-height: 1.7;
   color: var(--text-primary);
   margin-bottom: 40px;
   font-style: italic;
@@ -622,7 +698,8 @@ html, body {
   margin: 0 auto;
 }
 
-.key-btn {
+/* Legacy code-keypad buttons - keeping them scoped to #code-keypad only */
+#code-keypad .key-btn {
   padding: 28px;
   font-size: 40px;
   font-family: var(--font-body);
@@ -635,12 +712,12 @@ html, body {
   transition: all 0.15s ease;
 }
 
-.key-btn:hover {
+#code-keypad .key-btn:hover {
   background: rgba(50, 40, 70, 0.8);
   border-color: var(--gold);
 }
 
-.key-btn:active {
+#code-keypad .key-btn:active {
   transform: scale(0.93);
   background: rgba(201, 168, 76, 0.2);
 }

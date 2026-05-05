@@ -111,6 +111,9 @@ const SpriteManager = {
     }
   },
 
+  debugMode: false,
+
+
   getSprite(sceneId, spriteId) {
     const scene = this.scenes[sceneId];
     return scene ? scene.sprites.find(s => s.id === spriteId) : null;
@@ -179,6 +182,7 @@ const SpriteManager = {
     // Draw Sprites
     scene.sprites.forEach(s => {
       if (!s.visible) return;
+      
       if (s.image) {
         ctx.save();
         if (s.blendMode) ctx.globalCompositeOperation = s.blendMode;
@@ -190,6 +194,21 @@ const SpriteManager = {
         }
 
         ctx.drawImage(s.image, this.ART_X + s.x, this.ART_Y + s.y, s.w, s.h);
+        ctx.restore();
+      }
+
+      // Draw debug outlines if enabled
+      if (this.debugMode) {
+        ctx.save();
+        ctx.strokeStyle = '#ff00ff';
+        ctx.lineWidth = 4;
+        ctx.setLineDash([10, 5]);
+        ctx.strokeRect(this.ART_X + s.x, this.ART_Y + s.y, s.w, s.h);
+        
+        // Draw Sprite ID
+        ctx.fillStyle = '#ff00ff';
+        ctx.font = 'bold 20px Arial';
+        ctx.fillText(s.id, this.ART_X + s.x + 5, this.ART_Y + s.y + 22);
         ctx.restore();
       }
     });

@@ -13,12 +13,23 @@ const Inventory = {
     this.render();
   },
 
-  addItem(item) {
-    if (this.items.find(i => i.id === item.id)) return false;
+  addItem(item, silent = false) {
+    if (this.items.find(i => i.id === item.id)) return -1;
+    const index = this.items.length;
+    item.pendingReveal = silent; // Mark as pending if silent
     this.items.push(item);
     Audio.playSFX('item_pickup');
     this.render();
-    return true;
+    return index;
+  },
+
+  revealItem(itemId) {
+    const item = this.items.find(i => i.id === itemId);
+    if (item) {
+      item.pendingReveal = false;
+      this.render();
+      // Optional: Add a small 'pop' animation effect here if desired
+    }
   },
 
   removeItem(itemId) {
@@ -61,7 +72,9 @@ const Inventory = {
       const item = this.items[i];
       const slot = document.createElement('div');
       slot.className = 'inv-slot';
-      if (item) {
+      
+      // If item exists but is pending reveal, treat slot as empty visually
+      if (item && !item.pendingReveal) {
         if (this.selectedItem && this.selectedItem.id === item.id) {
           slot.classList.add('active');
         }

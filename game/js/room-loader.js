@@ -36,17 +36,17 @@ const RoomLoader = {
     // MAIN LOBBY SCENE (Art Space: 1024x1024)
     // ============================================
     
-    // Guest Book (Zoom in) - Accurate to the counter top
+    // Guest Book (Zoom in) - Accurate to the physical book on the counter
     SpriteManager.addSprite('main', {
-      id: 'guest_book_tap', x: 150, y: 450, w: 350, h: 200,
+      id: 'guest_book_tap', x: 140, y: 580, w: 300, h: 140,
       onClick: async () => {
         await Engine.switchScene('zoom_guestbook', 'assets/rooms/room_01/zoom_guestbook.png');
       }
     });
 
-    // Safe (Transition to Zoom View) - Large hitbox under the left counter
+    // Safe (Transition to Zoom View) - Calibrated to the lower door panel
     SpriteManager.addSprite('main', {
-      id: 'safe_entrance', x: 50, y: 650, w: 450, h: 350,
+      id: 'safe_entrance', x: 80, y: 730, w: 200, h: 250,
       onClick: async () => {
         let bg = 'assets/rooms/room_01/zoom_safe_closed.png';
         if (state.safeOpened) {
@@ -60,7 +60,7 @@ const RoomLoader = {
 
     // Chandelier (Transition to Zoom View)
     SpriteManager.addSprite('main', {
-      id: 'chandelier', x: 400, y: 0, w: 400, h: 400,
+      id: 'chandelier', x: 400, y: 0, w: 400, h: 380,
       onClick: async () => {
         if (!state.guestBookRead) return;
         const bg = state.brassKeyFound ? 
@@ -84,15 +84,18 @@ const RoomLoader = {
         state.brassKeyFound = true;
         Audio.playSFX('key_pickup');
         
-        // Visual Animation: Fly to inventory from the key's location
-        Engine.animateItemPickup(520, 630, 'assets/items/brass_key.png');
-        
-        Dialog.showFeedback(I18n.currentLang === 'zh' ? '找到黄铜钥匙！' : 'Found the Brass Key!', 2000);
-        Inventory.addItem({ 
+        // Logic for picking up the key
+        const key = { 
           id: 'brass_key', 
           name: roomData.items[0].name,
           icon: 'assets/items/brass_key.png'
-        });
+        };
+        const slotIdx = Inventory.addItem(key, true);
+        
+        // Visual Animation: Fly to the specific inventory slot
+        Engine.animateItemPickup(520, 630, key.icon, slotIdx, key.id);
+        
+        Dialog.showFeedback(I18n.currentLang === 'zh' ? '找到黄铜钥匙！' : 'Found the Brass Key!', 2000);
         
         // Hide sprite
         SpriteManager.updateSprite('zoom_chandelier', 'brass_key_item', { visible: false });
@@ -103,17 +106,10 @@ const RoomLoader = {
     SpriteManager.updateSprite('zoom_chandelier', 'brass_key_item', { visible: !state.brassKeyFound });
     SpriteManager.loadSpriteImage('zoom_chandelier', 'brass_key_item', 'assets/items/brass_key.png');
 
-    // Keypad on the wall (Goes to Elevator Zoom first)
-    SpriteManager.addSprite('main', {
-      id: 'keypad_on_wall', x: 770, y: 500, w: 60, h: 100,
-      onClick: async () => {
-        await Engine.switchScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator.png');
-      }
-    });
 
     // Elevator (Interaction - Goes to Elevator Zoom)
     SpriteManager.addSprite('main', {
-      id: 'elevator', x: 620, y: 380, w: 150, h: 280,
+      id: 'elevator', x: 620, y: 380, w: 220, h: 280,
       onClick: async () => {
         await Engine.switchScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator.png');
       }
@@ -123,13 +119,49 @@ const RoomLoader = {
     // ZOOM VIEW: ELEVATOR FRONT (Art Space: 1024x1024)
     // ============================================
     
-    // Hitbox for the keypad on the zoomed-in elevator wall
-    SpriteManager.addSprite('zoom_elevator', {
-      id: 'elevator_keypad_zoom', x: 745, y: 475, w: 70, h: 100,
-      onClick: async () => {
-        await Engine.switchScene('zoom_keypad', 'assets/rooms/room_01/zoom_keypad.png');
-        this.updateKeypadDisplay();
+    // ============================================
+    // KEYPAD MODAL LOGIC (Overlay Pattern)
+    // ============================================
+    
+    this.currentKeypadCode = '';
+    const keypadModal = document.getElementById('keypad-modal');
+    const keypadButtons = document.querySelectorAll('.key-btn');
+
+    // Close only when clicking outside the keypad box
+    keypadModal.addEventListener('click', (e) => {
+      if (!e.target.closest('#keypad-overlay-inner')) {
+        keypadModal.classList.add('hidden');
       }
+    });
+
+    keypadButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = btn.dataset.val;
+        Audio.playSFX('button_click');
+
+        if (val === 'CLEAR') {
+          this.currentKeypadCode = '';
+        } else if (val === 'ENTER') {
+          if (this.currentKeypadCode === '3142') {
+            Audio.playSFX('door_open');
+            keypadModal.classList.add('hidden');
+            Dialog.showStory({
+              en: "The elevator dings and the doors slide open. You've escaped the lobby!",
+              zh: "电梯发出叮的一声，门缓缓打开。你成功离开了大堂！"
+            }, () => {
+              Engine.completeRoom();
+            });
+          } else {
+            Dialog.showFeedback(I18n.currentLang === 'zh' ? '密码错误' : 'Invalid Code');
+            this.currentKeypadCode = '';
+          }
+        } else {
+          if (this.currentKeypadCode.length < 4) {
+            this.currentKeypadCode += val;
+          }
+        }
+        this.updateKeypadDisplay();
+      });
     });
 
     // ============================================
@@ -163,12 +195,16 @@ const RoomLoader = {
         // Logic for taking the note
         state.noteFound = true;
         Audio.playSFX('paper_pickup');
-        Inventory.addItem({ 
+        const noteItem = { 
           id: 'reception_note', 
           name: roomData.items[1].name,
           icon: 'assets/items/note_folded.png',
           examineBg: 'assets/rooms/room_01/zoom_note.png'
-        });
+        };
+        const slotIdx = Inventory.addItem(noteItem, true); // Add silently
+        
+        // Visual Animation: Fly to the specific inventory slot
+        Engine.animateItemPickup(405, 825, noteItem.icon, slotIdx, noteItem.id);
         
         Dialog.showFeedback(I18n.currentLang === 'zh' ? '便条已加入物品栏' : 'Note added to inventory');
         
@@ -201,55 +237,14 @@ const RoomLoader = {
     // Initialize visibility
     SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: state.safeOpened && !state.noteFound });
 
-    // ============================================
-    // ZOOM VIEW: KEYPAD (Art Space: 1024x1024)
-    // ============================================
-    
-    this.currentKeypadCode = '';
-    
-    const keypadConfig = [
-      { id: 'key_1', x: 330, y: 310, val: '1' },
-      { id: 'key_2', x: 460, y: 310, val: '2' },
-      { id: 'key_3', x: 590, y: 310, val: '3' },
-      { id: 'key_4', x: 330, y: 440, val: '4' },
-      { id: 'key_5', x: 460, y: 440, val: '5' },
-      { id: 'key_6', x: 590, y: 440, val: '6' },
-      { id: 'key_7', x: 330, y: 570, val: '7' },
-      { id: 'key_8', x: 460, y: 570, val: '8' },
-      { id: 'key_9', x: 590, y: 570, val: '9' },
-      { id: 'key_0', x: 460, y: 700, val: '0' },
-      { id: 'key_clear', x: 320, y: 700, val: 'CLEAR', w: 120 },
-      { id: 'key_enter', x: 580, y: 700, val: 'ENTER', w: 120 }
-    ];
-
-    keypadConfig.forEach(cfg => {
-      SpriteManager.addSprite('zoom_keypad', {
-        id: cfg.id, x: cfg.x, y: cfg.y, w: cfg.w || 100, h: 100,
-        onClick: () => {
-          Audio.playSFX('button_click');
-          if (cfg.val === 'CLEAR') {
-            this.currentKeypadCode = '';
-          } else if (cfg.val === 'ENTER') {
-            if (this.currentKeypadCode === '3142') {
-              Audio.playSFX('door_open');
-              Dialog.showStory({
-                en: "The elevator dings and the doors slide open. You've escaped the lobby!",
-                zh: "电梯发出叮的一声，门缓缓打开。你成功离开了大堂！"
-              }, () => {
-                Engine.completeRoom();
-              });
-            } else {
-              Dialog.showFeedback(I18n.currentLang === 'zh' ? '密码错误' : 'Invalid Code');
-              this.currentKeypadCode = '';
-            }
-          } else {
-            if (this.currentKeypadCode.length < 4) {
-              this.currentKeypadCode += cfg.val;
-            }
-          }
-          this.updateKeypadDisplay();
-        }
-      });
+    // Hitbox for the keypad on the zoomed-in elevator wall
+    SpriteManager.addSprite('zoom_elevator', {
+      id: 'elevator_keypad_zoom', x: 745, y: 475, w: 70, h: 100,
+      onClick: () => {
+        this.currentKeypadCode = '';
+        this.updateKeypadDisplay();
+        keypadModal.classList.remove('hidden');
+      }
     });
 
     HintSystem.setCurrentPuzzle(0);
@@ -257,28 +252,20 @@ const RoomLoader = {
   },
 
   updateKeypadDisplay() {
-    const display = document.getElementById('keypad-display');
     const slots = document.querySelectorAll('.digit-slot');
-    
-    if (SpriteManager.currentSceneId === 'zoom_keypad') {
-      display.classList.remove('hidden');
-      slots.forEach((slot, i) => {
-        const val = this.currentKeypadCode[i] || '';
-        slot.textContent = val;
-        // Toggle 'has-value' class to show/hide ghost segments
-        if (val !== '') {
-          slot.classList.add('has-value');
-        } else {
-          slot.classList.remove('has-value');
-        }
-      });
-    } else {
-      display.classList.add('hidden');
-    }
+    slots.forEach((slot, i) => {
+      const val = this.currentKeypadCode[i] || '';
+      slot.textContent = val;
+      if (val !== '') {
+        slot.classList.add('has-value');
+      } else {
+        slot.classList.remove('has-value');
+      }
+    });
   },
 
   onSceneChange(sceneId) {
-    this.updateKeypadDisplay();
+    // Scene-specific logic if needed
   }
 };
 
