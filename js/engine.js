@@ -45,8 +45,16 @@ const Engine = {
       this.sceneHistory = [];
       this.updateBackButton();
 
-      if (roomNumber === 1) {
-        this.roomState = await RoomLoader.setupRoom1(this.roomData);
+      if (this.currentRoomInstance) {
+        this.currentRoomInstance.cleanup();
+      }
+
+      const className = `Room${String(roomNumber).padStart(2, '0')}`;
+      if (window[className]) {
+        this.currentRoomInstance = new window[className](this.roomData);
+        this.roomState = await this.currentRoomInstance.setup();
+      } else {
+        console.warn(`Class ${className} not found, falling back to manual setup if exists.`);
       }
 
       SpriteManager.resize();
@@ -163,6 +171,15 @@ const Engine = {
         Inventory.revealItem(itemId);
       }
     }, 850);
+  },
+
+  pickupItem(itemData, startX, startY, onComplete, sfx = 'key_pickup') {
+    Audio.playSFX(sfx);
+    const slotIdx = Inventory.addItem(itemData, true); // Add silently
+    this.animateItemPickup(startX, startY, itemData.icon, slotIdx, itemData.id);
+    if (onComplete) {
+      setTimeout(onComplete, 850); // trigger callback when animation finishes
+    }
   },
 
   async restartRoom() {
