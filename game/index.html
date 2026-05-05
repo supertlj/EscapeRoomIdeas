@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="css/ui.css">
   <link rel="stylesheet" href="css/puzzles.css">
   <link rel="stylesheet" href="css/rooms/room_01.css">
+  <link rel="stylesheet" href="css/ads.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
 </head>
@@ -47,7 +48,13 @@
 
         <!-- === Section 4: Ad Space (1524–1920px) === -->
         <div id="ad-space">
-          <!-- Future ad integration -->
+          <div class="ad-placeholder">
+            <span class="ad-label">Advertisement</span>
+            <div class="ad-content-sim">
+              <div class="ad-brand">The Grandview Hotel</div>
+              <div class="ad-tagline">Excellence in every stay.</div>
+            </div>
+          </div>
         </div>
 
         <!-- === Overlays (positioned absolutely within the 1080×1920 container) === -->
@@ -78,7 +85,6 @@
             </div>
           </div>
         </div>
-
 
         <!-- Menu panel -->
         <div id="menu-panel" class="modal hidden">
@@ -125,6 +131,7 @@
   <script src="js/rooms/BaseRoom.js"></script>
   <script src="js/rooms/Room01.js"></script>
   <script src="js/rooms/Room02.js"></script>
+  <script src="js/AdManager.js"></script>
   <script src="js/room-loader.js"></script>
   <script src="js/engine.js"></script>
 </body>

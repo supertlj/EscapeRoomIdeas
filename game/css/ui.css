@@ -14,9 +14,10 @@
   justify-content: space-between;
   padding: 0 40px;
   padding-top: var(--safe-area-top);
-  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
   z-index: 20;
 }
+
 
 #room-title {
   font-family: var(--font-display);
@@ -120,7 +121,7 @@
   width: 1080px;
   height: 250px;
   pointer-events: auto;
-  background: rgba(0, 0, 0, 0.95);
+  background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(20,20,30,0.6) 60%, transparent 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -140,9 +141,10 @@
   height: 160px;
   min-width: 160px;
   min-height: 160px;
-  border: 3px solid #4a3a6a;
+  border: 3px solid rgba(201, 168, 76, 0.4); /* Stronger gold border */
   border-radius: 24px;
-  background: linear-gradient(135deg, #2a224a 0%, #150f22 100%);
+  background: linear-gradient(135deg, #2a2a3a 0%, #1a1a25 100%);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.8), inset 0 0 15px rgba(201, 168, 76, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,8 +169,8 @@
 }
 
 .inv-slot.empty {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px dashed rgba(180, 150, 90, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px dashed rgba(201, 168, 76, 0.2);
   box-shadow: none;
 }
 

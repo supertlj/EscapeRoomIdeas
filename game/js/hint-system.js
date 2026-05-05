@@ -66,21 +66,26 @@ const HintSystem = {
   },
 
   watchAdForHint() {
-    // Placeholder: simulate watching an ad (2 second delay)
     const watchBtn = document.getElementById('hint-watch-ad');
-    watchBtn.textContent = I18n.currentLang === 'zh' ? '加载广告...' : 'Loading ad...';
     watchBtn.disabled = true;
 
-    setTimeout(() => {
-      const puzzle = Engine.getCurrentPuzzle();
-      if (!puzzle) return;
-
-      const puzzleName = I18n.t(puzzle.puzzle_name);
-      const tier = this.getTierRevealed(puzzleName);
-      this.hintsRevealed[puzzleName] = tier + 1;
-
-      watchBtn.disabled = false;
-      this.showHintModal(); // Refresh to show the revealed hint
-    }, 1000);
+    AdManager.showRewardedAd(
+      () => {
+        // Success: Award the hint
+        const puzzle = Engine.getCurrentPuzzle();
+        if (puzzle) {
+          const puzzleName = I18n.t(puzzle.puzzle_name);
+          const tier = this.getTierRevealed(puzzleName);
+          this.hintsRevealed[puzzleName] = tier + 1;
+        }
+        watchBtn.disabled = false;
+        this.showHintModal();
+      },
+      () => {
+        // Fail/Skip: No hint
+        watchBtn.disabled = false;
+        Dialog.showFeedback(I18n.currentLang === 'zh' ? '广告未看完' : 'Ad not finished', 2000);
+      }
+    );
   }
 };
