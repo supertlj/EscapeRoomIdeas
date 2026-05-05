@@ -1,0 +1,783 @@
+/* ============================================
+   THE GRANDVIEW HOTEL — Game Stylesheet
+   Portrait mobile: 1080×1920 design target
+   
+   ARCHITECTURE: Everything is inside a 1080×1920
+   container that scales uniformly via transform.
+   All sizes are in DESIGN-SPACE pixels.
+   ============================================ */
+
+:root {
+  /* Color palette — dark luxury hotel */
+  --bg-dark: #0a0a0f;
+  --bg-panel: rgba(15, 12, 20, 0.92);
+  --bg-panel-border: rgba(180, 150, 90, 0.3);
+  --gold: #c9a84c;
+  --gold-bright: #f0d060;
+  --gold-dim: #8a7030;
+  --text-primary: #e8e0d0;
+  --text-secondary: #9a9080;
+  --accent: #c9a84c;
+  --danger: #c04040;
+  --success: #40a060;
+  --hint-blue: #4a8ac0;
+
+  /* Typography */
+  --font-display: 'Cinzel', serif;
+  --font-body: 'Inter', 'Noto Sans SC', sans-serif;
+
+  /* Layout (design-space pixels) */
+  --safe-area-top: env(safe-area-inset-top, 0px);
+  --safe-area-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg-dark);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+/* ============================================
+   GAME CONTAINER & CANVAS
+   ============================================ */
+
+#game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#game-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+
+/* ============================================
+   UI OVERLAY — THE SINGLE SCALING CONTAINER
+   
+   #ui-overlay fills the viewport.
+   #ui-design-container is exactly 1080×1920
+   and is scaled/positioned by JS (SpriteManager.resize).
+   EVERYTHING inside uses design-space pixels.
+   ============================================ */
+
+#ui-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#ui-design-container {
+  position: absolute;
+  width: 1080px;
+  height: 1920px;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  /* JS sets: transform: translate(offsetX, offsetY) scale(s) */
+  pointer-events: none;
+}
+
+
+/* ============================================
+   SECTION 1: TOP BAR (y: 0–200)
+   ============================================ */
+
+#top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 200px;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  padding-top: var(--safe-area-top);
+  background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+  z-index: 20;
+}
+
+#room-title {
+  font-family: var(--font-display);
+  font-size: 52px;
+  color: var(--gold);
+  text-align: center;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 4px 12px rgba(0,0,0,0.9);
+}
+
+.ui-btn {
+  pointer-events: auto;
+  background: rgba(30, 25, 45, 0.9);
+  border: 3px solid var(--bg-panel-border);
+  color: var(--gold);
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  font-size: 42px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+}
+
+.ui-btn:hover {
+  background: rgba(50, 40, 70, 0.9);
+  border-color: var(--gold);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.2);
+}
+
+.ui-btn:active {
+  transform: scale(0.95);
+}
+
+
+/* ============================================
+   BACK BUTTON (overlaid on room view area)
+   ============================================ */
+
+#btn-back {
+  position: absolute;
+  top: 1304px; /* Perfectly aligned with the bottom-left corner of the art area (1424 - 120) */
+  left: 28px;
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 50;
+  transition: transform 0.2s ease;
+}
+
+#btn-back::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 120px 120px 0 0;
+  border-color: rgba(201, 168, 76, 0.4) transparent transparent transparent;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+  transform: rotate(-90deg);
+  transition: all 0.3s ease;
+}
+
+#btn-back svg {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 48px;
+  height: 48px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#btn-back:hover {
+  transform: scale(1.1);
+}
+
+#btn-back:hover::before {
+  border-color: rgba(201, 168, 76, 0.7) transparent transparent transparent;
+}
+
+
+/* ============================================
+   SECTION 3: INVENTORY BAR (y: 1224–1524)
+   ============================================ */
+
+#inventory-bar {
+  position: absolute;
+  top: 1424px; /* Perfectly aligned after the 1024x1024 art area (400 + 1024) */
+  left: 0;
+  width: 1080px;
+  height: 250px; /* Slimmer inventory to leave more room for ads */
+  pointer-events: auto;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 40px;
+  z-index: 15;
+}
+
+#inventory-slots {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.inv-slot {
+  width: 160px;
+  height: 160px;
+  min-width: 160px;
+  min-height: 160px;
+  border: 3px solid #4a3a6a;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #2a224a 0%, #150f22 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: inset 0 4px 15px rgba(0,0,0,0.8), 0 6px 15px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+.inv-slot:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.6);
+}
+
+.inv-slot.active {
+  border-color: var(--gold-bright);
+  background: rgba(201, 168, 76, 0.15);
+  box-shadow: 0 0 20px rgba(201, 168, 76, 0.4), inset 0 0 10px rgba(201, 168, 76, 0.2);
+}
+
+.inv-slot.empty {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(180, 150, 90, 0.1);
+  box-shadow: none;
+}
+
+.item-icon {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+  mix-blend-mode: screen;
+}
+
+.inv-slot .item-label {
+  position: absolute;
+  bottom: 4px;
+  width: 100%;
+  text-align: center;
+  font-size: 8px;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 4px;
+}
+
+
+/* ============================================
+   SECTION 4: AD SPACE (y: 1524–1920)
+   ============================================ */
+
+#ad-space {
+  position: absolute;
+  top: 1674px; /* Starts after inventory (1424 + 250) */
+  left: 0;
+  width: 1080px;
+  height: 246px; /* Remaining space to bottom (1920 - 1674) */
+  /* Transparent placeholder — will be filled by ad SDK */
+  pointer-events: auto;
+}
+
+
+/* ============================================
+   FEEDBACK OVERLAY
+   Centered over the ROOM VIEW area (y: 200–1224)
+   ============================================ */
+
+#feedback-overlay {
+  position: absolute;
+  top: 400px; /* Aligned with the start of the room art (ART_Y) */
+  left: 0;
+  width: 1080px;
+  height: 1024px; /* Matches the ART_SIZE */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  pointer-events: none;
+}
+
+#feedback-text {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px 50px; /* More compact */
+  border: 3px solid var(--gold);
+  border-radius: 40px;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 32px; /* Scaled down for a more refined look */
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+  max-width: 900px;
+  text-align: center;
+  animation: feedbackPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* === Item Inspect Modal === */
+#item-inspect-modal {
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
+  padding: 0;
+}
+
+#item-inspect-container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#item-inspect-image {
+  max-width: 100%;
+  max-height: 1200px;
+  border: 44 solid var(--gold); /* Note: Corrected to 4px in next step if needed, but using 4px here */
+  border: 4px solid var(--gold);
+  box-shadow: 0 0 100px rgba(0,0,0,1);
+  animation: inspectPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#item-inspect-hint {
+  margin-top: 40px;
+  color: var(--gold-bright);
+  font-family: var(--font-display);
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  opacity: 0.6;
+}
+
+@keyframes inspectPop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* === Keypad Display === */
+#keypad-display {
+  position: absolute;
+  top: 485px; /* Perfectly aligned with the new functional hardware window */
+  left: 342px; /* Shifted right to fit perfectly inside the brass bezel */
+  width: 395px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  pointer-events: none;
+  
+  /* Smoked Glass / Blackout Layer to hide baked-in numbers */
+  background: rgba(0, 0, 0, 0.98); 
+  border-radius: 4px;
+  box-shadow: inset 0 0 40px rgba(0,0,0,1);
+}
+
+/* Subtle scanline effect for digital realism */
+#keypad-display::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.2) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  opacity: 0.5;
+  border-radius: 4px;
+}
+
+#keypad-digits {
+  color: #e67e00; /* More 'burnt' amber color */
+  font-family: 'Seven Segment', sans-serif;
+  font-size: 85px;
+  font-weight: 400;
+  width: 320px; /* Constrained width for tighter spacing */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 fixed slots */
+  margin: 0 auto; /* Center the grid within the display area */
+  text-shadow: 
+    0 0 10px rgba(230, 126, 0, 0.9),
+    0 0 30px rgba(230, 126, 0, 0.4);
+  filter: blur(0.5px); /* Simulates old optics/behind thick glass */
+  animation: amberFlicker 4s infinite;
+}
+
+.digit-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* The 'Ghost' LED segments */
+.digit-slot::before {
+  content: "8"; /* Dim '8' to simulate unlit segments */
+  position: absolute;
+  color: rgba(230, 126, 0, 0.05);
+  pointer-events: none;
+  font-family: 'Seven Segment', sans-serif;
+  transition: opacity 0.2s;
+}
+
+/* Hide ghost segments when a number is typed */
+.digit-slot.has-value::before {
+  opacity: 0;
+}
+
+@keyframes amberFlicker {
+  0%, 100% { opacity: 1; }
+  45% { opacity: 0.98; }
+  50% { opacity: 0.95; }
+  55% { opacity: 0.99; }
+  90% { opacity: 1; }
+}
+
+
+/* ============================================
+   MODALS (all positioned inside the 1080×1920 container)
+   ============================================ */
+
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1080px;
+  height: 1920px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.modal-content {
+  background: var(--bg-panel);
+  border: 3px solid var(--bg-panel-border);
+  border-radius: 40px;
+  padding: 50px; /* Reduced from 70px */
+  width: 756px; 
+  max-height: 1400px;
+  overflow-y: auto;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  text-align: center;
+  animation: slideUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* ---- Story Modal ---- */
+
+#story-text {
+  font-size: 36px; /* Reduced from 42px */
+  line-height: 1.6;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 30px; /* Tighter spacing */
+  animation: softFadeIn 0.5s ease-out;
+}
+
+
+/* ---- Modal Buttons ---- */
+
+.modal-btn {
+  display: inline-block;
+  padding: 18px 60px; /* Slimmer button */
+  border: 3px solid var(--gold);
+  border-radius: 16px;
+  background: rgba(40, 35, 60, 0.95);
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-size: 26px; /* Reduced from 32px */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  white-space: nowrap;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+.modal-btn:hover {
+  background: rgba(50, 40, 70, 0.9);
+  border-color: var(--gold-bright);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(201, 168, 76, 0.3);
+}
+
+.modal-btn.accent {
+  background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 100%);
+  color: #1a1520;
+  font-weight: 600;
+  border: none;
+}
+
+.modal-btn.accent:hover {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+  box-shadow: 0 8px 24px rgba(201, 168, 76, 0.4);
+}
+
+
+/* ---- Hint Modal ---- */
+
+.hint-header {
+  font-family: var(--font-display);
+  font-size: 28px;
+  color: var(--hint-blue);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+#hint-text {
+  font-size: 38px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+#hint-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+
+/* ---- Code Entry Modal ---- */
+
+#code-display {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid var(--bg-panel-border);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 40px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#code-digits {
+  font-family: 'Courier New', monospace;
+  font-size: 64px;
+  letter-spacing: 20px;
+  color: var(--gold-bright);
+  text-shadow: 0 0 12px rgba(201, 168, 76, 0.5);
+}
+
+#code-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.key-btn {
+  padding: 28px;
+  font-size: 40px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  background: rgba(30, 25, 40, 0.8);
+  border: 2px solid var(--bg-panel-border);
+  border-radius: 12px;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.key-btn:hover {
+  background: rgba(50, 40, 70, 0.8);
+  border-color: var(--gold);
+}
+
+.key-btn:active {
+  transform: scale(0.93);
+  background: rgba(201, 168, 76, 0.2);
+}
+
+.key-clear {
+  color: var(--danger);
+}
+
+.key-enter {
+  background: linear-gradient(135deg, var(--gold-dim) 0%, var(--gold) 100%);
+  color: #1a1520;
+  border: none;
+}
+
+
+/* ---- Menu Panel ---- */
+
+.menu-content {
+  text-align: center;
+}
+
+.menu-content h2 {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 44px;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+}
+
+.menu-btn {
+  display: block;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 20px;
+  background: rgba(30, 25, 40, 0.8);
+  border: 2px solid var(--bg-panel-border);
+  border-radius: 16px;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 34px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+  background: rgba(50, 40, 70, 0.8);
+  border-color: var(--gold);
+}
+
+
+/* ---- Room Complete ---- */
+
+.complete-content {
+  text-align: center;
+}
+
+.complete-icon {
+  font-size: 100px;
+  margin-bottom: 30px;
+  animation: feedbackPop 0.5s ease;
+}
+
+.complete-content h2 {
+  font-family: var(--font-display);
+  color: var(--gold);
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.complete-content p {
+  font-size: 36px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+
+/* ============================================
+   HOTSPOT GLOW (for tappable areas)
+   ============================================ */
+
+.hotspot-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: hotspotPulse 2s ease-in-out infinite;
+}
+
+@keyframes hotspotPulse {
+  0%, 100% { box-shadow: 0 0 8px 2px rgba(201, 168, 76, 0.2); }
+  50% { box-shadow: 0 0 16px 6px rgba(201, 168, 76, 0.4); }
+}
+
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes feedbackPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.1); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes softFadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ============================================
+   ITEM PICKUP ANIMATION
+   ============================================ */
+
+.fly-item {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  z-index: 99999;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  filter: drop-shadow(0 0 15px var(--gold));
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+.fly-item.animating {
+  transform: scale(0.2) rotate(360deg);
+  opacity: 0;
+}

@@ -1,0 +1,335 @@
+{
+  "room_number": 1,
+  "room_name": {
+    "en": "Main Lobby",
+    "zh": "酒店大堂"
+  },
+  "hotel_area": {
+    "en": "Lobby",
+    "zh": "大堂"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A grand but faded hotel lobby with a marble check-in counter, a dusty crystal chandelier, an old guest book, velvet armchairs, and a locked elevator at the far end. Cobwebs hang from the ornate ceiling moldings, and a single flickering lamp casts long shadows across the checkered floor. A faded 'WELCOME TO THE GRANDVIEW' banner hangs crookedly above the entrance.",
+    "zh": "一个宏伟但已褪色的酒店大堂，设有大理石前台、落满灰尘的水晶吊灯、一本旧的宾客登记簿、天鹅绒扶手椅，以及远处一部锁住的电梯。蛛网悬挂在华丽的天花板装饰线上，一盏闪烁的台灯在棋盘格地板上投下长长的影子。入口上方歪歪扭扭地挂着一条褪色的'欢迎来到格兰德维尤'横幅。"
+  },
+  "story_fragment": {
+    "en": "The guest book lies open to a page dated October 14, 1994 — the last entry. A flowing signature reads: 'E.V. Grandview — Returning to finish what I started.' The ink is smudged, as if written in haste. A faded newspaper clipping is tucked between the pages: 'GRANDVIEW HOTEL TO CLOSE PERMANENTLY — OWNER MISSING.'",
+    "zh": "宾客登记簿翻开在1994年10月14日那一页——最后一条记录。一个流畅的签名写道：'E.V. Grandview——回来完成我开始的事。'墨迹模糊，仿佛是匆忙写下的。书页间夹着一张褪色的报纸剪报：'格兰德维尤酒店将永久关闭——业主失踪。'"
+  },
+  "estimated_solve_time_minutes": 2,
+  "items": [
+    {
+      "id": "brass_key",
+      "name": {
+        "en": "Brass Key",
+        "zh": "黄铜钥匙"
+      }
+    },
+    {
+      "id": "reception_note",
+      "name": {
+        "en": "Receptionist's Note",
+        "zh": "前台便条"
+      }
+    },
+    {
+      "id": "elevator_token",
+      "name": {
+        "en": "Elevator Token",
+        "zh": "电梯代币"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "The Last Guest",
+        "zh": "最后的房客"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "hidden_item_search",
+      "twist_applied": "T3_layered_hiding",
+      "items_used": [],
+      "clue_source": {
+        "en": "The guest book entry mentions 'I left something in the chandelier for safekeeping.'",
+        "zh": "宾客登记簿上写着'我把东西藏在了吊灯里保管。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Open the guest book on the marble counter and read the final entry dated October 14, 1994.",
+          "zh": "打开大理石前台上的宾客登记簿，阅读1994年10月14日的最后一条记录。"
+        },
+        {
+          "en": "The entry mentions hiding something in the chandelier. Tap the dusty crystal chandelier hanging overhead.",
+          "zh": "记录中提到在吊灯里藏了东西。点击头顶上方落满灰尘的水晶吊灯。"
+        },
+        {
+          "en": "A brass key falls from between the crystals onto the checkered floor.",
+          "zh": "一把黄铜钥匙从水晶装饰间掉落到棋盘格地板上。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "Have you read everything on the counter? Someone left a message.",
+          "zh": "你读过柜台上的所有东西了吗？有人留了一条信息。"
+        },
+        {
+          "en": "The guest book mentions hiding something overhead. Look up.",
+          "zh": "宾客登记簿提到在头顶藏了东西。往上看。"
+        },
+        {
+          "en": "Tap the crystal chandelier to find the brass key hidden among the crystals.",
+          "zh": "点击水晶吊灯，在水晶装饰中找到隐藏的黄铜钥匙。"
+        }
+      ],
+      "reward": {
+        "en": "Brass Key",
+        "zh": "黄铜钥匙"
+      },
+      "depends_on": null,
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 10 (hidden items under objects)",
+        "Level 23 (layered item retrieval)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Reception Desk Safe",
+        "zh": "前台保险箱"
+      },
+      "puzzle_type": "item_use",
+      "mechanic_family": "key_lock_chain",
+      "twist_applied": null,
+      "items_used": [
+        "brass_key"
+      ],
+      "clue_source": {
+        "en": "The brass key from the chandelier fits the lock on the small safe behind the reception counter.",
+        "zh": "吊灯中的黄铜钥匙可以打开前台柜台后面小保险箱的锁。"
+      },
+      "solution_steps": [
+        {
+          "en": "Go behind the marble reception counter.",
+          "zh": "走到大理石前台柜台后面。"
+        },
+        {
+          "en": "Find the small metal safe mounted under the counter.",
+          "zh": "找到安装在柜台下方的小型金属保险箱。"
+        },
+        {
+          "en": "Use the brass key to unlock the safe. Inside is a handwritten note and a faded room directory.",
+          "zh": "使用黄铜钥匙打开保险箱。里面有一张手写便条和一份褪色的房间目录。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "You have a key. Where might there be a lock to match it?",
+          "zh": "你有一把钥匙。哪里可能有匹配的锁？"
+        },
+        {
+          "en": "Try looking behind the reception counter — there's more back there than you think.",
+          "zh": "试试看前台柜台后面——那里有比你想象的更多的东西。"
+        },
+        {
+          "en": "Use the brass key on the small metal safe under the reception counter.",
+          "zh": "在前台柜台下方的小金属保险箱上使用黄铜钥匙。"
+        }
+      ],
+      "reward": {
+        "en": "Receptionist's Note (contains the number sequence '3-1-4-2')",
+        "zh": "前台便条（包含数字序列'3-1-4-2'）"
+      },
+      "depends_on": "The Last Guest",
+      "difficulty": 1,
+      "inspired_by": [
+        "Level 5 (key to cabinet chain)",
+        "Level 8 (chest lock)"
+      ]
+    },
+    {
+      "puzzle_name": {
+        "en": "Bellhop's Button Board",
+        "zh": "门童按钮板"
+      },
+      "puzzle_type": "logic_minigame",
+      "mechanic_family": "numeric_code_entry",
+      "twist_applied": null,
+      "items_used": [
+        "reception_note"
+      ],
+      "clue_source": {
+        "en": "The receptionist's note reads: 'For the elevator — press the floor buttons in the order the bellhops line up each morning: tallest first.' Four bellhop figurines of different heights stand on the counter, numbered 1-4.",
+        "zh": "前台便条上写着：'要使用电梯——按照门童每天早上排队的顺序按楼层按钮：最高的排第一。'柜台上有四个不同高度的门童小雕像，编号1-4。"
+      },
+      "solution_steps": [
+        {
+          "en": "Read the receptionist's note about the bellhop order.",
+          "zh": "阅读前台便条中关于门童排列顺序的内容。"
+        },
+        {
+          "en": "Examine the four bellhop figurines on the reception counter. Rank them by height: Figurine 3 is tallest, then 1, then 4, then 2.",
+          "zh": "检查前台柜台上的四个门童小雕像。按高度排列：3号最高，然后是1号，4号，2号最矮。"
+        },
+        {
+          "en": "Go to the elevator and press the floor buttons in order: 3, 1, 4, 2.",
+          "zh": "走到电梯前，按顺序按下楼层按钮：3、1、4、2。"
+        },
+        {
+          "en": "The elevator mechanism whirs to life. A small compartment opens beside the elevator, revealing a golden elevator token.",
+          "zh": "电梯机械装置嗡嗡启动。电梯旁边的一个小隔间打开了，露出一枚金色的电梯代币。"
+        }
+      ],
+      "hints": [
+        {
+          "en": "The note mentions an order based on height. Look at the figurines carefully.",
+          "zh": "便条提到了一个基于身高的顺序。仔细看看那些小雕像。"
+        },
+        {
+          "en": "Rank the four bellhop figurines from tallest to shortest. Their numbers give you the button sequence.",
+          "zh": "将四个门童小雕像从高到矮排列。它们的编号就是按钮序列。"
+        },
+        {
+          "en": "Press the elevator buttons in order: 3, 1, 4, 2 (tallest to shortest figurine).",
+          "zh": "按顺序按电梯按钮：3、1、4、2（从最高到最矮的雕像）。"
+        }
+      ],
+      "reward": {
+        "en": "Elevator Token",
+        "zh": "电梯代币"
+      },
+      "depends_on": "Reception Desk Safe",
+      "difficulty": 2,
+      "inspired_by": [
+        "Level 9 (animal sequence)",
+        "Level 34 (billiards pocket sequence)"
+      ]
+    }
+  ],
+  "final_action": {
+    "en": "Insert the elevator token into the brass slot beside the elevator doors. The old mechanism groans to life — gears turning somewhere deep in the walls — and the doors slowly slide open, revealing the shaft to the upper floors of the Grandview Hotel.",
+    "zh": "将电梯代币插入电梯门旁的黄铜插槽中。老旧的机械装置发出吱嘎声——墙壁深处齿轮转动——门缓缓滑开，露出通往格兰德维尤酒店上层楼的电梯井。"
+  },
+  "escape_mechanism": "token",
+  "persistent_items_found": [],
+  "persistent_items_required": [],
+  "sprite_list": [
+    {
+      "id": "chandelier",
+      "name": {
+        "en": "Crystal Chandelier",
+        "zh": "水晶吊灯"
+      },
+      "states": [
+        "idle",
+        "swinging",
+        "key_fallen"
+      ],
+      "trigger_puzzle": "The Last Guest",
+      "z_layer": 2
+    },
+    {
+      "id": "guest_book",
+      "name": {
+        "en": "Guest Book",
+        "zh": "宾客登记簿"
+      },
+      "states": [
+        "closed",
+        "open"
+      ],
+      "trigger_puzzle": "The Last Guest",
+      "z_layer": 3
+    },
+    {
+      "id": "reception_safe",
+      "name": {
+        "en": "Reception Safe",
+        "zh": "前台保险箱"
+      },
+      "states": [
+        "locked",
+        "open"
+      ],
+      "trigger_puzzle": "Reception Desk Safe",
+      "z_layer": 3
+    },
+    {
+      "id": "bellhop_figurines",
+      "name": {
+        "en": "Bellhop Figurines",
+        "zh": "门童小雕像"
+      },
+      "states": [
+        "idle",
+        "highlighted"
+      ],
+      "trigger_puzzle": "Bellhop's Button Board",
+      "z_layer": 3
+    },
+    {
+      "id": "elevator_doors",
+      "name": {
+        "en": "Elevator Doors",
+        "zh": "电梯门"
+      },
+      "states": [
+        "locked",
+        "token_inserted",
+        "open"
+      ],
+      "trigger_puzzle": "final_action",
+      "z_layer": 1
+    },
+    {
+      "id": "brass_key",
+      "name": {
+        "en": "Brass Key",
+        "zh": "黄铜钥匙"
+      },
+      "states": [
+        "hidden",
+        "on_floor",
+        "collected"
+      ],
+      "trigger_puzzle": "The Last Guest",
+      "z_layer": 4
+    },
+    {
+      "id": "reception_note",
+      "name": {
+        "en": "Receptionist's Note",
+        "zh": "前台便条"
+      },
+      "states": [
+        "hidden",
+        "visible",
+        "collected"
+      ],
+      "trigger_puzzle": "Reception Desk Safe",
+      "z_layer": 4
+    },
+    {
+      "id": "elevator_token",
+      "name": {
+        "en": "Elevator Token",
+        "zh": "电梯代币"
+      },
+      "states": [
+        "hidden",
+        "revealed",
+        "collected"
+      ],
+      "trigger_puzzle": "Bellhop's Button Board",
+      "z_layer": 4
+    }
+  ]
+}
