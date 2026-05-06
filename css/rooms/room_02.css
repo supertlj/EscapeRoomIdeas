@@ -1,0 +1,33 @@
+/* ============================================
+   ROOM 02: THE RESTAURANT
+   Room-specific CSS overrides
+   ============================================ */
+
+/* Dial Puzzle positioning and specific aesthetic for Room 02 */
+#dial-puzzle-container .dial-content {
+    background: #1a1510; /* Darker, warmer tone for the restaurant */
+    border-image: linear-gradient(to bottom, #c9a84c, #8a6d3b) 1;
+}
+
+.dial-display {
+    background: #000;
+    border: 2px solid #444;
+    color: #e6b800; /* Gold/Amber display instead of green */
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 48px;
+    padding: 10px 40px;
+    border-radius: 8px;
+    margin: 0 20px;
+    box-shadow: inset 0 0 10px #000;
+    min-width: 80px;
+    text-align: center;
+}
+
+/* If Room 02 needs specific Keypad positioning, it would go here */
+.keypad-room02 #keypad-display-overlay {
+    /* Placeholder for future Room 02 specific keypad assets */
+    top: 85px;
+    left: 265px;
+    width: 285px;
+    height: 115px;
+}

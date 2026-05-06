@@ -1,0 +1,126 @@
+/* ============================================
+   Level Select Grid Styles
+   ============================================ */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.level-select-content {
+    width: 90%;
+    max-width: 800px;
+    height: 80vh;
+    background: #111;
+    border: 2px solid #c9a84c;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 50px #000;
+}
+
+.level-grid {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Custom Scrollbar for the grid */
+.level-grid::-webkit-scrollbar {
+    width: 8px;
+}
+.level-grid::-webkit-scrollbar-track {
+    background: #000;
+}
+.level-grid::-webkit-scrollbar-thumb {
+    background: #c9a84c;
+    border-radius: 4px;
+}
+
+.level-card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #333;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.level-card:hover {
+    border-color: #c9a84c;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+.level-card.locked {
+    filter: grayscale(1) brightness(0.3);
+    cursor: not-allowed;
+}
+
+.level-card.locked::after {
+    content: '🔒';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    opacity: 0.5;
+}
+
+.level-info {
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 15px 5px;
+    text-align: center;
+}
+
+.level-num {
+    display: block;
+    font-family: 'Share Tech Mono', monospace;
+    color: #c9a84c;
+    font-size: 14px;
+}
+
+.level-name {
+    display: block;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.level-card.no-asset {
+    background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.level-card.no-asset::before {
+    content: 'COMING SOON';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    background: #c9a84c;
+    color: #000;
+    padding: 2px 6px;
+    border-radius: 2px;
+    font-weight: bold;
+    z-index: 5;
+    opacity: 0.6;
+}

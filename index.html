@@ -7,22 +7,19 @@
   <title>The Grandview Hotel</title>
   <link rel="stylesheet" href="css/core.css">
   <link rel="stylesheet" href="css/ui.css">
-  <link rel="stylesheet" href="css/puzzles.css">
+  <link rel="stylesheet" href="css/puzzles/KeypadPuzzle.css">
+  <link rel="stylesheet" href="css/puzzles/DialPuzzle.css">
   <link rel="stylesheet" href="css/rooms/room_01.css">
+  <link rel="stylesheet" href="css/rooms/room_02.css">
   <link rel="stylesheet" href="css/ads.css">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&family=Orbitron:wght@400;700&family=Share+Tech+Mono&family=Noto+Sans+SC:wght@300;400;600&display=swap" rel="stylesheet">
   <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
 </head>
 <body>
   <div id="game-container">
-    <!-- Background canvas (renders room art, sprites, vignette) -->
     <canvas id="game-canvas"></canvas>
-
-    <!-- UI Overlay — everything scales together -->
     <div id="ui-overlay">
       <div id="ui-design-container">
-
-        <!-- === Section 1: Top Bar (0–200px) === -->
         <div id="top-bar">
           <button id="btn-menu" class="ui-btn" aria-label="Menu">☰</button>
           <div id="room-title"></div>
@@ -30,23 +27,15 @@
             <button id="btn-hint" class="ui-btn" aria-label="Hint">💡</button>
           </div>
         </div>
-
-        <!-- === Section 2: Room View area is drawn by canvas (200–1224px) === -->
-
-        <!-- Back button (positioned over room view) -->
         <button id="btn-back" class="ui-btn hidden" aria-label="Back">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
             <line x1="19" y1="5" x2="5" y2="19"></line>
             <polyline points="12 19 5 19 5 12"></polyline>
           </svg>
         </button>
-
-        <!-- === Section 3: Inventory (1224–1524px) === -->
         <div id="inventory-bar">
           <div id="inventory-slots"></div>
         </div>
-
-        <!-- === Section 4: Ad Space (1524–1920px) === -->
         <div id="ad-space">
           <div class="ad-placeholder">
             <span class="ad-label">Advertisement</span>
@@ -56,28 +45,18 @@
             </div>
           </div>
         </div>
-
-        <!-- === Overlays (positioned absolutely within the 1080×1920 container) === -->
-
-        <!-- Feedback overlay (centered over room view area) -->
         <div id="feedback-overlay" class="hidden">
           <div id="feedback-text"></div>
         </div>
-
-        <!-- Story modal -->
         <div id="story-modal" class="modal hidden">
           <div class="modal-content story-content">
             <div id="story-text"></div>
             <button id="story-close" class="modal-btn">Continue</button>
           </div>
         </div>
-
-        <!-- Hint modal -->
         <div id="hint-modal" class="modal hidden">
           <div class="modal-content hint-content">
-            <div class="hint-header">
-              <span id="hint-tier-label">Hint 1 of 3</span>
-            </div>
+            <div class="hint-header"><span id="hint-tier-label">Hint 1 of 3</span></div>
             <div id="hint-text"></div>
             <div id="hint-actions">
               <button id="hint-watch-ad" class="modal-btn accent">Watch Ad for Hint</button>
@@ -85,18 +64,22 @@
             </div>
           </div>
         </div>
-
-        <!-- Menu panel -->
         <div id="menu-panel" class="modal hidden">
           <div class="modal-content menu-content">
             <h2 id="menu-title">The Grandview Hotel</h2>
-            <button id="btn-resume" class="menu-btn">Resume</button>
-            <button id="btn-language" class="menu-btn">语言 / Language</button>
-            <button id="btn-restart-room" class="menu-btn">Restart Room</button>
+            <button id="btn-restart-room" class="menu-btn">RESTART ROOM</button>
+            <button id="btn-level-select" class="menu-btn">ROOM SELECTION</button>
+            <button id="btn-language" class="menu-btn">CHINESE / ENGLISH</button>
+            <button id="btn-resume" class="menu-btn primary">RESUME</button>
           </div>
         </div>
-
-        <!-- Room complete -->
+        <div id="level-select-panel" class="modal-overlay hidden">
+          <div class="level-select-content">
+            <h2 id="level-select-title">ROOM SELECTION</h2>
+            <div id="level-grid" class="level-grid"></div>
+            <button id="btn-close-levels" class="menu-btn primary">BACK</button>
+          </div>
+        </div>
         <div id="room-complete" class="modal hidden">
           <div class="modal-content complete-content">
             <div class="complete-icon">🔓</div>
@@ -105,21 +88,9 @@
             <button id="btn-next-room" class="modal-btn accent">Next Room</button>
           </div>
         </div>
-
-        <!-- Item Inspect Modal -->
-        <div id="item-inspect-modal" class="modal hidden">
-          <div class="zoom-overlay-container">
-            <div class="zoom-overlay-inner">
-              <img id="item-inspect-image" src="" alt="Item Zoom">
-            </div>
-            <div class="zoom-hint">TAP ANYWHERE TO CLOSE</div>
-          </div>
-        </div>
-
-      </div><!-- end #ui-design-container -->
-    </div><!-- end #ui-overlay -->
-  </div><!-- end #game-container -->
-
+      </div>
+    </div>
+  </div>
   <script src="js/i18n.js"></script>
   <script src="js/audio.js"></script>
   <script src="js/inventory.js"></script>
@@ -127,11 +98,13 @@
   <script src="js/hint-system.js"></script>
   <script src="js/puzzle-engine.js"></script>
   <script src="js/sprite-manager.js"></script>
-  <script src="js/puzzles/KeypadPuzzle.js"></script>
   <script src="js/rooms/BaseRoom.js"></script>
   <script src="js/rooms/Room01.js"></script>
   <script src="js/rooms/Room02.js"></script>
+  <script src="js/puzzles/KeypadPuzzle.js"></script>
+  <script src="js/puzzles/DialPuzzle.js"></script>
   <script src="js/AdManager.js"></script>
+  <script src="js/SaveManager.js"></script>
   <script src="js/room-loader.js"></script>
   <script src="js/engine.js"></script>
 </body>

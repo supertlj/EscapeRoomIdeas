@@ -1,0 +1,166 @@
+﻿/* ============================================
+   KEYPAD PUZZLE (LED / Electronic) - FINAL CLEAN
+   ============================================ */
+
+/* 1. KILL ALL MODAL BORDERS FOR KEYPAD */
+.modal.keypad-room01, 
+.modal.keypad-room02,
+#keypad-modal {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+/* 2. RESTORE GOLD STANDARD STRUCTURE */
+.zoom-overlay-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+#keypad-overlay-inner {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: auto;
+  border: none !important; /* Ensure NO border here */
+}
+
+#keypad-bg-image {
+  width: 800px;
+  height: 800px;
+  object-fit: cover;
+  border: 4px solid #c9a84c; /* THE ONLY BORDER */
+  box-shadow: 0 0 80px rgba(0,0,0,1), 0 0 20px rgba(201, 168, 76, 0.3);
+  background: #000;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.zoom-hint {
+  margin-top: 50px;
+  color: #c9a84c;
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  text-align: center;
+  width: 100%;
+  animation: softPulse 2s infinite;
+  pointer-events: none;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+#keypad-display-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.98);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: inset 0 0 40px rgba(0,0,0,1);
+  z-index: 5;
+}
+
+#keypad-digits {
+  color: #ff8c00;
+  font-family: 'Seven Segment', sans-serif;
+  font-size: 65px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 240px;
+  text-shadow: 0 0 10px rgba(255, 140, 0, 0.6);
+  animation: amberFlicker 4s infinite;
+}
+
+@keyframes amberFlicker {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 0.98; }
+  66% { opacity: 0.99; }
+  80% { opacity: 0.97; }
+}
+
+.digit-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.digit-slot::before {
+  content: "8";
+  position: absolute;
+  color: rgba(255, 140, 0, 0.08);
+  pointer-events: none;
+  font-family: 'Seven Segment', sans-serif;
+}
+
+#keypad-button-grid {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.key-row {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+}
+
+.key-btn {
+  width: 30%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  pointer-events: auto;
+}
+
+.key-btn:active {
+  background: rgba(255, 140, 0, 0.2);
+  box-shadow: 0 0 20px rgba(255, 140, 0, 0.4);
+}
+
+/* Hide the ghost '8' when a number is actually typed */
+.digit-slot.has-value::before {
+    opacity: 0 !important;
+}
+
+/* === LED 'LIT OFF' AESTHETIC === */
+.digit-slot::before {
+    content: "8";
+    position: absolute;
+    color: rgba(60, 40, 20, 0.4); /* Dark 'off' segment color */
+    pointer-events: none;
+    font-family: 'Seven Segment', sans-serif;
+    text-shadow: none !important; /* NO GLOW when off */
+    opacity: 1 !important;
+}
+
+.digit-slot.has-value::before {
+    opacity: 0.1 !important; /* Make it even dimmer when a real number is on top */
+}
+
+#keypad-digits {
+    /* Ensure real numbers HAVE the glow */
+    color: #ff8c00;
+    text-shadow: 0 0 15px rgba(255, 140, 0, 0.7), 0 0 5px rgba(255, 140, 0, 0.5);
+}

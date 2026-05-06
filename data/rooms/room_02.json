@@ -1,0 +1,150 @@
+{
+  "room_number": 2,
+  "room_name": {
+    "en": "The Restaurant",
+    "zh": "酒店餐厅"
+  },
+  "hotel_area": {
+    "en": "Restaurant",
+    "zh": "餐厅"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "An elegant hotel dining room frozen in time. White tablecloths have yellowed with age, silverware sits tarnished at each place setting, and a grand stone fireplace dominates the far wall. A large chalkboard menu still displays the specials from 1994. Dried flower arrangements sit in crystal vases, and a wine rack lines the entire left wall. Table 7, near the window, still has a half-eaten meal and an overturned wine glass.",
+    "zh": "一间被时间凝固的优雅酒店餐厅。白色桌布已经泛黄，每套餐具旁的银器已经失去光泽，远处墙壁上有一座宏大的石头壁炉。一块大黑板菜单上仍然显示着1994年的特色菜品。干花插在水晶花瓶中，整面左墙排满了酒架。靠窗的7号桌上还有一顿未吃完的饭菜和一只翻倒的酒杯。"
+  },
+  "story_fragment": {
+    "en": "Table 7 has a reservation card: 'Mr. E.V. Grandview — Dinner for Two — Oct 14, 8:00 PM.' But the second chair is pulled back, napkin untouched. Whoever was supposed to join him never arrived — or left in a hurry.",
+    "zh": "7号桌上有一张预订卡：'E.V. Grandview先生——双人晚餐——10月14日晚8:00。'但第二把椅子被推开，餐巾纸没有动过。原本要来赴约的人从未到达——或者匆忙离开了。"
+  },
+  "estimated_solve_time_minutes": 5,
+  "items": [
+    {
+      "id": "vintage_bottle",
+      "name": {
+        "en": "Vintage Wine Bottle",
+        "zh": "陈年葡萄酒瓶"
+      }
+    },
+    {
+      "id": "corkscrew",
+      "name": {
+        "en": "Brass Corkscrew",
+        "zh": "黄铜开瓶器"
+      }
+    },
+    {
+      "id": "dining_key",
+      "name": {
+        "en": "Dining Room Key",
+        "zh": "餐厅钥匙"
+      }
+    }
+  ],
+  "puzzles": [
+    {
+      "puzzle_name": {
+        "en": "Table Number Tally",
+        "zh": "餐桌编号统计"
+      },
+      "puzzle_type": "observation",
+      "mechanic_family": "color_count_observation",
+      "clue_source": {
+        "en": "Each table has a brass number plate and a colored napkin. A wall sign says: 'Service Order: Red, Blue, Gold.'",
+        "zh": "每张桌子都有一个黄铜桌号牌和彩色餐巾。墙上的告示写着：'服务顺序：红色、蓝色、金色。'"
+      },
+      "solution_steps": [
+        {
+          "en": "Note colors: Red(Table 4), Blue(Table 7), Gold(Table 2).",
+          "zh": "记录颜色：红色(4号桌)，蓝色(7号桌)，金色(2号桌)。"
+        }
+      ],
+      "reward": {
+        "en": "Code '472'",
+        "zh": "密码'472'"
+      }
+    },
+    {
+      "puzzle_name": {
+        "en": "The Chef's Special",
+        "zh": "主厨特色菜"
+      },
+      "puzzle_type": "logic_math",
+      "clue_source": {
+        "en": "Add the prices of the three specials on the chalkboard: $14, $28, $9.",
+        "zh": "将黑板上三道特色菜的价格相加：$14, $28, $9。"
+      },
+      "solution_steps": [
+        {
+          "en": "Sum is 51. Enter into the kitchen hatch lock.",
+          "zh": "总和为51。在厨房传菜窗锁上输入。"
+        }
+      ],
+      "reward": {
+        "en": "Vintage Wine Bottle",
+        "zh": "陈年葡萄酒瓶"
+      }
+    },
+    {
+      "puzzle_name": {
+        "en": "The Wine Cabinet",
+        "zh": "酒柜谜题"
+      },
+      "puzzle_type": "numeric_lock",
+      "clue_source": {
+        "en": "A locked cabinet in the wine rack area requires a 3-digit code.",
+        "zh": "酒架区域的一个带锁柜子需要一个3位数的密码。"
+      },
+      "solution_steps": [
+        {
+          "en": "Enter '472' (from Table Tally) into the cabinet lock.",
+          "zh": "在柜子锁上输入'472'（来自餐桌统计）。"
+        }
+      ],
+      "reward": {
+        "en": "Brass Corkscrew",
+        "zh": "黄铜开瓶器"
+      }
+    },
+    {
+      "puzzle_name": {
+        "en": "The Bottle Secret",
+        "zh": "酒瓶的秘密"
+      },
+      "puzzle_type": "item_combine",
+      "clue_source": {
+        "en": "Use the corkscrew to open the vintage bottle.",
+        "zh": "使用开瓶器打开陈年酒瓶。"
+      },
+      "solution_steps": [
+        {
+          "en": "Select Corkscrew, then click Wine Bottle in inventory.",
+          "zh": "选择开瓶器，然后点击物品栏中的酒瓶。"
+        }
+      ],
+      "reward": {
+        "en": "Dining Room Key",
+        "zh": "餐厅钥匙"
+      }
+    }
+  ],
+  "final_action": {
+    "en": "Unlock the service door next to the fireplace.",
+    "zh": "解锁火炉旁的服务门。"
+  },
+  "escape_mechanism": "key",
+  "sprite_list": [
+    { "id": "fireplace_door", "states": ["locked", "unlocked", "open"] },
+    { "id": "kitchen_hatch", "states": ["locked", "open"] },
+    { "id": "wine_cabinet", "states": ["locked", "open"] },
+    { "id": "chalkboard", "states": ["idle", "zoomed"] },
+    { "id": "table_7", "states": ["idle", "zoomed"] }
+  ]
+}

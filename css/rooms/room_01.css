@@ -17,3 +17,10 @@
   width: 260px;
   height: 360px;
 }
+
+#item-inspect-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 30px rgba(201, 168, 76, 0.4));
+}
