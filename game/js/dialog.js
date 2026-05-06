@@ -46,12 +46,11 @@ const Dialog = {
   inspectItem(imgSrc) {
     const modal = document.getElementById('item-inspect-modal');
     const img = document.getElementById('item-inspect-image');
+    if (!modal || !img) {
+      console.error('item-inspect-modal or item-inspect-image not found in DOM.');
+      return;
+    }
     img.src = imgSrc;
     modal.classList.remove('hidden');
-    
-    // Clicking anywhere on the modal closes it
-    modal.onclick = () => {
-      modal.classList.add('hidden');
-    };
   }
 };

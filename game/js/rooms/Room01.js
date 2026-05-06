@@ -21,6 +21,7 @@ class Room01 extends BaseRoom {
     this.setupSafe();
     this.setupChandelier();
     this.setupElevator();
+    this.initInspectModal();
 
     HintSystem.setCurrentPuzzle(0);
     return this.state;
@@ -116,11 +117,39 @@ class Room01 extends BaseRoom {
   }
 
   setupSafe() {
-    // Note inside safe
+    // Safe door/mechanism
     SpriteManager.addSprite('zoom_safe', {
-      id: 'safe_note_item', x: 230, y: 700, w: 350, h: 250,
+      id: 'safe_mechanism', x: 200, y: 200, w: 624, h: 624,
       onClick: async () => {
-        if (this.state.noteFound) return;
+        if (this.state.safeOpened) return;
+
+        if (PuzzleEngine.checkItemUse('brass_key')) {
+          this.state.safeOpened = true;
+          Inventory.removeItem('brass_key');
+          Audio.playSFX('door_open');
+          
+          // Disable the mechanism hitbox so it doesn't block the note
+          SpriteManager.updateSprite('zoom_safe', 'safe_mechanism', { visible: false });
+          
+          await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_with_note.png');
+          // Update main background to open safe (with note)
+          SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_open.png';
+          SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: true });
+          Dialog.showFeedback(I18n.currentLang === 'zh' ? '保险箱已打开' : 'Safe opened');
+        } else {
+          Dialog.showFeedback(I18n.currentLang === 'zh' ? '它被锁住了，需要一把钥匙。' : 'It is locked. You need a key.');
+        }
+      }
+    });
+
+    // Initialize visibility
+    SpriteManager.updateSprite('zoom_safe', 'safe_mechanism', { visible: !this.state.safeOpened });
+
+    // Note inside safe - defined AFTER so it is on TOP
+    SpriteManager.addSprite('zoom_safe', {
+      id: 'safe_note_item', x: 230, y: 640, w: 350, h: 250,
+      onClick: async () => {
+        if (this.state.noteFound || !this.state.safeOpened) return;
         
         Dialog.inspectItem('assets/rooms/room_01/zoom_note.png');
 
@@ -141,27 +170,6 @@ class Room01 extends BaseRoom {
         // Update main background to empty safe
         SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_empty.png';
         SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: false });
-      }
-    });
-
-    // Safe door/mechanism
-    SpriteManager.addSprite('zoom_safe', {
-      id: 'safe_mechanism', x: 200, y: 200, w: 624, h: 624,
-      onClick: async () => {
-        if (this.state.safeOpened) return; 
-
-        if (PuzzleEngine.checkItemUse('brass_key')) {
-          this.state.safeOpened = true;
-          Inventory.removeItem('brass_key');
-          Audio.playSFX('door_open');
-          await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_with_note.png');
-          // Update main background to open safe (with note)
-          SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_open.png';
-          SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: true });
-          Dialog.showFeedback(I18n.currentLang === 'zh' ? '保险箱已打开' : 'Safe opened');
-        } else {
-          Dialog.showFeedback(I18n.currentLang === 'zh' ? '它被锁住了，需要一把钥匙。' : 'It is locked. You need a key.');
-        }
       }
     });
 
@@ -204,6 +212,26 @@ class Room01 extends BaseRoom {
     if (this.keypad) {
       this.keypad.cleanup();
     }
+  }
+
+  initInspectModal() {
+    if (document.getElementById('item-inspect-modal')) return;
+    
+    const modal = document.createElement('div');
+    modal.id = 'item-inspect-modal';
+    modal.className = 'modal-overlay hidden';
+    modal.innerHTML = `
+      <div class="zoom-frame">
+        <img id="item-inspect-image" src="" alt="Inspecting item">
+      </div>
+      <div class="zoom-hint-text">TAP ANYWHERE TO CLOSE</div>
+    `;
+    
+    document.getElementById('ui-design-container').appendChild(modal);
+    
+    modal.onclick = () => {
+      modal.classList.add('hidden');
+    };
   }
 }
 

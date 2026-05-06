@@ -27,6 +27,8 @@ const Engine = {
     document.getElementById('btn-resume').addEventListener('click', () => this.hideMenu());
     document.getElementById('btn-language').addEventListener('click', () => this.toggleLanguage());
     document.getElementById('btn-restart-room').addEventListener('click', () => this.restartRoom());
+    document.getElementById('btn-level-select').addEventListener('click', () => this.openLevelSelect());
+    document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
     document.getElementById('btn-back').addEventListener('click', () => this.goBack());
     
     // Debug Mode Toggle (Hotspot Outlines)
@@ -37,11 +39,12 @@ const Engine = {
       }
     });
 
-    await this.loadRoom(1);
+    await this.loadRoom(SaveManager.getSavedRoom());
   },
 
   async loadRoom(roomNumber) {
     try {
+      Inventory.init(); // Clear inventory on room load
       this.roomData = await RoomLoader.loadRoom(roomNumber);
       this.sceneHistory = [];
       this.updateBackButton();
@@ -134,6 +137,67 @@ const Engine = {
     Dialog.showFeedback(newLang === 'zh' ? '语言已切换为中文' : 'Language switched to English', 1500);
   },
 
+  openLevelSelect() {
+    this.hideMenu();
+    const panel = document.getElementById('level-select-panel');
+    const grid = document.getElementById('level-grid');
+    grid.innerHTML = '';
+
+    const maxUnlocked = SaveManager.getSavedRoom();
+    
+    // Room Names for the gallery
+    const roomNames = {
+      1: { en: "The Lobby", zh: "酒店大堂" },
+      2: { en: "The Restaurant", zh: "豪华餐厅" },
+      3: { en: "The Hotel Bar", zh: "酒店酒吧" },
+      4: { en: "The Library", zh: "大图书馆" },
+      5: { en: "The Grand Suite", zh: "总统套房" },
+      6: { en: "The Laundry", zh: "洗衣房" },
+      7: { en: "The Boiler Room", zh: "锅炉房" },
+      8: { en: "The Rooftop", zh: "楼顶花园" },
+      9: { en: "The Ballroom", zh: "大宴会厅" },
+      10: { en: "The Hidden Vault", zh: "秘密金库" }
+    };
+
+    for (let i = 1; i <= 10; i++) {
+      const card = document.createElement('div');
+      card.className = 'level-card';
+      if (i > maxUnlocked) card.classList.add('locked');
+      
+      const padded = String(i).padStart(2, '0');
+      // Only set background if the room is developed (Room 01 and 02)
+      if (i <= 2) {
+        card.style.backgroundImage = `url('assets/rooms/room_${padded}/background.png')`;
+      } else {
+        card.classList.add('no-asset');
+      }
+      
+      const nameObj = roomNames[i] || { en: `Room ${padded}`, zh: `第 ${i} 关` };
+      const displayName = I18n.currentLang === 'zh' ? nameObj.zh : nameObj.en;
+
+      card.innerHTML = `
+        <div class="level-info">
+          <span class="level-num">ROOM ${padded}</span>
+          <span class="level-name">${displayName}</span>
+        </div>
+      `;
+
+      if (i <= maxUnlocked) {
+        card.onclick = () => {
+          this.hideLevelSelect();
+          this.loadRoom(i);
+        };
+      }
+      grid.appendChild(card);
+    }
+
+    panel.classList.remove('hidden');
+  },
+
+  hideLevelSelect() {
+    document.getElementById('level-select-panel').classList.add('hidden');
+  },
+
   animateItemPickup(startX, startY, imgSrc, targetSlotIndex = -1, itemId = null) {
     const fly = document.createElement('img');
     fly.src = imgSrc;
@@ -204,8 +268,9 @@ const Engine = {
     document.getElementById('btn-next-room').onclick = () => {
       AdManager.showInterstitialAd(() => {
         modal.classList.add('hidden');
-        // Logic to load room 2
-        this.loadRoom(2);
+        const nextRoom = this.roomData.room_number + 1;
+        SaveManager.saveProgress(nextRoom);
+        this.loadRoom(nextRoom);
       });
     };
   }

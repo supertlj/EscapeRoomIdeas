@@ -135,13 +135,12 @@ const SpriteManager = {
     const scene = this.scenes[this.currentSceneId];
     if (!scene) return null;
 
-    // Convert design coordinates to art-local coordinates
     const lx = dx - this.ART_X;
     const ly = dy - this.ART_Y;
 
-    // Test in reverse order (top z-layer first)
-    const sorted = [...scene.sprites].sort((a, b) => (b.zLayer || 0) - (a.zLayer || 0));
-    for (const s of sorted) {
+    // Iterate backwards through the array (last added = top visual layer)
+    for (let i = scene.sprites.length - 1; i >= 0; i--) {
+      const s = scene.sprites[i];
       if (!s.visible) continue;
       if (lx >= s.x && lx <= s.x + s.w && ly >= s.y && ly <= s.y + s.h) {
         return s;
