@@ -213,26 +213,6 @@ class Room01 extends BaseRoom {
       this.keypad.cleanup();
     }
   }
-
-  initInspectModal() {
-    if (document.getElementById('item-inspect-modal')) return;
-    
-    const modal = document.createElement('div');
-    modal.id = 'item-inspect-modal';
-    modal.className = 'modal-overlay hidden';
-    modal.innerHTML = `
-      <div class="zoom-frame">
-        <img id="item-inspect-image" src="" alt="Inspecting item">
-      </div>
-      <div class="zoom-hint-text">TAP ANYWHERE TO CLOSE</div>
-    `;
-    
-    document.getElementById('ui-design-container').appendChild(modal);
-    
-    modal.onclick = () => {
-      modal.classList.add('hidden');
-    };
-  }
 }
 
 window.Room01 = Room01;
