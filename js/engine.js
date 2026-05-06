@@ -137,7 +137,7 @@ const Engine = {
     Dialog.showFeedback(newLang === 'zh' ? '语言已切换为中文' : 'Language switched to English', 1500);
   },
 
-  openLevelSelect() {
+  async openLevelSelect() {
     this.hideMenu();
     const panel = document.getElementById('level-select-panel');
     const grid = document.getElementById('level-grid');
@@ -145,35 +145,23 @@ const Engine = {
 
     const maxUnlocked = SaveManager.getSavedRoom();
     
-    // Room Names for the gallery
-    const roomNames = {
-      1: { en: "The Lobby", zh: "酒店大堂" },
-      2: { en: "The Restaurant", zh: "豪华餐厅" },
-      3: { en: "The Hotel Bar", zh: "酒店酒吧" },
-      4: { en: "The Library", zh: "大图书馆" },
-      5: { en: "The Grand Suite", zh: "总统套房" },
-      6: { en: "The Laundry", zh: "洗衣房" },
-      7: { en: "The Boiler Room", zh: "锅炉房" },
-      8: { en: "The Rooftop", zh: "楼顶花园" },
-      9: { en: "The Ballroom", zh: "大宴会厅" },
-      10: { en: "The Hidden Vault", zh: "秘密金库" }
-    };
+    // Load metadata from rooms.json
+    const response = await fetch('data/rooms.json');
+    const data = await response.json();
 
-    for (let i = 1; i <= 10; i++) {
+    data.rooms.forEach(room => {
       const card = document.createElement('div');
       card.className = 'level-card';
-      if (i > maxUnlocked) card.classList.add('locked');
+      if (room.id > maxUnlocked) card.classList.add('locked');
       
-      const padded = String(i).padStart(2, '0');
-      // Only set background if the room is developed (Room 01 and 02)
-      if (i <= 2) {
+      const padded = String(room.id).padStart(2, '0');
+      if (room.developed) {
         card.style.backgroundImage = `url('assets/rooms/room_${padded}/background.png')`;
       } else {
         card.classList.add('no-asset');
       }
       
-      const nameObj = roomNames[i] || { en: `Room ${padded}`, zh: `第 ${i} 关` };
-      const displayName = I18n.currentLang === 'zh' ? nameObj.zh : nameObj.en;
+      const displayName = I18n.currentLang === 'zh' ? room.name.zh : room.name.en;
 
       card.innerHTML = `
         <div class="level-info">
@@ -182,14 +170,14 @@ const Engine = {
         </div>
       `;
 
-      if (i <= maxUnlocked) {
+      if (room.id <= maxUnlocked) {
         card.onclick = () => {
           this.hideLevelSelect();
-          this.loadRoom(i);
+          this.loadRoom(room.id);
         };
       }
       grid.appendChild(card);
-    }
+    });
 
     panel.classList.remove('hidden');
   },
@@ -260,9 +248,7 @@ const Engine = {
   completeRoom() {
     const modal = document.getElementById('room-complete');
     const text = document.getElementById('complete-text');
-    text.textContent = I18n.currentLang === 'zh' ? 
-      '你已经解开了大堂的所有谜题。电梯正在上升...' : 
-      'You have solved all puzzles in the Lobby. The elevator is ascending...';
+    text.textContent = I18n.t(this.roomData.final_action);
     modal.classList.remove('hidden');
     
     document.getElementById('btn-next-room').onclick = () => {

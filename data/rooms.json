@@ -1,0 +1,14 @@
+{
+  "rooms": [
+    { "id": 1, "name": { "en": "The Lobby", "zh": "酒店大堂" }, "developed": true },
+    { "id": 2, "name": { "en": "The Restaurant", "zh": "豪华餐厅" }, "developed": true },
+    { "id": 3, "name": { "en": "The Hotel Bar", "zh": "酒店酒吧" }, "developed": false },
+    { "id": 4, "name": { "en": "The Library", "zh": "大图书馆" }, "developed": false },
+    { "id": 5, "name": { "en": "The Grand Suite", "zh": "总统套房" }, "developed": false },
+    { "id": 6, "name": { "en": "The Laundry", "zh": "洗衣房" }, "developed": false },
+    { "id": 7, "name": { "en": "The Boiler Room", "zh": "锅炉房" }, "developed": false },
+    { "id": 8, "name": { "en": "The Rooftop", "zh": "楼顶花园" }, "developed": false },
+    { "id": 9, "name": { "en": "The Ballroom", "zh": "大宴会厅" }, "developed": false },
+    { "id": 10, "name": { "en": "The Hidden Vault", "zh": "秘密金库" }, "developed": false }
+  ]
+}
