@@ -9,6 +9,7 @@ const SpriteManager = {
   scale: 1,
   offsetX: 0,
   offsetY: 0,
+  debugMode: false,
 
   // Design resolution (full portrait screen)
   DESIGN_W: 1080,
@@ -179,18 +180,61 @@ const SpriteManager = {
     // Draw Sprites
     scene.sprites.forEach(s => {
       if (!s.visible) return;
-      
+
+      if (s.style && (s.style.background || s.style.border)) {
+        // Draw Styled Box (Rectangle)
+        ctx.save();
+        const style = s.style;
+        if (style.background) {
+          ctx.fillStyle = style.background;
+          ctx.fillRect(this.ART_X + s.x, this.ART_Y + s.y, s.w, s.h);
+        }
+        if (style.border) {
+          const parts = style.border.split(' ');
+          ctx.lineWidth = parseInt(parts[0]) || 2;
+          ctx.strokeStyle = parts[2] || '#fff';
+          ctx.strokeRect(this.ART_X + s.x, this.ART_Y + s.y, s.w, s.h);
+        }
+        ctx.restore();
+      }
+
       if (s.image) {
         ctx.save();
         if (s.blendMode) ctx.globalCompositeOperation = s.blendMode;
+        if (s.filter) ctx.filter = s.filter;
         
-        // Apply pulsing glint if enabled
+        if (s.shadow) {
+          ctx.shadowColor = s.shadow.color || 'rgba(0,0,0,0.5)';
+          ctx.shadowBlur = s.shadow.blur || 10;
+          ctx.shadowOffsetX = s.shadow.offsetX || 0;
+          ctx.shadowOffsetY = s.shadow.offsetY || 0;
+        }
+
         if (s.glint) {
           const pulse = Math.sin(Date.now() / 400) * 0.4 + 1.2;
           ctx.filter = `brightness(${pulse})`;
         }
 
         ctx.drawImage(s.image, this.ART_X + s.x, this.ART_Y + s.y, s.w, s.h);
+        ctx.restore();
+      }
+
+      if (s.text) {
+        // Draw Styled Text
+        ctx.save();
+        const style = s.style || {};
+        ctx.fillStyle = style.color || '#fff';
+        ctx.font = `${style.fontWeight || ''} ${style.fontSize || '24px'} ${style.fontFamily || 'Cinzel, serif'}`;
+        ctx.textAlign = style.textAlign || 'left';
+        ctx.textBaseline = style.textBaseline || 'middle';
+        
+        if (style.textShadow) {
+           ctx.shadowColor = 'rgba(0,0,0,0.8)';
+           ctx.shadowBlur = 10;
+           ctx.shadowOffsetY = 4;
+        }
+
+        ctx.fillText(s.text, this.ART_X + s.x + (style.textAlign === 'center' ? s.w/2 : 0), this.ART_Y + s.y + s.h/2);
         ctx.restore();
       }
 
@@ -209,11 +253,6 @@ const SpriteManager = {
         ctx.restore();
       }
     });
-
-    // Optional: Draw a thin gold border around the art
-    ctx.strokeStyle = '#c9a84c';
-    ctx.lineWidth = 2;
-    ctx.strokeRect(this.ART_X, this.ART_Y, this.ART_SIZE, this.ART_SIZE);
 
     ctx.restore();
 

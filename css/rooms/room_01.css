@@ -3,20 +3,7 @@
    Room-specific CSS overrides
    ============================================ */
 
-/* Keypad calibration for Room 1's brass plate hardware */
-.keypad-room01 #keypad-display-overlay {
-  top: 85px;
-  left: 265px;
-  width: 285px;
-  height: 115px;
-}
 
-.keypad-room01 #keypad-button-grid {
-  top: 260px;
-  left: 275px;
-  width: 260px;
-  height: 360px;
-}
 
 #item-inspect-image {
   max-width: 90%;

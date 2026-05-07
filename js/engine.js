@@ -28,13 +28,25 @@ const Engine = {
     document.getElementById('btn-language').addEventListener('click', () => this.toggleLanguage());
     document.getElementById('btn-restart-room').addEventListener('click', () => this.restartRoom());
     document.getElementById('btn-level-select').addEventListener('click', () => this.openLevelSelect());
-    document.getElementById('btn-close-levels').addEventListener('click', () => this.hideLevelSelect());
-    document.getElementById('btn-back').addEventListener('click', () => this.goBack());
+    document.getElementById('btn-close-levels').addEventListener('click', () => {
+      console.log("Level Select: BACK clicked");
+      this.hideLevelSelect();
+    });
+    document.getElementById('btn-back').addEventListener('click', async () => {
+      if (this.isBusy) return;
+      this.setBusy(true);
+      try {
+        await this.goBack();
+      } finally {
+        this.setBusy(false);
+      }
+    });
     
     // Debug Mode Toggle (Hotspot Outlines)
     window.addEventListener('keydown', (e) => {
       if (e.key.toLowerCase() === 'd') {
         SpriteManager.debugMode = !SpriteManager.debugMode;
+        document.body.classList.toggle('debug-mode', SpriteManager.debugMode);
         console.log('Debug Mode:', SpriteManager.debugMode ? 'ON' : 'OFF');
       }
     });
@@ -44,6 +56,7 @@ const Engine = {
 
   async loadRoom(roomNumber) {
     try {
+      const padded = String(roomNumber).padStart(2, '0');
       Inventory.init(); // Clear inventory on room load
       this.roomData = await RoomLoader.loadRoom(roomNumber);
       this.sceneHistory = [];
@@ -53,24 +66,22 @@ const Engine = {
         this.currentRoomInstance.cleanup();
       }
 
-      const className = `Room${String(roomNumber).padStart(2, '0')}`;
+      const className = `Room${padded}`;
+      console.log(`Engine: Attempting to instantiate ${className}`);
       if (window[className]) {
         this.currentRoomInstance = new window[className](this.roomData);
         this.roomState = await this.currentRoomInstance.setup();
+        console.log(`Engine: ${className} setup complete`);
       } else {
-        console.warn(`Class ${className} not found, falling back to manual setup if exists.`);
+        console.error(`Engine: Class ${className} not found even after script load!`);
+        throw new Error(`Room class ${className} missing`);
       }
 
       SpriteManager.resize();
       SpriteManager.startRenderLoop();
 
       setTimeout(() => {
-        Dialog.showStory(this.roomData.room_description, () => {
-          Dialog.showFeedback(
-            I18n.currentLang === 'zh' ? '点击物品进行互动' : 'Tap objects to interact',
-            2500
-          );
-        });
+        Dialog.showStory(this.roomData.room_description);
       }, 500);
     } catch (err) {
       console.error('Failed to load room:', err);
@@ -78,29 +89,63 @@ const Engine = {
     }
   },
 
-  handleTap(e) {
+  isBusy: false,
+  busyCount: 0,
+
+  setBusy(val) {
+    if (val) this.busyCount++;
+    else this.busyCount = Math.max(0, this.busyCount - 1);
+    
+    const nowBusy = this.busyCount > 0;
+    if (this.isBusy !== nowBusy) {
+      this.isBusy = nowBusy;
+      if (this.isBusy) {
+        document.body.classList.add('engine-busy');
+      } else {
+        document.body.classList.remove('engine-busy');
+      }
+    }
+  },
+
+  async handleTap(e) {
+    if (this.isBusy) return;
     const dp = SpriteManager.screenToDesign(e.clientX, e.clientY);
     const hit = SpriteManager.hitTest(dp.x, dp.y);
     if (hit && hit.onClick) {
-      hit.onClick();
+      this.setBusy(true);
+      try {
+        await hit.onClick();
+      } finally {
+        this.setBusy(false);
+      }
     }
   },
 
   async switchScene(sceneId, backgroundSrc) {
-    if (SpriteManager.currentSceneId !== sceneId) {
-      this.sceneHistory.push(SpriteManager.currentSceneId);
+    this.setBusy(true);
+    try {
+      if (SpriteManager.currentSceneId !== sceneId) {
+        this.sceneHistory.push(SpriteManager.currentSceneId);
+      }
+      await SpriteManager.setScene(sceneId, backgroundSrc);
+      this.updateBackButton();
+      if (RoomLoader.onSceneChange) RoomLoader.onSceneChange(sceneId);
+    } finally {
+      this.setBusy(false);
     }
-    await SpriteManager.setScene(sceneId, backgroundSrc);
-    this.updateBackButton();
-    if (RoomLoader.onSceneChange) RoomLoader.onSceneChange(sceneId);
   },
 
   async goBack() {
-    if (this.sceneHistory.length > 0) {
-      const prevSceneId = this.sceneHistory.pop();
-      await SpriteManager.setScene(prevSceneId);
-      this.updateBackButton();
-      if (RoomLoader.onSceneChange) RoomLoader.onSceneChange(prevSceneId);
+    this.setBusy(true);
+    try {
+      if (this.sceneHistory.length > 0) {
+        const prevSceneId = this.sceneHistory.pop();
+        await SpriteManager.setScene(prevSceneId);
+        this.updateBackButton();
+        if (RoomLoader.onSceneChange) RoomLoader.onSceneChange(prevSceneId);
+      }
+    } finally {
+      this.setBusy(false);
     }
   },
 
@@ -143,7 +188,7 @@ const Engine = {
     const grid = document.getElementById('level-grid');
     grid.innerHTML = '';
 
-    const maxUnlocked = SaveManager.getSavedRoom();
+    const maxUnlocked = SaveManager.getSavedRoom() || 10;
     
     // Load metadata from rooms.json
     const response = await fetch('data/rooms.json');
@@ -171,10 +216,14 @@ const Engine = {
       `;
 
       if (room.id <= maxUnlocked) {
-        card.onclick = () => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          console.log("Card Click Detected for Room:", room.id);
           this.hideLevelSelect();
           this.loadRoom(room.id);
-        };
+        });
       }
       grid.appendChild(card);
     });
@@ -226,13 +275,32 @@ const Engine = {
     }, 850);
   },
 
-  pickupItem(itemData, startX, startY, onComplete, sfx = 'key_pickup') {
+  pickupItem(itemOrId, startX, startY, onComplete, sfx = 'key_pickup') {
+    this.setBusy(true);
+
+    let itemData;
+    if (typeof itemOrId === 'string') {
+      itemData = this.roomData.items.find(i => i.id === itemOrId);
+      if (!itemData) {
+        console.error(`Item with ID ${itemOrId} not found in room data.`);
+        this.setBusy(false);
+        return;
+      }
+    } else {
+      itemData = itemOrId;
+    }
+
     Audio.playSFX(sfx);
     const slotIdx = Inventory.addItem(itemData, true); // Add silently
     this.animateItemPickup(startX, startY, itemData.icon, slotIdx, itemData.id);
-    if (onComplete) {
-      setTimeout(onComplete, 850); // trigger callback when animation finishes
-    }
+    
+    return new Promise(resolve => {
+      setTimeout(() => {
+        if (onComplete) onComplete();
+        this.setBusy(false);
+        resolve();
+      }, 850);
+    });
   },
 
   async restartRoom() {

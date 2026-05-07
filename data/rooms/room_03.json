@@ -1,0 +1,34 @@
+{
+  "room_number": 3,
+  "room_name": {
+    "en": "The Grand Corridor",
+    "zh": "宏伟走廊"
+  },
+  "hotel_area": {
+    "en": "Main Hall",
+    "zh": "主大厅"
+  },
+  "act": 1,
+  "difficulty_tier": "Beginner",
+  "art_style": "realistic_painterly",
+  "perspective": "2d_point_and_click",
+  "monetization": {
+    "ad_between_rooms": true,
+    "ad_for_hints": true
+  },
+  "room_description": {
+    "en": "A long, dimly lit corridor with deep red carpets and ornate gold-framed paintings. Large windows look out into a stormy night. This hallway connects the dining area to the hotel's more private wings.",
+    "zh": "一条长长的、昏暗的走廊，铺着深红色的地毯，挂着装饰华丽的金色画框。大窗户望向风暴交加的夜晚。这条走廊将用餐区与酒店更私密的侧翼连接起来。"
+  },
+  "story_fragment": {
+    "en": "The portraits on the wall seem to follow your every move. One frame is empty, leaving a rectangular patch of unfaded wallpaper behind.",
+    "zh": "墙上的肖像似乎在跟随你的一举一动。一个画框是空的，在没褪色的壁纸上留下了一个矩形的痕迹。"
+  },
+  "estimated_solve_time_minutes": 5,
+  "items": [],
+  "puzzles": [],
+  "final_action": {
+    "en": "You move deeper into the hotel...",
+    "zh": "你向酒店深处走去..."
+  }
+}

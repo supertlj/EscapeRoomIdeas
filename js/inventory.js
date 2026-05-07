@@ -88,17 +88,48 @@ const Inventory = {
           slot.innerHTML = `<span class="item-label">${I18n.t(item.name)}</span>`;
         }
         
-        slot.addEventListener('click', () => {
-          if (item.examineBg) {
-            Dialog.inspectItem(item.examineBg);
-          } else {
-            this.selectItem(item.id);
-          }
-        });
+        slot.addEventListener('click', () => this.handleItemClick(item));
       } else {
         slot.classList.add('empty');
       }
       container.appendChild(slot);
+    }
+  },
+
+  async handleItemClick(item) {
+    if (Engine.isBusy) return;
+
+    // 1. Try Combination Logic first if an item is already selected
+    if (this.selectedItem && this.selectedItem.id !== item.id) {
+      if (window.Engine && Engine.currentRoomInstance && Engine.currentRoomInstance.handleItemUse) {
+        Engine.setBusy(true);
+        try {
+          if (await Engine.currentRoomInstance.handleItemUse(this.selectedItem.id, item.id)) {
+            return; // Room handled the combination
+          }
+        } finally {
+          Engine.setBusy(false);
+        }
+      }
+    }
+
+    // 2. Drive Action by explicit Item Type
+    switch (item.type) {
+      case 'interactive':
+      case 'document':
+        // UNIFIED ZOOM VIEW: Uses the same HTML modal for all inspection types
+        let hotspots = [];
+        if (Engine.currentRoomInstance && Engine.currentRoomInstance.getInteractiveHotspots) {
+          hotspots = Engine.currentRoomInstance.getInteractiveHotspots(item.id);
+        }
+        Dialog.inspectItem(item.examineBg, hotspots);
+        break;
+
+      case 'tool':
+      default:
+        // STANDARD SELECTION: Highlight to use on environment
+        this.selectItem(item.id);
+        break;
     }
   }
 };
