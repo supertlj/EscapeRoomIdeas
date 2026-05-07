@@ -81,7 +81,7 @@ class KeypadPuzzle {
   cleanup() {
     this.buttons.forEach(btn => btn.removeEventListener('click', this.handleButtonClick));
     this.modal.removeEventListener('click', this.handleOutsideClick);
-    this.modal.classList.add('hidden');
+    this.modal.remove();
   }
 
   show() {
