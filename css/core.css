@@ -39,7 +39,7 @@ html, body {
   height: 100%;
   overflow: hidden;
   background-color: #1a1a24;
-  background-image: url('../assets/ui/main_bg.png');
+  background-image: url('../assets/ui/main_bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
