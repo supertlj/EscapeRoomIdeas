@@ -43,14 +43,46 @@ const Dialog = {
     };
   },
 
-  inspectItem(imgSrc) {
+  inspectItem(imgSrc, hotspots = []) {
     const modal = document.getElementById('item-inspect-modal');
     const img = document.getElementById('item-inspect-image');
+    const container = document.getElementById('item-inspect-hotspots');
+    
     if (!modal || !img) {
       console.error('item-inspect-modal or item-inspect-image not found in DOM.');
       return;
     }
+    
     img.src = imgSrc;
+    
+    // Clear old hotspots
+    if (container) {
+      container.innerHTML = '';
+      container.style.pointerEvents = 'none'; // Container is pass-through
+      container.style.zIndex = '9000'; // Above image
+      hotspots.forEach(hs => {
+        const div = document.createElement('div');
+        div.style.position = 'absolute';
+        div.style.left = hs.x + 'px';
+        div.style.top = hs.y + 'px';
+        div.style.width = hs.w + 'px';
+        div.style.height = hs.h + 'px';
+        div.style.pointerEvents = 'auto';
+        div.style.cursor = 'pointer';
+        div.style.zIndex = '9999';
+        
+        const trigger = (e) => {
+          e.stopPropagation();
+          if (hs.onClick) hs.onClick();
+        };
+
+        div.onclick = trigger;
+        div.addEventListener('mousedown', trigger);
+        
+        container.appendChild(div);
+      });
+    }
+    
     modal.classList.remove('hidden');
   }
 };

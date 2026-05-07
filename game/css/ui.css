@@ -15,7 +15,7 @@
   padding: 0 40px;
   padding-top: var(--safe-area-top);
   background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.3) 70%, transparent 100%);
-  z-index: 20;
+  z-index: 10000; /* Above zoom modals */
 }
 
 
@@ -126,7 +126,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 40px;
-  z-index: 15;
+  z-index: 10000; /* Above zoom modals */
 }
 
 #inventory-slots {
@@ -221,7 +221,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
+  z-index: 10000;
   pointer-events: none;
 }
 
@@ -427,15 +427,17 @@
 
 .level-select-content {
   width: 900px;
-  height: 1400px;
-  background: #111;
+  height: 80vh;
+  max-height: 1400px;
+  background: #0a0a0a;
   border: 4px solid var(--gold);
   border-radius: 40px;
-  padding: 60px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   box-shadow: 0 0 100px #000;
+  position: relative;
 }
 
 .level-grid {
@@ -444,30 +446,66 @@
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-  padding: 20px;
+  gap: 30px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
 }
 
 .level-card {
   position: relative;
-  aspect-ratio: 1 / 1;
+  height: 350px;
   background-size: cover;
   background-position: center;
   border: 2px solid #333;
   border-radius: 20px;
   cursor: pointer;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .level-card:hover { border-color: var(--gold); transform: translateY(-5px); }
 
+.level-card.locked {
+  filter: grayscale(0.8) brightness(0.4);
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+.level-card.locked::after {
+  content: '🔒';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  opacity: 0.5;
+}
+
+.level-card.no-asset {
+  background: #1a1a1a;
+  border-style: dashed;
+}
+
+.level-card.no-asset::after {
+  content: 'COMING SOON';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: 20px;
+  color: #444;
+}
+
 .level-info {
-  background: linear-gradient(to top, #000 0%, transparent 100%);
-  padding: 20px 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  padding: 30px 20px;
+  width: 100%;
+}
   text-align: center;
 }
 
@@ -481,49 +519,84 @@
 /* ============================================
    SECTION: SHARED DESIGN SYSTEM (THE ZOOM FRAME)
    ============================================ */
-.modal-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 1080px; height: 1920px;
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(10px);
-    z-index: 9000;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    pointer-events: auto;
+.modal.zoom-mode {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(10px) !important;
+  z-index: 9000;
+  pointer-events: auto !important;
 }
 
-.zoom-frame {
-    width: 900px;
-    height: 900px;
-    border: 6px solid #c9a84c;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.8), 0 0 20px rgba(201, 168, 76, 0.3);
-    position: relative;
-    overflow: hidden;
+.zoom-overlay-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
 }
 
-.zoom-hint-text {
-    margin-top: 60px !important;
-    font-family: 'Cinzel', serif;
-    color: rgba(201, 168, 76, 0.8);
-    font-size: 34px !important;
-    letter-spacing: 12px !important;
-    text-transform: uppercase;
-    text-align: center;
-    width: 100%;
-    animation: hintPulse 3s infinite ease-in-out;
-    pointer-events: none;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+/* Base frame for ALL zooms (Notes, Keypads, Dials, etc.) */
+.zoom-inner-box {
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  border: 4px solid #c9a84c;
+  border-radius: 12px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.9), 0 0 20px rgba(201, 168, 76, 0.3);
+  pointer-events: auto;
+  overflow: hidden;
 }
 
-@keyframes hintPulse {
-    0%, 100% { opacity: 0.5; transform: scale(0.98); }
-    50% { opacity: 0.9; transform: scale(1.0); }
+/* Layout Variant: Centered Flex (Best for Notes, Simple Items, Mechanical Dials) */
+.zoom-inner-box.centered-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Layout Variant: Absolute Layering (Best for Complex Electronic Puzzles with precise overlays) */
+.zoom-inner-box.absolute-layout {
+  display: block; /* Default block behavior for relative container with absolute children */
+}
+
+.zoom-hint {
+  margin-top: 50px;
+  color: #c9a84c;
+  font-family: 'Cinzel', serif;
+  font-size: 28px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  animation: softPulse 2s infinite;
+  pointer-events: none;
+  text-align: center;
+  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+}
+
+/* Debug Mode Overlays */
+body.debug-mode #item-inspect-hotspots div {
+  border: 1px dashed #ff00ff !important;
+  background: rgba(255, 0, 255, 0.1) !important;
+}
+
+@keyframes softPulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.98); }
+  50% { opacity: 0.9; transform: scale(1.0); }
 }
 
 .hidden { display: none !important; }
+
+/* Interaction Lock */
+body.engine-busy #btn-back {
+  opacity: 0.5;
+  filter: grayscale(1);
+}
+
+body.engine-busy #game-canvas,
+body.engine-busy #btn-back,
+body.engine-busy #inventory-bar {
+  pointer-events: none !important;
+}

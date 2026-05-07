@@ -28,24 +28,31 @@
   "items": [
     {
       "id": "brass_key",
+      "type": "tool",
       "name": {
         "en": "Brass Key",
         "zh": "黄铜钥匙"
-      }
+      },
+      "icon": "assets/items/room_01/brass_key.png"
     },
     {
       "id": "reception_note",
+      "type": "document",
       "name": {
         "en": "Receptionist's Note",
         "zh": "前台便条"
-      }
+      },
+      "icon": "assets/items/room_01/note_folded.png",
+      "examineBg": "assets/rooms/room_01/zoom_note.png"
     },
     {
       "id": "elevator_token",
+      "type": "tool",
       "name": {
         "en": "Elevator Token",
         "zh": "电梯代币"
-      }
+      },
+      "icon": "assets/items/room_01/elevator_token.png"
     }
   ],
   "puzzles": [

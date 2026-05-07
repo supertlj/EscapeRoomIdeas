@@ -18,43 +18,45 @@ class KeypadPuzzle {
 
   createDOM() {
     this.modal = document.createElement('div');
-    this.modal.className = `modal hidden ${this.cssClass}`;
+    this.modal.className = `modal zoom-mode hidden ${this.cssClass}`;
     this.modal.id = 'keypad-modal';
     
     this.modal.innerHTML = `
-      <div class="zoom-overlay-container" style="width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <div id="keypad-overlay-inner">
-          <img src="${this.bgImage}" id="keypad-bg-image" alt="Keypad">
-          
-          <div id="keypad-display-overlay">
-            <div id="keypad-digits">
-              <span class="digit-slot"></span>
-              <span class="digit-slot"></span>
-              <span class="digit-slot"></span>
-              <span class="digit-slot"></span>
+      <div class="zoom-overlay-container">
+        <div class="zoom-inner-box centered-layout" id="keypad-overlay-inner">
+          <div id="keypad-wrapper" style="position: relative; width: 800px; height: 800px;">
+            <img src="${this.bgImage}" id="keypad-bg-image" alt="Keypad" style="width: 100%; height: 100%; object-fit: contain;">
+            
+            <div id="keypad-display-overlay">
+              <div id="keypad-digits">
+                <span class="digit-slot"></span>
+                <span class="digit-slot"></span>
+                <span class="digit-slot"></span>
+                <span class="digit-slot"></span>
+              </div>
             </div>
-          </div>
 
-          <div id="keypad-button-grid">
-            <div class="key-row">
-              <button class="key-btn" data-val="1"></button>
-              <button class="key-btn" data-val="2"></button>
-              <button class="key-btn" data-val="3"></button>
-            </div>
-            <div class="key-row">
-              <button class="key-btn" data-val="4"></button>
-              <button class="key-btn" data-val="5"></button>
-              <button class="key-btn" data-val="6"></button>
-            </div>
-            <div class="key-row">
-              <button class="key-btn" data-val="7"></button>
-              <button class="key-btn" data-val="8"></button>
-              <button class="key-btn" data-val="9"></button>
-            </div>
-            <div class="key-row">
-              <button class="key-btn" data-val="CLEAR"></button>
-              <button class="key-btn" data-val="0"></button>
-              <button class="key-btn" data-val="ENTER"></button>
+            <div id="keypad-button-grid">
+              <div class="key-row">
+                <button class="key-btn" data-val="1"></button>
+                <button class="key-btn" data-val="2"></button>
+                <button class="key-btn" data-val="3"></button>
+              </div>
+              <div class="key-row">
+                <button class="key-btn" data-val="4"></button>
+                <button class="key-btn" data-val="5"></button>
+                <button class="key-btn" data-val="6"></button>
+              </div>
+              <div class="key-row">
+                <button class="key-btn" data-val="7"></button>
+                <button class="key-btn" data-val="8"></button>
+                <button class="key-btn" data-val="9"></button>
+              </div>
+              <div class="key-row">
+                <button class="key-btn" data-val="CLEAR"></button>
+                <button class="key-btn" data-val="0"></button>
+                <button class="key-btn" data-val="ENTER"></button>
+              </div>
             </div>
           </div>
         </div>
@@ -99,26 +101,48 @@ class KeypadPuzzle {
     }
   }
 
-  handleButtonClick(e) {
-    const btn = e.currentTarget;
-    const val = btn.dataset.val;
-    Audio.playSFX('button_click');
+  async handleButtonClick(e) {
+    if (Engine.isBusy) return;
+    Engine.isBusy = true;
 
-    if (val === 'CLEAR') {
-      this.currentCode = '';
-    } else if (val === 'ENTER') {
-      if (this.currentCode === this.targetCode) {
-        this.onSuccess();
-      } else {
-        this.onFail();
+    try {
+      const btn = e.currentTarget;
+      const val = btn.dataset.val;
+      Audio.playSFX('button_click');
+
+      if (val === 'CLEAR') {
         this.currentCode = '';
+      } else if (val === 'ENTER') {
+        if (this.currentCode === this.targetCode) {
+          await this.onSuccess();
+        } else {
+          this.onFail();
+          this.currentCode = '';
+        }
+      } else {
+        if (this.currentCode.length < this.targetCode.length) {
+          this.currentCode += val;
+          
+          // Auto-check when max length is reached
+          if (this.currentCode.length === this.targetCode.length) {
+            this.updateDisplay(); // Show the last digit first
+            await new Promise(resolve => setTimeout(resolve, 300));
+            
+            if (this.currentCode === this.targetCode) {
+              await this.onSuccess();
+            } else {
+              this.onFail();
+              this.currentCode = '';
+              this.updateDisplay();
+            }
+            return;
+          }
+        }
       }
-    } else {
-      if (this.currentCode.length < 4) {
-        this.currentCode += val;
-      }
+      this.updateDisplay();
+    } finally {
+      Engine.isBusy = false;
     }
-    this.updateDisplay();
   }
 
   updateDisplay() {

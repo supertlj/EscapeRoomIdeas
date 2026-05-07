@@ -1,68 +1,15 @@
-﻿/* ============================================
+/* ============================================
    KEYPAD PUZZLE (LED / Electronic) - FINAL CLEAN
    ============================================ */
 
 /* 1. KILL ALL MODAL BORDERS FOR KEYPAD */
-.modal.keypad-room01, 
-.modal.keypad-room02,
-#keypad-modal {
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+.modal.zoom-mode {
   backdrop-filter: blur(10px) !important;
 }
 
 /* 2. RESTORE GOLD STANDARD STRUCTURE */
-.zoom-overlay-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-}
-
 #keypad-overlay-inner {
-  position: relative;
-  width: 800px;
-  height: 800px;
-  background: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  pointer-events: auto;
-  border: none !important; /* Ensure NO border here */
-}
-
-#keypad-bg-image {
-  width: 800px;
-  height: 800px;
-  object-fit: cover;
-  border: 4px solid #c9a84c; /* THE ONLY BORDER */
-  box-shadow: 0 0 80px rgba(0,0,0,1), 0 0 20px rgba(201, 168, 76, 0.3);
-  background: #000;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.zoom-hint {
-  margin-top: 50px;
-  color: #c9a84c;
-  font-family: 'Cinzel', serif;
-  font-size: 28px;
-  letter-spacing: 6px;
-  text-transform: uppercase;
-  opacity: 0.9;
-  text-align: center;
-  width: 100%;
-  animation: softPulse 2s infinite;
-  pointer-events: none;
-}
-
-@keyframes softPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 1; }
+  padding: 0; /* Remove padding to avoid shifting the centered unit */
 }
 
 #keypad-display-overlay {
@@ -164,3 +111,33 @@
     color: #ff8c00;
     text-shadow: 0 0 15px rgba(255, 140, 0, 0.7), 0 0 5px rgba(255, 140, 0, 0.5);
 }
+
+/* ============================================
+   ROOM-SPECIFIC CALIBRATION
+   ============================================ */
+
+/* Room 01: Brass Plate Hardware */
+.keypad-room01 #keypad-display-overlay {
+  top: 85px;
+  left: 260px;
+  width: 295px;
+  height: 115px;
+}
+
+.keypad-room01 #keypad-button-grid {
+  top: 260px;
+  left: 265px;
+  width: 285px;
+  height: 405px;
+}
+
+/* DEBUG MODE: Set to 'true' to see hitboxes */
+/*
+.keypad-room01 .key-btn {
+  background: rgba(255, 0, 0, 0.4) !important;
+  border: 1px solid rgba(255, 0, 0, 0.8) !important;
+}
+.keypad-room01 #keypad-display-overlay {
+  background: rgba(0, 255, 0, 0.2) !important;
+}
+*/

@@ -21,11 +21,21 @@ const RoomLoader = {
 
   loadScript(src) {
     return new Promise((resolve, reject) => {
-      if (document.querySelector(`script[src="${src}"]`)) return resolve();
+      if (document.querySelector(`script[src="${src}"]`)) {
+        console.log(`RoomLoader: Script already loaded: ${src}`);
+        return resolve();
+      }
+      console.log(`RoomLoader: Loading script: ${src}`);
       const script = document.createElement('script');
       script.src = src;
-      script.onload = resolve;
-      script.onerror = reject;
+      script.onload = () => {
+        console.log(`RoomLoader: Script loaded successfully: ${src}`);
+        resolve();
+      };
+      script.onerror = (err) => {
+        console.error(`RoomLoader: Failed to load script: ${src}`, err);
+        reject(err);
+      };
       document.body.appendChild(script);
     });
   },

@@ -28,24 +28,31 @@
   "items": [
     {
       "id": "vintage_bottle",
+      "type": "interactive",
       "name": {
         "en": "Vintage Wine Bottle",
         "zh": "陈年葡萄酒瓶"
-      }
+      },
+      "icon": "assets/items/room_02/vintage_bottle.png",
+      "examineBg": "assets/items/room_02/vintage_bottle.png"
     },
     {
       "id": "corkscrew",
+      "type": "tool",
       "name": {
         "en": "Brass Corkscrew",
         "zh": "黄铜开瓶器"
-      }
+      },
+      "icon": "assets/items/room_02/corkscrew.png"
     },
     {
       "id": "dining_key",
+      "type": "tool",
       "name": {
         "en": "Dining Room Key",
         "zh": "餐厅钥匙"
-      }
+      },
+      "icon": "assets/items/room_02/dining_key.png"
     }
   ],
   "puzzles": [
