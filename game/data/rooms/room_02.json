@@ -33,8 +33,8 @@
         "en": "Vintage Wine Bottle",
         "zh": "陈年葡萄酒瓶"
       },
-      "icon": "assets/items/room_02/vintage_bottle.png",
-      "examineBg": "assets/items/room_02/vintage_bottle.png"
+      "icon": "assets/items/room_02/vintage_bottle.webp",
+      "examineBg": "assets/items/room_02/vintage_bottle.webp"
     },
     {
       "id": "corkscrew",
@@ -43,7 +43,7 @@
         "en": "Brass Corkscrew",
         "zh": "黄铜开瓶器"
       },
-      "icon": "assets/items/room_02/corkscrew.png"
+      "icon": "assets/items/room_02/corkscrew.webp"
     },
     {
       "id": "dining_key",
@@ -52,7 +52,7 @@
         "en": "Dining Room Key",
         "zh": "餐厅钥匙"
       },
-      "icon": "assets/items/room_02/dining_key.png"
+      "icon": "assets/items/room_02/dining_key.webp"
     }
   ],
   "puzzles": [

@@ -30,29 +30,29 @@ class Room02 extends BaseRoom {
     };
 
     // Load everything silently
-    await loadScene('main', `${assetPath}/background.png`);
-    await loadScene('chalkboard', `${assetPath}/chalkboard_zoom.png`);
-    await loadScene('table_2', `${assetPath}/table_2_zoom.png`);
-    await loadScene('table_4', `${assetPath}/table_4_zoom.png`);
-    await loadScene('table_7', `${assetPath}/table_7_zoom.png`);
-    await loadScene('hatch', `${assetPath}/hatch_zoom.png`);
-    await loadScene('service_note', `${assetPath}/servicenote_zoom.png`);
-    await loadScene('door', `${assetPath}/door_zoom.png`);
-    await loadScene('door_open', `${assetPath}/door_open_zoom.png`);
+    await loadScene('main', `${assetPath}/background.webp`);
+    await loadScene('chalkboard', `${assetPath}/chalkboard_zoom.webp`);
+    await loadScene('table_2', `${assetPath}/table_2_zoom.webp`);
+    await loadScene('table_4', `${assetPath}/table_4_zoom.webp`);
+    await loadScene('table_7', `${assetPath}/table_7_zoom.webp`);
+    await loadScene('hatch', `${assetPath}/hatch_zoom.webp`);
+    await loadScene('service_note', `${assetPath}/servicenote_zoom.webp`);
+    await loadScene('door', `${assetPath}/door_zoom.webp`);
+    await loadScene('door_open', `${assetPath}/door_open_zoom.webp`);
     
     const cabinetBg = this.state.wineCabinetOpen ? 
-      (this.state.hasCorkscrew ? 'assets/rooms/room_02/cabinet_zoom_empty.png' : 'assets/rooms/room_02/cabinet_zoom_open.png') : 
-      'assets/rooms/room_02/cabinet_zoom.png';
+      (this.state.hasCorkscrew ? 'assets/rooms/room_02/cabinet_zoom_empty.webp' : 'assets/rooms/room_02/cabinet_zoom_open.webp') : 
+      'assets/rooms/room_02/cabinet_zoom.webp';
     await loadScene('cabinet', cabinetBg);
     
     // Preload overlays and Open states
-    await AssetLoader.loadImage('hatch_open_patch', `${assetPath}/hatch_open_patch.png`);
-    await AssetLoader.loadImage('hatch_zoom_open', `${assetPath}/hatch_zoom_open.png`);
-    await AssetLoader.loadImage('hatch_zoom_open_with_bottle', `${assetPath}/hatch_zoom_open_with_bottle.png`);
-    await AssetLoader.loadImage('cabinet_open_patch', `${assetPath}/cabinet_open_patch.png`);
-    await AssetLoader.loadImage('door_open_patch', `${assetPath}/door_open_patch.png`);
-    await AssetLoader.loadImage('vintage_bottle_sprite', `assets/items/room_02/vintage_bottle.png`);
-    await AssetLoader.loadImage('bottle_with_key_sprite', `assets/items/room_02/bottle_with_key.png`);
+    await AssetLoader.loadImage('hatch_open_patch', `${assetPath}/hatch_open_patch.webp`);
+    await AssetLoader.loadImage('hatch_zoom_open', `${assetPath}/hatch_zoom_open.webp`);
+    await AssetLoader.loadImage('hatch_zoom_open_with_bottle', `${assetPath}/hatch_zoom_open_with_bottle.webp`);
+    await AssetLoader.loadImage('cabinet_open_patch', `${assetPath}/cabinet_open_patch.webp`);
+    await AssetLoader.loadImage('door_open_patch', `${assetPath}/door_open_patch.webp`);
+    await AssetLoader.loadImage('vintage_bottle_sprite', `assets/items/room_02/vintage_bottle.webp`);
+    await AssetLoader.loadImage('bottle_with_key_sprite', `assets/items/room_02/bottle_with_key.webp`);
 
     // Set the starting scene correctly
     SpriteManager.currentSceneId = 'main';
@@ -156,7 +156,7 @@ class Room02 extends BaseRoom {
           SpriteManager.updateSprite('main', 'door_open_overlay', { visible: true });
           
           // Swap background of the zoom scene too
-          SpriteManager.setScene('door', 'assets/rooms/room_02/door_open_zoom.png');
+          SpriteManager.setScene('door', 'assets/rooms/room_02/door_open_zoom.webp');
           
           Dialog.showStory(I18n.currentLang === 'zh' ? '你用钥匙打开了门，离开餐厅进入了走廊。' : 'You use the key to open the door and leave the restaurant into the corridor.');
         } else {
@@ -194,7 +194,7 @@ class Room02 extends BaseRoom {
           SpriteManager.updateSprite('main', 'hatch_bottle_overlay', { visible: false });
           
           // Swap background to empty version
-          SpriteManager.setScene('hatch', 'assets/rooms/room_02/hatch_zoom_open.png');
+          SpriteManager.setScene('hatch', 'assets/rooms/room_02/hatch_zoom_open.webp');
           
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '获得陈年酒瓶' : 'Obtained the Vintage Bottle!');
         });
@@ -204,7 +204,7 @@ class Room02 extends BaseRoom {
     // The Cabinet Zoom
     // Initial scene background is set in setupZoomScenes if opened
     if (this.state.wineCabinetOpen) {
-      SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_open.png');
+      SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_open.webp');
     }
 
     // Brass Corkscrew (Inside cabinet)
@@ -219,7 +219,7 @@ class Room02 extends BaseRoom {
         Engine.pickupItem('corkscrew', 540, 960, () => {
           this.state.hasCorkscrew = true;
           // Swap to empty background in zoom view
-          SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_empty.png');
+          SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_empty.webp');
           SpriteManager.updateSprite('cabinet', 'brass_corkscrew_item', { visible: false });
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '获得黄铜开瓶器' : 'Found the Brass Corkscrew!');
         });
@@ -275,8 +275,8 @@ class Room02 extends BaseRoom {
     // Kitchen Hatch Puzzle (Code 51) using the new DialPuzzle
     this.hatchDial = new DialPuzzle({
       targetValue: 51,
-      assetPath: 'assets/rooms/room_02/dial.png',
-      bgImage: 'assets/rooms/room_02/hatch_zoom.png',
+      assetPath: 'assets/rooms/room_02/dial.webp',
+      bgImage: 'assets/rooms/room_02/hatch_zoom.webp',
       onSuccess: async () => {
         this.state.kitchenHatchLocked = false;
         this.state.kitchenHatchOpen = true;
@@ -308,7 +308,7 @@ class Room02 extends BaseRoom {
 
     this.cabinetLock = new CombinationLockPuzzle({
       targetCode: '472',
-      bgImage: 'assets/rooms/room_02/cabinet_lock.png',
+      bgImage: 'assets/rooms/room_02/cabinet_lock.webp',
       onSuccess: async () => {
         this.state.wineCabinetLocked = false;
         this.state.wineCabinetOpen = true;
@@ -316,7 +316,7 @@ class Room02 extends BaseRoom {
         this.cabinetLock.hide();
         
         // Update backgrounds
-        await SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_open.png');
+        await SpriteManager.setScene('cabinet', 'assets/rooms/room_02/cabinet_zoom_open.webp');
         
         // Show the corkscrew in the zoom view
         SpriteManager.updateSprite('cabinet', 'brass_corkscrew_item', { visible: !this.state.hasCorkscrew });
@@ -353,7 +353,7 @@ class Room02 extends BaseRoom {
     Audio.playSFX('door_open'); // Placeholder for cork pop
     
     // Refresh the modal with the new image and new hotspots
-    Dialog.inspectItem('assets/items/room_02/bottle_with_key.png', this.getInteractiveHotspots('vintage_bottle'));
+    Dialog.inspectItem('assets/items/room_02/bottle_with_key.webp', this.getInteractiveHotspots('vintage_bottle'));
   }
 
   cleanup() {

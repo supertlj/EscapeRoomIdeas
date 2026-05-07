@@ -201,7 +201,7 @@ const Engine = {
       
       const padded = String(room.id).padStart(2, '0');
       if (room.developed) {
-        card.style.backgroundImage = `url('assets/rooms/room_${padded}/background.png')`;
+        card.style.backgroundImage = `url('assets/rooms/room_${padded}/background.webp')`;
       } else {
         card.classList.add('no-asset');
       }

@@ -33,7 +33,7 @@
         "en": "Brass Key",
         "zh": "黄铜钥匙"
       },
-      "icon": "assets/items/room_01/brass_key.png"
+      "icon": "assets/items/room_01/brass_key.webp"
     },
     {
       "id": "reception_note",
@@ -42,8 +42,8 @@
         "en": "Receptionist's Note",
         "zh": "前台便条"
       },
-      "icon": "assets/items/room_01/note_folded.png",
-      "examineBg": "assets/rooms/room_01/zoom_note.png"
+      "icon": "assets/items/room_01/note_folded.webp",
+      "examineBg": "assets/rooms/room_01/zoom_note.webp"
     },
     {
       "id": "elevator_token",
@@ -52,7 +52,7 @@
         "en": "Elevator Token",
         "zh": "电梯代币"
       },
-      "icon": "assets/items/room_01/elevator_token.png"
+      "icon": "assets/items/room_01/elevator_token.webp"
     }
   ],
   "puzzles": [

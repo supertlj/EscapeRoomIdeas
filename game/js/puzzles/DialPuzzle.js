@@ -5,7 +5,7 @@ class DialPuzzle {
   constructor({ targetValue, onSuccess, assetPath, bgImage }) {
     this.targetValue = targetValue;
     this.onSuccess = onSuccess;
-    this.bgImage = bgImage || 'assets/rooms/room_02/hatch_zoom.png';
+    this.bgImage = bgImage || 'assets/rooms/room_02/hatch_zoom.webp';
     // Derive basePath from assetPath (e.g., 'assets/rooms/room_02/')
     this.basePath = assetPath.substring(0, assetPath.lastIndexOf('/') + 1);
     this.currentValue = 0;
@@ -26,8 +26,8 @@ class DialPuzzle {
             <img src="${this.bgImage}" id="dial-bg" style="width: 100%; height: 100%; object-fit: contain; filter: blur(4px) brightness(0.8); transform: scale(1.05);">
             
             <div class="dial-frame" style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%) scale(0.85); filter: drop-shadow(0 20px 40px rgba(0,0,0,0.9));">
-              <img src="${this.basePath}dial_outer.png" id="dial-outer" class="dial-layer outer dial-img" style="filter: sepia(0.3) brightness(0.9);">
-              <img src="${this.basePath}dial_inner.png" id="dial-inner" class="dial-layer inner dial-img" style="filter: sepia(0.3) brightness(0.95);">
+              <img src="${this.basePath}dial_outer.webp" id="dial-outer" class="dial-layer outer dial-img" style="filter: sepia(0.3) brightness(0.9);">
+              <img src="${this.basePath}dial_inner.webp" id="dial-inner" class="dial-layer inner dial-img" style="filter: sepia(0.3) brightness(0.95);">
             </div>
 
             <div class="dial-controls" style="position: absolute; bottom: 100px; left: 0; width: 100%; display: flex; justify-content: center; align-items: center; gap: 40px; pointer-events: none;">

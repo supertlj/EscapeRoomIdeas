@@ -2,7 +2,7 @@ class KeypadPuzzle {
   constructor(options = {}) {
     this.targetCode = options.targetCode || '0000';
     this.cssClass = options.cssClass || 'keypad-room01';
-    this.bgImage = options.bgImage || 'assets/rooms/room_01/zoom_keypad.png';
+    this.bgImage = options.bgImage || 'assets/rooms/room_01/zoom_keypad.webp';
     this.onSuccess = options.onSuccess || (() => {});
     this.onFail = options.onFail || (() => {});
     this.onClose = options.onClose || (() => {});
