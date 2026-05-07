@@ -167,7 +167,7 @@ class Room02 extends BaseRoom {
           // Swap background of the zoom scene too
           SpriteManager.setScene('door', 'assets/rooms/room_02/door_open_zoom.webp');
           
-          Dialog.showStory(I18n.currentLang === 'zh' ? '你用钥匙打开了门，离开餐厅进入了走廊。' : 'You use the key to open the door and leave the restaurant into the corridor.');
+          Dialog.showFeedback(I18n.currentLang === 'zh' ? '门已打开' : 'Door opened', 2000);
         } else {
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '门锁着。我需要餐厅钥匙。' : 'The door is locked. I need the Dining Room Key.');
         }
@@ -177,8 +177,8 @@ class Room02 extends BaseRoom {
     // Relying on global UI back button for other scenes.
     // Chalkboard details
     SpriteManager.addSprite('chalkboard', {
-      id: 'read_menu', x: 200, y: 200, w: 600, h: 600,
-      onClick: () => Dialog.showFeedback(I18n.currentLang === 'zh' ? '主厨特供：龙虾浓汤 $14，菲力牛排 $28，焦糖布丁 $9。' : 'Chef\'s Special: Lobster Bisque $14, Filet Mignon $28, Crème Brûlée $9.')
+      id: 'read_menu', x: 100, y: 100, w: 824, h: 824,
+      onClick: () => Dialog.showFeedback(I18n.currentLang === 'zh' ? '主厨特供：龙虾浓汤 $14，菲力牛排 $28，焦糖布丁 $9。边上潦草地写着：“把特价菜加起来。那是我的储物柜号码。——R厨师”' : "Chef's Special: Lobster Bisque $14, Filet Mignon $28, Crème Brûlée $9. A note scrawled in the margin says: 'Add the specials. That's my locker number. — Chef R.'")
     });
 
     // The Hatch Zoom - Needs to show the open state and the bottle
@@ -208,6 +208,24 @@ class Room02 extends BaseRoom {
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '获得陈年酒瓶' : 'Obtained the Vintage Bottle!');
         });
       }
+    });
+
+    // Table 2 Zoom Sprites
+    SpriteManager.addSprite('table_2', {
+      id: 'table_2_sign', x: 350, y: 380, w: 280, h: 250,
+      onClick: () => Dialog.showFeedback(I18n.currentLang === 'zh' ? '2号桌。金色的餐巾叠得整整齐齐。' : 'Table 2. The gold napkin is perfectly folded.')
+    });
+
+    // Table 4 Zoom Sprites
+    SpriteManager.addSprite('table_4', {
+      id: 'table_4_chef_note', x: 200, y: 550, w: 300, h: 400,
+      onClick: () => Dialog.showFeedback(I18n.currentLang === 'zh' ? '厨房员工的手写便条：“厨师说要把特价菜加起来才能找到他的储物柜号码。查看黑板菜单了解价格。”' : "A handwritten note from the kitchen staff: 'The chef says to add the specials up to find his locker number. Check the chalkboard menu for the prices.'")
+    });
+
+    // Table 7 Zoom Sprites
+    SpriteManager.addSprite('table_7', {
+      id: 'table_7_reservation', x: 280, y: 310, w: 170, h: 160,
+      onClick: () => Dialog.showStory(I18n.currentLang === 'zh' ? '7号桌上有一张预订卡：“E.V. Grandview先生——双人晚餐——10月14日晚8:00。”但第二把椅子被推开，餐巾纸没有动过。原本要来赴约的人从未到达——或者匆忙离开了。' : "Table 7 has a reservation card: 'Mr. E.V. Grandview — Dinner for Two — Oct 14, 8:00 PM.' But the second chair is pulled back, napkin untouched. Whoever was supposed to join him never arrived — or left in a hurry.")
     });
 
     // The Cabinet Zoom

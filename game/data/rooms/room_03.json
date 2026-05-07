@@ -1,12 +1,12 @@
 {
   "room_number": 3,
   "room_name": {
-    "en": "The Grand Corridor",
-    "zh": "宏伟走廊"
+    "en": "The Hotel Bar",
+    "zh": "酒店酒吧"
   },
   "hotel_area": {
-    "en": "Main Hall",
-    "zh": "主大厅"
+    "en": "Bar",
+    "zh": "酒吧"
   },
   "act": 1,
   "difficulty_tier": "Beginner",
@@ -17,18 +17,75 @@
     "ad_for_hints": true
   },
   "room_description": {
-    "en": "A long, dimly lit corridor with deep red carpets and ornate gold-framed paintings. Large windows look out into a stormy night. This hallway connects the dining area to the hotel's more private wings.",
-    "zh": "一条长长的、昏暗的走廊，铺着深红色的地毯，挂着装饰华丽的金色画框。大窗户望向风暴交加的夜晚。这条走廊将用餐区与酒店更私密的侧翼连接起来。"
+    "en": "A moody, wood-paneled cocktail bar with a long mahogany counter, leather bar stools, and a large mirror behind rows of dusty bottles. A broken jukebox sits in the corner, its neon flickering weakly. Cocktail shakers and glasses still line the counter, and a bartender's cloth drapes over the brass beer taps. A locked cash register sits at the end of the bar.",
+    "zh": "一间氛围感十足的木质鸡尾酒吧，长长的红木吧台、皮革吧凳，以及一面大镜子后面排列着落满灰尘的酒瓶。角落里有一台坏掉的点唱机，霓虹灯微弱地闪烁。调酒器和酒杯仍然排列在吧台上，调酒师的布巾搭在黄铜啤酒龙头上。吧台尽头有一台锁着的收银机。"
   },
   "story_fragment": {
-    "en": "The portraits on the wall seem to follow your every move. One frame is empty, leaving a rectangular patch of unfaded wallpaper behind.",
-    "zh": "墙上的肖像似乎在跟随你的一举一动。一个画框是空的，在没褪色的壁纸上留下了一个矩形的痕迹。"
+    "en": "A leather-bound bartender's diary lies open behind the counter. The last entry reads: 'Oct 14 — Mr. G came in at 9 PM, alone. Said his dinner guest never showed. Ordered three whiskeys. Asked me if I'd ever kept a secret so big it could swallow you whole. Tipped $100. Never saw him again.'",
+    "zh": "吧台后面放着一本皮面装订的调酒师日记，翻开着。最后一条记录写道：'10月14日——G先生晚上9点独自来了。说他的晚餐客人没来。点了三杯威士忌。问我是否曾经守过一个大到能把你吞噬的秘密。给了$100小费。再也没见过他。'"
   },
   "estimated_solve_time_minutes": 5,
-  "items": [],
-  "puzzles": [],
+  "items": [
+    {
+      "id": "cocktail_recipe",
+      "name": {
+        "en": "Cocktail Recipe Card",
+        "zh": "鸡尾酒配方卡"
+      },
+      "icon": "assets/items/room_03/recipe.webp",
+      "type": "document"
+    },
+    {
+      "id": "jukebox_coin",
+      "name": {
+        "en": "Jukebox Coin",
+        "zh": "点唱机硬币"
+      },
+      "icon": "assets/items/room_03/coin.webp",
+      "type": "tool"
+    },
+    {
+      "id": "bar_exit_key",
+      "name": {
+        "en": "Bar Storage Key",
+        "zh": "酒吧储物间钥匙"
+      },
+      "icon": "assets/items/room_03/storage_key.webp",
+      "type": "tool"
+    }
+  ],
+  "puzzles": [
+    {
+      "id": 0,
+      "puzzle_name": "Mirror Writing",
+      "target_code": "1385",
+      "hints": {
+        "en": [
+          "Something is written behind the bottles, but it's hard to read directly.",
+          "Check the mirror behind the bar. What does the reflection show?",
+          "The mirror shows 5831, but reflections are reversed. Try 1385."
+        ],
+        "zh": [
+          "酒瓶后面写了东西，但直接看很难读懂。",
+          "检查吧台后面的镜子。倒影显示了什么？",
+          "镜子显示5831，但倒影是反转的。试试1385。"
+        ]
+      }
+    },
+    {
+      "id": 1,
+      "puzzle_name": "Cocktail Mixing",
+      "recipe": "2 Blue, 1 Red, 3 Gold",
+      "target_coaster": "4"
+    },
+    {
+      "id": 2,
+      "puzzle_name": "Jukebox Track",
+      "target_track": "B7"
+    }
+  ],
   "final_action": {
-    "en": "You move deeper into the hotel...",
-    "zh": "你向酒店深处走去..."
+    "en": "You unlock the storage door and move into the service corridor.",
+    "zh": "你打开了储藏室的门，进入了服务走廊。"
   }
 }

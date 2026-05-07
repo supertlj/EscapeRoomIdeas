@@ -166,7 +166,8 @@ class Room01 extends BaseRoom {
   setupElevator() {
     SpriteManager.addSprite('zoom_elevator', {
       id: 'elevator_keypad_zoom', x: 745, y: 475, w: 70, h: 100,
-      onClick: async () => {
+      onClick: () => {
+        if (this.state.elevatorOpen) return;
         this.keypad.show();
       }
     });
