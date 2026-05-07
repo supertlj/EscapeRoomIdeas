@@ -6,7 +6,16 @@ const I18n = {
 
   init() {
     const saved = localStorage.getItem('grandview_lang');
-    if (saved) this.currentLang = saved;
+    if (saved) {
+      this.currentLang = saved;
+    } else {
+      const browserLang = navigator.language || navigator.userLanguage;
+      if (browserLang && browserLang.startsWith('zh')) {
+        this.currentLang = 'zh';
+      } else {
+        this.currentLang = 'en';
+      }
+    }
   },
 
   toggle() {
