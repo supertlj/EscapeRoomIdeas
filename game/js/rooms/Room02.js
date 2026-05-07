@@ -193,8 +193,8 @@ class Room02 extends BaseRoom {
           SpriteManager.updateSprite('hatch', 'vintage_bottle_item', { visible: false });
           SpriteManager.updateSprite('main', 'hatch_bottle_overlay', { visible: false });
           
-          // Swap background to empty version
-          SpriteManager.setScene('hatch', 'assets/rooms/room_02/hatch_zoom_open.webp');
+          // Swap background sprite to empty version
+          SpriteManager.updateSprite('hatch', 'hatch_open_zoom_bg', { image: AssetLoader.images['hatch_zoom_open'] });
           
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '获得陈年酒瓶' : 'Obtained the Vintage Bottle!');
         });

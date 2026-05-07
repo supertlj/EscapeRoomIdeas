@@ -587,6 +587,11 @@ body.debug-mode #item-inspect-hotspots div {
   50% { opacity: 0.9; transform: scale(1.0); }
 }
 
+/* Safari / Mobile Zoom Prevention */
+#game-container, #game-canvas, #ui-overlay, .zoom-modal {
+  touch-action: manipulation;
+}
+
 .hidden { display: none !important; }
 
 /* Interaction Lock */

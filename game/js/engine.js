@@ -50,6 +50,12 @@ const Engine = {
         console.log('Debug Mode:', SpriteManager.debugMode ? 'ON' : 'OFF');
       }
     });
+    
+    // Prevent Safari double-click zoom and gestures
+    document.addEventListener('gesturestart', (e) => e.preventDefault());
+    document.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 1) e.preventDefault();
+    }, { passive: false });
 
     await this.loadRoom(SaveManager.getSavedRoom());
   },
