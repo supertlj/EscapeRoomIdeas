@@ -17,12 +17,12 @@
     "ad_for_hints": true
   },
   "room_description": {
-    "en": "An elegant hotel dining room frozen in time. White tablecloths have yellowed with age, silverware sits tarnished at each place setting, and a grand stone fireplace dominates the far wall. A large chalkboard menu still displays the specials from 1994. Dried flower arrangements sit in crystal vases, and a wine rack lines the entire left wall. Table 7, near the window, still has a half-eaten meal and an overturned wine glass.",
-    "zh": "一间被时间凝固的优雅酒店餐厅。白色桌布已经泛黄，每套餐具旁的银器已经失去光泽，远处墙壁上有一座宏大的石头壁炉。一块大黑板菜单上仍然显示着1994年的特色菜品。干花插在水晶花瓶中，整面左墙排满了酒架。靠窗的7号桌上还有一顿未吃完的饭菜和一只翻倒的酒杯。"
+    "en": "An elegant hotel dining room frozen in time. A large wooden door stands in the center, flanked by a chalkboard menu and a service note on the wall. To the left, a massive wine rack reaches the ceiling, while to the right, a mysterious service hatch sits embedded in the paneling. Several tables are set with aged tablecloths and distinct colored napkins—Red, Blue, and Gold—marking a strange order of service.",
+    "zh": "一间被时间凝固的优雅酒店餐厅。大木门位于中心，两侧是黑板菜单和墙上的服务说明。左侧是一个直达天花板的巨大酒架，右侧的镶板中嵌着一个神秘的传菜窗口。几张餐桌上铺着陈旧的桌布，并放着颜色各异的餐巾——红色、蓝色和金色——标记着某种奇怪的服务顺序。"
   },
   "story_fragment": {
-    "en": "Table 7 has a reservation card: 'Mr. E.V. Grandview — Dinner for Two — Oct 14, 8:00 PM.' But the second chair is pulled back, napkin untouched. Whoever was supposed to join him never arrived — or left in a hurry.",
-    "zh": "7号桌上有一张预订卡：'E.V. Grandview先生——双人晚餐——10月14日晚8:00。'但第二把椅子被推开，餐巾纸没有动过。原本要来赴约的人从未到达——或者匆忙离开了。"
+    "en": "The 'Service Order' note on the wall seems out of place for a luxury hotel. It's almost as if the staff were following a code rather than a menu.",
+    "zh": "墙上的“服务顺序”笔记对于一家豪华酒店来说似乎格格不入。就好像员工们遵循的是某种代码，而不是菜单。"
   },
   "estimated_solve_time_minutes": 5,
   "items": [
