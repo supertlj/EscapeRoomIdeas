@@ -4,7 +4,7 @@ class Room01 extends BaseRoom {
     
     // Clear all scenes and initialize 'main'
     SpriteManager.scenes = {};
-    await SpriteManager.setScene('main', `assets/rooms/room_${padded}/background.png`);
+    await SpriteManager.setScene('main', `assets/rooms/room_${padded}/background.webp`);
     
     this.state = {
       guestBookZoomed: false,
@@ -32,7 +32,7 @@ class Room01 extends BaseRoom {
     SpriteManager.addSprite('main', {
       id: 'guest_book_tap', x: 140, y: 580, w: 300, h: 140,
       onClick: () => {
-        Engine.switchScene('zoom_guestbook', 'assets/rooms/room_01/zoom_guestbook.png');
+        Engine.switchScene('zoom_guestbook', 'assets/rooms/room_01/zoom_guestbook.webp');
       }
     });
 
@@ -40,11 +40,11 @@ class Room01 extends BaseRoom {
     SpriteManager.addSprite('main', {
       id: 'safe_entrance', x: 80, y: 730, w: 200, h: 250,
       onClick: () => {
-        let bg = 'assets/rooms/room_01/zoom_safe_closed.png';
+        let bg = 'assets/rooms/room_01/zoom_safe_closed.webp';
         if (this.state.safeOpened) {
           bg = this.state.noteFound ? 
-            'assets/rooms/room_01/zoom_safe_open.png' : 
-            'assets/rooms/room_01/zoom_safe_with_note.png';
+            'assets/rooms/room_01/zoom_safe_open.webp' : 
+            'assets/rooms/room_01/zoom_safe_with_note.webp';
         }
         Engine.switchScene('zoom_safe', bg);
       }
@@ -56,8 +56,8 @@ class Room01 extends BaseRoom {
       onClick: () => {
         if (!this.state.guestBookRead) return;
         const bg = this.state.brassKeyFound ? 
-          'assets/rooms/room_01/zoom_chandelier_empty.png' : 
-          'assets/rooms/room_01/zoom_chandelier.png';
+          'assets/rooms/room_01/zoom_chandelier_empty.webp' : 
+          'assets/rooms/room_01/zoom_chandelier.webp';
         Engine.switchScene('zoom_chandelier', bg);
       }
     });
@@ -70,7 +70,7 @@ class Room01 extends BaseRoom {
           Engine.completeRoom();
           return;
         }
-        Engine.switchScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator.png');
+        Engine.switchScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator.webp');
       }
     });
   }
@@ -107,7 +107,7 @@ class Room01 extends BaseRoom {
     });
 
     SpriteManager.updateSprite('zoom_chandelier', 'brass_key_item', { visible: !this.state.brassKeyFound });
-    SpriteManager.loadSpriteImage('zoom_chandelier', 'brass_key_item', 'assets/items/room_01/brass_key.png');
+    SpriteManager.loadSpriteImage('zoom_chandelier', 'brass_key_item', 'assets/items/room_01/brass_key.webp');
   }
 
   setupSafe() {
@@ -125,9 +125,9 @@ class Room01 extends BaseRoom {
           // Disable the mechanism hitbox so it doesn't block the note
           SpriteManager.updateSprite('zoom_safe', 'safe_mechanism', { visible: false });
           
-          await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_with_note.png');
+          await SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_with_note.webp');
           // Update main background to open safe (with note)
-          SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_open.png';
+          SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_open.webp';
           SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: true });
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '保险箱已打开' : 'Safe opened');
         } else {
@@ -145,7 +145,7 @@ class Room01 extends BaseRoom {
       onClick: () => {
         if (this.state.noteFound || !this.state.safeOpened) return;
         
-        Dialog.inspectItem('assets/rooms/room_01/zoom_note.png');
+        Dialog.inspectItem('assets/rooms/room_01/zoom_note.webp');
 
         this.state.noteFound = true;
         
@@ -153,9 +153,9 @@ class Room01 extends BaseRoom {
           Dialog.showFeedback(I18n.currentLang === 'zh' ? '便条已加入物品栏' : 'Note added to inventory');
         }, 'paper_pickup');
         
-        SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_open.png');
+        SpriteManager.setScene('zoom_safe', 'assets/rooms/room_01/zoom_safe_open.webp');
         // Update main background to empty safe
-        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_empty.png';
+        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_safe_empty.webp';
         SpriteManager.updateSprite('zoom_safe', 'safe_note_item', { visible: false });
       }
     });
@@ -180,8 +180,8 @@ class Room01 extends BaseRoom {
         this.keypad.hide();
         
         // Update both backgrounds for consistency
-        await SpriteManager.setScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator_open.png');
-        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_elevator_open.png';
+        await SpriteManager.setScene('zoom_elevator', 'assets/rooms/room_01/zoom_elevator_open.webp');
+        SpriteManager.scenes['main'].background.src = 'assets/rooms/room_01/background_elevator_open.webp';
         
         // Add click handler to the open elevator in zoom view to exit
         SpriteManager.addSprite('zoom_elevator', {

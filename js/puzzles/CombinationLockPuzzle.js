@@ -4,7 +4,7 @@
 class CombinationLockPuzzle {
   constructor(options = {}) {
     this.targetCode = options.targetCode || '472';
-    this.bgImage = options.bgImage || 'assets/rooms/room_02/cabinet_zoom.png';
+    this.bgImage = options.bgImage || 'assets/rooms/room_02/cabinet_zoom.webp';
     this.onSuccess = options.onSuccess || (() => {});
     
     this.currentDigits = [0, 0, 0];

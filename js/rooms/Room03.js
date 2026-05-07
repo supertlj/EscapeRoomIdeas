@@ -11,7 +11,7 @@ class Room03 extends BaseRoom {
     };
 
     // Placeholder background since we don't have the asset yet
-    // In a real scenario, we would wait for the user to provide background.png
+    // In a real scenario, we would wait for the user to provide background.webp
     const loadScene = async (sceneId, src) => {
       const img = new Image();
       // NOTE: This will fail until the asset exists.
@@ -29,7 +29,7 @@ class Room03 extends BaseRoom {
       }
     };
 
-    await loadScene('main', `${assetPath}/background.png`);
+    await loadScene('main', `${assetPath}/background.webp`);
     
     SpriteManager.currentSceneId = 'main';
 
