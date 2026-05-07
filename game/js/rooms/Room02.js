@@ -266,6 +266,7 @@ class Room02 extends BaseRoom {
             id: 'key_on_floor',
             x: 200, y: 200, w: 500, h: 500, // Large area for picking up the key
             onClick: async () => {
+              if (Engine.isBusy) return;
               await Engine.pickupItem('dining_key', 540, 960);
               this.state.hasDiningKey = true;
               Inventory.removeItem('vintage_bottle');
