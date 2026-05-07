@@ -64,6 +64,15 @@ class Room02 extends BaseRoom {
     this.setupPuzzles();
 
     HintSystem.setCurrentPuzzle(0);
+
+    // PERSISTENCE SYNC: Ensure inventory item is in the correct state if already opened
+    if (this.state.bottleOpened) {
+      const bottleItem = Inventory.items.find(i => i.id === 'vintage_bottle');
+      if (bottleItem) {
+        bottleItem.examineBg = 'assets/items/room_02/bottle_with_key.webp';
+      }
+    }
+
     return this.state;
   }
 
@@ -352,6 +361,12 @@ class Room02 extends BaseRoom {
     
     Audio.playSFX('door_open'); // Placeholder for cork pop
     
+    // PERSISTENCE: Update the inventory item's background permanently
+    const bottleItem = Inventory.items.find(i => i.id === 'vintage_bottle');
+    if (bottleItem) {
+      bottleItem.examineBg = 'assets/items/room_02/bottle_with_key.webp';
+    }
+
     // Refresh the modal with the new image and new hotspots
     Dialog.inspectItem('assets/items/room_02/bottle_with_key.webp', this.getInteractiveHotspots('vintage_bottle'));
   }
