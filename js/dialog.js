@@ -77,7 +77,6 @@ const Dialog = {
         };
 
         div.onclick = trigger;
-        div.addEventListener('mousedown', trigger);
         
         container.appendChild(div);
       });

@@ -296,7 +296,6 @@ const Engine = {
       itemData = itemOrId;
     }
 
-    Audio.playSFX(sfx);
     const slotIdx = Inventory.addItem(itemData, true); // Add silently
     this.animateItemPickup(startX, startY, itemData.icon, slotIdx, itemData.id);
     
