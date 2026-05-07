@@ -278,7 +278,7 @@ const Engine = {
       if (itemId) {
         Inventory.revealItem(itemId);
       }
-    }, 850);
+    }, 400);
   },
 
   pickupItem(itemOrId, startX, startY, onComplete, sfx = 'key_pickup') {
@@ -304,7 +304,7 @@ const Engine = {
         if (onComplete) onComplete();
         this.setBusy(false);
         resolve();
-      }, 850);
+      }, 400);
     });
   },
 
