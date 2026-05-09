@@ -1,0 +1,234 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <!-- Ultra-Premium Gold Gradient -->
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff2a3" />
+      <stop offset="30%" stop-color="#ffd700" />
+      <stop offset="70%" stop-color="#ca9e1b" />
+      <stop offset="100%" stop-color="#5a450c" />
+    </linearGradient>
+
+    <!-- Black Luxury Marble for Coasters -->
+    <radialGradient id="black-marble" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#2c2c2c" />
+      <stop offset="50%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#0a0a0a" />
+    </radialGradient>
+
+    <!-- Liquid Glow Bottle Gradients -->
+    <linearGradient id="blue-bottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#000b1a" />
+      <stop offset="20%" stop-color="#002244" />
+      <stop offset="50%" stop-color="#00ffff" />
+      <stop offset="80%" stop-color="#003366" />
+      <stop offset="100%" stop-color="#000b1a" />
+    </linearGradient>
+    
+    <linearGradient id="red-bottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a0000" />
+      <stop offset="20%" stop-color="#4a0000" />
+      <stop offset="50%" stop-color="#ff3333" />
+      <stop offset="80%" stop-color="#800000" />
+      <stop offset="100%" stop-color="#1a0000" />
+    </linearGradient>
+    
+    <linearGradient id="gold-bottle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1a1100" />
+      <stop offset="20%" stop-color="#422d00" />
+      <stop offset="50%" stop-color="#ffea00" />
+      <stop offset="80%" stop-color="#8a6508" />
+      <stop offset="100%" stop-color="#1a1100" />
+    </linearGradient>
+
+    <!-- Vintage Paper Label Gradient -->
+    <linearGradient id="label-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fffae6" />
+      <stop offset="100%" stop-color="#e6cca2" />
+    </linearGradient>
+
+    <!-- Glass Reflection Overlay -->
+    <linearGradient id="glass-glare" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.5" />
+    </linearGradient>
+
+    <!-- Clip Path for Glass Liquid (Curved wine glass bowl) -->
+    <clipPath id="glass-clip">
+      <path d="M -35 -50 L 35 -50 L 32 -10 C 32 20, 0 50, 0 50 C 0 50, -32 20, -32 -10 Z"/>
+    </clipPath>
+
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <style>
+    .svg-btn { cursor: pointer; }
+    .svg-btn:hover .hover-target { filter: brightness(1.1) drop-shadow(0 0 5px rgba(255,215,0,0.5)); }
+    .svg-btn:active .hover-target { filter: brightness(0.7); } /* Darken instead of scale to fix origin bugs */
+    
+    /* Liquid "Poured In" Animation */
+    rect[id^="liquid-layer-"] {
+      transition: transform 0.4s ease-out;
+      transform-origin: bottom;
+      transform-box: fill-box;
+      transform: scaleY(0);
+      opacity: 0.85;
+    }
+    rect[id^="liquid-layer-"]:not([fill="none"]) {
+      transform: scaleY(1);
+    }
+    
+    .selected-glass {
+      animation: pulse-glow 1.5s infinite alternate;
+    }
+    @keyframes pulse-glow {
+      0% { filter: drop-shadow(0 0 2px #ffd700) brightness(1); }
+      100% { filter: drop-shadow(0 0 15px #ffd700) brightness(1.3); }
+    }
+    .svg-label { pointer-events: none; font-family: 'Cinzel', 'Times New Roman', serif; }
+  </style>
+
+  <!-- Title -->
+  <text x="300" y="50" fill="url(#gold)" font-size="30" class="svg-label" text-anchor="middle" font-weight="bold" letter-spacing="3" filter="url(#shadow)">COCKTAIL STATION</text>
+  
+  <!-- Bottles -->
+  
+  <!-- Blue Bottle -->
+  <g class="svg-btn" data-type="bottle" data-color="blue" transform="translate(150, 180)" filter="url(#shadow)">
+    <g class="hover-target">
+      <!-- Bottle Body -->
+      <path d="M -5 -70 L 5 -70 L 5 -30 C 5 -15, 25 -15, 25 10 L 25 70 L -25 70 L -25 10 C -25 -15, -5 -15, -5 -30 Z" fill="url(#blue-bottle)" stroke="url(#gold)" stroke-width="0.5"/>
+      <!-- Vintage Label -->
+      <rect x="-16" y="10" width="32" height="45" fill="url(#label-bg)" rx="2" stroke="#5a450c" stroke-width="0.5"/>
+      <rect x="-14" y="12" width="28" height="41" fill="none" stroke="#ca9e1b" stroke-width="0.5"/>
+      <!-- Text on Label -->
+      <text y="25" fill="#332200" font-family="'Cinzel', serif" font-size="10" text-anchor="middle" font-weight="bold">CURACAO</text>
+      <circle cx="0" cy="35" r="3" fill="#0055a5"/>
+    </g>
+    <!-- Glass Highlights -->
+    <path d="M -22 10 L -18 10 L -18 65 L -22 65 Z" fill="#fff" opacity="0.4" pointer-events="none"/>
+    <ellipse cx="0" cy="-70" rx="5" ry="1.5" fill="#111" pointer-events="none"/>
+  </g>
+  
+  <!-- Red Bottle -->
+  <g class="svg-btn" data-type="bottle" data-color="red" transform="translate(300, 180)" filter="url(#shadow)">
+    <g class="hover-target">
+      <!-- Bottle Body -->
+      <path d="M -5 -70 L 5 -70 L 5 -30 C 5 -15, 25 -15, 25 10 L 25 70 L -25 70 L -25 10 C -25 -15, -5 -15, -5 -30 Z" fill="url(#red-bottle)" stroke="url(#gold)" stroke-width="0.5"/>
+      <!-- Vintage Label -->
+      <rect x="-16" y="10" width="32" height="45" fill="url(#label-bg)" rx="2" stroke="#5a450c" stroke-width="0.5"/>
+      <rect x="-14" y="12" width="28" height="41" fill="none" stroke="#ca9e1b" stroke-width="0.5"/>
+      <!-- Text on Label -->
+      <text y="25" fill="#332200" font-family="'Cinzel', serif" font-size="10" text-anchor="middle" font-weight="bold">BITTERS</text>
+      <circle cx="0" cy="35" r="3" fill="#b30000"/>
+    </g>
+    <!-- Glass Highlights -->
+    <path d="M -22 10 L -18 10 L -18 65 L -22 65 Z" fill="#fff" opacity="0.4" pointer-events="none"/>
+    <ellipse cx="0" cy="-70" rx="5" ry="1.5" fill="#111" pointer-events="none"/>
+  </g>
+  
+  <!-- Gold Bottle -->
+  <g class="svg-btn" data-type="bottle" data-color="gold" transform="translate(450, 180)" filter="url(#shadow)">
+    <g class="hover-target">
+      <!-- Bottle Body -->
+      <path d="M -5 -70 L 5 -70 L 5 -30 C 5 -15, 25 -15, 25 10 L 25 70 L -25 70 L -25 10 C -25 -15, -5 -15, -5 -30 Z" fill="url(#gold-bottle)" stroke="url(#gold)" stroke-width="0.5"/>
+      <!-- Vintage Label -->
+      <rect x="-16" y="10" width="32" height="45" fill="url(#label-bg)" rx="2" stroke="#5a450c" stroke-width="0.5"/>
+      <rect x="-14" y="12" width="28" height="41" fill="none" stroke="#ca9e1b" stroke-width="0.5"/>
+      <!-- Text on Label -->
+      <text y="25" fill="#332200" font-family="'Cinzel', serif" font-size="10" text-anchor="middle" font-weight="bold">WHISKEY</text>
+      <circle cx="0" cy="35" r="3" fill="#ffd700"/>
+    </g>
+    <!-- Glass Highlights -->
+    <path d="M -22 10 L -18 10 L -18 65 L -22 65 Z" fill="#fff" opacity="0.4" pointer-events="none"/>
+    <ellipse cx="0" cy="-70" rx="5" ry="1.5" fill="#111" pointer-events="none"/>
+  </g>
+  
+  <!-- The Glass (Hyper-Realistic Wine Glass) -->
+  <g class="svg-btn" data-type="glass" id="interactive-glass" transform="translate(300, 340)" filter="url(#shadow)">
+    <g class="hover-target">
+      <!-- Glass Bowl (Background) -->
+      <path d="M -35 -50 L 35 -50 L 32 -10 C 32 20, 0 50, 0 50 C 0 50, -32 20, -32 -10 Z" fill="rgba(230,245,255,0.08)" stroke="#fff" stroke-width="1.5"/>
+      
+      <!-- Liquid Layers (Filled from bottom to top) -->
+      <rect id="liquid-layer-1" x="-50" y="33.33" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      <rect id="liquid-layer-2" x="-50" y="16.66" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      <rect id="liquid-layer-3" x="-50" y="0" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      <rect id="liquid-layer-4" x="-50" y="-16.66" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      <rect id="liquid-layer-5" x="-50" y="-33.33" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      <rect id="liquid-layer-6" x="-50" y="-50" width="100" height="16.67" fill="none" clip-path="url(#glass-clip)"/>
+      
+      <!-- Thick Glass Base of the Bowl (Refraction effect) -->
+      <path d="M -15 30 Q 0 50, 15 30 Q 0 45, -15 30 Z" fill="rgba(255,255,255,0.4)" pointer-events="none"/>
+      
+      <!-- Glass Reflections (Drawn OVER liquid) -->
+      <!-- Left Long Curved Reflection -->
+      <path d="M -33 -45 Q -30 0, -5 40 L -2 40 Q -27 0, -30 -45 Z" fill="url(#glass-glare)" pointer-events="none" />
+      <!-- Right Short Reflection -->
+      <path d="M 33 -45 Q 30 0, 15 30 L 18 30 Q 32 0, 35 -45 Z" fill="url(#glass-glare)" pointer-events="none" opacity="0.7"/>
+      
+      <!-- Solid Glass Stem -->
+      <path d="M -3 50 L -1.5 85 L 1.5 85 L 3 50 Z" fill="rgba(255,255,255,0.6)" stroke="#fff" stroke-width="0.5"/>
+      <path d="M -1 50 L -0.5 85 L 0.5 85 L 1 50 Z" fill="#fff" opacity="0.8"/>
+      
+      <!-- Stem Joint Nodes -->
+      <ellipse cx="0" cy="50" rx="4" ry="1.5" fill="#fff" opacity="0.8"/>
+      <ellipse cx="0" cy="85" rx="5" ry="1.5" fill="#fff" opacity="0.8"/>
+      
+      <!-- Base (Thick Glass Disc) -->
+      <ellipse cx="0" cy="90" rx="25" ry="6" fill="rgba(255,255,255,0.2)" stroke="#fff" stroke-width="1.5"/>
+      <ellipse cx="0" cy="90" rx="23" ry="4" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="0.5"/>
+      <ellipse cx="0" cy="88" rx="10" ry="2" fill="rgba(255,255,255,0.5)" pointer-events="none"/>
+      
+      <!-- Top Rim -->
+      <ellipse cx="0" cy="-50" rx="35" ry="6" fill="none" stroke="#fff" stroke-width="1.5" pointer-events="none"/>
+      <path d="M -35 -50 A 35 6 0 0 0 35 -50" fill="none" stroke="url(#gold)" stroke-width="0.8" pointer-events="none"/>
+    </g>
+  </g>
+  
+  <!-- Coasters Label -->
+  <text x="300" y="460" fill="url(#gold)" font-size="16" class="svg-label" text-anchor="middle" font-weight="bold" letter-spacing="1">PLACE GLASS ON COASTER</text>
+  
+  <!-- Coasters Grid (Black Marble with Gold Trim) -->
+  <g font-size="22" font-weight="bold" text-anchor="middle">
+    <!-- Coaster 1 -->
+    <g class="svg-btn" data-type="coaster" data-num="1" transform="translate(120, 520)">
+      <circle class="hover-target" cx="0" cy="0" r="38" fill="url(#black-marble)" stroke="url(#gold)" stroke-width="3" filter="url(#shadow)"/>
+      <!-- Gold Veins -->
+      <path d="M -25 -10 Q -5 20, 20 -20" fill="none" stroke="#ca9e1b" stroke-width="1" opacity="0.6" pointer-events="none"/>
+      <path d="M -10 20 Q 15 5, 30 10" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.4" pointer-events="none"/>
+      <text y="8" fill="#ffd700" class="svg-label">1</text>
+    </g>
+    
+    <!-- Coaster 2 -->
+    <g class="svg-btn" data-type="coaster" data-num="2" transform="translate(240, 520)">
+      <circle class="hover-target" cx="0" cy="0" r="38" fill="url(#black-marble)" stroke="url(#gold)" stroke-width="3" filter="url(#shadow)"/>
+      <!-- Gold Veins -->
+      <path d="M -20 -20 Q 5 -5, 15 25" fill="none" stroke="#ca9e1b" stroke-width="1" opacity="0.6" pointer-events="none"/>
+      <path d="M -25 10 Q -5 0, 20 15" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.4" pointer-events="none"/>
+      <text y="8" fill="#ffd700" class="svg-label">2</text>
+    </g>
+    
+    <!-- Coaster 3 -->
+    <g class="svg-btn" data-type="coaster" data-num="3" transform="translate(360, 520)">
+      <circle class="hover-target" cx="0" cy="0" r="38" fill="url(#black-marble)" stroke="url(#gold)" stroke-width="3" filter="url(#shadow)"/>
+      <!-- Gold Veins -->
+      <path d="M -15 -25 Q 0 0, 25 -10" fill="none" stroke="#ca9e1b" stroke-width="1" opacity="0.6" pointer-events="none"/>
+      <path d="M -20 20 Q 0 10, 20 25" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.4" pointer-events="none"/>
+      <text y="8" fill="#ffd700" class="svg-label">3</text>
+    </g>
+    
+    <!-- Coaster 4 -->
+    <g class="svg-btn" data-type="coaster" data-num="4" transform="translate(480, 520)">
+      <circle class="hover-target" cx="0" cy="0" r="38" fill="url(#black-marble)" stroke="url(#gold)" stroke-width="3" filter="url(#shadow)"/>
+      <!-- Gold Veins -->
+      <path d="M -25 5 Q -5 -15, 25 5" fill="none" stroke="#ca9e1b" stroke-width="1" opacity="0.6" pointer-events="none"/>
+      <path d="M -5 25 Q 10 5, 20 -20" fill="none" stroke="#ffd700" stroke-width="0.5" opacity="0.4" pointer-events="none"/>
+      <text y="8" fill="#ffd700" class="svg-label">4</text>
+    </g>
+  </g>
+</svg>

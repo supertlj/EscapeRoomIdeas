@@ -1,0 +1,187 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Antique Tarnished Brass Gradient -->
+    <linearGradient id="antique-brass" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d77f" />
+      <stop offset="20%" stop-color="#c29b38" />
+      <stop offset="40%" stop-color="#8c6a1c" />
+      <stop offset="60%" stop-color="#b58d2a" />
+      <stop offset="80%" stop-color="#5c4308" />
+      <stop offset="100%" stop-color="#2c1a04" />
+    </linearGradient>
+
+    <!-- Dark Patina for Corners -->
+    <radialGradient id="patina" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0" />
+      <stop offset="100%" stop-color="#120a02" stop-opacity="0.8" />
+    </radialGradient>
+
+    <!-- Aged Ivory Key Gradient -->
+    <radialGradient id="aged-ivory" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#fffae6" />
+      <stop offset="50%" stop-color="#ebdcb9" />
+      <stop offset="100%" stop-color="#c4b28b" />
+    </radialGradient>
+
+    <!-- Aged Paper for Wheels -->
+    <linearGradient id="aged-paper" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff5dd" />
+      <stop offset="100%" stop-color="#ebd2a3" />
+    </linearGradient>
+
+    <!-- Steel Stem Gradient -->
+    <linearGradient id="steel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#444" />
+      <stop offset="50%" stop-color="#aaa" />
+      <stop offset="100%" stop-color="#222" />
+    </linearGradient>
+
+    <!-- Glass Reflection -->
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.05" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="5" stdDeviation="4" flood-color="#000" flood-opacity="0.7"/>
+    </filter>
+    
+    <!-- Ornate Victorian Engraving Pattern -->
+    <pattern id="victorian" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 Q 45 15, 30 30 T 30 60" fill="none" stroke="#4a3504" stroke-width="0.7" opacity="0.4"/>
+      <path d="M 0 30 Q 15 45, 30 30 T 60 30" fill="none" stroke="#4a3504" stroke-width="0.7" opacity="0.4"/>
+      <circle cx="30" cy="30" r="3" fill="#4a3504" opacity="0.3"/>
+      <path d="M 15 15 C 20 5, 40 5, 45 15" fill="none" stroke="#4a3504" stroke-width="0.5" opacity="0.3"/>
+      <path d="M 15 45 C 20 55, 40 55, 45 45" fill="none" stroke="#4a3504" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Main Brass Panel -->
+  <rect x="10" y="10" width="580" height="580" rx="15" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="6" filter="url(#shadow)" />
+  
+  <!-- Engraved Pattern Layer -->
+  <rect x="20" y="20" width="560" height="560" rx="5" fill="url(#victorian)" />
+  
+  <!-- Patina Vignette Overlay -->
+  <rect x="10" y="10" width="580" height="580" rx="15" fill="url(#patina)" pointer-events="none" />
+  
+  <!-- Border Inset -->
+  <rect x="25" y="25" width="550" height="550" rx="10" fill="none" stroke="#2c1a04" stroke-width="2" opacity="0.6" />
+  
+  <!-- Aged Screws in Corners -->
+  <g fill="#1a0f02">
+    <circle cx="35" cy="35" r="6" />
+    <line x1="32" y1="32" x2="38" y2="38" stroke="#5c4308" stroke-width="1.5"/>
+    
+    <circle cx="565" cy="35" r="6" />
+    <line x1="562" y1="32" x2="568" y2="38" stroke="#5c4308" stroke-width="1.5"/>
+    
+    <circle cx="35" cy="565" r="6" />
+    <line x1="32" y1="562" x2="38" y2="568" stroke="#5c4308" stroke-width="1.5"/>
+    
+    <circle cx="565" cy="565" r="6" />
+    <line x1="562" y1="562" x2="568" y2="568" stroke="#5c4308" stroke-width="1.5"/>
+  </g>
+
+  <!-- Title Branding -->
+  <text x="300" y="35" fill="#2c1a04" font-family="'Cinzel', 'Times New Roman', serif" font-size="16" text-anchor="middle" font-weight="bold" letter-spacing="4">NATIONAL CASH REGISTER CO.</text>
+
+  <!-- Mechanical Display Window -->
+  <g filter="url(#shadow)">
+    <!-- Ornate Frame -->
+    <rect x="120" y="50" width="360" height="80" rx="5" fill="#1a0f02" stroke="#4a3504" stroke-width="3" />
+    <rect x="130" y="60" width="340" height="60" fill="#0a0501" />
+    
+    <!-- Odometer Wheels (Aged) -->
+    <g id="display-wheels" font-family="'Courier New', monospace" font-size="36" font-weight="bold">
+      <!-- Wheel 1 -->
+      <rect x="150" y="65" width="50" height="50" fill="url(#aged-paper)" rx="3" stroke="#8a6d43" stroke-width="0.5"/>
+      <line x1="150" y1="90" x2="200" y2="90" stroke="#8a6d43" stroke-width="1" opacity="0.5"/>
+      <text x="175" y="102" fill="#2c1a04" text-anchor="middle" id="digit-1">-</text>
+      
+      <!-- Wheel 2 -->
+      <rect x="225" y="65" width="50" height="50" fill="url(#aged-paper)" rx="3" stroke="#8a6d43" stroke-width="0.5"/>
+      <line x1="225" y1="90" x2="275" y2="90" stroke="#8a6d43" stroke-width="1" opacity="0.5"/>
+      <text x="250" y="102" fill="#2c1a04" text-anchor="middle" id="digit-2">-</text>
+      
+      <!-- Wheel 3 -->
+      <rect x="325" y="65" width="50" height="50" fill="url(#aged-paper)" rx="3" stroke="#8a6d43" stroke-width="0.5"/>
+      <line x1="325" y1="90" x2="375" y2="90" stroke="#8a6d43" stroke-width="1" opacity="0.5"/>
+      <text x="350" y="102" fill="#2c1a04" text-anchor="middle" id="digit-3">-</text>
+      
+      <!-- Wheel 4 -->
+      <rect x="400" y="65" width="50" height="50" fill="url(#aged-paper)" rx="3" stroke="#8a6d43" stroke-width="0.5"/>
+      <line x1="400" y1="90" x2="450" y2="90" stroke="#8a6d43" stroke-width="1" opacity="0.5"/>
+      <text x="425" y="102" fill="#2c1a04" text-anchor="middle" id="digit-4">-</text>
+    </g>
+    
+    <!-- Glass Reflection on Display -->
+    <rect x="130" y="60" width="340" height="60" fill="url(#glass)" pointer-events="none" />
+  </g>
+
+  <!-- Column Labels -->
+  <g font-family="'Cinzel', 'Times New Roman', serif" font-size="18" fill="#2c1a04" text-anchor="middle" font-weight="bold">
+    <text x="120" y="145">1000s</text>
+    <text x="240" y="145">100s</text>
+    <text x="360" y="145">10s</text>
+    <text x="480" y="145">1s</text>
+  </g>
+
+  <style>
+    .svg-btn { cursor: pointer; }
+    .svg-btn:hover .btn-rim { stroke: #fff; filter: drop-shadow(0 0 5px #fff); }
+    .svg-btn:hover .btn-face { filter: brightness(1.1); }
+    .svg-btn:active .btn-face { filter: brightness(0.8); }
+    .svg-label { pointer-events: none; font-family: 'Cinzel', 'Times New Roman', serif; }
+  </style>
+
+  <!-- Keypad Grid (4 Columns of 9 Keys) -->
+  <g font-weight="bold" text-anchor="middle" font-size="24">
+    
+    <!-- COLUMN 1 - X=120 -->
+    <g class="svg-btn" data-col="1" data-val="1" transform="translate(120, 170)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">1</text></g>
+    <g class="svg-btn" data-col="1" data-val="2" transform="translate(120, 218)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">2</text></g>
+    <g class="svg-btn" data-col="1" data-val="3" transform="translate(120, 266)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">3</text></g>
+    <g class="svg-btn" data-col="1" data-val="4" transform="translate(120, 314)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">4</text></g>
+    <g class="svg-btn" data-col="1" data-val="5" transform="translate(120, 362)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">5</text></g>
+    <g class="svg-btn" data-col="1" data-val="6" transform="translate(120, 410)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">6</text></g>
+    <g class="svg-btn" data-col="1" data-val="7" transform="translate(120, 458)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">7</text></g>
+    <g class="svg-btn" data-col="1" data-val="8" transform="translate(120, 506)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">8</text></g>
+    <g class="svg-btn" data-col="1" data-val="9" transform="translate(120, 554)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">9</text></g>
+
+    <!-- COLUMN 2 - X=240 -->
+    <g class="svg-btn" data-col="2" data-val="1" transform="translate(240, 170)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">1</text></g>
+    <g class="svg-btn" data-col="2" data-val="2" transform="translate(240, 218)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">2</text></g>
+    <g class="svg-btn" data-col="2" data-val="3" transform="translate(240, 266)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">3</text></g>
+    <g class="svg-btn" data-col="2" data-val="4" transform="translate(240, 314)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">4</text></g>
+    <g class="svg-btn" data-col="2" data-val="5" transform="translate(240, 362)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">5</text></g>
+    <g class="svg-btn" data-col="2" data-val="6" transform="translate(240, 410)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">6</text></g>
+    <g class="svg-btn" data-col="2" data-val="7" transform="translate(240, 458)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">7</text></g>
+    <g class="svg-btn" data-col="2" data-val="8" transform="translate(240, 506)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">8</text></g>
+    <g class="svg-btn" data-col="2" data-val="9" transform="translate(240, 554)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">9</text></g>
+
+    <!-- COLUMN 3 - X=360 -->
+    <g class="svg-btn" data-col="3" data-val="1" transform="translate(360, 170)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">1</text></g>
+    <g class="svg-btn" data-col="3" data-val="2" transform="translate(360, 218)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">2</text></g>
+    <g class="svg-btn" data-col="3" data-val="3" transform="translate(360, 266)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">3</text></g>
+    <g class="svg-btn" data-col="3" data-val="4" transform="translate(360, 314)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">4</text></g>
+    <g class="svg-btn" data-col="3" data-val="5" transform="translate(360, 357)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">5</text></g>
+    <g class="svg-btn" data-col="3" data-val="6" transform="translate(360, 410)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">6</text></g>
+    <g class="svg-btn" data-col="3" data-val="7" transform="translate(360, 453)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">7</text></g>
+    <g class="svg-btn" data-col="3" data-val="8" transform="translate(360, 501)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">8</text></g>
+    <g class="svg-btn" data-col="3" data-val="9" transform="translate(360, 549)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">9</text></g>
+
+    <!-- COLUMN 4 - X=480 -->
+    <g class="svg-btn" data-col="4" data-val="1" transform="translate(480, 170)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">1</text></g>
+    <g class="svg-btn" data-col="4" data-val="2" transform="translate(480, 218)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">2</text></g>
+    <g class="svg-btn" data-col="4" data-val="3" transform="translate(480, 266)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">3</text></g>
+    <g class="svg-btn" data-col="4" data-val="4" transform="translate(480, 309)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">4</text></g>
+    <g class="svg-btn" data-col="4" data-val="5" transform="translate(480, 357)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">5</text></g>
+    <g class="svg-btn" data-col="4" data-val="6" transform="translate(480, 405)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">6</text></g>
+    <g class="svg-btn" data-col="4" data-val="7" transform="translate(480, 453)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">7</text></g>
+    <g class="svg-btn" data-col="4" data-val="8" transform="translate(480, 501)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">8</text></g>
+    <g class="svg-btn" data-col="4" data-val="9" transform="translate(480, 549)"><rect x="-3" y="-5" width="6" height="15" fill="url(#steel)"/><circle class="btn-rim" r="20" fill="url(#antique-brass)" stroke="#2c1a04" stroke-width="1.5" filter="url(#shadow)"/><circle class="btn-face" r="16" fill="url(#aged-ivory)"/><text dy="8" fill="#2c1a04" class="svg-label">9</text></g>
+  </g>
+</svg>
