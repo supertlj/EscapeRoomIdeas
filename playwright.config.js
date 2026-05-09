@@ -5,7 +5,7 @@ module.exports = defineConfig({
   workers: 1,
   timeout: 120000,
   use: {
-    baseURL: 'http://localhost:8080',
+    baseURL: 'http://localhost:8000',
     viewport: { width: 1080, height: 1920 },
     headless: false,
     launchOptions: {

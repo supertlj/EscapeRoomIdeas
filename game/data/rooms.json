@@ -2,7 +2,7 @@
   "rooms": [
     { "id": 1, "name": { "en": "The Lobby", "zh": "酒店大堂" }, "developed": true },
     { "id": 2, "name": { "en": "The Restaurant", "zh": "豪华餐厅" }, "developed": true },
-    { "id": 3, "name": { "en": "The Grand Corridor", "zh": "宏伟走廊" }, "developed": true },
+    { "id": 3, "name": { "en": "The Hotel Bar", "zh": "酒店酒吧" }, "developed": true },
     { "id": 4, "name": { "en": "The Library", "zh": "大图书馆" }, "developed": false },
     { "id": 5, "name": { "en": "The Grand Suite", "zh": "总统套房" }, "developed": false },
     { "id": 6, "name": { "en": "The Laundry", "zh": "洗衣房" }, "developed": false },
