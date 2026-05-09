@@ -24,7 +24,7 @@
     "en": "A leather-bound bartender's diary lies open behind the counter. The last entry reads: 'Oct 14 — Mr. G came in at 9 PM, alone. Said his dinner guest never showed. Ordered three whiskeys. Asked me if I'd ever kept a secret so big it could swallow you whole. Tipped $100. Never saw him again.'",
     "zh": "吧台后面放着一本皮面装订的调酒师日记，翻开着。最后一条记录写道：'10月14日——G先生晚上9点独自来了。说他的晚餐客人没来。点了三杯威士忌。问我是否曾经守过一个大到能把你吞噬的秘密。给了$100小费。再也没见过他。'"
   },
-  "estimated_solve_time_minutes": 5,
+  "estimated_solve_time_minutes": 2.5,
   "items": [
     {
       "id": "cocktail_recipe",
@@ -32,7 +32,8 @@
         "en": "Cocktail Recipe Card",
         "zh": "鸡尾酒配方卡"
       },
-      "icon": "assets/items/room_03/recipe.webp",
+      "icon": "assets/items/room_03/cocktail_recipe.webp",
+      "examineBg": "assets/items/room_03/cocktail_recipe.webp",
       "type": "document"
     },
     {
@@ -41,7 +42,7 @@
         "en": "Jukebox Coin",
         "zh": "点唱机硬币"
       },
-      "icon": "assets/items/room_03/coin.webp",
+      "icon": "assets/items/room_03/jukebox_coin.webp",
       "type": "tool"
     },
     {
@@ -76,13 +77,38 @@
       "id": 1,
       "puzzle_name": "Cocktail Mixing",
       "recipe": "2 Blue, 1 Red, 3 Gold",
-      "target_coaster": "4"
+      "target_coaster": "4",
+      "hints": {
+        "en": [
+          "Follow the recipe found in the cash register: 2 Blue, 1 Red, 3 Gold.",
+          "Once mixed, look for a coaster with the correct number to place the glass.",
+          "Place the glass on the coaster marked '4' to reveal the Jukebox Coin."
+        ],
+        "zh": [
+          "遵循在收银机中找到的配方：2蓝、1红、3金。",
+          "调好后，寻找带有正确数字的杯垫来放置杯子。",
+          "把酒杯放在标有'4'的杯垫上以揭示点唱机硬币。"
+        ]
+      }
     },
     {
       "id": 2,
       "puzzle_name": "Jukebox Track",
-      "target_track": "B7"
+      "target_track": "B7",
+      "hints": {
+        "en": [
+          "The jukebox needs a coin. Have you solved the cocktail puzzle yet?",
+          "Look at the song list on the jukebox. One track is circled in red.",
+          "Insert the coin and play track B7 to get the exit key."
+        ],
+        "zh": [
+          "点唱机需要一枚硬币。你解开鸡尾酒谜题了吗？",
+          "看点唱机上的歌单。有一首曲子用红圈圈出。",
+          "投入硬币并播放B7曲目以获取出口钥匙。"
+        ]
+      }
     }
+
   ],
   "final_action": {
     "en": "You unlock the storage door and move into the service corridor.",
